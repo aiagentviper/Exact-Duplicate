@@ -1,0 +1,31 @@
+kind = "web"
+previewPath = "/"
+title = "Viper Portfolio Site"
+version = "1.0.0"
+id = "artifacts/viper-site"
+router = "path"
+
+[[integratedSkills]]
+name = "react-vite"
+version = "1.0.0"
+
+[[services]]
+name = "web"
+paths = [ "/" ]
+localPort = 25072
+
+[services.development]
+run = "pnpm --filter @workspace/viper-site run dev"
+
+[services.production]
+build = [ "pnpm", "--filter", "@workspace/viper-site", "run", "build" ]
+publicDir = "artifacts/viper-site/dist/public"
+serve = "static"
+
+[[services.production.rewrites]]
+from = "/*"
+to = "/index.html"
+
+[services.env]
+PORT = "25072"
+BASE_PATH = "/"

@@ -1,0 +1,62 @@
+uploads = []
+outputs = []
+
+[[generated]]
+id = "CSy1pCwYyvxxzEJLIxdXu"
+uri = "file://artifacts/viper-site/public/images/profile.png"
+type = "image"
+title = "Profile portrait"
+
+[[generated]]
+id = "_93RfcKogQkIjg-i-IcfM"
+uri = "file://artifacts/viper-site/public/images/portfolio-1.png"
+type = "image"
+title = "Product UI Mockup"
+
+[[generated]]
+id = "3RjOqovwSe7Iy_flBWCi4"
+uri = "file://artifacts/viper-site/public/images/portfolio-2.png"
+type = "image"
+title = "Brand Identity"
+
+[[generated]]
+id = "QGbrkDdBN7QP6fudyqxB2"
+uri = "file://artifacts/viper-site/public/images/portfolio-3.png"
+type = "image"
+title = "Editorial Photography"
+
+[[generated]]
+id = "dj9Il-IUFxjmE0Q13d_Xl"
+uri = "file://artifacts/viper-site/public/images/portfolio-4.png"
+type = "image"
+title = "Minimalist Poster"
+
+[[generated]]
+id = "KepbePp23Af7n8mytuqAm"
+uri = "file://artifacts/viper-site/public/images/portfolio-5.png"
+type = "image"
+title = "Dark Website Mockup"
+
+[[generated]]
+id = "yZw8_iC5VRNEjSiycLyS_"
+uri = "file://artifacts/viper-site/public/images/services.png"
+type = "image"
+title = "Design Services Photo"
+
+[[generated]]
+id = "eLrw5or0gaG3YBdopkkTa"
+uri = "file://artifacts/viper-site/public/images/blog-1.png"
+type = "image"
+title = "Blog Thumbnail 1"
+
+[[generated]]
+id = "7AtEQ1IfanHd-6oB0SxTc"
+uri = "file://artifacts/viper-site/public/images/blog-2.png"
+type = "image"
+title = "Blog Thumbnail 2"
+
+[[generated]]
+id = "74vjUUgVEmvnCNfWQyvuf"
+uri = "file://artifacts/viper-site/public/images/blog-3.png"
+type = "image"
+title = "Blog Thumbnail 3"
