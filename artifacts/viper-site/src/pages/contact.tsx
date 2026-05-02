@@ -10,7 +10,7 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { useToast } from "@/hooks/use-toast";
-import { Mail, MapPin } from "lucide-react";
+import { Mail, MapPin, Phone, Calendar } from "lucide-react";
 
 const formSchema = z.object({
   name: z.string().min(2, "Name is required"),
@@ -73,12 +73,19 @@ export function ContactPage() {
                 <h3 className="text-xs uppercase tracking-widest text-muted-foreground mb-6 font-medium">Contact Details</h3>
                 <div className="space-y-5">
                   <a
-                    href="mailto:hello@viperaiagency.com"
+                    href="mailto:jimohmalik101@gmail.com"
                     className="flex items-center gap-3 text-base hover:text-muted-foreground transition-colors"
                     data-testid="contact-email"
                   >
                     <Mail size={18} className="text-muted-foreground flex-shrink-0" />
-                    hello@viperaiagency.com
+                    jimohmalik101@gmail.com
+                  </a>
+                  <a
+                    href="tel:+2348107311900"
+                    className="flex items-center gap-3 text-base hover:text-muted-foreground transition-colors"
+                  >
+                    <Phone size={18} className="text-muted-foreground flex-shrink-0" />
+                    +234 810 731 1900
                   </a>
                   <div className="flex items-center gap-3 text-base text-muted-foreground">
                     <MapPin size={18} className="flex-shrink-0" />
@@ -92,6 +99,20 @@ export function ContactPage() {
               </div>
 
               <div className="pt-8 border-t border-border/50">
+                <h3 className="text-xs uppercase tracking-widest text-muted-foreground mb-4 font-medium">Book a Free Call</h3>
+                <a
+                  href="https://calendly.com/malik-designs"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 font-inter font-semibold text-[13px] bg-foreground text-background rounded-full px-6 py-3 hover:bg-foreground/90 transition-colors mb-8"
+                  data-testid="contact-calendly"
+                >
+                  <Calendar size={15} />
+                  Schedule on Calendly →
+                </a>
+              </div>
+
+              <div className="border-t border-border/50 pt-8">
                 <h3 className="text-xs uppercase tracking-widest text-muted-foreground mb-4 font-medium">What We Build</h3>
                 <ul className="space-y-2 text-sm text-muted-foreground">
                   {["AI Automation Systems", "AI-Powered Websites", "AI App MVPs", "Vibe Coded Products", "AI Video Content", "AI Strategy & Roadmaps"].map((item) => (

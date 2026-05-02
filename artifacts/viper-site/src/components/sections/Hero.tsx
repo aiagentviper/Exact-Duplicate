@@ -11,16 +11,38 @@ const services = [
 
 export function Hero() {
   return (
-    <section className="relative w-full h-screen min-h-[600px] overflow-hidden bg-background flex flex-col">
+    <section className="relative w-full h-screen min-h-[600px] overflow-hidden flex flex-col">
 
-      {/* Background — deep dark gradient with subtle glow */}
-      <div className="absolute inset-0 bg-[radial-gradient(ellipse_80%_60%_at_60%_-10%,rgba(255,255,255,0.04)_0%,transparent_70%)]" />
-      <div className="absolute inset-0 bg-[radial-gradient(ellipse_40%_50%_at_20%_80%,rgba(255,255,255,0.03)_0%,transparent_60%)]" />
+      {/* Background image */}
+      <div
+        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+        style={{ backgroundImage: "url('/hero-bg.jpg')" }}
+      />
 
-      {/* Bottom content — fills the lower portion */}
+      {/* Gradient layers — exact Folioblox style */}
+      {/* 1. Overall dark veil so image reads as cinematic */}
+      <div className="absolute inset-0 bg-black/40" />
+      {/* 2. Strong bottom-to-top fade so text pops */}
+      <div
+        className="absolute inset-0"
+        style={{
+          background:
+            "linear-gradient(to top, rgba(0,0,0,0.97) 0%, rgba(0,0,0,0.82) 25%, rgba(0,0,0,0.45) 55%, rgba(0,0,0,0.10) 80%, transparent 100%)",
+        }}
+      />
+      {/* 3. Left-side vignette */}
+      <div
+        className="absolute inset-0"
+        style={{
+          background:
+            "linear-gradient(to right, rgba(0,0,0,0.55) 0%, transparent 55%)",
+        }}
+      />
+
+      {/* Content — pushed to the bottom */}
       <div className="relative z-10 mt-auto px-6 md:px-10 pb-0">
 
-        {/* Main text row — left heading + right tagline */}
+        {/* Main text row */}
         <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-6 mb-10">
 
           {/* Left — large heading */}
@@ -32,7 +54,7 @@ export function Hero() {
               className="flex items-center gap-2 mb-4"
             >
               <span className="w-1.5 h-1.5 rounded-full bg-green-400 animate-pulse" />
-              <span className="text-[11px] font-inter font-semibold uppercase tracking-[0.2em] text-muted-foreground">
+              <span className="text-[11px] font-inter font-semibold uppercase tracking-[0.2em] text-white/60">
                 Next-Gen AI Agency
               </span>
             </motion.div>
@@ -41,34 +63,34 @@ export function Hero() {
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.7, delay: 0.1 }}
-              className="font-grotesk font-bold text-[60px] leading-[1.0] tracking-[-0.02em] text-foreground"
+              className="font-grotesk font-bold text-[60px] leading-[1.0] tracking-[-0.02em] text-white"
             >
               We Build<br />
-              <span className="text-foreground/40">With AI.</span>
+              <span className="text-white/35">With AI.</span>
             </motion.h1>
           </div>
 
-          {/* Right — tagline + description + CTA */}
+          {/* Right — tagline + CTA */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.25 }}
             className="lg:max-w-sm pb-1"
           >
-            <p className="font-grotesk font-semibold text-[22px] leading-[1.25] tracking-tight text-foreground mb-3">
+            <p className="font-grotesk font-semibold text-[22px] leading-[1.25] tracking-tight text-white mb-3">
               Great AI should scale your business invisibly.
             </p>
-            <p className="font-inter text-[15px] leading-relaxed text-muted-foreground mb-6">
+            <p className="font-inter text-[15px] leading-relaxed text-white/55 mb-6">
               VIPER builds automation, AI-powered websites, apps & video that work around the clock — so you don't have to.
             </p>
-            <div className="flex items-center gap-3">
+            <div className="flex items-center gap-4">
               <Link href="/contact">
-                <span className="inline-flex items-center gap-2 bg-foreground text-background font-inter font-semibold text-[13px] rounded-full px-6 py-2.5 hover:bg-foreground/90 transition-colors cursor-pointer">
+                <span className="inline-flex items-center gap-2 bg-white text-black font-inter font-semibold text-[13px] rounded-full px-6 py-2.5 hover:bg-white/90 transition-colors cursor-pointer">
                   Start Your Project <ArrowRight size={14} />
                 </span>
               </Link>
               <Link href="/work">
-                <span className="inline-flex items-center gap-2 font-inter font-medium text-[13px] text-muted-foreground hover:text-foreground transition-colors cursor-pointer">
+                <span className="inline-flex items-center gap-2 font-inter font-medium text-[13px] text-white/60 hover:text-white transition-colors cursor-pointer">
                   See Work <ArrowRight size={13} />
                 </span>
               </Link>
@@ -82,15 +104,15 @@ export function Hero() {
           initial={{ opacity: 0, y: 16 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.45 }}
-          className="border-t border-border/40 grid grid-cols-2 md:grid-cols-4"
+          className="border-t border-white/15 grid grid-cols-2 md:grid-cols-4"
         >
           {services.map((s, i) => (
             <div
               key={s.num}
-              className={`py-5 px-4 flex flex-col gap-1 ${i < 3 ? "md:border-r border-border/40" : ""}`}
+              className={`py-5 px-4 flex flex-col gap-1 ${i < 3 ? "md:border-r border-white/15" : ""}`}
             >
               <span className="font-inter font-semibold text-[11px] uppercase tracking-[0.2em] text-green-400">{s.num}</span>
-              <span className="font-grotesk font-medium text-[14px] text-foreground/80">{s.label}</span>
+              <span className="font-grotesk font-medium text-[14px] text-white/75">{s.label}</span>
             </div>
           ))}
         </motion.div>

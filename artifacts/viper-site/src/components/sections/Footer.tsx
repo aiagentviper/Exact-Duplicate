@@ -1,5 +1,5 @@
 import { Link } from "wouter";
-import { Mail, MapPin } from "lucide-react";
+import { Mail, Phone } from "lucide-react";
 
 const footerLinks = [
   { label: "About", href: "/about" },
@@ -34,12 +34,15 @@ export function Footer() {
           <div>
             <h4 className="font-inter font-semibold text-[11px] uppercase tracking-[0.2em] text-muted-foreground mb-5">Contact</h4>
             <div className="space-y-3">
-              <a href="mailto:hello@viperaiagency.com" className="flex items-center gap-2 font-inter text-[14px] text-muted-foreground hover:text-foreground transition-colors">
-                <Mail size={14} />hello@viperaiagency.com
+              <a href="mailto:jimohmalik101@gmail.com" className="flex items-center gap-2 font-inter text-[14px] text-muted-foreground hover:text-foreground transition-colors">
+                <Mail size={14} />jimohmalik101@gmail.com
               </a>
-              <div className="flex items-center gap-2 font-inter text-[14px] text-muted-foreground">
-                <MapPin size={14} />Remote-First. Worldwide.
-              </div>
+              <a href="tel:+2348107311900" className="flex items-center gap-2 font-inter text-[14px] text-muted-foreground hover:text-foreground transition-colors">
+                <Phone size={14} />+234 810 731 1900
+              </a>
+              <a href="https://calendly.com/malik-designs" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 mt-2 font-inter font-semibold text-[12px] bg-foreground text-background rounded-full px-4 py-2 hover:bg-foreground/90 transition-colors">
+                Book a Free Call →
+              </a>
             </div>
           </div>
         </div>

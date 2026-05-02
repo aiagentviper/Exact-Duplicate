@@ -82,7 +82,7 @@ export function AboutPage() {
                           Available for Projects
                         </span>
                       </div>
-                      <p className="font-grotesk font-semibold text-[18px] text-foreground">hello@viperaiagency.com</p>
+                      <p className="font-grotesk font-semibold text-[18px] text-foreground">jimohmalik101@gmail.com</p>
                     </div>
                   </div>
                 </div>
