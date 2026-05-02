@@ -15,7 +15,7 @@ export function Hero() {
 
       {/* Background image — fills entire hero, no clip */}
       <img
-        src="/hero-bg.jpg"
+        src="/hero-bg.png"
         alt=""
         aria-hidden="true"
         className="absolute inset-0 w-full h-full object-cover object-top"
