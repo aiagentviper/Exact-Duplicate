@@ -13,48 +13,50 @@ export function Hero() {
   return (
     <section className="relative w-full h-screen min-h-[600px] overflow-hidden flex flex-col">
 
-      {/* Background image */}
-      <div
-        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-        style={{ backgroundImage: "url('/hero-bg.jpg')" }}
+      {/* Background image — fills entire hero, no clip */}
+      <img
+        src="/hero-bg.jpg"
+        alt=""
+        aria-hidden="true"
+        className="absolute inset-0 w-full h-full object-cover object-top"
       />
 
-      {/* Gradient layers — exact Folioblox style */}
-      {/* 1. Overall dark veil so image reads as cinematic */}
-      <div className="absolute inset-0 bg-black/40" />
-      {/* 2. Strong bottom-to-top fade so text pops */}
+      {/* Folioblox gradient — minimal overall veil, heavy bottom fade only */}
+      {/* 1. Very light overall darkening — let the photo breathe */}
+      <div className="absolute inset-0 bg-black/20" />
+      {/* 2. Strong bottom-to-transparent fade — text area goes near-black */}
       <div
         className="absolute inset-0"
         style={{
           background:
-            "linear-gradient(to top, rgba(0,0,0,0.97) 0%, rgba(0,0,0,0.82) 25%, rgba(0,0,0,0.45) 55%, rgba(0,0,0,0.10) 80%, transparent 100%)",
+            "linear-gradient(to top, rgba(0,0,0,0.96) 0%, rgba(0,0,0,0.80) 20%, rgba(0,0,0,0.40) 45%, rgba(0,0,0,0.08) 70%, transparent 100%)",
         }}
       />
-      {/* 3. Left-side vignette */}
+      {/* 3. Left vignette — keeps left text readable without hiding the man */}
       <div
         className="absolute inset-0"
         style={{
           background:
-            "linear-gradient(to right, rgba(0,0,0,0.55) 0%, transparent 55%)",
+            "linear-gradient(to right, rgba(0,0,0,0.45) 0%, rgba(0,0,0,0.15) 35%, transparent 60%)",
         }}
       />
 
-      {/* Content — pushed to the bottom */}
-      <div className="relative z-10 mt-auto px-6 md:px-10 pb-0">
+      {/* Content — anchored to bottom, exactly like Folioblox */}
+      <div className="relative z-10 mt-auto px-6 md:px-12 pb-0">
 
         {/* Main text row */}
         <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-6 mb-10">
 
-          {/* Left — large heading */}
+          {/* Left — label + large heading */}
           <div>
             <motion.div
               initial={{ opacity: 0, y: 10 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5 }}
-              className="flex items-center gap-2 mb-4"
+              className="flex items-center gap-2 mb-3"
             >
               <span className="w-1.5 h-1.5 rounded-full bg-green-400 animate-pulse" />
-              <span className="text-[11px] font-inter font-semibold uppercase tracking-[0.2em] text-white/60">
+              <span className="text-[11px] font-inter font-semibold uppercase tracking-[0.22em] text-white/70">
                 Next-Gen AI Agency
               </span>
             </motion.div>
@@ -63,19 +65,20 @@ export function Hero() {
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.7, delay: 0.1 }}
-              className="font-grotesk font-bold text-[60px] leading-[1.0] tracking-[-0.02em] text-white"
+              className="font-grotesk font-bold leading-[0.95] tracking-[-0.02em] text-white"
+              style={{ fontSize: "clamp(3.2rem, 5.5vw, 5.5rem)" }}
             >
               We Build<br />
-              <span className="text-white/35">With AI.</span>
+              <span className="text-white/30">With AI.</span>
             </motion.h1>
           </div>
 
-          {/* Right — tagline + CTA */}
+          {/* Right — tagline + desc + CTA */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.25 }}
-            className="lg:max-w-sm pb-1"
+            className="lg:max-w-[360px] pb-1"
           >
             <p className="font-grotesk font-semibold text-[22px] leading-[1.25] tracking-tight text-white mb-3">
               Great AI should scale your business invisibly.
@@ -99,7 +102,7 @@ export function Hero() {
 
         </div>
 
-        {/* Bottom bar — numbered services */}
+        {/* Bottom numbered service tabs */}
         <motion.div
           initial={{ opacity: 0, y: 16 }}
           animate={{ opacity: 1, y: 0 }}
@@ -112,7 +115,7 @@ export function Hero() {
               className={`py-5 px-4 flex flex-col gap-1 ${i < 3 ? "md:border-r border-white/15" : ""}`}
             >
               <span className="font-inter font-semibold text-[11px] uppercase tracking-[0.2em] text-green-400">{s.num}</span>
-              <span className="font-grotesk font-medium text-[14px] text-white/75">{s.label}</span>
+              <span className="font-grotesk font-medium text-[14px] text-white/80">{s.label}</span>
             </div>
           ))}
         </motion.div>
