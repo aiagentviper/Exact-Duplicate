@@ -53,11 +53,11 @@ export function ContactPage() {
             transition={{ duration: 0.6 }}
             className="mb-16"
           >
-            <h1 className="font-display text-[clamp(2.8rem,6vw,6rem)] font-extrabold tracking-tight uppercase leading-[0.9] mb-6 max-w-3xl">
+            <h1 className="font-grotesk font-bold text-[60px] leading-[1.0] tracking-[-0.02em] mb-6 max-w-3xl">
               Let's Build Something<br />
-              <span className="text-muted-foreground/50">Intelligent.</span>
+              <span className="text-muted-foreground/40">Intelligent.</span>
             </h1>
-            <p className="text-lg text-muted-foreground max-w-xl">
+            <p className="font-inter text-[16px] text-muted-foreground max-w-xl leading-relaxed">
               Have a project in mind? Whether it's automation, an AI app, a website or a full AI strategy — we are ready to build.
             </p>
           </motion.div>

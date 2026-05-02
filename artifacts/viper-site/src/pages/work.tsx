@@ -106,12 +106,12 @@ export function WorkPage() {
       <main className="pt-24">
         <section className="py-20 container mx-auto px-6 text-center">
           <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }}>
-            <p className="text-xs uppercase tracking-widest text-muted-foreground mb-4 font-medium">Our Portfolio</p>
-            <h1 className="font-display text-[clamp(2.8rem,6vw,6rem)] font-extrabold tracking-tight uppercase leading-[0.9] mb-6">
+            <p className="font-inter font-semibold text-[11px] uppercase tracking-[0.2em] text-muted-foreground mb-4">Our Portfolio</p>
+            <h1 className="font-grotesk font-bold text-[60px] leading-[1.0] tracking-[-0.02em] mb-6">
               Real Projects.<br />
-              <span className="text-muted-foreground/50">Real Results.</span>
+              <span className="text-muted-foreground/40">Real Results.</span>
             </h1>
-            <p className="text-lg text-muted-foreground max-w-xl mx-auto">
+            <p className="font-inter text-[16px] text-muted-foreground max-w-xl mx-auto leading-relaxed">
               AI-powered websites, videos, automations & apps built for businesses across every industry.
             </p>
           </motion.div>

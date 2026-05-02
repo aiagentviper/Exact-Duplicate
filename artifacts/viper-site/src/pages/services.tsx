@@ -114,12 +114,12 @@ export function ServicesPage() {
       <main className="pt-24">
         <section className="py-20 container mx-auto px-6 text-center">
           <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }}>
-            <p className="text-xs uppercase tracking-widest text-muted-foreground mb-4 font-medium">What We Do</p>
-            <h1 className="font-display text-[clamp(2.8rem,6vw,6rem)] font-extrabold tracking-tight uppercase leading-[0.9] mb-6">
+            <p className="font-inter font-semibold text-[11px] uppercase tracking-[0.2em] text-muted-foreground mb-4">What We Do</p>
+            <h1 className="font-grotesk font-bold text-[60px] leading-[1.0] tracking-[-0.02em] mb-6">
               AI Services That<br />
-              <span className="text-muted-foreground/50">Actually Move The Needle.</span>
+              <span className="text-muted-foreground/40">Actually Move The Needle.</span>
             </h1>
-            <p className="text-lg text-muted-foreground max-w-xl mx-auto">
+            <p className="font-inter text-[16px] text-muted-foreground max-w-xl mx-auto leading-relaxed">
               From automation to full product builds — we handle everything with AI at the core.
             </p>
           </motion.div>
@@ -143,10 +143,10 @@ export function ServicesPage() {
                   </div>
                   <span className="text-sm font-medium text-muted-foreground">{service.title}</span>
                 </div>
-                <h2 className="text-3xl md:text-4xl font-black tracking-tighter uppercase mb-4">
+                <h2 className="font-grotesk font-semibold text-[36px] leading-[1.1] tracking-tight mb-4">
                   {service.headline}
                 </h2>
-                <p className="text-base text-muted-foreground mb-8 leading-relaxed">
+                <p className="font-inter text-[15px] text-muted-foreground mb-8 leading-relaxed">
                   {service.desc}
                 </p>
                 <ul className="space-y-3 mb-8">

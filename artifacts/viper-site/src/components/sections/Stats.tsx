@@ -20,11 +20,9 @@ export function Stats() {
               transition={{ duration: 0.6, delay: i * 0.12 }}
               className={`py-12 px-8 flex flex-col justify-center ${i < 2 ? "md:border-r border-border/40" : ""} ${i > 0 ? "border-t md:border-t-0 border-border/40" : ""}`}
             >
-              <div className="font-display text-[clamp(4rem,9vw,7rem)] font-extrabold leading-none tracking-tight mb-3">
-                {stat.value}
-              </div>
-              <div className="text-base font-semibold mb-1 font-body">{stat.label}</div>
-              <div className="text-sm text-muted-foreground font-body">{stat.desc}</div>
+              <div className="font-grotesk font-bold text-[60px] leading-none tracking-tight mb-3">{stat.value}</div>
+              <div className="font-grotesk font-medium text-[20px] mb-1">{stat.label}</div>
+              <div className="font-inter text-[15px] text-muted-foreground">{stat.desc}</div>
             </motion.div>
           ))}
         </div>
