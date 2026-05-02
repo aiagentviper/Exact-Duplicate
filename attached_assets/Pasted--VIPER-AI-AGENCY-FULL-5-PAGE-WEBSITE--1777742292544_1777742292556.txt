@@ -1,0 +1,565 @@
+=====================================
+VIPER AI AGENCY — FULL 5-PAGE WEBSITE
+=====================================
+
+=====================================
+NAVIGATION (ALL PAGES)
+=====================================
+VIPER
+Home  |  Work  |  Services  |  Pricing  |  Blog  |  Contact
+                                        [ Get a Free Audit → ]
+
+=====================================
+FOOTER (ALL PAGES)
+=====================================
+VIPER AI Agency
+We don't just use AI. We weaponize it for your growth.
+
+Work  |  Services  |  Pricing  |  Blog  |  Contact
+
+Email:     hello@viperaiagency.com
+Location:  Remote-First. Worldwide.
+
+© 2025 VIPER AI Agency. All rights reserved.
+
+=====================================
+PAGE 1 — HOME (/)
+=====================================
+
+--- HERO ---
+Label:        Next-Generation AI Agency
+
+Headline:     We Build With AI.
+              You Scale With Results.
+
+Sub-headline: VIPER is a next-generation AI agency specializing in
+              automation, AI-powered websites, apps, vibe coding &
+              AI video production. We don't just follow the future
+              — we ship it.
+
+CTA Buttons:
+[ Start Your AI Project → ]     [ See Our Work ]
+
+Trust Bar:
+✦ Trusted by forward-thinking brands & founders worldwide ✦
+
+--- FEATURED WORK PREVIEW ---
+Section Label:   Featured Work ✦
+Section Heading: AI-Powered Projects Built For The Real World
+
+Card 1:
+Screenshot → hairandskinclinic.co.uk
+Title: Hair & Skin Clinic
+Tag: AI Website | Beauty & Aesthetics
+[ View Project → ]
+
+Card 2:
+Screenshot → ohpolly.com
+Title: Oh Polly
+Tag: AI Website | Fashion E-Commerce
+[ View Project → ]
+
+Card 3:
+Screenshot → millioniarstraining.framer.website
+Title: Millionair Training
+Tag: AI Website | Business Coaching
+[ View Project → ]
+
+CTA: [ View All Projects → ] → links to /work
+
+--- SERVICES SNAPSHOT ---
+Section Label:   What We Do
+Section Heading: Full-Spectrum AI Solutions
+Sub-text:        For brands, startups & founders ready to
+                 operate at machine speed.
+
+01  AI Automation            →
+02  AI Website Design & Dev  →
+03  AI App Development       →
+04  Vibe Coding              →
+05  AI Video Production      →
+06  AI Strategy & Consulting →
+
+CTA: [ Explore All Services → ] → links to /services
+
+--- STATS BAR ---
+50+        Projects Shipped
+10x        Average Client ROI
+100%       Built With AI Tools
+24hr       Average MVP Turnaround
+
+--- TESTIMONIALS ---
+Section Heading: Trusted By Founders & Brands.
+
+"VIPER automated our entire onboarding flow in under a week.
+What used to take hours now runs on autopilot."
+— Jordan Miles, CEO at LaunchLab
+
+"They built our AI-powered website in days. It converts
+better than anything we've had before."
+— Priya Nair, Co-Founder, Stackly
+
+"The AI video content drove a 3x increase in engagement
+in the first two weeks alone."
+— Derek Owens, Head of Marketing, BrandWave
+
+--- CTA BANNER ---
+Headline:  The Future Runs on AI. So Should Your Business.
+Sub-text:  Let's automate, build & scale together.
+Button:    [ Start Your AI Project → ] → links to /contact
+
+=====================================
+PAGE 2 — WORK (/work)
+=====================================
+
+--- PAGE HERO ---
+Label:     Our Portfolio
+Headline:  Real Projects.
+           Real Results.
+Sub-text:  AI-powered websites, videos, automations & apps
+           built for businesses across every industry.
+
+--- FILTER TABS ---
+[ All ]  [ AI Website ]  [ AI Video ]  [ AI Automation ]  [ AI App ]  [ Vibe Coding ]
+
+--- AI WEBSITE PROJECTS ---
+
+01
+Screenshot → www.hairandskinclinic.co.uk
+Title:       Hair & Skin Clinic
+Tag:         AI Website | Beauty & Aesthetics
+Description: AI-built website for a Birmingham-based aesthetics
+             & skin clinic offering facials, Botox, fillers &
+             hair treatments.
+Link:        [ Visit Live Site → ] www.hairandskinclinic.co.uk
+
+02
+Screenshot → asunosalon.co.uk
+Title:       Asuno Salon
+Tag:         AI Website | Hair & Wellness
+Description: Elegant AI-designed salon site for a Japanese
+             head spa & hairdressing studio with online
+             booking integration.
+Link:        [ Visit Live Site → ] asunosalon.co.uk
+
+03
+Screenshot → www.ohpolly.com
+Title:       Oh Polly
+Tag:         AI Website | Fashion E-Commerce
+Description: AI-enhanced storefront for one of the UK's
+             fastest-growing global womenswear brands.
+Link:        [ Visit Live Site → ] www.ohpolly.com
+
+04
+Screenshot → www.showpo.com
+Title:       Showpo
+Tag:         AI Website | Fashion E-Commerce
+Description: AI-powered fashion e-commerce site for an
+             Australian womenswear brand with global reach.
+Link:        [ Visit Live Site → ] www.showpo.com
+
+05
+Screenshot → juicycouture.com
+Title:       Juicy Couture
+Tag:         AI Website | Lifestyle & Fashion
+Description: AI-driven redesign for the iconic Y2K fashion
+             & lifestyle brand.
+Link:        [ Visit Live Site → ] juicycouture.com
+
+06
+Screenshot → andfold.framer.website
+Title:       Andfold
+Tag:         AI Website | Creative / Portfolio
+Description: Sleek Framer-built AI website for a modern
+             creative brand.
+Link:        [ Visit Live Site → ] andfold.framer.website
+
+07
+Screenshot → www.tamaragiger.com
+Title:       Tamara Giger
+Tag:         AI Website | Personal Brand / Coaching
+Description: AI-crafted personal brand site for a
+             high-performance coach & speaker.
+Link:        [ Visit Live Site → ] www.tamaragiger.com
+
+08
+Screenshot → millioniarstraining.framer.website
+Title:       Millionair Training
+Tag:         AI Website | Business Coaching
+Description: AI website for a wealth & mindset coaching
+             brand built on Framer.
+Link:        [ Visit Live Site → ] millioniarstraining.framer.website
+
+09
+Screenshot → tyrgraham.com
+Title:       Tyrone Graham
+Tag:         AI Website | Personal Brand
+Description: AI-built personal brand platform for a
+             creator & entrepreneur.
+Link:        [ Visit Live Site → ] tyrgraham.com
+
+10
+Screenshot → join.buildingupsteam.org
+Title:       Building Up Steam
+Tag:         AI Website | Community / Training
+Description: AI-designed membership & community
+             onboarding site for a training platform.
+Link:        [ Visit Live Site → ] join.buildingupsteam.org
+
+11
+Screenshot → hollitabren.com
+Title:       Hollit Abren
+Tag:         AI Website | Personal Brand
+Description: Modern AI website for a personal brand in
+             the coaching & lifestyle space.
+Link:        [ Visit Live Site → ] hollitabren.com
+
+12
+Screenshot → sorhayazamor.com
+Title:       Sorhaya Zamor
+Tag:         AI Website | Personal Brand / Creative
+Description: AI-built brand website for a creative
+             entrepreneur & content creator.
+Link:        [ Visit Live Site → ] sorhayazamor.com
+
+--- AI VIDEO PROJECTS ---
+Section Heading: AI Video Productions
+
+[ Video Thumbnail 1 ]   [ Video Thumbnail 2 ]   [ Video Thumbnail 3 ]
+Coming Soon...          Coming Soon...           Coming Soon...
+
+Note: Videos to be added when footage is submitted.
+
+--- BOTTOM CTA ---
+Headline:  Ready to be our next project?
+Button:    [ Start Your AI Project → ] → links to /contact
+
+=====================================
+PAGE 3 — SERVICES (/services)
+=====================================
+
+--- PAGE HERO ---
+Label:     What We Do
+Headline:  AI Services That
+           Actually Move The Needle.
+Sub-text:  From automation to full product builds —
+           we handle everything with AI at the core.
+
+--- SERVICE 01 ---
+Icon: ⚡
+Title: AI Automation
+Headline: Stop Doing It Manually. Let AI Run It.
+Description:
+We build intelligent automation systems that handle your
+repetitive tasks, workflows, CRM updates, email sequences,
+lead nurturing & more — 24/7 without human input.
+
+What's Included:
+✓ Workflow automation (Zapier, Make, n8n)
+✓ AI agent setup & management
+✓ CRM & sales pipeline automation
+✓ Email & outreach automation
+✓ Custom AI triggers & logic flows
+
+[ Get This Service → ] → links to /contact
+
+--- SERVICE 02 ---
+Icon: 🌐
+Title: AI Website Design & Development
+Headline: Websites Built Smarter. Launched Faster.
+Description:
+We design and build high-converting AI-powered websites
+for brands, coaches, e-commerce stores & startups —
+using Framer, Webflow & custom builds.
+
+What's Included:
+✓ AI-generated design concepts
+✓ Framer / Webflow / custom dev
+✓ SEO optimized structure
+✓ Mobile-first responsive design
+✓ CMS & blog integration
+✓ Booking & lead capture forms
+
+[ Get This Service → ] → links to /contact
+
+--- SERVICE 03 ---
+Icon: 📱
+Title: AI App Development
+Headline: Your App Idea. Built With AI. Shipped Fast.
+Description:
+We build functional web & mobile apps powered by AI —
+from MVPs to full product launches. No bloated teams,
+no months of waiting.
+
+What's Included:
+✓ AI-powered MVP builds
+✓ Web app & mobile app development
+✓ AI feature integration (chatbots, recommendations)
+✓ Backend & database setup
+✓ User authentication & dashboards
+
+[ Get This Service → ] → links to /contact
+
+--- SERVICE 04 ---
+Icon: 💻
+Title: Vibe Coding
+Headline: Prompt It. Build It. Ship It.
+Description:
+We use the latest AI coding tools — Cursor, Replit,
+Bolt, v0 & more — to build real software products
+at unprecedented speed. No traditional dev cycles needed.
+
+What's Included:
+✓ AI-assisted full-stack development
+✓ Rapid prototyping & MVP builds
+✓ Cursor / Bolt / v0 / Replit builds
+✓ SaaS product development
+✓ API integrations & custom logic
+
+[ Get This Service → ] → links to /contact
+
+--- SERVICE 05 ---
+Icon: 🎬
+Title: AI Video Production
+Headline: Professional Video Content. Powered by AI.
+Description:
+We produce high-quality AI-generated video content for
+brands, ads, social media & product promos — without
+the traditional video production costs or timelines.
+
+What's Included:
+✓ AI brand videos & promos
+✓ AI short-form social content
+✓ AI voiceover & script generation
+✓ Product demo videos
+✓ Faceless AI video content
+✓ Batch content production
+
+[ Get This Service → ] → links to /contact
+
+--- SERVICE 06 ---
+Icon: 🧠
+Title: AI Strategy & Consulting
+Headline: Not Sure Where to Start With AI? We'll Map It Out.
+Description:
+We audit your business, identify the highest-leverage
+AI opportunities, and build you a clear roadmap to
+implement AI across your operations & marketing.
+
+What's Included:
+✓ Full AI business audit
+✓ Custom AI implementation roadmap
+✓ Tool & stack recommendations
+✓ Team training & onboarding
+✓ Ongoing advisory support
+
+[ Get This Service → ] → links to /contact
+
+--- STATS BAR ---
+50+   Projects Shipped
+10x   Client ROI
+6     Core AI Services
+24hr  Turnaround
+
+--- BOTTOM CTA ---
+Headline:  Not Sure Which Service You Need?
+Sub-text:  Book a free 30-minute AI audit call.
+           We'll tell you exactly what will move the
+           needle for your business.
+Button:    [ Book Free Audit → ] → links to /contact
+
+=====================================
+PAGE 4 — PRICING (/pricing)
+=====================================
+
+--- PAGE HERO ---
+Label:     Transparent Pricing
+Headline:  Feasible Plans For
+           Every Stage of Growth.
+Sub-text:  No hidden fees. No bloated retainers.
+           Just AI-powered results at honest prices.
+
+--- PLAN 1 — STARTER ---
+Price: $799 / project
+Best for: New businesses & solo founders
+getting their first AI presence live.
+
+✓ 1 AI Automation Workflow
+✓ AI Landing Page (1 page)
+✓ Basic AI Chatbot Setup
+✓ Mobile Responsive Design
+✓ 1 Revision Round
+✓ Delivered in 5 Business Days
+
+[ Get Started → ] → links to /contact
+
+--- PLAN 2 — GROWTH (MOST POPULAR) ---
+Price: $1,999 / project
+Best for: Growing brands & founders ready
+to go full AI across web, app & content.
+
+✓ Up to 5 AI Automation Workflows
+✓ Full AI Website (up to 5 pages)
+✓ AI App MVP (Vibe Coded)
+✓ AI Video (1 Short-Form Ad)
+✓ 3 Revision Rounds
+✓ Source Files Included
+✓ Delivered in 10 Business Days
+
+[ Get Started → ] → links to /contact
+
+--- PLAN 3 — ENTERPRISE ---
+Price: $4,999 / project
+Best for: Established businesses wanting
+complete AI infrastructure & ongoing support.
+
+✓ Unlimited AI Automation Workflows
+✓ Complete AI Website + App Build
+✓ AI Video Production Suite
+✓ AI Strategy & Roadmap Session
+✓ Unlimited Revisions
+✓ Priority Support
+✓ Dedicated Slack Channel
+✓ Monthly Performance Review
+
+[ Get Started → ] → links to /contact
+
+--- FAQ ---
+Section Heading: Got Questions? We've Got Answers.
+
+Q: How long does a project take?
+A: Starter projects take 3–5 days. Growth projects
+   take 7–10 days. Enterprise timelines are scoped
+   per project.
+
+Q: Do you offer payment plans?
+A: Yes. We offer 50% upfront and 50% on delivery
+   for all plans. Enterprise clients can arrange
+   custom payment schedules.
+
+Q: What AI tools do you use?
+A: We use the best tools for each job — including
+   Cursor, Framer, Webflow, Make, Zapier, n8n, Bolt,
+   v0, Replit, ElevenLabs, Runway, Sora & more.
+
+Q: Can I upgrade my plan mid-project?
+A: Absolutely. We'll simply adjust the scope and
+   invoice the difference.
+
+Q: Do you offer ongoing maintenance?
+A: Yes — we offer monthly retainer packages for
+   clients who need ongoing updates, content or
+   automation management.
+
+--- BOTTOM CTA ---
+Headline:  Need a Custom Quote?
+Sub-text:  Every business is different. Let's talk
+           about what you actually need.
+Button:    [ Contact Us → ] → links to /contact
+
+=====================================
+PAGE 5 — BLOG & CONTACT (/blog + /contact)
+=====================================
+
+--- BLOG HERO ---
+Label:     VIPER Insights
+Headline:  AI Knowledge.
+           Zero Fluff.
+Sub-text:  Strategies, breakdowns & insights on AI
+           automation, web, apps, video & vibe coding.
+
+--- BLOG ARTICLES ---
+
+Article 1:
+Tag:     AI Automation
+Date:    May 10, 2025
+Title:   How AI Agents Are Replacing Entire
+         Business Departments
+Excerpt: The shift is already happening.
+         Here's how smart founders are staying
+         10 steps ahead of the curve.
+[ Read Article → ]
+
+Article 2:
+Tag:     Vibe Coding
+Date:    Apr 22, 2025
+Title:   What Is Vibe Coding — And Why It's
+         Changing How We Build Software
+Excerpt: You don't need to be a developer
+         anymore. You just need to know how
+         to prompt the right way.
+[ Read Article → ]
+
+Article 3:
+Tag:     AI Video
+Date:    Mar 30, 2025
+Title:   How We Produced 30 Videos in One
+         Day Using AI Tools
+Excerpt: A full breakdown of our exact AI
+         video production stack, workflow
+         & tools we use every day.
+[ Read Article → ]
+
+Article 4:
+Tag:     AI Website
+Date:    Mar 10, 2025
+Title:   Why Every Business Needs an
+         AI-Powered Website in 2025
+Excerpt: Static websites are dead. Here's
+         what an AI-first website looks like
+         and why it converts better.
+[ Read Article → ]
+
+Article 5:
+Tag:     AI Strategy
+Date:    Feb 18, 2025
+Title:   The 6 AI Tools We Use on Every
+         Single Project at VIPER
+Excerpt: Our go-to stack for automation,
+         web, apps, video & everything
+         in between.
+[ Read Article → ]
+
+--- CONTACT HERO ---
+Section Heading:  Let's Build Something Intelligent.
+Sub-text:         Have a project in mind? Whether it's
+                  automation, an AI app, a website or a
+                  full AI strategy — we are ready to build.
+
+--- CONTACT DETAILS ---
+Email:     hello@viperaiagency.com
+Location:  Remote-First. Worldwide.
+Status:    ✅ Currently Accepting Projects
+
+--- CONTACT FORM ---
+Name        →  [ Your Name ]
+Email       →  [ your@email.com ]
+Service     →  [ Dropdown ⬇ ]
+               • AI Automation
+               • AI Website
+               • AI App Development
+               • Vibe Coding
+               • AI Video Production
+               • AI Strategy & Consulting
+               • Not Sure — Need Advice
+Budget      →  [ Dropdown ⬇ ]
+               • Under $1,000
+               • $1,000 – $2,500
+               • $2,500 – $5,000
+               • $5,000+
+Message     →  [ Tell us about your project... ]
+
+Button: [ Send Message → ]
+
+=====================================
+FULL SITE MAP
+=====================================
+Page 1 → Home        /
+Page 2 → Work        /work
+Page 3 → Services    /services
+Page 4 → Pricing     /pricing
+Page 5 → Blog        /blog
+         Contact     /contact
+=====================================
+END OF VIPER AI AGENCY WEBSITE CONTENT
+=====================================
