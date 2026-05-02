@@ -1,33 +1,48 @@
 import { motion } from "framer-motion";
 import { Link } from "wouter";
-import { Button } from "@/components/ui/button";
+
+const gridImages = [
+  "/portfolio/crypto-dashboard.jpg",
+  "/portfolio/watch-website.jpg",
+  "/portfolio/car-rental-site.jpg",
+  "/portfolio/automation-flow.jpg",
+  "/portfolio/mobile-app.jpg",
+  "/portfolio/ecommerce-store.jpg",
+];
 
 export function CtaBand() {
   return (
-    <section className="py-32 bg-black border-y border-white/5 relative overflow-hidden">
-      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(255,255,255,0.04)_0%,transparent_70%)]" />
-      <div className="container mx-auto px-6 relative z-10 text-center">
+    <section className="relative bg-foreground overflow-hidden">
+      {/* Masonry image grid background */}
+      <div className="grid grid-cols-6 h-[420px] md:h-[520px] opacity-30">
+        {gridImages.map((img, i) => (
+          <div key={i} className="overflow-hidden">
+            <img
+              src={img}
+              alt=""
+              className="w-full h-full object-cover"
+              style={{ imageRendering: "auto" }}
+            />
+          </div>
+        ))}
+      </div>
+
+      {/* Overlay content */}
+      <div className="absolute inset-0 flex flex-col items-center justify-center px-6 text-center bg-black/60">
         <motion.div
-          initial={{ opacity: 0, scale: 0.95 }}
-          whileInView={{ opacity: 1, scale: 1 }}
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
+          transition={{ duration: 0.7 }}
         >
-          <h2 className="text-5xl md:text-7xl font-black tracking-tighter uppercase mb-6 text-white leading-[0.95]">
-            The Future Runs on AI.<br />
-            <span className="text-white/50">So Should Your Business.</span>
+          <p className="text-xs uppercase tracking-[0.3em] text-white/50 font-body mb-4">Our Portfolio</p>
+          <h2 className="font-display text-[clamp(3rem,8vw,7.5rem)] font-extrabold uppercase leading-[0.88] tracking-tight text-white mb-8">
+            Every Pixel<br />Clicked.
           </h2>
-          <p className="text-xl text-white/50 max-w-xl mx-auto mb-10 font-light">
-            Let's automate, build & scale together.
-          </p>
-          <Link href="/contact">
-            <Button
-              size="lg"
-              className="rounded-full px-10 py-6 text-base bg-white text-black hover:bg-white/90"
-              data-testid="cta-band-button"
-            >
-              Start Your AI Project →
-            </Button>
+          <Link href="/work">
+            <span className="inline-flex items-center gap-2 text-sm font-semibold bg-white text-black rounded-full px-8 py-3.5 hover:bg-white/90 transition-colors cursor-pointer font-body">
+              View Full Portfolio →
+            </span>
           </Link>
         </motion.div>
       </div>

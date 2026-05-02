@@ -53,7 +53,7 @@ export function ContactPage() {
             transition={{ duration: 0.6 }}
             className="mb-16"
           >
-            <h1 className="text-5xl md:text-7xl font-black tracking-tighter uppercase mb-6 max-w-3xl">
+            <h1 className="font-display text-[clamp(2.8rem,6vw,6rem)] font-extrabold tracking-tight uppercase leading-[0.9] mb-6 max-w-3xl">
               Let's Build Something<br />
               <span className="text-muted-foreground/50">Intelligent.</span>
             </h1>

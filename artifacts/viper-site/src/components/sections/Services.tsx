@@ -1,70 +1,100 @@
 import { motion } from "framer-motion";
 import { Link } from "wouter";
-import { Button } from "@/components/ui/button";
+import { ArrowRight } from "lucide-react";
 
 const services = [
-  { num: "01", title: "AI Automation" },
-  { num: "02", title: "AI Website Design & Dev" },
-  { num: "03", title: "AI App Development" },
-  { num: "04", title: "Vibe Coding" },
-  { num: "05", title: "AI Video Production" },
-  { num: "06", title: "AI Strategy & Consulting" },
+  { num: "01", title: "AI Automation", desc: "End-to-end workflow automation that saves your team hundreds of hours." },
+  { num: "02", title: "AI Website Design & Dev", desc: "Conversion-optimised, AI-built websites that work 24/7 for your brand." },
+  { num: "03", title: "AI App Development", desc: "Custom AI-powered apps from MVP to production-ready in record time." },
+  { num: "04", title: "Vibe Coding", desc: "Ship polished, functional interfaces fast with AI-assisted coding." },
+  { num: "05", title: "AI Video Production", desc: "Cinematic AI-generated videos for ads, content & brand storytelling." },
+  { num: "06", title: "AI Strategy & Consulting", desc: "A clear AI roadmap tailored to your business goals and growth stage." },
 ];
 
 export function Services() {
   return (
-    <section className="py-32 container mx-auto px-6 border-t border-border/50">
-      <motion.div
-        initial={{ opacity: 0, y: 30 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true }}
-        transition={{ duration: 0.6 }}
-        className="mb-16 grid lg:grid-cols-2 gap-8 items-end"
-      >
-        <div>
-          <p className="text-xs uppercase tracking-widest text-muted-foreground mb-3 font-medium">What We Do</p>
-          <h2 className="text-4xl md:text-5xl font-black tracking-tighter uppercase">
-            Full-Spectrum<br />AI Solutions
-          </h2>
-        </div>
-        <div>
-          <p className="text-lg text-muted-foreground max-w-md">
-            For brands, startups & founders ready to operate at machine speed.
-          </p>
-        </div>
-      </motion.div>
+    <section className="py-28 border-t border-border/40">
+      <div className="container mx-auto px-6">
+        <div className="grid lg:grid-cols-2 gap-16 items-start">
 
-      <div className="mb-12">
-        {services.map((service, i) => (
-          <motion.div
-            key={service.num}
-            initial={{ opacity: 0, x: -20 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5, delay: i * 0.08 }}
-            className="group flex items-center justify-between py-7 border-b border-border/50 cursor-pointer hover:border-foreground/30 transition-colors"
-          >
-            <div className="flex items-baseline gap-6">
-              <span className="text-xs font-mono text-muted-foreground group-hover:text-foreground/60 transition-colors">{service.num}</span>
-              <h3 className="text-2xl md:text-3xl font-medium tracking-tight group-hover:translate-x-2 transition-transform duration-300">{service.title}</h3>
+          {/* Left — service list */}
+          <div>
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6 }}
+              className="mb-12"
+            >
+              <p className="text-xs uppercase tracking-[0.25em] text-muted-foreground font-body mb-3">What We Do</p>
+              <h2 className="font-display text-[clamp(2.5rem,5vw,4.5rem)] font-extrabold leading-[0.9] tracking-tight uppercase">
+                Pro<br />Services!
+              </h2>
+            </motion.div>
+
+            <div>
+              {services.map((s, i) => (
+                <motion.div
+                  key={s.num}
+                  initial={{ opacity: 0, x: -20 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.5, delay: i * 0.07 }}
+                  className="group flex items-start gap-5 py-5 border-b border-border/40 cursor-pointer hover:border-foreground/30 transition-colors"
+                >
+                  <span className="text-xs font-mono text-muted-foreground/60 pt-1.5 min-w-[28px] font-body">{s.num}</span>
+                  <div className="flex-1">
+                    <h3 className="text-xl font-bold tracking-tight mb-1 font-display group-hover:text-foreground transition-colors">{s.title}</h3>
+                    <p className="text-sm text-muted-foreground leading-relaxed font-body max-w-sm">{s.desc}</p>
+                  </div>
+                  <ArrowRight size={16} className="mt-1.5 text-muted-foreground/40 group-hover:text-foreground group-hover:translate-x-1 transition-all" />
+                </motion.div>
+              ))}
             </div>
-            <span className="text-muted-foreground group-hover:text-foreground transition-colors group-hover:translate-x-1 transform duration-300">&rarr;</span>
-          </motion.div>
-        ))}
-      </div>
 
-      <motion.div
-        initial={{ opacity: 0 }}
-        whileInView={{ opacity: 1 }}
-        viewport={{ once: true }}
-        transition={{ duration: 0.5, delay: 0.3 }}
-      >
-        <Link href="/services">
-          <Button variant="outline" size="lg" className="rounded-full px-8 border-foreground/20 hover:border-foreground/60">
-            Explore All Services →
-          </Button>
-        </Link>
-      </motion.div>
+            <motion.div
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: 0.4 }}
+              className="mt-8"
+            >
+              <Link href="/services">
+                <span className="inline-flex items-center gap-2 text-sm font-semibold text-foreground border border-border/60 rounded-full px-6 py-2.5 hover:border-foreground/50 transition-colors cursor-pointer font-body">
+                  Explore All Services <ArrowRight size={14} />
+                </span>
+              </Link>
+            </motion.div>
+          </div>
+
+          {/* Right — large image */}
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8, delay: 0.15 }}
+            className="sticky top-28 self-start"
+          >
+            <div className="relative rounded-2xl overflow-hidden aspect-[4/5] bg-card border border-border/40">
+              <img
+                src="/portfolio/watch-website.jpg"
+                alt="AI Services"
+                className="w-full h-full object-cover"
+                style={{ imageRendering: "auto" }}
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
+              <div className="absolute bottom-6 left-6 right-6">
+                <div className="bg-card/80 backdrop-blur-md rounded-xl p-5 border border-border/50">
+                  <p className="text-xs text-muted-foreground uppercase tracking-widest mb-1 font-body">Result</p>
+                  <p className="text-2xl font-bold font-display">+340%</p>
+                  <p className="text-sm text-muted-foreground font-body">Revenue lift in 60 days</p>
+                </div>
+              </div>
+            </div>
+          </motion.div>
+
+        </div>
+      </div>
     </section>
   );
 }

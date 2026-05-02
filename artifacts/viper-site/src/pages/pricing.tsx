@@ -88,7 +88,7 @@ export function PricingPage() {
         <section className="py-20 container mx-auto px-6 text-center">
           <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }}>
             <p className="text-xs uppercase tracking-widest text-muted-foreground mb-4 font-medium">Transparent Pricing</p>
-            <h1 className="text-5xl md:text-7xl font-black tracking-tighter uppercase mb-6">
+            <h1 className="font-display text-[clamp(2.8rem,6vw,6rem)] font-extrabold tracking-tight uppercase leading-[0.9] mb-6">
               Feasible Plans For<br />
               <span className="text-muted-foreground/50">Every Stage of Growth.</span>
             </h1>

@@ -1,28 +1,30 @@
 import { motion } from "framer-motion";
 
 const stats = [
-  { value: "50+", label: "Projects Shipped" },
-  { value: "10x", label: "Average Client ROI" },
-  { value: "100%", label: "Built With AI Tools" },
-  { value: "24hr", label: "Average MVP Turnaround" },
+  { value: "50+", label: "Projects Shipped", desc: "Across 12 countries" },
+  { value: "10x", label: "Average Client ROI", desc: "Measured within 90 days" },
+  { value: "100%", label: "Built With AI Tools", desc: "Every project, every time" },
 ];
 
 export function Stats() {
   return (
-    <section className="py-24 bg-card/20 border-y border-border/50">
+    <section className="py-24 border-y border-border/40">
       <div className="container mx-auto px-6">
-        <div className="grid grid-cols-2 md:grid-cols-4 divide-x divide-y md:divide-y-0 divide-border/50">
+        <div className="grid grid-cols-1 md:grid-cols-3">
           {stats.map((stat, i) => (
             <motion.div
               key={stat.value}
-              initial={{ opacity: 0, y: 20 }}
+              initial={{ opacity: 0, y: 24 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: i * 0.1 }}
-              className="flex flex-col items-center justify-center py-12 px-6 text-center"
+              transition={{ duration: 0.6, delay: i * 0.12 }}
+              className={`py-12 px-8 flex flex-col justify-center ${i < 2 ? "md:border-r border-border/40" : ""} ${i > 0 ? "border-t md:border-t-0 border-border/40" : ""}`}
             >
-              <div className="text-5xl md:text-6xl font-black tracking-tighter mb-3">{stat.value}</div>
-              <div className="text-xs uppercase tracking-widest text-muted-foreground font-medium">{stat.label}</div>
+              <div className="font-display text-[clamp(4rem,9vw,7rem)] font-extrabold leading-none tracking-tight mb-3">
+                {stat.value}
+              </div>
+              <div className="text-base font-semibold mb-1 font-body">{stat.label}</div>
+              <div className="text-sm text-muted-foreground font-body">{stat.desc}</div>
             </motion.div>
           ))}
         </div>
