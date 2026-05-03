@@ -36,41 +36,44 @@ export function ProcessSection() {
     const section = sectionRef.current;
     if (!section) return;
 
-    const cards = cardsRef.current.filter(Boolean);
-    const CARD_COUNT = cards.length;
+    const cards = gsap.utils.toArray<HTMLElement>(".process-card");
 
     gsap.set(cards, { opacity: 0.2, y: 40 });
     gsap.set(cards[0], { opacity: 1, y: 0 });
 
-    const st = ScrollTrigger.create({
-      trigger: section,
-      start: "top top",
-      end: () => "+=" + (CARD_COUNT * window.innerHeight) + window.innerHeight,
-      pin: true,
-      scrub: 1,
-      anticipatePin: 1,
-      onUpdate(self) {
-        const progress = self.progress;
-        cards.forEach((card, i) => {
-          const cardProgress = Math.min(1, Math.max(0, (progress - (i / CARD_COUNT)) * CARD_COUNT));
-          gsap.to(card, {
-            opacity: 0.2 + (cardProgress * 0.8),
-            y: 40 - (cardProgress * 40),
-            duration: 0.25,
-            ease: "power2.out",
-            overwrite: "auto",
-          });
-        });
+    const tl = gsap.timeline({
+      scrollTrigger: {
+        trigger: ".process-section",
+        start: "top top",
+        end: "+=200%",
+        pin: true,
+        scrub: 0.5,
+        anticipatePin: 1,
       },
     });
 
+    cards.forEach((card, i) => {
+      if (i === 0) return;
+      tl.fromTo(
+        card,
+        { opacity: 0.2, y: 40 },
+        { opacity: 1, y: 0, duration: 1 },
+        i * 1,
+      );
+    });
+
     return () => {
-      st.kill();
+      tl.scrollTrigger?.kill();
+      tl.kill();
     };
   }, []);
 
   return (
-    <section ref={sectionRef} className="w-full border-t border-border/40 bg-[#0a0a0a] overflow-hidden" style={{ height: "100vh" }}>
+    <section
+      ref={sectionRef}
+      className="process-section w-full border-t border-border/40 bg-[#0a0a0a] overflow-visible"
+      style={{ height: "100vh", willChange: "transform" }}
+    >
       <div className="flex h-full w-full">
         <div className="w-[45%] shrink-0 overflow-hidden">
           <img src={processPhoto} alt="Design process" className="block h-full w-full object-cover object-center grayscale contrast-[1.12] brightness-[0.82]" />
