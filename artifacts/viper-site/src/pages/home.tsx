@@ -3,10 +3,9 @@ import { Hero } from "@/components/sections/Hero";
 import { Portfolio } from "@/components/sections/Portfolio";
 import { Services } from "@/components/sections/Services";
 import { Testimonials } from "@/components/sections/Testimonials";
-import { CtaBand } from "@/components/sections/CtaBand";
 import { Footer } from "@/components/sections/Footer";
 import { motion } from "framer-motion";
-import { ArrowRight, Sparkles, Bot, Globe2, Video, Wrench, Brain } from "lucide-react";
+import { ArrowRight, Sparkles, Bot, Globe2, Video, Wrench, Brain, Check } from "lucide-react";
 import { Link } from "wouter";
 import { useState } from "react";
 
@@ -22,6 +21,8 @@ const faqs = [
   { q: "What is your pricing structure?", a: "We offer project-based, subscription, and retainer pricing — designed to suit startups through to scale-ups. See our Pricing page for full details." },
   { q: "Can you redesign my existing website?", a: "Yes. We regularly rebuild and upgrade existing sites — migrating to faster, smarter stacks with AI features baked in from day one." },
 ];
+
+const tags = ["Product Design", "Branding", "Web Design", "AI Systems", "Content", "Strategy"];
 
 const featureCards = [
   { icon: Sparkles, title: "NEW Brand Systems", text: "Launch sharper visual systems with modern direction, fast iterations, and premium polish." },
@@ -82,11 +83,42 @@ export function HomePage() {
         {/* ── Everything below Hero: strict 1100px wrapper ── */}
         <Portfolio />
 
+        <section className="w-full border-t border-white/10 bg-black py-32">
+          <div className="mx-auto w-full max-w-[1200px] px-6">
+            <div className="grid gap-12 lg:grid-cols-2 lg:items-center">
+              <div>
+                <p className="mb-3 font-inter text-[11px] font-semibold uppercase tracking-[0.22em] text-orange-500">Meet Jimoh</p>
+                <h2 className="mb-5 font-grotesk text-[52px] font-semibold leading-[1.0] tracking-tight">Meet Jimoh.</h2>
+                <p className="max-w-[520px] font-inter text-[15px] leading-relaxed text-white/65">
+                  Jimoh is the founder behind VIPER — building sharp digital products, branding systems, and AI workflows for teams that want fast, premium results.
+                </p>
+                <p className="mt-4 max-w-[520px] font-inter text-[15px] leading-relaxed text-white/65">
+                  He blends design, strategy, and execution so every build feels clear, useful, and ready to ship.
+                </p>
+                <div className="mt-8 flex flex-wrap gap-3">
+                  {tags.map((tag) => (
+                    <span key={tag} className="rounded-full border border-orange-500/40 px-4 py-2 font-inter text-[12px] text-white/75">
+                      {tag}
+                    </span>
+                  ))}
+                </div>
+              </div>
+              <div className="overflow-hidden rounded-3xl">
+                <img
+                  src="/photo-services.jpg"
+                  alt="Jimoh"
+                  className="aspect-[4/5] h-full w-full object-cover object-center grayscale contrast-[1.1] brightness-[0.84]"
+                />
+              </div>
+            </div>
+          </div>
+        </section>
+
         {/* ── Journey / Process ── */}
         <section className="w-full border-t border-border/40 bg-black py-32">
           <div className="mx-auto w-full max-w-[1100px] px-6">
             <div className="mb-16 text-center">
-              <p className="mb-3 font-inter text-[11px] font-semibold uppercase tracking-[0.22em] text-sky-400">How It Works</p>
+              <p className="mb-3 font-inter text-[11px] font-semibold uppercase tracking-[0.22em] text-orange-500">How It Works</p>
               <h2 className="font-grotesk text-[52px] font-semibold leading-[1.0] tracking-tight">
                 We Simplify The Journey.
               </h2>
@@ -111,7 +143,7 @@ export function HomePage() {
                     Tell us exactly what you want to build — your goals, your audience, and the outcome you're after. We listen first, then map the clearest path to impact.
                   </p>
                   <Link href="/contact">
-                    <span className="inline-flex cursor-pointer items-center gap-2 rounded-full bg-sky-500 px-6 py-3 font-inter text-[13px] font-semibold text-white transition-colors hover:bg-sky-400">
+                    <span className="inline-flex cursor-pointer items-center gap-2 rounded-full bg-orange-500 px-6 py-3 font-inter text-[13px] font-semibold text-white transition-colors hover:bg-orange-400">
                       Book an Appointment →
                     </span>
                   </Link>
@@ -141,7 +173,7 @@ export function HomePage() {
                   />
                 </div>
                 <div>
-                  <span className="mb-5 inline-block rounded-full border border-sky-500/40 bg-sky-500/10 px-4 py-1.5 font-inter text-[11px] font-semibold uppercase tracking-[0.2em] text-sky-400">
+                  <span className="mb-5 inline-block rounded-full border border-orange-500/40 bg-orange-500/10 px-4 py-1.5 font-inter text-[11px] font-semibold uppercase tracking-[0.2em] text-orange-500">
                     Step 2
                   </span>
                   <h3 className="mb-4 font-grotesk text-[36px] font-semibold leading-[1.1] tracking-tight">Submit Your Request</h3>
@@ -149,7 +181,7 @@ export function HomePage() {
                     Access our private client portal to drop in your brief. We refine the scope, confirm deliverables, and get to work — typically within 48 hours of sign-off.
                   </p>
                   <Link href="/contact">
-                    <span className="inline-flex cursor-pointer items-center gap-2 rounded-full bg-sky-500 px-6 py-3 font-inter text-[13px] font-semibold text-white transition-colors hover:bg-sky-400">
+                    <span className="inline-flex cursor-pointer items-center gap-2 rounded-full bg-orange-500 px-6 py-3 font-inter text-[13px] font-semibold text-white transition-colors hover:bg-orange-400">
                       Book an Appointment →
                     </span>
                   </Link>
@@ -165,7 +197,7 @@ export function HomePage() {
                 className="grid items-center gap-12 lg:grid-cols-2"
               >
                 <div>
-                  <span className="mb-5 inline-block rounded-full border border-sky-500/40 bg-sky-500/10 px-4 py-1.5 font-inter text-[11px] font-semibold uppercase tracking-[0.2em] text-sky-400">
+                  <span className="mb-5 inline-block rounded-full border border-orange-500/40 bg-orange-500/10 px-4 py-1.5 font-inter text-[11px] font-semibold uppercase tracking-[0.2em] text-orange-500">
                     Step 3
                   </span>
                   <h3 className="mb-4 font-grotesk text-[36px] font-semibold leading-[1.1] tracking-tight">Project Delivered</h3>
@@ -173,7 +205,7 @@ export function HomePage() {
                     We build fast using the best AI tools available, iterate with your feedback in real time, and ship the final product — on time, on budget, and beyond expectations.
                   </p>
                   <Link href="/contact">
-                    <span className="inline-flex cursor-pointer items-center gap-2 rounded-full bg-sky-500 px-6 py-3 font-inter text-[13px] font-semibold text-white transition-colors hover:bg-sky-400">
+                    <span className="inline-flex cursor-pointer items-center gap-2 rounded-full bg-orange-500 px-6 py-3 font-inter text-[13px] font-semibold text-white transition-colors hover:bg-orange-400">
                       Book an Appointment →
                     </span>
                   </Link>
@@ -198,7 +230,7 @@ export function HomePage() {
         <section className="w-full border-t border-border/40 bg-black py-32">
           <div className="mx-auto w-full max-w-[1200px] px-6">
             <div className="mb-12">
-              <p className="mb-3 font-inter text-[11px] font-semibold uppercase tracking-[0.22em] text-sky-400">Unlimited Design Features</p>
+              <p className="mb-3 font-inter text-[11px] font-semibold uppercase tracking-[0.22em] text-orange-500">Unlimited Design Features</p>
               <h2 className="font-grotesk text-[52px] font-semibold leading-[1.0] tracking-tight">Built for speed. Designed to convert.</h2>
             </div>
             <div className="grid grid-cols-1 gap-4 md:grid-cols-2 xl:grid-cols-3">
@@ -211,13 +243,13 @@ export function HomePage() {
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
                     transition={{ duration: 0.5, delay: i * 0.05 }}
-                    className="rounded-2xl border border-sky-500/35 bg-zinc-950/80 p-6"
+                    className="rounded-2xl border border-orange-500/35 bg-zinc-950/80 p-6"
                   >
                     <div className="mb-5 flex items-center justify-between">
-                      <div className="flex h-11 w-11 items-center justify-center rounded-full border border-sky-500/30 bg-sky-500/10 text-sky-400">
+                      <div className="flex h-11 w-11 items-center justify-center rounded-full border border-orange-500/30 bg-orange-500/10 text-orange-500">
                         <Icon size={18} />
                       </div>
-                      <span className="rounded-full border border-sky-500/30 bg-sky-500/10 px-3 py-1 font-inter text-[10px] font-semibold uppercase tracking-[0.18em] text-sky-400">
+                      <span className="rounded-full border border-orange-500/30 bg-orange-500/10 px-3 py-1 font-inter text-[10px] font-semibold uppercase tracking-[0.18em] text-orange-500">
                         NEW
                       </span>
                     </div>
@@ -234,7 +266,7 @@ export function HomePage() {
         <section className="w-full border-t border-border/40 bg-black py-32">
           <div className="mx-auto w-full max-w-[1200px] px-6">
             <div className="mb-12">
-              <p className="mb-3 font-inter text-[11px] font-semibold uppercase tracking-[0.22em] text-sky-400">Pricing</p>
+              <p className="mb-3 font-inter text-[11px] font-semibold uppercase tracking-[0.22em] text-orange-500">Pricing</p>
               <h2 className="font-grotesk text-[52px] font-semibold leading-[1.0] tracking-tight">Simple plans. Serious output.</h2>
             </div>
             <div className="grid gap-5 lg:grid-cols-2">
@@ -245,15 +277,15 @@ export function HomePage() {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.5, delay: i * 0.08 }}
-                  className={`rounded-3xl border p-8 ${plan.highlighted ? "border-sky-400/60 bg-sky-500/10 shadow-[0_0_80px_rgba(59,130,246,0.18)]" : "border-sky-500/25 bg-zinc-950/80"}`}
+                  className={`rounded-3xl border p-8 ${plan.highlighted ? "border-orange-500/60 bg-orange-500/10 shadow-[0_0_80px_rgba(255,77,0,0.18)]" : "border-orange-500/25 bg-zinc-950/80"}`}
                 >
                   <div className="mb-8 flex items-end justify-between gap-6 border-b border-white/10 pb-8">
                     <div>
-                      <p className="mb-3 font-inter text-[11px] font-semibold uppercase tracking-[0.22em] text-sky-400">{plan.name}</p>
+                      <p className="mb-3 font-inter text-[11px] font-semibold uppercase tracking-[0.22em] text-orange-500">{plan.name}</p>
                       <h3 className="font-grotesk text-[54px] font-bold leading-none tracking-tight text-white">{plan.price}</h3>
                     </div>
                     {plan.highlighted && (
-                      <span className="rounded-full border border-sky-400/40 bg-sky-400/10 px-3 py-1 font-inter text-[10px] font-semibold uppercase tracking-[0.18em] text-sky-300">
+                      <span className="rounded-full border border-orange-500/40 bg-orange-500/10 px-3 py-1 font-inter text-[10px] font-semibold uppercase tracking-[0.18em] text-orange-300">
                         Most Popular
                       </span>
                     )}
@@ -261,15 +293,15 @@ export function HomePage() {
                   <ul className="mb-8 space-y-3">
                     {plan.features.map((feature) => (
                       <li key={feature} className="flex items-start gap-3 font-inter text-[14px] text-white/75">
-                        <span className="mt-1 inline-flex h-4 w-4 flex-shrink-0 items-center justify-center rounded-full border border-sky-400/50 text-[10px] text-sky-400">
-                          ✓
+                        <span className="mt-1 inline-flex h-4 w-4 flex-shrink-0 items-center justify-center rounded-full border border-orange-500/50 text-[10px] text-orange-500">
+                          <Check size={10} />
                         </span>
                         {feature}
                       </li>
                     ))}
                   </ul>
                   <Link href="/contact">
-                    <span className="inline-flex w-full cursor-pointer items-center justify-center rounded-full bg-sky-500 px-6 py-3.5 font-inter text-[13px] font-semibold text-white transition-colors hover:bg-sky-400">
+                    <span className="inline-flex w-full cursor-pointer items-center justify-center rounded-full bg-orange-500 px-6 py-3.5 font-inter text-[13px] font-semibold text-white transition-colors hover:bg-orange-400">
                       Book a Call
                     </span>
                   </Link>
@@ -347,7 +379,20 @@ export function HomePage() {
           </div>
         </section>
 
-        <CtaBand />
+        <section className="w-full border-t border-white/10 bg-black py-32 text-center">
+          <div className="mx-auto w-full max-w-[1200px] px-6">
+            <h2 className="font-grotesk text-[clamp(3rem,8vw,7rem)] font-black leading-[0.95] tracking-[-0.04em] text-white">
+              LET&apos;S BUILD SOMETHING REAL
+            </h2>
+            <div className="mt-10 flex justify-center">
+              <Link href="/contact">
+                <span className="inline-flex cursor-pointer items-center gap-2 rounded-full bg-white px-8 py-3.5 font-inter text-[13px] font-semibold text-black transition-colors hover:bg-white/90">
+                  Book a Free Call <ArrowRight size={14} className="text-orange-500" />
+                </span>
+              </Link>
+            </div>
+          </div>
+        </section>
       </main>
       <Footer />
     </div>

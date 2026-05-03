@@ -1,0 +1,46 @@
+"Act as a Senior UI/UX Frontend Engineer. Recreate this landing page with 100% precision. Use HTML and Tailwind CSS.
+
+STRICT DESIGN RULES:
+
+Background: MUST be pure black (#000000).
+Accent Color: MUST be Vivid Orange (#FF4D00). Change all blue elements to this orange.
+Container Width: Wrap all content in a max-w-[1200px] mx-auto px-6 to ensure it is not too wide.
+Image Handling: All images must have object-cover and a fixed aspect ratio (e.g., aspect-[4/5]) so they are never 'too big' or 'rubbish'.
+BUILD THESE SECTIONS IN THIS EXACT ORDER:
+
+1. Hero Section (Viper Red Style):
+
+Full-screen portrait background of a man with dramatic red/orange lighting.
+Navbar: Logo 'Viper' on left, 'Home, About, Services, Pricing' on right.
+Text: Bottom-left massive heading 'We Build With AI.'.
+Orange numbers (#01, #02...) in a grid at the very bottom of the hero.
+2. Meet Jimoh Section (Replacing Meet Meily):
+
+Split 50/50 layout.
+Left side: Heading 'Meet Jimoh'. Short bio text. Below that, a group of pill-shaped tags (Product Design, Branding, etc.) with orange borders.
+Right side: A large, vertically-oriented grayscale image of a man (Jimoh) with rounded corners.
+3. The Journey (Staggered Portfolio Layout):
+
+Heading: 'We Simplify The Journey'.
+Layout Secret: Create a container with flex flex-row gap-6. Inside, create three separate vertical columns (w-1/3).
+The Stagger: The Middle Column MUST have translate-y-[-100px].
+Image Sizing: Every image in these columns MUST be grayscale and have aspect-[3/4].
+Buttons: Every image card must have a glassmorphism button ('View Case Study') at the bottom with a white border.
+4. Pricing Section:
+
+Heading: 'Simple plans. Serious output.'
+Create two large cards side-by-side.
+Colors: Black background, white text, Orange buttons.
+List features with orange checkmarks. Use a 'Most Popular' orange badge on the second card.
+5. FAQ Section:
+
+Heading 'Answers' on the left with a small grayscale image below it.
+Vertical Accordion list on the right with '+' icons and thin gray dividers.
+6. The Ending (Let's Build Something Real):
+
+IMPORTANT: Use a PLAIN BLACK BACKGROUND (bg-black). Remove all background images or overlays here.
+Text: Massive, centered bold white text: 'LET'S BUILD SOMETHING REAL'.
+Button: A single centered 'Book a Free Call' button in the Viper style (white pill, orange arrow icon).
+7. Footer:
+
+Simple black background. 4 columns for 'Navigate', 'Contact', and 'Socials'. Small white text."
