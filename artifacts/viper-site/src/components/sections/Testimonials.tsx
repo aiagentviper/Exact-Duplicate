@@ -26,22 +26,24 @@ const testimonials = [
 
 export function Testimonials() {
   return (
-    <section className="py-28 border-t border-border/40">
+    <section className="py-28 border-t border-border/40 overflow-hidden">
       <div className="container mx-auto px-6">
         <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }} className="mb-14">
           <p className="font-inter font-semibold text-[11px] uppercase tracking-[0.2em] text-muted-foreground mb-3">What Clients Say</p>
           <h2 className="font-grotesk font-semibold text-[42px] leading-[1.05] tracking-tight">Trusted By<br />Experts.</h2>
         </motion.div>
+      </div>
 
-        <div className="grid md:grid-cols-3 gap-6">
-          {testimonials.map((t, i) => (
+      <div className="relative overflow-hidden">
+        <div className="flex w-max gap-6 animate-[marquee_30s_linear_infinite] px-6">
+          {[...testimonials, ...testimonials].map((t, i) => (
             <motion.div
-              key={t.id}
+              key={`${t.id}-${i}`}
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: i * 0.1 }}
-              className="bg-card border border-border/40 rounded-[18px] p-8 flex flex-col justify-between hover:border-border/70 transition-colors"
+              transition={{ duration: 0.5, delay: (i % 3) * 0.08 }}
+              className="w-[320px] md:w-[360px] bg-card border border-border/40 rounded-[18px] p-8 flex flex-col justify-between hover:border-border/70 transition-colors"
             >
               <div>
                 <span className="inline-block font-inter font-semibold text-[11px] uppercase tracking-[0.2em] text-muted-foreground border border-border/60 rounded-full px-3 py-1 mb-6">{t.tag}</span>
