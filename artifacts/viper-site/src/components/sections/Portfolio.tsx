@@ -2,70 +2,61 @@ import { motion } from "framer-motion";
 import { Link } from "wouter";
 import { ArrowRight } from "lucide-react";
 
-const featured = [
-  { id: 1, title: "CryptoTrack Dashboard", tag: "AI App · Fintech", image: "/portfolio/crypto-dashboard.jpg", size: "tall" },
-  { id: 2, title: "Watch Pro E-Commerce", tag: "AI Website · Luxury", image: "/portfolio/watch-website.jpg", size: "wide" },
-  { id: 3, title: "Premium Car Rental", tag: "AI Website · Automotive", image: "/portfolio/car-rental-site.jpg", size: "normal" },
-  { id: 4, title: "Automation Flow System", tag: "AI Automation · SaaS", image: "/portfolio/automation-flow.jpg", size: "normal" },
+const items = [
+  { title: "CryptoTrack Dashboard", tag: "AI App · Fintech", image: "/portfolio/crypto-dashboard.jpg" },
+  { title: "Watch Pro E-Commerce", tag: "AI Website · Luxury", image: "/portfolio/watch-website.jpg" },
+  { title: "Omega Agency Site", tag: "AI Website · Agency", image: "/portfolio/omega-website.jpg" },
+  { title: "Automation Flow System", tag: "AI Automation · SaaS", image: "/portfolio/automation-flow.jpg" },
+  { title: "AI Agent Flow", tag: "AI Agents · Workflow", image: "/portfolio/ai-agent-flow.jpg" },
 ];
-
-function Card({ project, className }: { project: typeof featured[0]; className?: string }) {
-  return (
-    <motion.div
-      initial={{ opacity: 0, y: 30 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true }}
-      transition={{ duration: 0.6 }}
-      className={`group relative overflow-hidden rounded-[18px] bg-card border border-border/40 cursor-pointer ${className}`}
-    >
-      <img src={project.image} alt={project.title} className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
-      <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-400 flex flex-col justify-end p-6">
-        <p className="font-inter font-semibold text-[11px] uppercase tracking-[0.2em] text-white/60 mb-1.5">{project.tag}</p>
-        <div className="flex items-center justify-between">
-          <h3 className="font-grotesk font-semibold text-[18px] text-white">{project.title}</h3>
-          <div className="w-7 h-7 rounded-full border border-white/40 flex items-center justify-center flex-shrink-0">
-            <ArrowRight size={13} className="text-white" />
-          </div>
-        </div>
-      </div>
-    </motion.div>
-  );
-}
 
 export function Portfolio() {
   return (
-    <section className="py-28 border-t border-border/40">
-      <div className="container mx-auto px-6 mb-10">
-        <div className="flex items-end justify-between">
-          <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>
-            <p className="font-inter font-semibold text-[11px] uppercase tracking-[0.2em] text-muted-foreground mb-3">Our Work ✦</p>
-            <h2 className="font-grotesk font-semibold text-[42px] leading-[1.05] tracking-tight">Featured<br />Portfolio!</h2>
-          </motion.div>
-          <motion.div initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} viewport={{ once: true }} transition={{ duration: 0.5, delay: 0.2 }}>
-            <Link href="/work">
-              <span className="flex items-center gap-2 font-inter text-[13px] text-muted-foreground hover:text-foreground transition-colors cursor-pointer group">
-                View All <ArrowRight size={13} className="group-hover:translate-x-1 transition-transform" />
-              </span>
-            </Link>
-          </motion.div>
-        </div>
+    <section className="border-t border-border/40 w-full">
+      {/* Strip header */}
+      <div className="flex items-center justify-between px-10 lg:px-14 py-4 border-b border-border/40">
+        <motion.p
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5 }}
+          className="font-inter text-[12px] text-muted-foreground flex items-center gap-2"
+        >
+          <span className="text-green-400 text-[8px]">●</span> Recent Works
+        </motion.p>
+        <Link href="/work">
+          <span className="flex items-center gap-1.5 font-inter text-[12px] text-muted-foreground hover:text-foreground transition-colors cursor-pointer group">
+            View All <ArrowRight size={12} className="group-hover:translate-x-0.5 transition-transform" />
+          </span>
+        </Link>
       </div>
 
-      <div className="container mx-auto px-6">
-        <div className="grid grid-cols-12 gap-4" style={{ gridAutoRows: "80px" }}>
-          <div className="col-span-12 md:col-span-5" style={{ gridRow: "span 7" }}>
-            <Card project={featured[0]} className="w-full h-full" />
-          </div>
-          <div className="col-span-12 md:col-span-7" style={{ gridRow: "span 4" }}>
-            <Card project={featured[1]} className="w-full h-full" />
-          </div>
-          <div className="col-span-12 md:col-span-4" style={{ gridRow: "span 3" }}>
-            <Card project={featured[2]} className="w-full h-full" />
-          </div>
-          <div className="col-span-12 md:col-span-3" style={{ gridRow: "span 3" }}>
-            <Card project={featured[3]} className="w-full h-full" />
-          </div>
-        </div>
+      {/* Full-width 5-col thumbnail strip */}
+      <div className="grid grid-cols-5 w-full">
+        {items.map((item, i) => (
+          <motion.div
+            key={item.title}
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, delay: i * 0.07 }}
+            className={`group relative overflow-hidden cursor-pointer ${i < items.length - 1 ? "border-r border-border/40" : ""}`}
+          >
+            <div className="relative aspect-[4/3] w-full overflow-hidden">
+              <img
+                src={item.image}
+                alt={item.title}
+                className="w-full h-full object-cover object-center transition-transform duration-700 group-hover:scale-105"
+              />
+              <div className="absolute inset-0 bg-black/0 group-hover:bg-black/30 transition-colors duration-300" />
+            </div>
+            {/* Caption */}
+            <div className="px-4 py-3 border-t border-border/40">
+              <p className="font-inter text-[10px] text-muted-foreground/60 uppercase tracking-[0.15em] mb-0.5">{item.tag}</p>
+              <p className="font-grotesk font-semibold text-[13px] leading-snug text-foreground">{item.title}</p>
+            </div>
+          </motion.div>
+        ))}
       </div>
     </section>
   );

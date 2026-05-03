@@ -6,8 +6,8 @@ const gridImages = [
   "/portfolio/watch-website.jpg",
   "/portfolio/car-rental-site.jpg",
   "/portfolio/automation-flow.jpg",
-  "/portfolio/mobile-app.jpg",
-  "/portfolio/ecommerce-store.jpg",
+  "/portfolio/ai-agent-flow.jpg",
+  "/portfolio/smart-home-site.jpg",
 ];
 
 export function CtaBand() {

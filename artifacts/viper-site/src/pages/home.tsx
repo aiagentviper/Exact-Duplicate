@@ -102,7 +102,7 @@ export function HomePage() {
             </motion.div>
 
             {/* RIGHT: content */}
-            <div className="py-20 px-10 lg:px-14 flex flex-col justify-center">
+            <div className="py-16 px-10 lg:px-14 flex flex-col justify-center">
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
