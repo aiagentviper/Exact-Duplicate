@@ -45,9 +45,7 @@ export function Services() {
 
   return (
     <section className="border-t border-border/40">
-      {/* Top split: LEFT content, RIGHT image */}
       <div className="grid lg:grid-cols-2 min-h-[500px]">
-        {/* Left */}
         <div className="py-20 px-10 lg:px-14 border-r border-border/40 flex flex-col justify-between">
           <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>
             <p className="font-inter font-semibold text-[11px] uppercase tracking-[0.2em] text-muted-foreground mb-3">Design services</p>
@@ -77,7 +75,6 @@ export function Services() {
           </motion.div>
         </div>
 
-        {/* Right — image */}
         <motion.div
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
@@ -85,12 +82,11 @@ export function Services() {
           transition={{ duration: 0.8 }}
           className="relative overflow-hidden min-h-[300px]"
         >
-          <img src="/portfolio/watch-website.jpg" alt="Services" className="w-full h-full object-cover" />
+          <img src="@assets/Screenshot_2026-05-03_074126_1777791116828.png" alt="Services" className="w-full h-full object-cover" />
           <div className="absolute inset-0 bg-black/10" />
         </motion.div>
       </div>
 
-      {/* Service cards 2×2 grid */}
       <div className="grid grid-cols-2 border-t border-border/40">
         {serviceCards.map((card, i) => (
           <motion.div
@@ -110,13 +106,10 @@ export function Services() {
         ))}
       </div>
 
-      {/* Scrolling ticker rows */}
       <div className="border-t border-border/40 py-5 overflow-hidden space-y-3">
         <div className="relative">
-          <div className="absolute left-0 top-0 bottom-0 w-20 z-10 pointer-events-none"
-            style={{ background: "linear-gradient(to right, hsl(0 0% 4%), transparent)" }} />
-          <div className="absolute right-0 top-0 bottom-0 w-20 z-10 pointer-events-none"
-            style={{ background: "linear-gradient(to left, hsl(0 0% 4%), transparent)" }} />
+          <div className="absolute left-0 top-0 bottom-0 w-20 z-10 pointer-events-none" style={{ background: "linear-gradient(to right, hsl(0 0% 4%), transparent)" }} />
+          <div className="absolute right-0 top-0 bottom-0 w-20 z-10 pointer-events-none" style={{ background: "linear-gradient(to left, hsl(0 0% 4%), transparent)" }} />
           <div className="flex gap-3 w-max" style={{ animation: "marquee 25s linear infinite" }}>
             {doubled1.map((item, i) => (
               <span key={i} className="font-inter font-medium text-[12px] whitespace-nowrap border border-border/50 rounded-full px-4 py-2 text-muted-foreground">
@@ -126,10 +119,8 @@ export function Services() {
           </div>
         </div>
         <div className="relative">
-          <div className="absolute left-0 top-0 bottom-0 w-20 z-10 pointer-events-none"
-            style={{ background: "linear-gradient(to right, hsl(0 0% 4%), transparent)" }} />
-          <div className="absolute right-0 top-0 bottom-0 w-20 z-10 pointer-events-none"
-            style={{ background: "linear-gradient(to left, hsl(0 0% 4%), transparent)" }} />
+          <div className="absolute left-0 top-0 bottom-0 w-20 z-10 pointer-events-none" style={{ background: "linear-gradient(to right, hsl(0 0% 4%), transparent)" }} />
+          <div className="absolute right-0 top-0 bottom-0 w-20 z-10 pointer-events-none" style={{ background: "linear-gradient(to left, hsl(0 0% 4%), transparent)" }} />
           <div className="flex gap-3 w-max" style={{ animation: "marquee-reverse 28s linear infinite" }}>
             {doubled2.map((item, i) => (
               <span key={i} className="font-inter font-medium text-[12px] whitespace-nowrap border border-border/50 rounded-full px-4 py-2 text-muted-foreground">

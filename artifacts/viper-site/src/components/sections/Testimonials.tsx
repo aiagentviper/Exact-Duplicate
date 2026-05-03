@@ -69,19 +69,16 @@ export function Testimonials() {
 
   return (
     <section className="border-t border-border/40 overflow-hidden">
-      {/* Top banner — reference layout: LEFT image, RIGHT heading + desc + CTAs */}
       <div className="grid lg:grid-cols-2 min-h-[360px]">
-        {/* Left — dark editorial photo */}
         <div className="relative overflow-hidden min-h-[260px]">
           <img
-            src="/portfolio/make-automation.jpg"
+            src="@assets/Screenshot_2026-05-03_073800_1777791116835.png"
             alt="Client Reviews"
             className="w-full h-full object-cover"
           />
           <div className="absolute inset-0 bg-black/40" />
         </div>
 
-        {/* Right — heading + desc + CTAs */}
         <div className="py-16 px-10 lg:px-14 flex flex-col justify-center">
           <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>
             <p className="font-inter font-semibold text-[11px] uppercase tracking-[0.2em] text-muted-foreground mb-3">Reviews</p>
@@ -105,12 +102,9 @@ export function Testimonials() {
         </div>
       </div>
 
-      {/* Scrolling testimonial cards */}
       <div className="py-12 relative">
-        <div className="absolute left-0 top-0 bottom-0 w-24 z-10 pointer-events-none"
-          style={{ background: "linear-gradient(to right, hsl(0 0% 4%), transparent)" }} />
-        <div className="absolute right-0 top-0 bottom-0 w-24 z-10 pointer-events-none"
-          style={{ background: "linear-gradient(to left, hsl(0 0% 4%), transparent)" }} />
+        <div className="absolute left-0 top-0 bottom-0 w-24 z-10 pointer-events-none" style={{ background: "linear-gradient(to right, hsl(0 0% 4%), transparent)" }} />
+        <div className="absolute right-0 top-0 bottom-0 w-24 z-10 pointer-events-none" style={{ background: "linear-gradient(to left, hsl(0 0% 4%), transparent)" }} />
 
         <div className="flex gap-5 w-max px-6" style={{ animation: "marquee 40s linear infinite" }}>
           {doubled.map((t, i) => (
@@ -119,7 +113,6 @@ export function Testimonials() {
         </div>
       </div>
 
-      {/* Stats row */}
       <div className="border-t border-border/40">
         <div className="grid grid-cols-3">
           {[

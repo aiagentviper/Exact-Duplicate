@@ -73,25 +73,16 @@ export function HomePage() {
     <div className="bg-background min-h-screen text-foreground dark">
       <Navigation />
       <main>
-        {/* Hero — 20px top + bottom breathing room */}
-        <div className="pt-[20px] pb-[20px]">
+        <div className="pt-[30px] pb-[30px]">
           <Hero />
         </div>
 
-        {/* Featured Portfolio grid */}
         <Portfolio />
-
-        {/* Services + scrolling tickers */}
         <Services />
-
-        {/* Stats band */}
         <Stats />
 
-        {/* ── Process ── */}
-        {/* Reference: LEFT = image of person working, RIGHT = numbered steps */}
         <section className="border-t border-border/40">
           <div className="grid lg:grid-cols-2 min-h-[600px]">
-            {/* Left — sticky image panel */}
             <motion.div
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
@@ -100,14 +91,13 @@ export function HomePage() {
               className="relative overflow-hidden min-h-[400px] lg:min-h-auto"
             >
               <img
-                src="/portfolio/automation-flow.jpg"
+                src="@assets/Screenshot_2026-05-03_073740_1777791116828.png"
                 alt="Our Process"
                 className="w-full h-full object-cover"
               />
               <div className="absolute inset-0 bg-black/30" />
             </motion.div>
 
-            {/* Right — content */}
             <div className="py-20 px-10 lg:px-14 flex flex-col justify-center">
               <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>
                 <p className="font-inter font-semibold text-[11px] uppercase tracking-[0.2em] text-muted-foreground mb-3">Design process</p>
@@ -156,11 +146,8 @@ export function HomePage() {
           </div>
         </section>
 
-        {/* ── FAQ / Answers ── */}
-        {/* Reference: LEFT = label + heading + desc + image + pills + CTA, RIGHT = accordion */}
         <section className="border-t border-border/40">
           <div className="grid lg:grid-cols-2 min-h-[600px]">
-            {/* Left — content + image */}
             <div className="py-20 px-10 lg:px-14 flex flex-col justify-between border-r border-border/40">
               <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>
                 <p className="font-inter font-semibold text-[11px] uppercase tracking-[0.2em] text-muted-foreground mb-3">FAQs</p>
@@ -170,7 +157,6 @@ export function HomePage() {
                 </p>
               </motion.div>
 
-              {/* Image card */}
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -178,12 +164,12 @@ export function HomePage() {
                 transition={{ duration: 0.6, delay: 0.15 }}
                 className="my-8 rounded-2xl overflow-hidden aspect-[4/3] max-w-sm"
               >
-                <img src="/portfolio/ai-agent-flow.jpg" alt="AI Process" className="w-full h-full object-cover" />
+                <img src="@assets/Screenshot_2026-05-03_073837_1777791116834.png" alt="AI Process" className="w-full h-full object-cover" />
               </motion.div>
 
               <div>
                 <div className="flex flex-wrap gap-2 mb-6">
-                  {["AI Automation", "AI Websites", "AI Strategy"].map(tag => (
+                  {["Product Design", "Brand Identity Design", "Branding"].map(tag => (
                     <span key={tag} className="border border-border/60 rounded-full px-4 py-1.5 text-[12px] font-inter text-muted-foreground">
                       {tag}
                     </span>
@@ -197,7 +183,6 @@ export function HomePage() {
               </div>
             </div>
 
-            {/* Right — accordion */}
             <div className="py-20 px-10 lg:px-14">
               <motion.div initial={{ opacity: 0, x: 20 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>
                 <FAQAccordion items={faqs} />
@@ -206,9 +191,7 @@ export function HomePage() {
           </div>
         </section>
 
-        {/* Testimonials — scrolling marquee */}
         <Testimonials />
-
         <CtaBand />
       </main>
       <Footer />
