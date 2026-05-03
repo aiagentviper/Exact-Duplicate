@@ -36,9 +36,7 @@ export function Services() {
           <div>
             <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }} className="mb-12">
               <p className="font-inter font-semibold text-[11px] uppercase tracking-[0.2em] text-muted-foreground mb-3">What We Do</p>
-              <h2 className="font-grotesk font-semibold text-[42px] leading-[1.05] tracking-tight">
-                Pro<br />Services!
-              </h2>
+              <h2 className="font-grotesk font-semibold text-[42px] leading-[1.05] tracking-tight">Services</h2>
               <p className="font-inter text-[15px] text-muted-foreground mt-4 max-w-xs leading-relaxed">
                 Helping businesses stand out with AI-powered builds that captivate and convert effectively.
               </p>
@@ -98,14 +96,10 @@ export function Services() {
         </div>
       </div>
 
-      {/* Scrolling ticker rows */}
       <div className="mt-20 overflow-hidden space-y-3">
-        {/* Row 1 — left to right */}
         <div className="relative">
-          <div className="absolute left-0 top-0 bottom-0 w-20 z-10 pointer-events-none"
-            style={{ background: "linear-gradient(to right, hsl(0 0% 4%), transparent)" }} />
-          <div className="absolute right-0 top-0 bottom-0 w-20 z-10 pointer-events-none"
-            style={{ background: "linear-gradient(to left, hsl(0 0% 4%), transparent)" }} />
+          <div className="absolute left-0 top-0 bottom-0 w-20 z-10 pointer-events-none" style={{ background: "linear-gradient(to right, hsl(0 0% 4%), transparent)" }} />
+          <div className="absolute right-0 top-0 bottom-0 w-20 z-10 pointer-events-none" style={{ background: "linear-gradient(to left, hsl(0 0% 4%), transparent)" }} />
           <div className="flex gap-3 w-max" style={{ animation: "marquee 25s linear infinite" }}>
             {doubled1.map((item, i) => (
               <span key={i} className="font-inter font-medium text-[12px] whitespace-nowrap border border-border/50 rounded-full px-4 py-2 text-muted-foreground hover:text-foreground hover:border-foreground/30 transition-colors cursor-default">
@@ -114,12 +108,9 @@ export function Services() {
             ))}
           </div>
         </div>
-        {/* Row 2 — right to left */}
         <div className="relative">
-          <div className="absolute left-0 top-0 bottom-0 w-20 z-10 pointer-events-none"
-            style={{ background: "linear-gradient(to right, hsl(0 0% 4%), transparent)" }} />
-          <div className="absolute right-0 top-0 bottom-0 w-20 z-10 pointer-events-none"
-            style={{ background: "linear-gradient(to left, hsl(0 0% 4%), transparent)" }} />
+          <div className="absolute left-0 top-0 bottom-0 w-20 z-10 pointer-events-none" style={{ background: "linear-gradient(to right, hsl(0 0% 4%), transparent)" }} />
+          <div className="absolute right-0 top-0 bottom-0 w-20 z-10 pointer-events-none" style={{ background: "linear-gradient(to left, hsl(0 0% 4%), transparent)" }} />
           <div className="flex gap-3 w-max" style={{ animation: "marquee-reverse 28s linear infinite" }}>
             {doubled2.map((item, i) => (
               <span key={i} className="font-inter font-medium text-[12px] whitespace-nowrap border border-border/50 rounded-full px-4 py-2 text-muted-foreground hover:text-foreground hover:border-foreground/30 transition-colors cursor-default">

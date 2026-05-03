@@ -81,9 +81,8 @@ export function Testimonials() {
         <div className="flex items-end justify-between">
           <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>
             <p className="font-inter font-semibold text-[11px] uppercase tracking-[0.2em] text-muted-foreground mb-3">Client Reviews</p>
-            <h2 className="font-grotesk font-semibold text-[42px] leading-[1.05] tracking-tight">
-              Trusted By<br />Experts.
-            </h2>
+            <h2 className="font-grotesk font-semibold text-[42px] leading-[1.05] tracking-tight">Client Reviews</h2>
+            <p className="font-inter text-[15px] text-muted-foreground mt-4 max-w-md">Real feedback from clients who trusted my design expertise to elevate their brands successfully.</p>
           </motion.div>
           <Link href="/contact">
             <span className="font-inter font-semibold text-[13px] border border-border/60 rounded-full px-5 py-2.5 hover:border-foreground/50 transition-colors cursor-pointer flex items-center gap-2">
@@ -93,32 +92,23 @@ export function Testimonials() {
         </div>
       </div>
 
-      {/* Scrolling marquee row */}
       <div className="relative">
-        {/* Left fade */}
-        <div className="absolute left-0 top-0 bottom-0 w-24 z-10 pointer-events-none"
-          style={{ background: "linear-gradient(to right, hsl(0 0% 4%), transparent)" }} />
-        {/* Right fade */}
-        <div className="absolute right-0 top-0 bottom-0 w-24 z-10 pointer-events-none"
-          style={{ background: "linear-gradient(to left, hsl(0 0% 4%), transparent)" }} />
+        <div className="absolute left-0 top-0 bottom-0 w-24 z-10 pointer-events-none" style={{ background: "linear-gradient(to right, hsl(0 0% 4%), transparent)" }} />
+        <div className="absolute right-0 top-0 bottom-0 w-24 z-10 pointer-events-none" style={{ background: "linear-gradient(to left, hsl(0 0% 4%), transparent)" }} />
 
-        <div
-          className="flex gap-5 w-max"
-          style={{ animation: "marquee 40s linear infinite" }}
-        >
+        <div className="flex gap-5 w-max" style={{ animation: "marquee 40s linear infinite" }}>
           {doubled.map((t, i) => (
             <TestimonialCard key={`${t.id}-${i}`} t={t} />
           ))}
         </div>
       </div>
 
-      {/* Stats row below */}
       <div className="container mx-auto px-6 mt-16">
         <div className="grid grid-cols-3 border border-border/40 rounded-2xl overflow-hidden">
           {[
-            { val: "180+", label: "Projects completed" },
-            { val: "96%", label: "Client satisfaction rate" },
-            { val: "15+", label: "Years of experience" },
+            { val: "180+", label: "design projects completed." },
+            { val: "96%", label: "Client satisfaction rate." },
+            { val: "15+", label: "Years of experience." },
           ].map((s, i) => (
             <motion.div
               key={s.val}
