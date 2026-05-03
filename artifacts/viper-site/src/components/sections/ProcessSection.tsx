@@ -1,5 +1,6 @@
 import { Link } from "wouter";
 import { Lightbulb, ListChecks, Rocket } from "lucide-react";
+import processHero from "@assets/Screenshot_2026-05-03_110817_1777804010848.png";
 
 const steps = [
   {
@@ -49,6 +50,9 @@ export function ProcessSection() {
             <div className="mt-6 flex flex-wrap gap-3">
               <Link href="/contact"><span className="inline-flex cursor-pointer items-center gap-2 rounded-full bg-white px-5 py-2.5 font-inter text-[13px] font-semibold text-black transition-colors hover:bg-white/90">Book a Free Call</span></Link>
               <Link href="/work"><span className="inline-flex cursor-pointer items-center gap-2 rounded-full border border-white/20 px-5 py-2.5 font-inter text-[13px] font-semibold text-white/70 transition-colors hover:border-white/50 hover:text-white">See Projects</span></Link>
+            </div>
+            <div className="mt-8 overflow-hidden rounded-3xl border border-white/10">
+              <img src={processHero} alt="Process landscape" className="aspect-[16/9] w-full object-cover object-center grayscale contrast-[1.08] brightness-[0.86]" />
             </div>
           </div>
 
