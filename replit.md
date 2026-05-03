@@ -24,7 +24,7 @@ pnpm workspace monorepo. Primary artifact is the VIPER AI Agency portfolio site 
 
 **Home page section order (top → bottom):**
 1. `Hero` — full-screen portrait, LOCKED (do not modify Hero.tsx)
-2. `Portfolio` — full-width 5-col thumbnail strip, edge-to-edge, no container
+2. `Portfolio` — full-width 3-col bento masonry CSS grid (8 items; col-2 spans rows 1–2); "View Casestudy" pill on each cell
 3. `Process` — full-width 50/50 grid: LEFT = `/photo-process.png` (full-bleed), RIGHT = step cards with rounded borders
 4. `Services` — full-width: LEFT = content + tags + CTAs, RIGHT = `/photo-services.jpg`; then 2×2 service cards; then dual marquee
 5. `Testimonials` — full-width: LEFT = `/photo-reviews.png`, RIGHT = content; then scrolling cards marquee; then 3-col stats row

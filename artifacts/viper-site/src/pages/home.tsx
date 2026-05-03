@@ -71,7 +71,8 @@ export function HomePage() {
         <section className="border-t border-border/40 w-full">
           <div className="grid lg:grid-cols-2 min-h-[680px] w-full">
             <motion.div initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} viewport={{ once: true }} transition={{ duration: 0.8 }} className="relative overflow-hidden min-h-[420px]">
-              <img src="@assets/Screenshot_2026-05-03_073740_1777794081585.png" alt="Our Process" className="absolute inset-0 w-full h-full object-cover object-center" />
+              <img src="/photo-process.png" alt="Our Process" className="absolute inset-0 w-full h-full object-cover object-center" />
+              <div className="absolute inset-0 bg-black/25" />
             </motion.div>
             <div className="py-16 px-10 lg:px-14 flex flex-col justify-center">
               <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>
@@ -110,7 +111,7 @@ export function HomePage() {
                 <p className="font-inter text-[14px] text-muted-foreground max-w-[320px] leading-relaxed">Find answers to common questions about our process, services etc...</p>
               </motion.div>
               <motion.div initial={{ opacity: 0, y: 16 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6, delay: 0.15 }} className="rounded-2xl overflow-hidden aspect-[4/3] max-w-[360px]">
-                <img src="@assets/Screenshot_2026-05-03_073837_1777794081584.png" alt="FAQ visual" className="w-full h-full object-cover object-center" />
+                <img src="/photo-faq.png" alt="FAQ visual" className="w-full h-full object-cover object-center" />
               </motion.div>
               <div>
                 <div className="flex flex-wrap gap-2 mb-5">
