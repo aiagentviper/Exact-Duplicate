@@ -9,6 +9,7 @@ import { Link } from "wouter";
 import { useState } from "react";
 import profilePhoto from "@assets/Gemini_Generated_Image_rk6t1wrk6t1wrk6t_1777802311237.png";
 import servicesPhoto from "@assets/Screenshot_2026-05-03_104753_1777802222600.png";
+import processPhoto from "@assets/Screenshot_2026-05-03_073740_1777802785070.png";
 
 const faqs = [
   { q: "What services do you provide?", a: "We specialise in AI automation, AI-powered websites, apps, and video — plus strategy, chatbots, and agent workflows to scale your business invisibly." },
@@ -79,44 +80,51 @@ export function HomePage() {
             </div>
           </div>
         </section>
+
         <section className="w-full border-t border-border/40 bg-black py-32">
-          <div className="mx-auto w-full max-w-[1100px] px-6">
-            <div className="mb-16 text-center">
-              <p className="mb-3 font-inter text-[11px] font-semibold uppercase tracking-[0.22em] text-white/40">How It Works</p>
-              <h2 className="font-grotesk text-[52px] font-semibold leading-[1.0] tracking-tight">We Simplify The Journey.</h2>
-            </div>
-            <div className="flex flex-col gap-24">
-              <motion.div initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.7 }} className="grid items-center gap-12 lg:grid-cols-2">
-                <div>
-                  <span className="mb-5 inline-block rounded-full border border-white/20 bg-white/5 px-4 py-1.5 font-inter text-[11px] font-semibold uppercase tracking-[0.2em] text-white/60">Step 1</span>
-                  <h3 className="mb-4 font-grotesk text-[36px] font-semibold leading-[1.1] tracking-tight">Define Your Vision</h3>
-                  <p className="mb-8 max-w-[380px] font-inter text-[15px] leading-relaxed text-muted-foreground">Tell us exactly what you want to build — your goals, your audience, and the outcome you're after. We listen first, then map the clearest path to impact.</p>
-                  <Link href="/contact"><span className="inline-flex cursor-pointer items-center gap-2 rounded-full bg-white px-6 py-3 font-inter text-[13px] font-semibold text-black transition-colors hover:bg-white/90">Book an Appointment →</span></Link>
-                </div>
-                <div className="aspect-[4/3] overflow-hidden rounded-2xl"><img src="/photo-process.png" alt="Define your vision" className="h-full w-full object-cover object-center grayscale contrast-[1.1] brightness-[0.82]" /></div>
-              </motion.div>
-              <motion.div initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.7 }} className="grid items-center gap-12 lg:grid-cols-2">
-                <div className="aspect-[4/3] overflow-hidden rounded-2xl lg:order-first order-last"><img src={servicesPhoto} alt="Submit your request" className="h-full w-full object-cover object-center grayscale contrast-[1.1] brightness-[0.82]" /></div>
-                <div>
-                  <span className="mb-5 inline-block rounded-full border border-white/20 bg-white/5 px-4 py-1.5 font-inter text-[11px] font-semibold uppercase tracking-[0.2em] text-white/60">Step 2</span>
-                  <h3 className="mb-4 font-grotesk text-[36px] font-semibold leading-[1.1] tracking-tight">Submit Your Request</h3>
-                  <p className="mb-8 max-w-[380px] font-inter text-[15px] leading-relaxed text-muted-foreground">Access our private client portal to drop in your brief. We refine the scope, confirm deliverables, and get to work — typically within 48 hours of sign-off.</p>
-                  <Link href="/contact"><span className="inline-flex cursor-pointer items-center gap-2 rounded-full bg-white px-6 py-3 font-inter text-[13px] font-semibold text-black transition-colors hover:bg-white/90">Book an Appointment →</span></Link>
+          <div className="mx-auto w-full max-w-[1200px] px-6">
+            <div className="grid gap-10 lg:grid-cols-[0.95fr_1.05fr] lg:items-start">
+              <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }} className="lg:sticky lg:top-24">
+                <p className="mb-3 font-inter text-[11px] font-semibold uppercase tracking-[0.22em] text-white/40">Design process</p>
+                <h2 className="font-grotesk text-[clamp(3rem,5vw,4.5rem)] font-medium leading-[0.95] tracking-tight text-white">Process</h2>
+                <p className="mt-4 max-w-[360px] font-inter text-[14px] leading-relaxed text-white/55">
+                  Crafting bold visuals that inspire and elevate brands with thoughtful process.
+                </p>
+                <div className="mt-6 flex flex-wrap gap-3">
+                  <Link href="/contact"><span className="inline-flex cursor-pointer items-center gap-2 rounded-full bg-white px-5 py-2.5 font-inter text-[13px] font-semibold text-black transition-colors hover:bg-white/90">Book a Free Call</span></Link>
+                  <Link href="/work"><span className="inline-flex cursor-pointer items-center gap-2 rounded-full border border-white/20 px-5 py-2.5 font-inter text-[13px] font-semibold text-white/70 transition-colors hover:border-white/50 hover:text-white">See Projects</span></Link>
                 </div>
               </motion.div>
-              <motion.div initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.7 }} className="grid items-center gap-12 lg:grid-cols-2">
-                <div>
-                  <span className="mb-5 inline-block rounded-full border border-white/20 bg-white/5 px-4 py-1.5 font-inter text-[11px] font-semibold uppercase tracking-[0.2em] text-white/60">Step 3</span>
-                  <h3 className="mb-4 font-grotesk text-[36px] font-semibold leading-[1.1] tracking-tight">Project Delivered</h3>
-                  <p className="mb-8 max-w-[380px] font-inter text-[15px] leading-relaxed text-muted-foreground">We build fast using the best AI tools available, iterate with your feedback in real time, and ship the final product — on time, on budget, and beyond expectations.</p>
-                  <Link href="/contact"><span className="inline-flex cursor-pointer items-center gap-2 rounded-full bg-white px-6 py-3 font-inter text-[13px] font-semibold text-black transition-colors hover:bg-white/90">Book an Appointment →</span></Link>
+
+              <motion.div initial={{ opacity: 0, y: 24 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.7 }} className="grid gap-5">
+                <div className="overflow-hidden rounded-[24px] border border-border/40 bg-zinc-950/80 p-0">
+                  <img src={processPhoto} alt="Design process" className="h-[280px] w-full object-cover object-center grayscale contrast-[1.12] brightness-[0.82]" />
                 </div>
-                <div className="aspect-[4/3] overflow-hidden rounded-2xl"><img src={servicesPhoto} alt="Project delivered" className="h-full w-full object-cover object-center grayscale contrast-[1.1] brightness-[0.82]" /></div>
+                {[
+                  { num: "1", title: "Define Your Vision", text: "Find the perfect plan tailored to your goals, aligning high-level thinking and execution to help you achieve your goals effortlessly." },
+                  { num: "2", title: "Submit Your Request", text: "Submit your design requirements through our private design portal, ensuring a seamless process where your ideas are understood, refined, and brought to life with precision and creativity." },
+                  { num: "3", title: "Project Delivered", text: "As a detail-oriented freelancer, I ensure your project is completed with precision and delivered within 3–5 days. With a focus on thoughtful design, I bring your vision to life with care and refined execution." },
+                ].map((step) => (
+                  <div key={step.num} className="rounded-[24px] border border-border/40 bg-zinc-950/80 p-6 shadow-[0_0_0_1px_rgba(255,255,255,0.02)]">
+                    <div className="mb-4 flex items-center justify-between gap-4">
+                      <div className="flex items-center gap-3">
+                        <div className="flex h-9 w-9 items-center justify-center rounded-full border border-white/15 bg-white/5 text-white/70">
+                          <Check size={14} />
+                        </div>
+                        <h3 className="font-grotesk text-[20px] font-semibold tracking-tight text-white">{step.title}</h3>
+                      </div>
+                      <span className="font-inter text-[12px] font-medium text-white/40">{step.num}</span>
+                    </div>
+                    <p className="max-w-[820px] font-inter text-[13px] leading-relaxed text-white/55">{step.text}</p>
+                  </div>
+                ))}
               </motion.div>
             </div>
           </div>
         </section>
+
         <Services />
+
         <section className="w-full border-t border-border/40 bg-black py-32">
           <div className="mx-auto w-full max-w-[1200px] px-6">
             <div className="mb-12"><p className="mb-3 font-inter text-[11px] font-semibold uppercase tracking-[0.22em] text-white/40">Unlimited Design Features</p><h2 className="font-grotesk text-[52px] font-semibold leading-[1.0] tracking-tight">Built for speed. Designed to convert.</h2></div>
