@@ -29,13 +29,9 @@ const steps = [
 ];
 
 export function ProcessSection() {
-  const sectionRef = useRef<HTMLElement>(null);
   const cardsRef = useRef<HTMLDivElement[]>([]);
 
   useEffect(() => {
-    const section = sectionRef.current;
-    if (!section) return;
-
     const cards = gsap.utils.toArray<HTMLElement>(".process-card");
 
     gsap.set(cards, { opacity: 0.2, y: 40 });
@@ -45,9 +41,9 @@ export function ProcessSection() {
       scrollTrigger: {
         trigger: ".process-section",
         start: "top top",
-        end: "+=200%",
+        end: "+=120%",
         pin: true,
-        scrub: 0.5,
+        scrub: 0.1,
         anticipatePin: 1,
       },
     });
@@ -69,11 +65,7 @@ export function ProcessSection() {
   }, []);
 
   return (
-    <section
-      ref={sectionRef}
-      className="process-section w-full border-t border-border/40 bg-[#0a0a0a] overflow-visible"
-      style={{ height: "100vh", willChange: "transform" }}
-    >
+    <section className="process-section w-full max-w-full overflow-x-hidden border-t border-border/40 bg-[#0a0a0a] overflow-visible box-border" style={{ height: "100vh", willChange: "transform" }}>
       <div className="flex h-full w-full">
         <div className="w-[45%] shrink-0 overflow-hidden">
           <img src={processPhoto} alt="Design process" className="block h-full w-full object-cover object-center grayscale contrast-[1.12] brightness-[0.82]" />
