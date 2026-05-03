@@ -92,9 +92,9 @@ export function HomePage() {
         </section>
 
         <section className="w-full border-t border-border/40 bg-black overflow-hidden">
-          <div className="process-section mx-auto flex max-w-[1200px] items-start bg-[#0a0a0a]">
-            <div className="process-image-wrapper w-[45%] sticky top-0 h-screen shrink-0 overflow-hidden">
-              <img src={processPhoto} alt="Design process" className="h-screen w-full object-cover object-center grayscale contrast-[1.12] brightness-[0.82]" />
+          <div className="process-section mx-auto flex min-h-[100vh] max-w-[1200px] items-stretch bg-[#0a0a0a]">
+            <div className="process-image-wrapper w-[45%] sticky top-0 h-[100vh] shrink-0 overflow-hidden">
+              <img src={processPhoto} alt="Design process" className="h-full w-full object-cover object-center grayscale contrast-[1.12] brightness-[0.82] block" />
             </div>
             <div className="process-steps w-[55%] bg-[#0a0a0a] px-[40px] py-[80px] flex flex-col gap-6">
               <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>
