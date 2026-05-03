@@ -6,7 +6,7 @@ import { Testimonials } from "@/components/sections/Testimonials";
 import { CtaBand } from "@/components/sections/CtaBand";
 import { Footer } from "@/components/sections/Footer";
 import { motion } from "framer-motion";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, Sparkles, Bot, Globe2, Video, Wrench, Brain } from "lucide-react";
 import { Link } from "wouter";
 import { useState } from "react";
 
@@ -38,6 +38,30 @@ const faqs = [
   { q: "Do you offer ongoing support?", a: "Absolutely. We offer monthly retainer packages that cover maintenance, optimisation, new automations, and priority turnaround as your business grows." },
   { q: "What is your pricing structure?", a: "We offer project-based, subscription, and retainer pricing — designed to suit startups through to scale-ups. See our Pricing page for full details." },
   { q: "Can you redesign my existing website?", a: "Yes. We regularly rebuild and upgrade existing sites — migrating to faster, smarter stacks with AI features baked in from day one." },
+];
+
+const featureCards = [
+  { icon: Sparkles, title: "NEW Brand Systems", text: "Launch sharper visual systems with modern direction, fast iterations, and premium polish." },
+  { icon: Bot, title: "NEW AI Workflows", text: "Automate lead handling, outreach, and internal ops with high-leverage AI flows." },
+  { icon: Globe2, title: "NEW Web Experiences", text: "Build high-converting sites with cinematic visuals and clean conversion paths." },
+  { icon: Video, title: "NEW Video Content", text: "Create content that looks premium, feels cinematic, and ships quickly." },
+  { icon: Wrench, title: "NEW Product Builds", text: "Ship apps and MVPs with fast iteration and strong technical foundations." },
+  { icon: Brain, title: "NEW Strategy Layer", text: "Get a clear roadmap for what to automate, build, and scale next." },
+];
+
+const pricingPlans = [
+  {
+    name: "Basic",
+    price: "$999",
+    features: ["1-page landing page", "Mobile-first responsive build", "3 content sections", "Blue-accent styling", "1 revision round"],
+    highlighted: false,
+  },
+  {
+    name: "Premium",
+    price: "$2,599",
+    features: ["Multi-section website", "Custom motion + interactions", "Copy polishing + structure", "AI/automation integration", "Priority delivery"],
+    highlighted: true,
+  },
 ];
 
 function FAQAccordion({ items }: { items: typeof faqs }) {
@@ -150,6 +174,91 @@ export function HomePage() {
 
         {/* ── Services ── */}
         <Services />
+
+        {/* ── Feature Cards ── */}
+        <section className="w-full border-t border-border/40 bg-black py-32">
+          <div className="mx-auto w-full max-w-[1200px] px-6">
+            <div className="mb-12">
+              <p className="mb-3 font-inter text-[11px] font-semibold uppercase tracking-[0.22em] text-sky-400">Unlimited Design Features</p>
+              <h2 className="font-grotesk text-[52px] font-semibold leading-[1.0] tracking-tight">Built for speed. Designed to convert.</h2>
+            </div>
+            <div className="grid grid-cols-1 gap-4 md:grid-cols-2 xl:grid-cols-3">
+              {featureCards.map((card, i) => {
+                const Icon = card.icon;
+                return (
+                  <motion.div
+                    key={card.title}
+                    initial={{ opacity: 0, y: 16 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.5, delay: i * 0.05 }}
+                    className="rounded-2xl border border-sky-500/35 bg-zinc-950/80 p-6"
+                  >
+                    <div className="mb-5 flex items-center justify-between">
+                      <div className="flex h-11 w-11 items-center justify-center rounded-full border border-sky-500/30 bg-sky-500/10 text-sky-400">
+                        <Icon size={18} />
+                      </div>
+                      <span className="rounded-full border border-sky-500/30 bg-sky-500/10 px-3 py-1 font-inter text-[10px] font-semibold uppercase tracking-[0.18em] text-sky-400">
+                        NEW
+                      </span>
+                    </div>
+                    <h3 className="mb-2 font-grotesk text-[18px] font-semibold text-white">{card.title}</h3>
+                    <p className="font-inter text-[13px] leading-relaxed text-muted-foreground">{card.text}</p>
+                  </motion.div>
+                );
+              })}
+            </div>
+          </div>
+        </section>
+
+        {/* ── Pricing ── */}
+        <section className="w-full border-t border-border/40 bg-black py-32">
+          <div className="mx-auto w-full max-w-[1200px] px-6">
+            <div className="mb-12">
+              <p className="mb-3 font-inter text-[11px] font-semibold uppercase tracking-[0.22em] text-sky-400">Pricing</p>
+              <h2 className="font-grotesk text-[52px] font-semibold leading-[1.0] tracking-tight">Simple plans. Serious output.</h2>
+            </div>
+            <div className="grid gap-5 lg:grid-cols-2">
+              {pricingPlans.map((plan, i) => (
+                <motion.div
+                  key={plan.name}
+                  initial={{ opacity: 0, y: 18 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.5, delay: i * 0.08 }}
+                  className={`rounded-3xl border p-8 ${plan.highlighted ? "border-sky-400/60 bg-sky-500/10 shadow-[0_0_80px_rgba(59,130,246,0.18)]" : "border-sky-500/25 bg-zinc-950/80"}`}
+                >
+                  <div className="mb-8 flex items-end justify-between gap-6 border-b border-white/10 pb-8">
+                    <div>
+                      <p className="mb-3 font-inter text-[11px] font-semibold uppercase tracking-[0.22em] text-sky-400">{plan.name}</p>
+                      <h3 className="font-grotesk text-[54px] font-bold leading-none tracking-tight text-white">{plan.price}</h3>
+                    </div>
+                    {plan.highlighted && (
+                      <span className="rounded-full border border-sky-400/40 bg-sky-400/10 px-3 py-1 font-inter text-[10px] font-semibold uppercase tracking-[0.18em] text-sky-300">
+                        Most Popular
+                      </span>
+                    )}
+                  </div>
+                  <ul className="mb-8 space-y-3">
+                    {plan.features.map((feature) => (
+                      <li key={feature} className="flex items-start gap-3 font-inter text-[14px] text-white/75">
+                        <span className="mt-1 inline-flex h-4 w-4 flex-shrink-0 items-center justify-center rounded-full border border-sky-400/50 text-[10px] text-sky-400">
+                          ✓
+                        </span>
+                        {feature}
+                      </li>
+                    ))}
+                  </ul>
+                  <Link href="/contact">
+                    <span className="inline-flex w-full cursor-pointer items-center justify-center rounded-full bg-sky-500 px-6 py-3.5 font-inter text-[13px] font-semibold text-white transition-colors hover:bg-sky-400">
+                      Book a Call
+                    </span>
+                  </Link>
+                </motion.div>
+              ))}
+            </div>
+          </div>
+        </section>
 
         {/* ── Testimonials + Stats ── */}
         <Testimonials />
