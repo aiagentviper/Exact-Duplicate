@@ -86,7 +86,7 @@ function WebsiteCard({ project }: { project: typeof websiteProjects[0] }) {
         <p className="font-inter text-[11px] text-muted-foreground/60 mb-1">{project.tag}</p>
         <div className="flex items-center justify-between">
           <h3 className="font-grotesk font-medium text-[15px]">{project.title}</h3>
-          <ExternalLink size={13} className="text-muted-foreground/50 group-hover:text-foreground transition-colors" />
+          <ExternalLink size={13} className="text-muted-foreground/50 group-hover:text-white transition-colors" />
         </div>
       </div>
     </motion.a>
@@ -146,9 +146,9 @@ export function WorkPage() {
         <section className="border-b border-border/40 py-20 text-center">
           <div className="mx-auto w-full max-w-[1100px] px-6">
             <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }}>
-              <p className="mb-4 font-inter text-[11px] font-semibold uppercase tracking-[0.2em] text-orange-500">Our Portfolio</p>
+              <p className="mb-4 font-inter text-[11px] font-semibold uppercase tracking-[0.2em] text-white/40">Our Portfolio</p>
               <h1 className="mb-6 font-grotesk text-[60px] font-bold leading-[1.0] tracking-[-0.02em]">
-                Real Projects.<br /><span className="text-orange-500">Real Results.</span>
+                Real Projects.<br /><span className="text-white/60">Real Results.</span>
               </h1>
               <p className="mx-auto max-w-xl font-inter text-[16px] leading-relaxed text-muted-foreground">
                 AI-powered websites, videos, automations & apps built for businesses across every industry. Click any website to visit the live site.
@@ -163,7 +163,7 @@ export function WorkPage() {
             <div className="flex flex-wrap gap-2 justify-center">
               {filters.map((f) => (
                 <button key={f} onClick={() => setActive(f)}
-                  className={`font-inter font-medium text-[13px] px-5 py-2 rounded-full transition-all border ${active === f ? "bg-orange-500 text-white border-orange-500" : "bg-transparent text-muted-foreground border-border/50 hover:border-orange-500 hover:text-orange-500"}`}>
+                  className={`font-inter font-medium text-[13px] px-5 py-2 rounded-full transition-all border ${active === f ? "bg-white text-black border-white" : "bg-transparent text-muted-foreground border-border/50 hover:border-white/50 hover:text-white"}`}>
                   {f}
                 </button>
               ))}
@@ -177,10 +177,10 @@ export function WorkPage() {
             <div>
               <div className="flex items-end justify-between mb-8">
                 <div>
-                  <p className="font-inter font-semibold text-[11px] uppercase tracking-[0.2em] text-orange-500 mb-1">Live Websites</p>
+                  <p className="font-inter font-semibold text-[11px] uppercase tracking-[0.2em] text-white/40 mb-1">Live Websites</p>
                   <h2 className="font-grotesk font-semibold text-[28px] tracking-tight">AI Websites</h2>
                 </div>
-                <span className="font-inter text-[12px] text-orange-500/70">Click card to visit live site</span>
+                <span className="font-inter text-[12px] text-white/40">Click card to visit live site</span>
               </div>
               <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
                 {websiteProjects.map((p) => <WebsiteCard key={p.id} project={p} />)}
@@ -190,7 +190,7 @@ export function WorkPage() {
           {showApp && (
             <div>
               <div className="mb-8">
-                <p className="font-inter font-semibold text-[11px] uppercase tracking-[0.2em] text-orange-500 mb-1">Custom Builds</p>
+                <p className="font-inter font-semibold text-[11px] uppercase tracking-[0.2em] text-white/40 mb-1">Custom Builds</p>
                 <h2 className="font-grotesk font-semibold text-[28px] tracking-tight">AI Apps</h2>
               </div>
               <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
@@ -201,7 +201,7 @@ export function WorkPage() {
           {showAutomation && (
             <div>
               <div className="mb-8">
-                <p className="font-inter font-semibold text-[11px] uppercase tracking-[0.2em] text-orange-500 mb-1">Workflow Systems</p>
+                <p className="font-inter font-semibold text-[11px] uppercase tracking-[0.2em] text-white/40 mb-1">Workflow Systems</p>
                 <h2 className="font-grotesk font-semibold text-[28px] tracking-tight">AI Automation</h2>
               </div>
               <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
@@ -212,7 +212,7 @@ export function WorkPage() {
           {showVideo && (
             <div>
               <div className="mb-8">
-                <p className="font-inter font-semibold text-[11px] uppercase tracking-[0.2em] text-orange-500 mb-1">Motion & Content</p>
+                <p className="font-inter font-semibold text-[11px] uppercase tracking-[0.2em] text-white/40 mb-1">Motion & Content</p>
                 <h2 className="font-grotesk font-semibold text-[28px] tracking-tight">AI Video Productions</h2>
               </div>
               <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
@@ -227,8 +227,8 @@ export function WorkPage() {
           <div className="mx-auto w-full max-w-[1100px] px-6">
             <div className="grid lg:grid-cols-2 gap-16 items-start">
               <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>
-                <p className="font-inter font-semibold text-[11px] uppercase tracking-[0.2em] text-orange-500 mb-3">How It Works</p>
-                  <h2 className="font-grotesk font-semibold text-[42px] leading-[1.05] tracking-tight">
+                <p className="font-inter font-semibold text-[11px] uppercase tracking-[0.2em] text-white/40 mb-3">How It Works</p>
+                <h2 className="font-grotesk font-semibold text-[42px] leading-[1.05] tracking-tight">
                   Our<br />Process!
                 </h2>
               </motion.div>
@@ -236,7 +236,7 @@ export function WorkPage() {
                 {processSteps.map((step, i) => (
                   <motion.div key={step.num} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.5, delay: i * 0.1 }}
                     className="flex gap-8 py-8 border-b border-border/40 last:border-0">
-                    <span className="font-inter font-semibold text-[11px] uppercase tracking-[0.2em] text-orange-500 pt-1 min-w-[28px]">{step.num}</span>
+                    <span className="font-inter font-semibold text-[11px] uppercase tracking-[0.2em] text-white/40 pt-1 min-w-[28px]">{step.num}</span>
                     <div>
                       <h3 className="font-grotesk font-semibold text-[22px] tracking-tight mb-2">{step.title}</h3>
                       <p className="font-inter text-[15px] leading-relaxed text-muted-foreground">{step.desc}</p>
@@ -253,8 +253,8 @@ export function WorkPage() {
           <div className="mx-auto w-full max-w-[1100px] px-6">
             <div className="grid lg:grid-cols-2 gap-16 items-start">
               <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>
-                <p className="font-inter font-semibold text-[11px] uppercase tracking-[0.2em] text-orange-500 mb-3">Answers</p>
-              <h2 className="font-grotesk font-semibold text-[42px] leading-[1.05] tracking-tight">
+                <p className="font-inter font-semibold text-[11px] uppercase tracking-[0.2em] text-white/40 mb-3">Answers</p>
+                <h2 className="font-grotesk font-semibold text-[42px] leading-[1.05] tracking-tight">
                   Got a<br />Question?
                 </h2>
                 <p className="font-inter text-[15px] text-muted-foreground mt-4 leading-relaxed max-w-xs">
@@ -278,12 +278,12 @@ export function WorkPage() {
         {/* ── CTA ── */}
         <section className="py-28 border-t border-border/40 text-center">
           <motion.div initial={{ opacity: 0, y: 24 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>
-            <p className="font-inter font-semibold text-[11px] uppercase tracking-[0.2em] text-orange-500 mb-4">Ready?</p>
+            <p className="font-inter font-semibold text-[11px] uppercase tracking-[0.2em] text-white/40 mb-4">Ready?</p>
             <h2 className="font-grotesk font-bold text-[48px] leading-[1.0] tracking-tight mb-6">
-              Ready to be<br /><span className="text-orange-500">Our Next Project?</span>
+              Ready to be<br /><span className="text-white/60">Our Next Project?</span>
             </h2>
             <Link href="/contact">
-              <span className="inline-flex items-center gap-2 bg-orange-500 text-white font-inter font-semibold text-[13px] rounded-full px-8 py-3.5 hover:bg-orange-400 transition-colors cursor-pointer">
+              <span className="inline-flex items-center gap-2 bg-white text-black font-inter font-semibold text-[13px] rounded-full px-8 py-3.5 hover:bg-white/90 transition-colors cursor-pointer">
                 Start Your AI Project <ArrowRight size={14} />
               </span>
             </Link>

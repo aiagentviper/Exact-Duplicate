@@ -105,9 +105,9 @@ export function PricingPage() {
         <section className="border-b border-border/40 py-20 text-center">
           <div className="mx-auto w-full max-w-[1100px] px-6">
             <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }}>
-              <p className="mb-4 font-inter text-[11px] font-semibold uppercase tracking-[0.2em] text-orange-500">Transparent Pricing</p>
+              <p className="mb-4 font-inter text-[11px] font-semibold uppercase tracking-[0.2em] text-white/40">Transparent Pricing</p>
               <h1 className="mb-6 font-grotesk text-[60px] font-bold leading-[1.0] tracking-[-0.02em]">
-                Feasible Plans For<br /><span className="text-orange-500">Every Stage of Growth.</span>
+                Feasible Plans For<br /><span className="text-white/60">Every Stage of Growth.</span>
               </h1>
               <p className="mx-auto max-w-xl font-inter text-[16px] leading-relaxed text-muted-foreground">
                 No hidden fees. No bloated retainers. Just AI-powered results at honest prices.
@@ -122,27 +122,27 @@ export function PricingPage() {
             <div className="grid md:grid-cols-3 gap-6">
               {plans.map((plan, i) => (
                 <motion.div key={plan.name} initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.5, delay: i * 0.1 }}
-                  className={`relative flex flex-col p-8 rounded-2xl border ${plan.popular ? "bg-card border-orange-500/40 shadow-2xl" : "bg-card/50 border-border/50"}`}>
+                  className={`relative flex flex-col p-8 rounded-2xl border ${plan.popular ? "bg-card border-white/30 shadow-2xl" : "bg-card/50 border-border/50"}`}>
                   {plan.popular && (
-                    <div className="absolute -top-4 left-1/2 -translate-x-1/2 bg-orange-500 text-white font-inter font-bold text-[11px] px-4 py-1.5 rounded-full uppercase tracking-[0.15em]">
+                    <div className="absolute -top-4 left-1/2 -translate-x-1/2 bg-white text-black font-inter font-bold text-[11px] px-4 py-1.5 rounded-full uppercase tracking-[0.15em]">
                       Most Popular
                     </div>
                   )}
                   <h3 className="font-grotesk font-bold text-[16px] uppercase tracking-[0.1em] mb-2">{plan.name}</h3>
                   <div className="flex items-baseline gap-1 mb-3">
                     <span className="font-grotesk font-bold text-[48px] leading-none tracking-tight">{plan.price}</span>
-                    <span className="font-inter text-[13px] text-orange-500">{plan.per}</span>
+                    <span className="font-inter text-[13px] text-white/50">{plan.per}</span>
                   </div>
                   <p className="font-inter text-[14px] text-muted-foreground mb-8 leading-relaxed border-b border-border/50 pb-8">{plan.best}</p>
                   <ul className="flex-1 space-y-3 mb-8">
                     {plan.features.map((f) => (
                       <li key={f} className="flex items-start gap-3 font-inter text-[14px] text-muted-foreground">
-                        <Check size={14} className="text-orange-500 flex-shrink-0 mt-0.5" />{f}
+                        <Check size={14} className="text-white/60 flex-shrink-0 mt-0.5" />{f}
                       </li>
                     ))}
                   </ul>
                   <Link href="/contact">
-                    <span className={`inline-flex w-full items-center justify-center gap-2 font-inter font-semibold text-[13px] rounded-full px-6 py-3 transition-colors cursor-pointer ${plan.popular ? "bg-orange-500 text-white hover:bg-orange-400" : "border border-orange-500/30 text-orange-500 hover:border-orange-400 hover:bg-orange-500/10"}`}>
+                    <span className={`inline-flex w-full items-center justify-center gap-2 font-inter font-semibold text-[13px] rounded-full px-6 py-3 transition-colors cursor-pointer ${plan.popular ? "bg-white text-black hover:bg-white/90" : "border border-white/20 text-white/70 hover:border-white/50 hover:text-white"}`}>
                       Get Started <ArrowRight size={13} />
                     </span>
                   </Link>
@@ -157,7 +157,7 @@ export function PricingPage() {
           <div className="mx-auto w-full max-w-[1100px] px-6">
             <div className="grid lg:grid-cols-2 gap-16 items-start">
               <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>
-                <p className="font-inter font-semibold text-[11px] uppercase tracking-[0.2em] text-orange-500 mb-3">How It Works</p>
+                <p className="font-inter font-semibold text-[11px] uppercase tracking-[0.2em] text-white/40 mb-3">How It Works</p>
                 <h2 className="font-grotesk font-semibold text-[42px] leading-[1.05] tracking-tight">
                   Our<br />Process!
                 </h2>
@@ -167,7 +167,7 @@ export function PricingPage() {
                 {processSteps.map((step, i) => (
                   <motion.div key={step.num} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.5, delay: i * 0.1 }}
                     className="flex gap-8 py-8 border-b border-border/40 last:border-0">
-                    <span className="font-inter font-semibold text-[11px] uppercase tracking-[0.2em] text-orange-500 pt-1 min-w-[28px]">{step.num}</span>
+                    <span className="font-inter font-semibold text-[11px] uppercase tracking-[0.2em] text-white/40 pt-1 min-w-[28px]">{step.num}</span>
                     <div>
                       <h3 className="font-grotesk font-semibold text-[22px] tracking-tight mb-2">{step.title}</h3>
                       <p className="font-inter text-[15px] leading-relaxed text-muted-foreground">{step.desc}</p>
@@ -183,7 +183,7 @@ export function PricingPage() {
         <section className="py-28 border-b border-border/40">
           <div className="mx-auto w-full max-w-[1100px] px-6">
             <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }} className="mb-14">
-              <p className="font-inter font-semibold text-[11px] uppercase tracking-[0.2em] text-orange-500 mb-3">Client Reviews</p>
+              <p className="font-inter font-semibold text-[11px] uppercase tracking-[0.2em] text-white/40 mb-3">Client Reviews</p>
               <h2 className="font-grotesk font-semibold text-[42px] leading-[1.05] tracking-tight">
                 Trusted by<br />Clients.
               </h2>
@@ -196,16 +196,16 @@ export function PricingPage() {
                     <div className="flex gap-0.5">
                       {Array.from({ length: t.stars }).map((_, j) => <span key={j} className="text-yellow-400 text-sm">★</span>)}
                     </div>
-                    <span className="font-inter font-semibold text-[11px] uppercase tracking-[0.15em] text-orange-500/60 border border-orange-500/20 rounded-full px-3 py-1">{t.plan}</span>
+                    <span className="font-inter font-semibold text-[11px] uppercase tracking-[0.15em] text-white/40 border border-white/20 rounded-full px-3 py-1">{t.plan}</span>
                   </div>
                   <p className="font-inter text-[15px] leading-relaxed text-foreground/80 mb-8">"{t.quote}"</p>
                   <div className="flex items-center gap-3 border-t border-border/40 pt-6">
-                    <div className="w-9 h-9 rounded-full bg-orange-500/10 border border-orange-500/30 flex items-center justify-center font-grotesk text-[12px] font-bold flex-shrink-0">
+                    <div className="w-9 h-9 rounded-full bg-white/5 border border-white/20 flex items-center justify-center font-grotesk text-[12px] font-bold flex-shrink-0">
                       {t.name.split(" ").map(n => n[0]).join("")}
                     </div>
                     <div>
                       <h4 className="font-grotesk font-semibold text-[14px]">{t.name}</h4>
-                      <p className="font-inter text-[12px] text-orange-500">{t.title}</p>
+                      <p className="font-inter text-[12px] text-white/50">{t.title}</p>
                     </div>
                   </div>
                 </motion.div>
@@ -219,7 +219,7 @@ export function PricingPage() {
           <div className="mx-auto w-full max-w-[1100px] px-6">
             <div className="grid lg:grid-cols-2 gap-16 items-start">
               <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>
-                <p className="font-inter font-semibold text-[11px] uppercase tracking-[0.2em] text-orange-500 mb-3">Answers</p>
+                <p className="font-inter font-semibold text-[11px] uppercase tracking-[0.2em] text-white/40 mb-3">Answers</p>
                 <h2 className="font-grotesk font-semibold text-[42px] leading-[1.05] tracking-tight">
                   Got a<br />Question?
                 </h2>
@@ -227,7 +227,7 @@ export function PricingPage() {
                   Everything you need to know before getting started. Still unsure? Just book a call.
                 </p>
                 <a href="https://calendly.com/malik-designs" target="_blank" rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 mt-6 font-inter font-semibold text-[13px] border border-orange-500/40 rounded-full px-6 py-2.5 hover:border-orange-500 transition-colors text-orange-500">
+                  className="inline-flex items-center gap-2 mt-6 font-inter font-semibold text-[13px] border border-white/20 rounded-full px-6 py-2.5 hover:border-white/50 transition-colors text-white/70">
                   Book a Free Call <ArrowRight size={13} />
                 </a>
               </motion.div>
@@ -248,15 +248,15 @@ export function PricingPage() {
         {/* ── CTA ── */}
         <section className="py-28 text-center">
           <motion.div initial={{ opacity: 0, y: 24 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>
-            <p className="font-inter font-semibold text-[11px] uppercase tracking-[0.2em] text-orange-500 mb-4">Let's Talk</p>
+            <p className="font-inter font-semibold text-[11px] uppercase tracking-[0.2em] text-white/40 mb-4">Let's Talk</p>
             <h2 className="font-grotesk font-bold text-[48px] leading-[1.0] tracking-tight mb-6">
-              Need a Custom Quote?<br /><span className="text-orange-500">We've Got You.</span>
+              Need a Custom Quote?<br /><span className="text-white/60">We've Got You.</span>
             </h2>
             <p className="font-inter text-[16px] text-muted-foreground max-w-md mx-auto mb-8 leading-relaxed">
               Every business is different. Let's talk about what you actually need.
             </p>
             <Link href="/contact">
-              <span className="inline-flex items-center gap-2 bg-orange-500 text-white font-inter font-semibold text-[13px] rounded-full px-8 py-3.5 hover:bg-orange-400 transition-colors cursor-pointer">
+              <span className="inline-flex items-center gap-2 bg-white text-black font-inter font-semibold text-[13px] rounded-full px-8 py-3.5 hover:bg-white/90 transition-colors cursor-pointer">
                 Contact Us <ArrowRight size={14} />
               </span>
             </Link>

@@ -81,9 +81,9 @@ export function BlogPage() {
         {/* ── Page header ── */}
         <section className="py-20 container mx-auto px-6 text-center border-b border-border/40">
           <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }}>
-            <p className="font-inter font-semibold text-[11px] uppercase tracking-[0.2em] text-orange-500 mb-4">VIPER Insights</p>
+            <p className="font-inter font-semibold text-[11px] uppercase tracking-[0.2em] text-white/40 mb-4">VIPER Insights</p>
             <h1 className="font-grotesk font-bold text-[60px] leading-[1.0] tracking-[-0.02em] mb-6">
-              AI Knowledge.<br /><span className="text-orange-500">Zero Fluff.</span>
+              AI Knowledge.<br /><span className="text-white/60">Zero Fluff.</span>
             </h1>
             <p className="font-inter text-[16px] text-muted-foreground max-w-xl mx-auto leading-relaxed">
               Strategies, breakdowns & insights on AI automation, web, apps, video & vibe coding — written by practitioners, not theorists.
@@ -94,7 +94,7 @@ export function BlogPage() {
         {/* ── Featured post ── */}
         <section className="py-16 border-b border-border/40">
           <div className="container mx-auto px-6">
-            <p className="font-inter font-semibold text-[11px] uppercase tracking-[0.2em] text-orange-500 mb-8">Featured Article</p>
+            <p className="font-inter font-semibold text-[11px] uppercase tracking-[0.2em] text-white/40 mb-8">Featured Article</p>
             <motion.div initial={{ opacity: 0, y: 24 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }}
               className="grid lg:grid-cols-2 gap-10 items-center group cursor-pointer">
               <div className="aspect-[16/10] overflow-hidden rounded-2xl border border-border/40 bg-card">
@@ -108,7 +108,7 @@ export function BlogPage() {
                 </div>
                 <h2 className="font-grotesk font-bold text-[36px] leading-[1.1] tracking-tight mb-4 group-hover:text-foreground/80 transition-colors">{featured.title}</h2>
                 <p className="font-inter text-[15px] leading-relaxed text-muted-foreground mb-8">{featured.excerpt}</p>
-                <span className="inline-flex items-center gap-2 font-inter font-semibold text-[13px] border border-orange-500/40 rounded-full px-6 py-2.5 hover:border-orange-500 transition-colors text-orange-500">
+                <span className="inline-flex items-center gap-2 font-inter font-semibold text-[13px] border border-white/20 rounded-full px-6 py-2.5 hover:border-white/50 transition-colors text-white/70">
                   Read Article <ArrowRight size={13} />
                 </span>
               </div>
@@ -121,7 +121,7 @@ export function BlogPage() {
           <div className="container mx-auto px-6">
             <div className="flex flex-wrap gap-2 mb-12">
               {categories.map((c) => (
-                <span key={c} className="font-inter font-medium text-[12px] px-4 py-1.5 rounded-full border border-border/50 text-muted-foreground hover:border-orange-500 hover:text-orange-500 transition-colors cursor-pointer">
+                <span key={c} className="font-inter font-medium text-[12px] px-4 py-1.5 rounded-full border border-border/50 text-muted-foreground hover:border-white/40 hover:text-white transition-colors cursor-pointer">
                   {c}
                 </span>
               ))}
@@ -140,7 +140,7 @@ export function BlogPage() {
                   </div>
                   <h2 className="font-grotesk font-semibold text-[18px] leading-[1.25] mb-2 group-hover:text-foreground/70 transition-colors">{post.title}</h2>
                   <p className="font-inter text-[14px] text-muted-foreground mb-4 line-clamp-2">{post.excerpt}</p>
-                  <span className="font-inter font-medium text-[13px] text-muted-foreground group-hover:text-foreground transition-colors flex items-center gap-1">
+                  <span className="font-inter font-medium text-[13px] text-muted-foreground group-hover:text-white transition-colors flex items-center gap-1">
                     Read Article <ArrowRight size={12} className="group-hover:translate-x-1 transition-transform" />
                   </span>
                 </motion.article>
@@ -164,24 +164,24 @@ export function BlogPage() {
           </div>
         </section>
 
-        {/* ── Newsletter / CTA ── */}
+        {/* ── CTA ── */}
         <section className="py-28 text-center">
           <motion.div initial={{ opacity: 0, y: 24 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>
-            <p className="font-inter font-semibold text-[11px] uppercase tracking-[0.2em] text-orange-500 mb-4">Stay Ahead</p>
-                <h2 className="font-grotesk font-bold text-[48px] leading-[1.0] tracking-tight mb-6">
-              Want More AI<br /><span className="text-orange-500">Insights Like These?</span>
+            <p className="font-inter font-semibold text-[11px] uppercase tracking-[0.2em] text-white/40 mb-4">Stay Ahead</p>
+            <h2 className="font-grotesk font-bold text-[48px] leading-[1.0] tracking-tight mb-6">
+              Want More AI<br /><span className="text-white/60">Insights Like These?</span>
             </h2>
             <p className="font-inter text-[16px] text-muted-foreground max-w-md mx-auto mb-8 leading-relaxed">
               Follow us for weekly breakdowns on AI, automation, and how to build faster than everyone else.
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-3">
               <Link href="/contact">
-                <span className="inline-flex items-center gap-2 bg-orange-500 text-white font-inter font-semibold text-[13px] rounded-full px-8 py-3.5 hover:bg-orange-400 transition-colors cursor-pointer">
+                <span className="inline-flex items-center gap-2 bg-white text-black font-inter font-semibold text-[13px] rounded-full px-8 py-3.5 hover:bg-white/90 transition-colors cursor-pointer">
                   Work With Us <ArrowRight size={14} />
                 </span>
               </Link>
               <a href="https://calendly.com/malik-designs" target="_blank" rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 font-inter font-semibold text-[13px] border border-orange-500/40 rounded-full px-8 py-3.5 hover:border-orange-500 transition-colors text-orange-500">
+                className="inline-flex items-center gap-2 font-inter font-semibold text-[13px] border border-white/20 rounded-full px-8 py-3.5 hover:border-white/50 transition-colors text-white/70">
                 Book a Free Call <ArrowRight size={13} />
               </a>
             </div>

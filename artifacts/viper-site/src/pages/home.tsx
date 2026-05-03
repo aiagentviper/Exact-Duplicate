@@ -1,6 +1,5 @@
 import { Navigation } from "@/components/sections/Navigation";
 import { Hero } from "@/components/sections/Hero";
-import { Portfolio } from "@/components/sections/Portfolio";
 import { Services } from "@/components/sections/Services";
 import { Testimonials } from "@/components/sections/Testimonials";
 import { Footer } from "@/components/sections/Footer";
@@ -59,7 +58,7 @@ function FAQAccordion({ items }: { items: typeof faqs }) {
             className="flex w-full items-center justify-between gap-4 text-left"
           >
             <span className="font-inter text-[14px] text-foreground">{item.q}</span>
-            <span className="flex-shrink-0 text-2xl font-light leading-none text-muted-foreground/70 transition-transform" style={{ transform: open === i ? 'rotate(45deg)' : 'none' }}>+</span>
+            <span className="flex-shrink-0 text-2xl font-light leading-none text-white/40 transition-transform" style={{ transform: open === i ? 'rotate(45deg)' : 'none' }}>+</span>
           </button>
           {open === i && (
             <p className="mt-4 max-w-[480px] font-inter text-[13px] leading-relaxed text-muted-foreground">
@@ -80,14 +79,12 @@ export function HomePage() {
         {/* ── Hero ── full bleed, no wrapper */}
         <Hero />
 
-        {/* ── Everything below Hero: strict 1100px wrapper ── */}
-        <Portfolio />
-
+        {/* ── Meet Jimoh ── */}
         <section className="w-full border-t border-white/10 bg-black py-32">
           <div className="mx-auto w-full max-w-[1200px] px-6">
             <div className="grid gap-12 lg:grid-cols-2 lg:items-center">
               <div>
-                <p className="mb-3 font-inter text-[11px] font-semibold uppercase tracking-[0.22em] text-orange-500">Meet Jimoh</p>
+                <p className="mb-3 font-inter text-[11px] font-semibold uppercase tracking-[0.22em] text-white/40">Meet Jimoh</p>
                 <h2 className="mb-5 font-grotesk text-[52px] font-semibold leading-[1.0] tracking-tight">Meet Jimoh.</h2>
                 <p className="max-w-[520px] font-inter text-[15px] leading-relaxed text-white/65">
                   Jimoh is the founder behind VIPER — building sharp digital products, branding systems, and AI workflows for teams that want fast, premium results.
@@ -97,7 +94,7 @@ export function HomePage() {
                 </p>
                 <div className="mt-8 flex flex-wrap gap-3">
                   {tags.map((tag) => (
-                    <span key={tag} className="rounded-full border border-orange-500/40 px-4 py-2 font-inter text-[12px] text-white/75">
+                    <span key={tag} className="rounded-full border border-white/20 px-4 py-2 font-inter text-[12px] text-white/60">
                       {tag}
                     </span>
                   ))}
@@ -118,7 +115,7 @@ export function HomePage() {
         <section className="w-full border-t border-border/40 bg-black py-32">
           <div className="mx-auto w-full max-w-[1100px] px-6">
             <div className="mb-16 text-center">
-              <p className="mb-3 font-inter text-[11px] font-semibold uppercase tracking-[0.22em] text-orange-500">How It Works</p>
+              <p className="mb-3 font-inter text-[11px] font-semibold uppercase tracking-[0.22em] text-white/40">How It Works</p>
               <h2 className="font-grotesk text-[52px] font-semibold leading-[1.0] tracking-tight">
                 We Simplify The Journey.
               </h2>
@@ -126,7 +123,7 @@ export function HomePage() {
 
             <div className="flex flex-col gap-24">
 
-              {/* Step 1 — text left, image right */}
+              {/* Step 1 */}
               <motion.div
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -135,7 +132,7 @@ export function HomePage() {
                 className="grid items-center gap-12 lg:grid-cols-2"
               >
                 <div>
-                  <span className="mb-5 inline-block rounded-full border border-orange-500/40 bg-orange-500/10 px-4 py-1.5 font-inter text-[11px] font-semibold uppercase tracking-[0.2em] text-orange-500">
+                  <span className="mb-5 inline-block rounded-full border border-white/20 bg-white/5 px-4 py-1.5 font-inter text-[11px] font-semibold uppercase tracking-[0.2em] text-white/60">
                     Step 1
                   </span>
                   <h3 className="mb-4 font-grotesk text-[36px] font-semibold leading-[1.1] tracking-tight">Define Your Vision</h3>
@@ -143,7 +140,7 @@ export function HomePage() {
                     Tell us exactly what you want to build — your goals, your audience, and the outcome you're after. We listen first, then map the clearest path to impact.
                   </p>
                   <Link href="/contact">
-                    <span className="inline-flex cursor-pointer items-center gap-2 rounded-full bg-orange-500 px-6 py-3 font-inter text-[13px] font-semibold text-white transition-colors hover:bg-orange-400">
+                    <span className="inline-flex cursor-pointer items-center gap-2 rounded-full bg-white px-6 py-3 font-inter text-[13px] font-semibold text-black transition-colors hover:bg-white/90">
                       Book an Appointment →
                     </span>
                   </Link>
@@ -157,7 +154,7 @@ export function HomePage() {
                 </div>
               </motion.div>
 
-              {/* Step 2 — image left, text right */}
+              {/* Step 2 */}
               <motion.div
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -173,7 +170,7 @@ export function HomePage() {
                   />
                 </div>
                 <div>
-                  <span className="mb-5 inline-block rounded-full border border-orange-500/40 bg-orange-500/10 px-4 py-1.5 font-inter text-[11px] font-semibold uppercase tracking-[0.2em] text-orange-500">
+                  <span className="mb-5 inline-block rounded-full border border-white/20 bg-white/5 px-4 py-1.5 font-inter text-[11px] font-semibold uppercase tracking-[0.2em] text-white/60">
                     Step 2
                   </span>
                   <h3 className="mb-4 font-grotesk text-[36px] font-semibold leading-[1.1] tracking-tight">Submit Your Request</h3>
@@ -181,14 +178,14 @@ export function HomePage() {
                     Access our private client portal to drop in your brief. We refine the scope, confirm deliverables, and get to work — typically within 48 hours of sign-off.
                   </p>
                   <Link href="/contact">
-                    <span className="inline-flex cursor-pointer items-center gap-2 rounded-full bg-orange-500 px-6 py-3 font-inter text-[13px] font-semibold text-white transition-colors hover:bg-orange-400">
+                    <span className="inline-flex cursor-pointer items-center gap-2 rounded-full bg-white px-6 py-3 font-inter text-[13px] font-semibold text-black transition-colors hover:bg-white/90">
                       Book an Appointment →
                     </span>
                   </Link>
                 </div>
               </motion.div>
 
-              {/* Step 3 — text left, image right */}
+              {/* Step 3 */}
               <motion.div
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -197,7 +194,7 @@ export function HomePage() {
                 className="grid items-center gap-12 lg:grid-cols-2"
               >
                 <div>
-                  <span className="mb-5 inline-block rounded-full border border-orange-500/40 bg-orange-500/10 px-4 py-1.5 font-inter text-[11px] font-semibold uppercase tracking-[0.2em] text-orange-500">
+                  <span className="mb-5 inline-block rounded-full border border-white/20 bg-white/5 px-4 py-1.5 font-inter text-[11px] font-semibold uppercase tracking-[0.2em] text-white/60">
                     Step 3
                   </span>
                   <h3 className="mb-4 font-grotesk text-[36px] font-semibold leading-[1.1] tracking-tight">Project Delivered</h3>
@@ -205,7 +202,7 @@ export function HomePage() {
                     We build fast using the best AI tools available, iterate with your feedback in real time, and ship the final product — on time, on budget, and beyond expectations.
                   </p>
                   <Link href="/contact">
-                    <span className="inline-flex cursor-pointer items-center gap-2 rounded-full bg-orange-500 px-6 py-3 font-inter text-[13px] font-semibold text-white transition-colors hover:bg-orange-400">
+                    <span className="inline-flex cursor-pointer items-center gap-2 rounded-full bg-white px-6 py-3 font-inter text-[13px] font-semibold text-black transition-colors hover:bg-white/90">
                       Book an Appointment →
                     </span>
                   </Link>
@@ -230,7 +227,7 @@ export function HomePage() {
         <section className="w-full border-t border-border/40 bg-black py-32">
           <div className="mx-auto w-full max-w-[1200px] px-6">
             <div className="mb-12">
-              <p className="mb-3 font-inter text-[11px] font-semibold uppercase tracking-[0.22em] text-orange-500">Unlimited Design Features</p>
+              <p className="mb-3 font-inter text-[11px] font-semibold uppercase tracking-[0.22em] text-white/40">Unlimited Design Features</p>
               <h2 className="font-grotesk text-[52px] font-semibold leading-[1.0] tracking-tight">Built for speed. Designed to convert.</h2>
             </div>
             <div className="grid grid-cols-1 gap-4 md:grid-cols-2 xl:grid-cols-3">
@@ -243,13 +240,13 @@ export function HomePage() {
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
                     transition={{ duration: 0.5, delay: i * 0.05 }}
-                    className="rounded-2xl border border-orange-500/35 bg-zinc-950/80 p-6"
+                    className="rounded-2xl border border-white/10 bg-zinc-950/80 p-6"
                   >
                     <div className="mb-5 flex items-center justify-between">
-                      <div className="flex h-11 w-11 items-center justify-center rounded-full border border-orange-500/30 bg-orange-500/10 text-orange-500">
+                      <div className="flex h-11 w-11 items-center justify-center rounded-full border border-white/15 bg-white/5 text-white/70">
                         <Icon size={18} />
                       </div>
-                      <span className="rounded-full border border-orange-500/30 bg-orange-500/10 px-3 py-1 font-inter text-[10px] font-semibold uppercase tracking-[0.18em] text-orange-500">
+                      <span className="rounded-full border border-white/15 bg-white/5 px-3 py-1 font-inter text-[10px] font-semibold uppercase tracking-[0.18em] text-white/50">
                         NEW
                       </span>
                     </div>
@@ -266,7 +263,7 @@ export function HomePage() {
         <section className="w-full border-t border-border/40 bg-black py-32">
           <div className="mx-auto w-full max-w-[1200px] px-6">
             <div className="mb-12">
-              <p className="mb-3 font-inter text-[11px] font-semibold uppercase tracking-[0.22em] text-orange-500">Pricing</p>
+              <p className="mb-3 font-inter text-[11px] font-semibold uppercase tracking-[0.22em] text-white/40">Pricing</p>
               <h2 className="font-grotesk text-[52px] font-semibold leading-[1.0] tracking-tight">Simple plans. Serious output.</h2>
             </div>
             <div className="grid gap-5 lg:grid-cols-2">
@@ -277,15 +274,15 @@ export function HomePage() {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.5, delay: i * 0.08 }}
-                  className={`rounded-3xl border p-8 ${plan.highlighted ? "border-orange-500/60 bg-orange-500/10 shadow-[0_0_80px_rgba(255,77,0,0.18)]" : "border-orange-500/25 bg-zinc-950/80"}`}
+                  className={`rounded-3xl border p-8 ${plan.highlighted ? "border-white/30 bg-white/5 shadow-[0_0_80px_rgba(255,255,255,0.05)]" : "border-white/10 bg-zinc-950/80"}`}
                 >
                   <div className="mb-8 flex items-end justify-between gap-6 border-b border-white/10 pb-8">
                     <div>
-                      <p className="mb-3 font-inter text-[11px] font-semibold uppercase tracking-[0.22em] text-orange-500">{plan.name}</p>
+                      <p className="mb-3 font-inter text-[11px] font-semibold uppercase tracking-[0.22em] text-white/40">{plan.name}</p>
                       <h3 className="font-grotesk text-[54px] font-bold leading-none tracking-tight text-white">{plan.price}</h3>
                     </div>
                     {plan.highlighted && (
-                      <span className="rounded-full border border-orange-500/40 bg-orange-500/10 px-3 py-1 font-inter text-[10px] font-semibold uppercase tracking-[0.18em] text-orange-300">
+                      <span className="rounded-full border border-white/20 bg-white/5 px-3 py-1 font-inter text-[10px] font-semibold uppercase tracking-[0.18em] text-white/60">
                         Most Popular
                       </span>
                     )}
@@ -293,7 +290,7 @@ export function HomePage() {
                   <ul className="mb-8 space-y-3">
                     {plan.features.map((feature) => (
                       <li key={feature} className="flex items-start gap-3 font-inter text-[14px] text-white/75">
-                        <span className="mt-1 inline-flex h-4 w-4 flex-shrink-0 items-center justify-center rounded-full border border-orange-500/50 text-[10px] text-orange-500">
+                        <span className="mt-1 inline-flex h-4 w-4 flex-shrink-0 items-center justify-center rounded-full border border-white/30 text-[10px] text-white/70">
                           <Check size={10} />
                         </span>
                         {feature}
@@ -301,7 +298,7 @@ export function HomePage() {
                     ))}
                   </ul>
                   <Link href="/contact">
-                    <span className="inline-flex w-full cursor-pointer items-center justify-center rounded-full bg-orange-500 px-6 py-3.5 font-inter text-[13px] font-semibold text-white transition-colors hover:bg-orange-400">
+                    <span className="inline-flex w-full cursor-pointer items-center justify-center rounded-full bg-white px-6 py-3.5 font-inter text-[13px] font-semibold text-black transition-colors hover:bg-white/90">
                       Book a Call
                     </span>
                   </Link>
@@ -319,7 +316,7 @@ export function HomePage() {
           <div className="mx-auto w-full max-w-[1100px] px-6">
             <div className="grid min-h-[520px] items-start gap-12 lg:grid-cols-2">
 
-              {/* Left — heading, image, tags, CTA */}
+              {/* Left */}
               <div className="flex flex-col gap-8">
                 <motion.div
                   initial={{ opacity: 0, y: 20 }}
@@ -327,7 +324,7 @@ export function HomePage() {
                   viewport={{ once: true }}
                   transition={{ duration: 0.6 }}
                 >
-                  <p className="mb-3 font-inter text-[11px] font-semibold uppercase tracking-[0.2em] text-orange-500">FAQs</p>
+                  <p className="mb-3 font-inter text-[11px] font-semibold uppercase tracking-[0.2em] text-white/40">FAQs</p>
                   <h2 className="mb-4 font-grotesk text-[52px] font-semibold leading-[1.0] tracking-tight">Answers</h2>
                   <p className="max-w-[300px] font-inter text-[14px] leading-relaxed text-muted-foreground">
                     Find answers to common questions about our process, services, and delivery.
@@ -351,13 +348,13 @@ export function HomePage() {
                 <div>
                   <div className="mb-5 flex flex-wrap gap-2">
                     {["AI Automation", "AI Websites", "AI Video"].map((tag) => (
-                      <span key={tag} className="rounded-full border border-orange-500/30 px-4 py-1.5 font-inter text-[12px] text-orange-500">
+                      <span key={tag} className="rounded-full border border-white/20 px-4 py-1.5 font-inter text-[12px] text-white/60">
                         {tag}
                       </span>
                     ))}
                   </div>
                   <Link href="/contact">
-                    <span className="inline-flex cursor-pointer items-center gap-2 rounded-full border border-orange-500/30 px-6 py-2.5 font-inter text-[13px] font-semibold text-orange-500 transition-colors hover:border-orange-400">
+                    <span className="inline-flex cursor-pointer items-center gap-2 rounded-full border border-white/20 px-6 py-2.5 font-inter text-[13px] font-semibold text-white/70 transition-colors hover:border-white/50 hover:text-white">
                       Book a Free Call <ArrowRight size={13} />
                     </span>
                   </Link>
@@ -388,7 +385,7 @@ export function HomePage() {
             <div className="mt-10 flex justify-center">
               <Link href="/contact">
                 <span className="inline-flex cursor-pointer items-center gap-2 rounded-full bg-white px-8 py-3.5 font-inter text-[13px] font-semibold text-black transition-colors hover:bg-white/90">
-                  Book a Free Call <ArrowRight size={14} className="text-orange-500" />
+                  Book a Free Call <ArrowRight size={14} />
                 </span>
               </Link>
             </div>

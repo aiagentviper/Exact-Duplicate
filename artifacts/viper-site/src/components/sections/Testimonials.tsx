@@ -20,7 +20,7 @@ function TestimonialCard({ t }: { t: typeof testimonials[0] }) {
         <p className="mb-6 font-inter text-[14px] leading-relaxed text-foreground/80">"{t.quote}"</p>
       </div>
       <div className="flex items-center gap-3 border-t border-border/40 pt-5">
-        <div className="flex h-9 w-9 flex-shrink-0 items-center justify-center rounded-full border border-border/50 bg-foreground/10 font-grotesk text-[11px] font-bold text-foreground">
+        <div className="flex h-9 w-9 flex-shrink-0 items-center justify-center rounded-full border border-border/50 bg-white/5 font-grotesk text-[11px] font-bold text-white">
           {t.name.split(" ").map(n => n[0]).join("")}
         </div>
         <div>
@@ -46,14 +46,14 @@ export function Testimonials() {
 
           <div className="flex flex-col justify-center px-6 py-16 lg:px-10 xl:px-14">
             <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>
-              <p className="mb-3 font-inter text-[11px] font-semibold uppercase tracking-[0.2em] text-orange-500">Reviews</p>
+              <p className="mb-3 font-inter text-[11px] font-semibold uppercase tracking-[0.2em] text-white/40">Reviews</p>
               <h2 className="mb-4 font-grotesk text-[46px] font-semibold leading-[1.02] tracking-tight">Client Reviews</h2>
               <p className="mb-8 max-w-[340px] font-inter text-[14px] leading-relaxed text-muted-foreground">
                 Real results from clients who trusted VIPER to build their AI systems, sites and automations.
               </p>
               <div className="flex flex-wrap gap-3">
-                <Link href="/contact"><span className="inline-flex cursor-pointer items-center gap-2 rounded-full bg-orange-500 px-5 py-2.5 font-inter text-[13px] font-semibold text-white transition-colors hover:bg-orange-400">Book a Free Call</span></Link>
-                <Link href="/services"><span className="inline-flex cursor-pointer items-center gap-2 rounded-full border border-border/60 px-5 py-2.5 font-inter text-[13px] font-semibold text-foreground transition-colors hover:border-foreground/50">See Services <ArrowRight size={13} /></span></Link>
+                <Link href="/contact"><span className="inline-flex cursor-pointer items-center gap-2 rounded-full bg-white px-5 py-2.5 font-inter text-[13px] font-semibold text-black transition-colors hover:bg-white/90">Book a Free Call</span></Link>
+                <Link href="/services"><span className="inline-flex cursor-pointer items-center gap-2 rounded-full border border-white/20 px-5 py-2.5 font-inter text-[13px] font-semibold text-white/70 transition-colors hover:border-white/50 hover:text-white">See Services <ArrowRight size={13} /></span></Link>
               </div>
             </motion.div>
           </div>

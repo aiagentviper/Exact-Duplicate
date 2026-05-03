@@ -79,10 +79,10 @@ export function AboutPage() {
           <div className="mx-auto w-full max-w-[1100px] px-6 py-16">
             <div className="grid lg:grid-cols-2 gap-16 items-center">
               <motion.div initial={{ opacity: 0, x: -30 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.7 }}>
-                <span className="font-inter font-semibold text-[11px] uppercase tracking-[0.2em] text-orange-500 block mb-6">About VIPER</span>
+                <span className="font-inter font-semibold text-[11px] uppercase tracking-[0.2em] text-white/40 block mb-6">About VIPER</span>
                 <h1 className="font-grotesk font-bold text-[60px] leading-[1.0] tracking-[-0.02em] mb-6">
                   The AI Agency<br />
-                  <span className="text-orange-500">Built for Speed.</span>
+                  <span className="text-white/60">Built for Speed.</span>
                 </h1>
                 <p className="font-inter text-[16px] leading-relaxed text-muted-foreground mb-6 max-w-md">
                   VIPER is a next-generation AI agency founded on one belief: every business deserves to operate at machine speed. We build the systems, sites, apps, and content that make that possible.
@@ -92,13 +92,13 @@ export function AboutPage() {
                 </p>
                 <div className="flex flex-wrap gap-3 mb-10">
                   {skills.map((s) => (
-                    <span key={s.label} className="inline-flex items-center gap-2 border border-orange-500/30 rounded-full px-4 py-2 font-inter text-[13px] text-orange-500 hover:border-orange-400 hover:text-orange-400 transition-colors">
+                    <span key={s.label} className="inline-flex items-center gap-2 border border-white/20 rounded-full px-4 py-2 font-inter text-[13px] text-white/60 hover:border-white/40 hover:text-white/80 transition-colors">
                       {s.icon}{s.label}
                     </span>
                   ))}
                 </div>
                 <Link href="/contact">
-                  <span className="inline-flex items-center gap-2 bg-orange-500 text-white font-inter font-semibold text-[13px] rounded-full px-7 py-3 hover:bg-orange-400 transition-colors cursor-pointer">
+                  <span className="inline-flex items-center gap-2 bg-white text-black font-inter font-semibold text-[13px] rounded-full px-7 py-3 hover:bg-white/90 transition-colors cursor-pointer">
                     Work With Us <ArrowRight size={14} />
                   </span>
                 </Link>
@@ -111,8 +111,8 @@ export function AboutPage() {
                   <div className="absolute bottom-6 left-6 right-6">
                     <div className="bg-card/85 backdrop-blur-md rounded-xl p-5 border border-border/50">
                       <div className="flex items-center gap-2 mb-1">
-                        <span className="w-2 h-2 rounded-full bg-orange-500 animate-pulse" />
-                        <span className="font-inter text-[11px] uppercase tracking-[0.2em] text-orange-500 font-semibold">Available for Projects</span>
+                        <span className="w-2 h-2 rounded-full bg-white/60 animate-pulse" />
+                        <span className="font-inter text-[11px] uppercase tracking-[0.2em] text-white/50 font-semibold">Available for Projects</span>
                       </div>
                       <p className="font-grotesk font-semibold text-[18px] text-foreground">jimohmalik101@gmail.com</p>
                     </div>
@@ -120,7 +120,7 @@ export function AboutPage() {
                 </div>
                 <div className="absolute -top-4 -right-4 bg-card border border-border/50 rounded-2xl p-5 shadow-xl hidden lg:block">
                   <div className="font-grotesk font-bold text-[36px] leading-none mb-1">50+</div>
-                  <div className="font-inter text-[11px] uppercase tracking-[0.2em] text-orange-500 font-semibold">Projects Shipped</div>
+                  <div className="font-inter text-[11px] uppercase tracking-[0.2em] text-white/40 font-semibold">Projects Shipped</div>
                 </div>
               </motion.div>
             </div>
@@ -140,7 +140,7 @@ export function AboutPage() {
                 <motion.div key={s.val} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.5, delay: i * 0.1 }}
                   className={`py-12 px-6 ${i < 3 ? "md:border-r border-border/40" : ""} ${i > 1 ? "border-t md:border-t-0 border-border/40" : ""}`}>
                   <div className="font-grotesk font-bold text-[48px] leading-none tracking-tight mb-2">{s.val}</div>
-                  <div className="font-inter font-semibold text-[11px] uppercase tracking-[0.2em] text-orange-500">{s.label}</div>
+                  <div className="font-inter font-semibold text-[11px] uppercase tracking-[0.2em] text-white/40">{s.label}</div>
                 </motion.div>
               ))}
             </div>
@@ -152,7 +152,7 @@ export function AboutPage() {
           <div className="mx-auto w-full max-w-[1100px] px-6">
             <div className="grid lg:grid-cols-2 gap-16 items-start">
               <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>
-                <p className="font-inter font-semibold text-[11px] uppercase tracking-[0.2em] text-orange-500 mb-3">How It Works</p>
+                <p className="font-inter font-semibold text-[11px] uppercase tracking-[0.2em] text-white/40 mb-3">How It Works</p>
                 <h2 className="font-grotesk font-semibold text-[42px] leading-[1.05] tracking-tight">
                   Our<br />Process!
                 </h2>
@@ -161,7 +161,7 @@ export function AboutPage() {
                 {processSteps.map((step, i) => (
                   <motion.div key={step.num} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.5, delay: i * 0.1 }}
                     className="flex gap-8 py-8 border-b border-border/40 last:border-0">
-                    <span className="font-inter font-semibold text-[11px] uppercase tracking-[0.2em] text-orange-500 pt-1.5 min-w-[28px]">{step.num}</span>
+                    <span className="font-inter font-semibold text-[11px] uppercase tracking-[0.2em] text-white/40 pt-1.5 min-w-[28px]">{step.num}</span>
                     <div>
                       <h3 className="font-grotesk font-semibold text-[22px] tracking-tight mb-2">{step.title}</h3>
                       <p className="font-inter text-[15px] leading-relaxed text-muted-foreground max-w-md">{step.desc}</p>
@@ -177,7 +177,7 @@ export function AboutPage() {
         <section className="py-28 border-b border-border/40">
           <div className="mx-auto w-full max-w-[1100px] px-6">
             <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }} className="mb-14">
-              <p className="font-inter font-semibold text-[11px] uppercase tracking-[0.2em] text-orange-500 mb-3">What We Offer</p>
+              <p className="font-inter font-semibold text-[11px] uppercase tracking-[0.2em] text-white/40 mb-3">What We Offer</p>
               <h2 className="font-grotesk font-semibold text-[42px] leading-[1.05] tracking-tight">
                 Our<br />Services!
               </h2>
@@ -186,10 +186,10 @@ export function AboutPage() {
               {services.map((s, i) => (
                 <motion.div key={s.num} initial={{ opacity: 0, y: 24 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.5, delay: i * 0.08 }}
                   className="bg-card border border-border/40 rounded-2xl p-7 hover:border-border/70 transition-colors">
-                  <div className="w-10 h-10 rounded-xl bg-orange-500/10 border border-orange-500/30 flex items-center justify-center mb-5 text-orange-500">
+                  <div className="w-10 h-10 rounded-xl bg-white/5 border border-white/15 flex items-center justify-center mb-5 text-white/60">
                     {s.icon}
                   </div>
-                  <span className="font-inter font-semibold text-[11px] uppercase tracking-[0.2em] text-orange-500/70 block mb-2">{s.num}</span>
+                  <span className="font-inter font-semibold text-[11px] uppercase tracking-[0.2em] text-white/30 block mb-2">{s.num}</span>
                   <h3 className="font-grotesk font-semibold text-[20px] tracking-tight mb-2">{s.title}</h3>
                   <p className="font-inter text-[14px] leading-relaxed text-muted-foreground">{s.desc}</p>
                 </motion.div>
@@ -197,7 +197,7 @@ export function AboutPage() {
             </div>
             <motion.div initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} viewport={{ once: true }} transition={{ duration: 0.5, delay: 0.3 }} className="mt-10 text-center">
               <Link href="/services">
-                <span className="inline-flex items-center gap-2 font-inter font-semibold text-[13px] border border-orange-500/40 rounded-full px-6 py-2.5 hover:border-orange-500 transition-colors cursor-pointer text-orange-500">
+                <span className="inline-flex items-center gap-2 font-inter font-semibold text-[13px] border border-white/20 rounded-full px-6 py-2.5 hover:border-white/50 transition-colors cursor-pointer text-white/70">
                   View All Services <ArrowRight size={13} />
                 </span>
               </Link>
@@ -209,7 +209,7 @@ export function AboutPage() {
         <section className="py-28 border-b border-border/40">
           <div className="mx-auto w-full max-w-[1100px] px-6">
             <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }} className="mb-14">
-              <p className="font-inter font-semibold text-[11px] uppercase tracking-[0.2em] text-orange-500 mb-3">Client Reviews</p>
+              <p className="font-inter font-semibold text-[11px] uppercase tracking-[0.2em] text-white/40 mb-3">Client Reviews</p>
               <h2 className="font-grotesk font-semibold text-[42px] leading-[1.05] tracking-tight">
                 What Clients<br />Say!
               </h2>
@@ -225,12 +225,12 @@ export function AboutPage() {
                   </div>
                   <p className="font-inter text-[15px] leading-relaxed text-foreground/80 mb-8">"{t.quote}"</p>
                   <div className="flex items-center gap-3 border-t border-border/40 pt-6">
-                    <div className="w-9 h-9 rounded-full bg-orange-500/10 border border-orange-500/30 flex items-center justify-center font-grotesk text-[12px] font-bold flex-shrink-0">
+                    <div className="w-9 h-9 rounded-full bg-white/5 border border-white/20 flex items-center justify-center font-grotesk text-[12px] font-bold flex-shrink-0">
                       {t.name.split(" ").map(n => n[0]).join("")}
                     </div>
                     <div>
                       <h4 className="font-grotesk font-semibold text-[14px]">{t.name}</h4>
-                      <p className="font-inter text-[12px] text-orange-500">{t.title}</p>
+                      <p className="font-inter text-[12px] text-white/50">{t.title}</p>
                     </div>
                   </div>
                 </motion.div>
@@ -244,7 +244,7 @@ export function AboutPage() {
           <div className="mx-auto w-full max-w-[1100px] px-6">
             <div className="grid lg:grid-cols-2 gap-16 items-start">
               <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>
-                <p className="font-inter font-semibold text-[11px] uppercase tracking-[0.2em] text-orange-500 mb-3">Answers</p>
+                <p className="font-inter font-semibold text-[11px] uppercase tracking-[0.2em] text-white/40 mb-3">Answers</p>
                 <h2 className="font-grotesk font-semibold text-[42px] leading-[1.05] tracking-tight">
                   Got a<br />Question?
                 </h2>
@@ -269,13 +269,13 @@ export function AboutPage() {
         {/* ── CTA ── */}
         <section className="py-28 text-center">
           <motion.div initial={{ opacity: 0, y: 24 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>
-            <p className="font-inter font-semibold text-[11px] uppercase tracking-[0.2em] text-orange-500 mb-4">Ready?</p>
+            <p className="font-inter font-semibold text-[11px] uppercase tracking-[0.2em] text-white/40 mb-4">Ready?</p>
             <h2 className="font-grotesk font-bold text-[48px] leading-[1.0] tracking-tight mb-6">
               Let's Build Something<br />
-              <span className="text-orange-500">Extraordinary.</span>
+              <span className="text-white/60">Extraordinary.</span>
             </h2>
             <Link href="/contact">
-              <span className="inline-flex items-center gap-2 bg-orange-500 text-white font-inter font-semibold text-[13px] rounded-full px-8 py-3.5 hover:bg-orange-400 transition-colors cursor-pointer">
+              <span className="inline-flex items-center gap-2 bg-white text-black font-inter font-semibold text-[13px] rounded-full px-8 py-3.5 hover:bg-white/90 transition-colors cursor-pointer">
                 Get in Touch <ArrowRight size={14} />
               </span>
             </Link>

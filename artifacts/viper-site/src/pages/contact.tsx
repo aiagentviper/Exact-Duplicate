@@ -56,7 +56,7 @@ export function ContactPage() {
           >
             <h1 className="font-grotesk font-bold text-[60px] leading-[1.0] tracking-[-0.02em] mb-6 max-w-3xl">
               Let's Build Something<br />
-              <span className="text-orange-500">Intelligent.</span>
+              <span className="text-white/60">Intelligent.</span>
             </h1>
             <p className="font-inter text-[16px] text-muted-foreground max-w-xl leading-relaxed">
               Have a project in mind? Whether it's automation, an AI app, a website or a full AI strategy — we are ready to build.
@@ -71,41 +71,41 @@ export function ContactPage() {
               className="space-y-8"
             >
               <div>
-                <h3 className="text-xs uppercase tracking-widest text-orange-500 mb-6 font-semibold">Contact Details</h3>
+                <h3 className="text-xs uppercase tracking-widest text-white/40 mb-6 font-semibold">Contact Details</h3>
                 <div className="space-y-5">
                   <a
                     href="mailto:jimohmalik101@gmail.com"
-                    className="flex items-center gap-3 text-base hover:text-orange-500 transition-colors"
+                    className="flex items-center gap-3 text-base hover:text-white transition-colors"
                     data-testid="contact-email"
                   >
-                    <Mail size={18} className="text-orange-500 flex-shrink-0" />
+                    <Mail size={18} className="text-white/50 flex-shrink-0" />
                     jimohmalik101@gmail.com
                   </a>
                   <a
                     href="tel:+2348107311900"
-                    className="flex items-center gap-3 text-base hover:text-orange-500 transition-colors"
+                    className="flex items-center gap-3 text-base hover:text-white transition-colors"
                   >
-                    <Phone size={18} className="text-orange-500 flex-shrink-0" />
+                    <Phone size={18} className="text-white/50 flex-shrink-0" />
                     +234 810 731 1900
                   </a>
-                  <div className="flex items-center gap-3 text-base text-orange-500">
-                    <MapPin size={18} className="flex-shrink-0" />
+                  <div className="flex items-center gap-3 text-base text-white/60">
+                    <MapPin size={18} className="flex-shrink-0 text-white/50" />
                     Remote-First. Worldwide.
                   </div>
                   <div className="flex items-center gap-2 text-sm">
-                    <span className="w-2 h-2 rounded-full bg-orange-500 animate-pulse" />
-                    <span className="text-orange-500 font-medium">Currently Accepting Projects</span>
+                    <span className="w-2 h-2 rounded-full bg-white/60 animate-pulse" />
+                    <span className="text-white/60 font-medium">Currently Accepting Projects</span>
                   </div>
                 </div>
               </div>
 
               <div className="pt-8 border-t border-border/50">
-                <h3 className="text-xs uppercase tracking-widest text-orange-500 mb-4 font-semibold">Book a Free Call</h3>
+                <h3 className="text-xs uppercase tracking-widest text-white/40 mb-4 font-semibold">Book a Free Call</h3>
                 <a
                   href="https://calendly.com/malik-designs"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 font-inter font-semibold text-[13px] bg-orange-500 text-white rounded-full px-6 py-3 hover:bg-orange-400 transition-colors mb-8"
+                  className="inline-flex items-center gap-2 font-inter font-semibold text-[13px] bg-white text-black rounded-full px-6 py-3 hover:bg-white/90 transition-colors mb-8"
                   data-testid="contact-calendly"
                 >
                   <Calendar size={15} />
@@ -114,11 +114,11 @@ export function ContactPage() {
               </div>
 
               <div className="border-t border-border/50 pt-8">
-                <h3 className="text-xs uppercase tracking-widest text-orange-500 mb-4 font-semibold">What We Build</h3>
+                <h3 className="text-xs uppercase tracking-widest text-white/40 mb-4 font-semibold">What We Build</h3>
                 <ul className="space-y-2 text-sm text-muted-foreground">
                   {["AI Automation Systems", "AI-Powered Websites", "AI App MVPs", "Vibe Coded Products", "AI Video Content", "AI Strategy & Roadmaps"].map((item) => (
                     <li key={item} className="flex items-center gap-2">
-                      <span className="w-1.5 h-1.5 rounded-full bg-orange-500 flex-shrink-0" />
+                      <span className="w-1.5 h-1.5 rounded-full bg-white/40 flex-shrink-0" />
                       {item}
                     </li>
                   ))}
@@ -139,7 +139,7 @@ export function ContactPage() {
                     name="name"
                     render={({ field }) => (
                       <FormItem>
-                        <FormLabel className="text-xs uppercase tracking-widest text-orange-500">Name</FormLabel>
+                        <FormLabel className="text-xs uppercase tracking-widest text-white/40">Name</FormLabel>
                         <FormControl>
                           <Input placeholder="Your Name" className="bg-background/50 border-border/50 rounded-xl" {...field} data-testid="contact-input-name" />
                         </FormControl>
@@ -152,7 +152,7 @@ export function ContactPage() {
                     name="email"
                     render={({ field }) => (
                       <FormItem>
-                        <FormLabel className="text-xs uppercase tracking-widest text-orange-500">Email</FormLabel>
+                        <FormLabel className="text-xs uppercase tracking-widest text-white/40">Email</FormLabel>
                         <FormControl>
                           <Input type="email" placeholder="your@email.com" className="bg-background/50 border-border/50 rounded-xl" {...field} data-testid="contact-input-email" />
                         </FormControl>
@@ -165,7 +165,7 @@ export function ContactPage() {
                     name="service"
                     render={({ field }) => (
                       <FormItem>
-                        <FormLabel className="text-xs uppercase tracking-widest text-orange-500">Service</FormLabel>
+                        <FormLabel className="text-xs uppercase tracking-widest text-white/40">Service</FormLabel>
                         <Select onValueChange={field.onChange} defaultValue={field.value}>
                           <FormControl>
                             <SelectTrigger className="bg-background/50 border-border/50 rounded-xl" data-testid="contact-select-service">
@@ -191,7 +191,7 @@ export function ContactPage() {
                     name="budget"
                     render={({ field }) => (
                       <FormItem>
-                        <FormLabel className="text-xs uppercase tracking-widest text-orange-500">Budget</FormLabel>
+                        <FormLabel className="text-xs uppercase tracking-widest text-white/40">Budget</FormLabel>
                         <Select onValueChange={field.onChange} defaultValue={field.value}>
                           <FormControl>
                             <SelectTrigger className="bg-background/50 border-border/50 rounded-xl" data-testid="contact-select-budget">
@@ -214,7 +214,7 @@ export function ContactPage() {
                     name="message"
                     render={({ field }) => (
                       <FormItem>
-                        <FormLabel className="text-xs uppercase tracking-widest text-orange-500">Message</FormLabel>
+                        <FormLabel className="text-xs uppercase tracking-widest text-white/40">Message</FormLabel>
                         <FormControl>
                           <Textarea
                             placeholder="Tell us about your project..."
@@ -227,7 +227,7 @@ export function ContactPage() {
                       </FormItem>
                     )}
                   />
-                  <Button type="submit" size="lg" className="w-full rounded-xl bg-orange-500 hover:bg-orange-400 text-white border-0" data-testid="contact-submit">
+                  <Button type="submit" size="lg" className="w-full rounded-xl bg-white hover:bg-white/90 text-black border-0" data-testid="contact-submit">
                     Send Message →
                   </Button>
                 </form>

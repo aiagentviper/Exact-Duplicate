@@ -115,10 +115,10 @@ export function ServicesPage() {
         <section className="py-20 text-center">
           <div className="mx-auto w-full max-w-[1100px] px-6">
             <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }}>
-              <p className="mb-4 font-inter text-[11px] font-semibold uppercase tracking-[0.2em] text-orange-500">What We Do</p>
+              <p className="mb-4 font-inter text-[11px] font-semibold uppercase tracking-[0.2em] text-white/40">What We Do</p>
               <h1 className="mb-6 font-grotesk text-[60px] font-bold leading-[1.0] tracking-[-0.02em]">
                 AI Services That<br />
-                <span className="text-orange-500">Actually Move The Needle.</span>
+                <span className="text-white/60">Actually Move The Needle.</span>
               </h1>
               <p className="mx-auto max-w-xl font-inter text-[16px] leading-relaxed text-muted-foreground">
                 From automation to full product builds — we handle everything with AI at the core.
@@ -139,11 +139,11 @@ export function ServicesPage() {
             >
               <div className={i % 2 === 1 ? "lg:col-start-2" : ""}>
                 <div className="flex items-center gap-4 mb-6">
-                  <span className="text-xs font-mono text-orange-500">{service.num}</span>
-                  <div className="w-10 h-10 rounded-lg bg-card border border-orange-500/30 flex items-center justify-center text-orange-500">
+                  <span className="text-xs font-mono text-white/40">{service.num}</span>
+                  <div className="w-10 h-10 rounded-lg bg-white/5 border border-white/15 flex items-center justify-center text-white/60">
                     {service.icon}
                   </div>
-                  <span className="text-sm font-medium text-orange-500">{service.title}</span>
+                  <span className="text-sm font-medium text-white/60">{service.title}</span>
                 </div>
                 <h2 className="font-grotesk font-semibold text-[36px] leading-[1.1] tracking-tight mb-4">
                   {service.headline}
@@ -154,13 +154,13 @@ export function ServicesPage() {
                 <ul className="space-y-3 mb-8">
                   {service.bullets.map((bullet) => (
                     <li key={bullet} className="flex items-center gap-3 text-sm text-muted-foreground">
-                      <Check size={14} className="text-orange-500 flex-shrink-0" />
+                      <Check size={14} className="text-white/50 flex-shrink-0" />
                       {bullet}
                     </li>
                   ))}
                 </ul>
                 <Link href="/contact">
-                  <Button variant="outline" className="rounded-full px-6 border-orange-500/30 text-orange-500 hover:border-orange-400 hover:bg-orange-500/10">
+                  <Button variant="outline" className="rounded-full px-6 border-white/20 text-white/70 hover:border-white/50 hover:text-white hover:bg-transparent">
                     Get This Service →
                   </Button>
                 </Link>

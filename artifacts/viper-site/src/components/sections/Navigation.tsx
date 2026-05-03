@@ -47,8 +47,8 @@ export function Navigation() {
           {navLinks.map((link) => (
             <Link key={link.href} href={link.href}>
               <span
-            className={`font-inter text-[13px] font-medium transition-colors cursor-pointer ${
-                  location === link.href ? "text-orange-500" : "text-muted-foreground hover:text-orange-500"
+                className={`font-inter text-[13px] font-medium transition-colors cursor-pointer ${
+                  location === link.href ? "text-white" : "text-muted-foreground hover:text-white"
                 }`}
                 data-testid={`nav-link-${link.label.toLowerCase()}`}
               >
@@ -61,7 +61,7 @@ export function Navigation() {
         <div className="hidden md:block">
           <Link href="/contact">
             <span
-              className="font-inter font-semibold text-[13px] bg-orange-500 text-white rounded-full px-5 py-2 hover:bg-orange-400 transition-colors cursor-pointer"
+              className="font-inter font-semibold text-[13px] bg-white text-black rounded-full px-5 py-2 hover:bg-white/90 transition-colors cursor-pointer"
               data-testid="nav-cta"
             >
               Get in touch →
@@ -86,13 +86,13 @@ export function Navigation() {
         >
           {navLinks.map((link) => (
             <Link key={link.href} href={link.href}>
-              <span className={`font-inter text-[15px] font-medium cursor-pointer ${location === link.href ? "text-orange-500" : "text-muted-foreground"}`}>
+              <span className={`font-inter text-[15px] font-medium cursor-pointer ${location === link.href ? "text-white" : "text-muted-foreground"}`}>
                 {link.label}
               </span>
             </Link>
           ))}
           <Link href="/contact">
-            <span className="font-inter font-semibold text-[13px] bg-orange-500 text-white rounded-full px-5 py-2 w-fit cursor-pointer">
+            <span className="font-inter font-semibold text-[13px] bg-white text-black rounded-full px-5 py-2 w-fit cursor-pointer">
               Get in touch →
             </span>
           </Link>

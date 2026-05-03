@@ -1,6 +1,5 @@
 import { motion } from "framer-motion";
 import { Link } from "wouter";
-import { ArrowRight } from "lucide-react";
 
 const serviceCards = [
   { icon: "⬡", title: "AI Automation", desc: "Build powerful n8n, Make.com, and Zapier workflows that eliminate repetitive tasks — so your team focuses on what matters while the system runs around the clock." },
@@ -22,21 +21,21 @@ export function Services() {
         <div className="grid min-h-[520px] w-full lg:grid-cols-[1.05fr_0.95fr]">
           <div className="flex flex-col justify-center border-r border-border/40 px-6 py-16 lg:px-10 xl:px-14">
             <motion.div initial={{ opacity: 0, y: 18 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>
-              <p className="mb-3 font-inter text-[11px] font-semibold uppercase tracking-[0.22em] text-orange-500">Our services</p>
+              <p className="mb-3 font-inter text-[11px] font-semibold uppercase tracking-[0.22em] text-white/40">Our services</p>
               <h2 className="mb-3 font-grotesk text-[58px] leading-[0.96] tracking-tight">Services</h2>
               <p className="mb-5 max-w-[360px] font-inter text-[13px] leading-relaxed text-muted-foreground">
                 We help businesses scale invisibly — with AI automation, websites, apps, video, and agent workflows that work around the clock.
               </p>
               <div className="mb-6 flex max-w-[520px] flex-wrap gap-2">
                 {['AI Automation', 'AI Websites', 'AI Apps', 'AI Video', 'AI Agents'].map((tag) => (
-                  <span key={tag} className="rounded-full border border-orange-500/30 px-3.5 py-1.5 font-inter text-[11px] text-orange-500">
+                  <span key={tag} className="rounded-full border border-white/20 px-3.5 py-1.5 font-inter text-[11px] text-white/60">
                     {tag}
                   </span>
                 ))}
               </div>
               <div className="flex gap-3">
-                <Link href="/contact"><span className="inline-flex cursor-pointer items-center gap-2 rounded-full bg-orange-500 px-5 py-2.5 font-inter text-[13px] font-semibold text-white transition-colors hover:bg-orange-400">Book a Free Call</span></Link>
-                <Link href="/work"><span className="inline-flex cursor-pointer items-center gap-2 rounded-full border border-orange-500/30 px-5 py-2.5 font-inter text-[13px] font-semibold text-orange-500 transition-colors hover:border-orange-400">See Projects</span></Link>
+                <Link href="/contact"><span className="inline-flex cursor-pointer items-center gap-2 rounded-full bg-white px-5 py-2.5 font-inter text-[13px] font-semibold text-black transition-colors hover:bg-white/90">Book a Free Call</span></Link>
+                <Link href="/work"><span className="inline-flex cursor-pointer items-center gap-2 rounded-full border border-white/20 px-5 py-2.5 font-inter text-[13px] font-semibold text-white/70 transition-colors hover:border-white/50 hover:text-white">See Projects</span></Link>
               </div>
             </motion.div>
           </div>
@@ -51,7 +50,7 @@ export function Services() {
           {serviceCards.map((card, i) => (
             <motion.div key={card.title} initial={{ opacity: 0, y: 16 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.5, delay: i * 0.06 }} className={`border-border/40 p-5 transition-colors hover:bg-card/50 lg:p-6 ${i % 2 === 0 ? 'md:border-r' : ''} ${i < 2 ? 'border-b' : ''}`}>
               <div className="h-full rounded-2xl border border-border/40 bg-zinc-900/50 p-5">
-                <span className="mb-3 block w-2 h-2 rounded-full bg-orange-500"></span>
+                <span className="mb-3 block w-2 h-2 rounded-full bg-white/40"></span>
                 <h3 className="mb-2 font-grotesk text-[16px] font-semibold tracking-tight">{card.title}</h3>
                 <p className="max-w-[320px] font-inter text-[12px] leading-relaxed text-muted-foreground">{card.desc}</p>
               </div>
@@ -64,14 +63,14 @@ export function Services() {
             <div className="pointer-events-none absolute left-0 top-0 bottom-0 z-10 w-16" style={{ background: 'linear-gradient(to right, hsl(0 0% 0%), transparent)' }} />
             <div className="pointer-events-none absolute right-0 top-0 bottom-0 z-10 w-16" style={{ background: 'linear-gradient(to left, hsl(0 0% 0%), transparent)' }} />
             <div className="flex w-max gap-2.5" style={{ animation: 'marquee 25s linear infinite' }}>
-              {doubled1.map((item, i) => <span key={i} className="whitespace-nowrap rounded-full border border-orange-500/20 px-3.5 py-1.5 font-inter text-[11px] font-medium text-orange-500">{item}</span>)}
+              {doubled1.map((item, i) => <span key={i} className="whitespace-nowrap rounded-full border border-white/15 px-3.5 py-1.5 font-inter text-[11px] font-medium text-white/40">{item}</span>)}
             </div>
           </div>
           <div className="relative">
             <div className="pointer-events-none absolute left-0 top-0 bottom-0 z-10 w-16" style={{ background: 'linear-gradient(to right, hsl(0 0% 0%), transparent)' }} />
             <div className="pointer-events-none absolute right-0 top-0 bottom-0 z-10 w-16" style={{ background: 'linear-gradient(to left, hsl(0 0% 0%), transparent)' }} />
             <div className="flex w-max gap-2.5" style={{ animation: 'marquee-reverse 28s linear infinite' }}>
-              {doubled2.map((item, i) => <span key={i} className="whitespace-nowrap rounded-full border border-orange-500/20 px-3.5 py-1.5 font-inter text-[11px] font-medium text-orange-500">{item}</span>)}
+              {doubled2.map((item, i) => <span key={i} className="whitespace-nowrap rounded-full border border-white/15 px-3.5 py-1.5 font-inter text-[11px] font-medium text-white/40">{item}</span>)}
             </div>
           </div>
         </div>
