@@ -25,19 +25,19 @@ const faqs = [
 const tags = ["Product Design", "Branding", "Web Design", "AI Systems", "Content", "Strategy"];
 
 const featureCards = [
-  { icon: Sparkles, title: "NEW Brand Systems", text: "Launch sharper visual systems with modern direction, fast iterations, and premium polish." },
-  { icon: Bot, title: "NEW AI Workflows", text: "Automate lead handling, outreach, and internal ops with high-leverage AI flows." },
-  { icon: Globe2, title: "NEW Web Experiences", text: "Build high-converting sites with cinematic visuals and clean conversion paths." },
-  { icon: Video, title: "NEW Video Content", text: "Create content that looks premium, feels cinematic, and ships quickly." },
-  { icon: Wrench, title: "NEW Product Builds", text: "Ship apps and MVPs with fast iteration and strong technical foundations." },
-  { icon: Brain, title: "NEW Strategy Layer", text: "Get a clear roadmap for what to automate, build, and scale next." },
+  { icon: Sparkles, title: "Brand Systems", text: "Launch sharper visual systems with modern direction, fast iterations, and premium polish." },
+  { icon: Bot, title: "AI Workflows", text: "Automate lead handling, outreach, and internal ops with high-leverage AI flows." },
+  { icon: Globe2, title: "Web Experiences", text: "Build high-converting sites with cinematic visuals and clean conversion paths." },
+  { icon: Video, title: "Video Content", text: "Create content that looks premium, feels cinematic, and ships quickly." },
+  { icon: Wrench, title: "Product Builds", text: "Ship apps and MVPs with fast iteration and strong technical foundations." },
+  { icon: Brain, title: "Strategy Layer", text: "Get a clear roadmap for what to automate, build, and scale next." },
 ];
 
 const pricingPlans = [
   {
     name: "Basic",
     price: "$999",
-    features: ["1-page landing page", "Mobile-first responsive build", "3 content sections", "Blue-accent styling", "1 revision round"],
+    features: ["1-page landing page", "Mobile-first responsive build", "3 content sections", "AI chatbot integration", "1 revision round"],
     highlighted: false,
   },
   {
@@ -135,7 +135,7 @@ export function HomePage() {
                 className="grid items-center gap-12 lg:grid-cols-2"
               >
                 <div>
-                  <span className="mb-5 inline-block rounded-full border border-sky-500/40 bg-sky-500/10 px-4 py-1.5 font-inter text-[11px] font-semibold uppercase tracking-[0.2em] text-sky-400">
+                  <span className="mb-5 inline-block rounded-full border border-orange-500/40 bg-orange-500/10 px-4 py-1.5 font-inter text-[11px] font-semibold uppercase tracking-[0.2em] text-orange-500">
                     Step 1
                   </span>
                   <h3 className="mb-4 font-grotesk text-[36px] font-semibold leading-[1.1] tracking-tight">Define Your Vision</h3>

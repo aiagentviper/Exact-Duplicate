@@ -115,7 +115,7 @@ export function ServicesPage() {
         <section className="py-20 text-center">
           <div className="mx-auto w-full max-w-[1100px] px-6">
           <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }}>
-            <p className="font-inter font-semibold text-[11px] uppercase tracking-[0.2em] text-muted-foreground mb-4">What We Do</p>
+            <p className="font-inter font-semibold text-[11px] uppercase tracking-[0.2em] text-orange-500 mb-4">What We Do</p>
             <h1 className="font-grotesk font-bold text-[60px] leading-[1.0] tracking-[-0.02em] mb-6">
               AI Services That<br />
               <span className="text-muted-foreground/40">Actually Move The Needle.</span>
@@ -154,7 +154,7 @@ export function ServicesPage() {
                 <ul className="space-y-3 mb-8">
                   {service.bullets.map((bullet) => (
                     <li key={bullet} className="flex items-center gap-3 text-sm text-muted-foreground">
-                      <Check size={14} className="text-foreground/60 flex-shrink-0" />
+                      <Check size={14} className="text-orange-500 flex-shrink-0" />
                       {bullet}
                     </li>
                   ))}

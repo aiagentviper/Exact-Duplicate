@@ -105,7 +105,7 @@ export function PricingPage() {
         <section className="py-20 text-center border-b border-border/40">
           <div className="mx-auto w-full max-w-[1100px] px-6">
           <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }}>
-            <p className="font-inter font-semibold text-[11px] uppercase tracking-[0.2em] text-muted-foreground mb-4">Transparent Pricing</p>
+            <p className="font-inter font-semibold text-[11px] uppercase tracking-[0.2em] text-orange-500 mb-4">Transparent Pricing</p>
             <h1 className="font-grotesk font-bold text-[60px] leading-[1.0] tracking-[-0.02em] mb-6">
               Feasible Plans For<br /><span className="text-muted-foreground/40">Every Stage of Growth.</span>
             </h1>
@@ -157,7 +157,7 @@ export function PricingPage() {
           <div className="mx-auto w-full max-w-[1100px] px-6">
             <div className="grid lg:grid-cols-2 gap-16 items-start">
               <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>
-                <p className="font-inter font-semibold text-[11px] uppercase tracking-[0.2em] text-muted-foreground mb-3">How It Works</p>
+                <p className="font-inter font-semibold text-[11px] uppercase tracking-[0.2em] text-orange-500 mb-3">How It Works</p>
                 <h2 className="font-grotesk font-semibold text-[42px] leading-[1.05] tracking-tight">
                   Our<br />Process!
                 </h2>
@@ -183,7 +183,7 @@ export function PricingPage() {
         <section className="py-28 border-b border-border/40">
           <div className="mx-auto w-full max-w-[1100px] px-6">
             <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }} className="mb-14">
-              <p className="font-inter font-semibold text-[11px] uppercase tracking-[0.2em] text-muted-foreground mb-3">Client Reviews</p>
+              <p className="font-inter font-semibold text-[11px] uppercase tracking-[0.2em] text-orange-500 mb-3">Client Reviews</p>
               <h2 className="font-grotesk font-semibold text-[42px] leading-[1.05] tracking-tight">
                 Trusted by<br />Clients.
               </h2>
@@ -219,7 +219,7 @@ export function PricingPage() {
           <div className="mx-auto w-full max-w-[1100px] px-6">
             <div className="grid lg:grid-cols-2 gap-16 items-start">
               <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>
-                <p className="font-inter font-semibold text-[11px] uppercase tracking-[0.2em] text-muted-foreground mb-3">Answers</p>
+                <p className="font-inter font-semibold text-[11px] uppercase tracking-[0.2em] text-orange-500 mb-3">Answers</p>
                 <h2 className="font-grotesk font-semibold text-[42px] leading-[1.05] tracking-tight">
                   Got a<br />Question?
                 </h2>
@@ -248,7 +248,7 @@ export function PricingPage() {
         {/* ── CTA ── */}
         <section className="py-28 text-center">
           <motion.div initial={{ opacity: 0, y: 24 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>
-            <p className="font-inter font-semibold text-[11px] uppercase tracking-[0.2em] text-muted-foreground mb-4">Let's Talk</p>
+            <p className="font-inter font-semibold text-[11px] uppercase tracking-[0.2em] text-orange-500 mb-4">Let's Talk</p>
             <h2 className="font-grotesk font-bold text-[48px] leading-[1.0] tracking-tight mb-6">
               Need a Custom Quote?<br /><span className="text-foreground/40">We've Got You.</span>
             </h2>

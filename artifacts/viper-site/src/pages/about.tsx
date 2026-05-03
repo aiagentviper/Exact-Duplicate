@@ -152,7 +152,7 @@ export function AboutPage() {
           <div className="mx-auto w-full max-w-[1100px] px-6">
             <div className="grid lg:grid-cols-2 gap-16 items-start">
               <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>
-                <p className="font-inter font-semibold text-[11px] uppercase tracking-[0.2em] text-muted-foreground mb-3">How It Works</p>
+                <p className="font-inter font-semibold text-[11px] uppercase tracking-[0.2em] text-orange-500 mb-3">How It Works</p>
                 <h2 className="font-grotesk font-semibold text-[42px] leading-[1.05] tracking-tight">
                   Our<br />Process!
                 </h2>
@@ -177,7 +177,7 @@ export function AboutPage() {
         <section className="py-28 border-b border-border/40">
           <div className="mx-auto w-full max-w-[1100px] px-6">
             <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }} className="mb-14">
-              <p className="font-inter font-semibold text-[11px] uppercase tracking-[0.2em] text-muted-foreground mb-3">What We Offer</p>
+              <p className="font-inter font-semibold text-[11px] uppercase tracking-[0.2em] text-orange-500 mb-3">What We Offer</p>
               <h2 className="font-grotesk font-semibold text-[42px] leading-[1.05] tracking-tight">
                 Our<br />Services!
               </h2>
@@ -209,7 +209,7 @@ export function AboutPage() {
         <section className="py-28 border-b border-border/40">
           <div className="mx-auto w-full max-w-[1100px] px-6">
             <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }} className="mb-14">
-              <p className="font-inter font-semibold text-[11px] uppercase tracking-[0.2em] text-muted-foreground mb-3">Client Reviews</p>
+              <p className="font-inter font-semibold text-[11px] uppercase tracking-[0.2em] text-orange-500 mb-3">Client Reviews</p>
               <h2 className="font-grotesk font-semibold text-[42px] leading-[1.05] tracking-tight">
                 What Clients<br />Say!
               </h2>
@@ -244,7 +244,7 @@ export function AboutPage() {
           <div className="mx-auto w-full max-w-[1100px] px-6">
             <div className="grid lg:grid-cols-2 gap-16 items-start">
               <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>
-                <p className="font-inter font-semibold text-[11px] uppercase tracking-[0.2em] text-muted-foreground mb-3">Answers</p>
+                <p className="font-inter font-semibold text-[11px] uppercase tracking-[0.2em] text-orange-500 mb-3">Answers</p>
                 <h2 className="font-grotesk font-semibold text-[42px] leading-[1.05] tracking-tight">
                   Got a<br />Question?
                 </h2>
@@ -269,7 +269,7 @@ export function AboutPage() {
         {/* ── CTA ── */}
         <section className="py-28 text-center">
           <motion.div initial={{ opacity: 0, y: 24 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>
-            <p className="font-inter font-semibold text-[11px] uppercase tracking-[0.2em] text-muted-foreground mb-4">Ready?</p>
+            <p className="font-inter font-semibold text-[11px] uppercase tracking-[0.2em] text-orange-500 mb-4">Ready?</p>
             <h2 className="font-grotesk font-bold text-[48px] leading-[1.0] tracking-tight mb-6">
               Let's Build Something<br />
               <span className="text-foreground/40">Extraordinary.</span>
