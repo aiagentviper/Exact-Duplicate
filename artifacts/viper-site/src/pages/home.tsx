@@ -55,13 +55,9 @@ function FAQAccordion({ items }: { items: typeof faqs }) {
             className="w-full flex items-center justify-between gap-4 text-left"
           >
             <span className="font-inter text-[14px] text-foreground">{item.q}</span>
-            <span className="text-muted-foreground text-lg leading-none flex-shrink-0">
-              {open === i ? "×" : "+"}
-            </span>
+            <span className="text-muted-foreground text-lg leading-none flex-shrink-0">{open === i ? "×" : "+"}</span>
           </button>
-          {open === i && item.a && (
-            <p className="font-inter text-[13px] text-muted-foreground mt-3 leading-relaxed">{item.a}</p>
-          )}
+          {open === i && item.a && <p className="font-inter text-[13px] text-muted-foreground mt-3 leading-relaxed">{item.a}</p>}
         </div>
       ))}
     </div>
@@ -77,7 +73,6 @@ export function HomePage() {
           <Hero />
         </div>
 
-
         <Portfolio />
         <Services />
         <Stats />
@@ -92,12 +87,11 @@ export function HomePage() {
               className="relative overflow-hidden min-h-[400px] lg:min-h-auto"
             >
               <img
-                src="/ref-process.png"
+                src="@assets/96d7cdeb-a346-42db-bebf-ad4717a34552_1777792353296.png"
                 alt="Our Process"
-                className="w-full h-full object-cover object-left"
+                className="w-full h-full object-cover object-center"
               />
-              <div className="absolute inset-0 bg-black/55" />
-              <div className="absolute inset-0" style={{ background: "linear-gradient(to right, rgba(0,0,0,0.1) 0%, rgba(0,0,0,0.6) 55%, rgba(0,0,0,0.97) 100%)" }} />
+              <div className="absolute inset-0 bg-black/50" />
             </motion.div>
 
             <div className="py-20 px-10 lg:px-14 flex flex-col justify-center">
@@ -166,7 +160,7 @@ export function HomePage() {
                 transition={{ duration: 0.6, delay: 0.15 }}
                 className="my-8 rounded-2xl overflow-hidden aspect-[4/3] max-w-sm"
               >
-                <img src="/ref-faq.png" alt="FAQ visual" className="w-full h-full object-cover object-left" />
+                <img src="@assets/imgi_141_QqqmFNIdzb0HbOiMSHvqZXkwT7w_1777792395220.png" alt="FAQ visual" className="w-full h-full object-cover object-center" />
               </motion.div>
 
               <div>

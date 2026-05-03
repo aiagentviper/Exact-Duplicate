@@ -54,7 +54,7 @@ export function Services() {
               Helping businesses standout with brand identity packaging that captivates and converts effectively.
             </p>
             <div className="flex flex-wrap gap-2 mb-8">
-              {["Product Design", "Brand Identity Design", "Branding", "Packaging Design", "Mockup Design"].map(tag => (
+              {['Product Design', 'Brand Identity Design', 'Branding', 'Packaging Design', 'Mockup Design'].map(tag => (
                 <span key={tag} className="border border-border/60 rounded-full px-4 py-1.5 text-[12px] font-inter text-muted-foreground">
                   {tag}
                 </span>
@@ -80,11 +80,10 @@ export function Services() {
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
-          className="relative overflow-hidden min-h-[300px]"
+          className="relative overflow-hidden min-h-[300px] rounded-none"
         >
-          <img src="/ref-services.png" alt="Services" className="w-full h-full object-cover object-right" />
-          <div className="absolute inset-0 bg-black/50" />
-          <div className="absolute inset-0" style={{ background: "linear-gradient(to right, rgba(0,0,0,0.95) 0%, rgba(0,0,0,0.4) 45%, rgba(0,0,0,0.05) 100%)" }} />
+          <img src="@assets/imgi_159_p6Im6dfknHAI0ig4NqDcO4WNpc_1777792397456.jpg" alt="Services" className="w-full h-full object-cover object-center" />
+          <div className="absolute inset-0 bg-black/25" />
         </motion.div>
       </div>
 
@@ -96,9 +95,7 @@ export function Services() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: i * 0.06 }}
-            className={`p-8 border-border/40 hover:bg-card/50 transition-colors ${
-              i % 2 === 0 ? "border-r" : ""
-            } ${i < 2 ? "border-b" : ""}`}
+            className={`p-8 border-border/40 hover:bg-card/50 transition-colors ${i % 2 === 0 ? "border-r" : ""} ${i < 2 ? "border-b" : ""}`}
           >
             <span className="text-muted-foreground/50 text-[20px] block mb-4">{card.icon}</span>
             <h3 className="font-grotesk font-semibold text-[18px] tracking-tight mb-2">{card.title}</h3>

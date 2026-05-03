@@ -70,14 +70,13 @@ export function Testimonials() {
   return (
     <section className="border-t border-border/40 overflow-hidden">
       <div className="grid lg:grid-cols-2 min-h-[360px]">
-        <div className="relative overflow-hidden min-h-[260px]">
+        <div className="relative overflow-hidden min-h-[260px] rounded-none">
           <img
-            src="/ref-reviews.png"
+            src="@assets/imgi_160_PjaPY2S6qP6ii6fCxTJHhHU66SM_1777792400172.png"
             alt="Client Reviews"
-            className="w-full h-full object-cover object-left"
+            className="w-full h-full object-cover object-center"
           />
-          <div className="absolute inset-0 bg-black/55" />
-          <div className="absolute inset-0" style={{ background: "linear-gradient(to right, rgba(0,0,0,0.1) 0%, rgba(0,0,0,0.7) 60%, rgba(0,0,0,0.97) 100%)" }} />
+          <div className="absolute inset-0 bg-black/42" />
         </div>
 
         <div className="py-16 px-10 lg:px-14 flex flex-col justify-center">
