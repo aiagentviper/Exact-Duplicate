@@ -3,65 +3,114 @@ import { Link } from "wouter";
 import { motion } from "framer-motion";
 import { Navigation } from "@/components/sections/Navigation";
 import { Footer } from "@/components/sections/Footer";
-import { Button } from "@/components/ui/button";
+import { ArrowRight, ExternalLink } from "lucide-react";
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 
-type FilterType = "All" | "AI Website" | "AI Video" | "AI Automation" | "AI App" | "Vibe Coding";
-
-const filters: FilterType[] = ["All", "AI Website", "AI Video", "AI Automation", "AI App", "Vibe Coding"];
+type FilterType = "All" | "AI Website" | "AI Video" | "AI Automation" | "AI App";
+const filters: FilterType[] = ["All", "AI Website", "AI Video", "AI Automation", "AI App"];
 
 const websiteProjects = [
-  { id: 1, image: "/portfolio/watch-website.jpg", title: "Watch Pro", tag: "AI Website | Luxury", category: "AI Website" },
-  { id: 2, image: "/portfolio/car-rental-site.jpg", title: "Premium Car Rental", tag: "AI Website | Automotive", category: "AI Website" },
-  { id: 3, image: "/portfolio/smart-home-site.jpg", title: "Gravette Smart Home", tag: "AI Website | Tech", category: "AI Website" },
-  { id: 4, image: "/portfolio/omega-website.jpg", title: "Moonwatch Omega", tag: "AI Website | Luxury", category: "AI Website" },
-  { id: 5, image: "/portfolio/email-sequences.jpg", title: "YAJU Supplements", tag: "AI Website | E-Commerce", category: "AI Website" },
-  { id: 6, image: "/portfolio/marketing-slides.jpg", title: "Strategy Deck Agency", tag: "AI Website | Agency", category: "AI Website" },
-  { id: 7, image: "/portfolio/watch-website.jpg", title: "Watch Pro II", tag: "AI Website | Product", category: "AI Website" },
-  { id: 8, image: "/portfolio/car-rental-site.jpg", title: "Luxury Fleet", tag: "AI Website | Automotive", category: "AI Website" },
-  { id: 9, image: "/portfolio/smart-home-site.jpg", title: "Home Environment", tag: "AI Website | SaaS", category: "AI Website" },
+  { id: 1, title: "Hair & Skin Clinic", tag: "AI Website · Health & Beauty", href: "https://www.hairandskinclinic.co.uk", image: "/portfolio/watch-website.jpg" },
+  { id: 2, title: "Asuno Salon", tag: "AI Website · Beauty & Wellness", href: "https://asunosalon.co.uk", image: "/portfolio/car-rental-site.jpg" },
+  { id: 3, title: "Oh Polly", tag: "AI Website · Fashion E-Commerce", href: "https://www.ohpolly.com", image: "/portfolio/smart-home-site.jpg" },
+  { id: 4, title: "Showpo", tag: "AI Website · Fashion E-Commerce", href: "https://www.showpo.com", image: "/portfolio/omega-website.jpg" },
+  { id: 5, title: "Juicy Couture", tag: "AI Website · Luxury Fashion", href: "https://juicycouture.com", image: "/portfolio/email-sequences.jpg" },
+  { id: 6, title: "Andfold", tag: "AI Website · Brand Studio", href: "https://andfold.framer.website", image: "/portfolio/marketing-slides.jpg" },
+  { id: 7, title: "Tamara Giger", tag: "AI Website · Personal Brand", href: "https://www.tamaragiger.com", image: "/portfolio/watch-website.jpg" },
+  { id: 8, title: "Millioniar Training", tag: "AI Website · Education", href: "https://Millioniarstraining.framer.website", image: "/portfolio/car-rental-site.jpg" },
+  { id: 9, title: "Tyr Graham", tag: "AI Website · Personal Brand", href: "https://tyrgraham.com", image: "/portfolio/smart-home-site.jpg" },
+  { id: 10, title: "Building Up Steam", tag: "AI Website · Community", href: "https://join.buildingupsteam.org", image: "/portfolio/omega-website.jpg" },
+  { id: 11, title: "Holli Tabren", tag: "AI Website · Personal Brand", href: "https://hollitabren.com", image: "/portfolio/email-sequences.jpg" },
+  { id: 12, title: "Sorhaya Zamor", tag: "AI Website · Portfolio", href: "https://sorhayazamor.com", image: "/portfolio/marketing-slides.jpg" },
 ];
 
 const appProjects = [
-  { id: 10, image: "/portfolio/crypto-dashboard.jpg", title: "CryptoTrack Dashboard", tag: "AI App | Fintech", desc: "AI-powered crypto portfolio & trading dashboard with live market data.", category: "AI App" },
-  { id: 11, image: "/portfolio/learning-app.jpg", title: "LearnAI Mobile App", tag: "AI App | EdTech", desc: "Gamified learning app with AI-personalized lessons, leaderboards & streaks.", category: "AI App" },
-  { id: 12, image: "/portfolio/crypto-dashboard.jpg", title: "Finance Analytics Suite", tag: "AI App | Fintech", desc: "Real-time financial analytics platform with AI-driven insights & alerts.", category: "AI App" },
+  { id: 13, image: "/portfolio/crypto-dashboard.jpg", title: "CryptoTrack Dashboard", tag: "AI App · Fintech", desc: "AI-powered crypto portfolio & trading dashboard with live market data." },
+  { id: 14, image: "/portfolio/learning-app.jpg", title: "LearnAI Mobile App", tag: "AI App · EdTech", desc: "Gamified learning app with AI-personalized lessons, leaderboards & streaks." },
+  { id: 15, image: "/portfolio/crypto-dashboard.jpg", title: "Finance Analytics Suite", tag: "AI App · Fintech", desc: "Real-time financial analytics with AI-driven insights & smart alerts." },
 ];
 
 const automationProjects = [
-  { id: 13, image: "/portfolio/automation-flow.jpg", title: "Content Generation Pipeline", tag: "AI Automation | n8n", desc: "Google Drive triggered AI workflow that auto-generates How-To guides as PDFs.", category: "AI Automation" },
-  { id: 14, image: "/portfolio/ai-agent-flow.jpg", title: "Multi-Agent Telegram Bot", tag: "AI Automation | AI Agent", desc: "AI agent handling email, calendar, contacts & web research via Telegram.", category: "AI Automation" },
-  { id: 15, image: "/portfolio/make-automation.jpg", title: "Booking Automation System", tag: "AI Automation | Make.com", desc: "End-to-end booking flow with Slack notifications & Google Sheets sync.", category: "AI Automation" },
+  { id: 16, image: "/portfolio/automation-flow.jpg", title: "Content Generation Pipeline", tag: "AI Automation · n8n", desc: "Google Drive triggered AI workflow that auto-generates How-To guides as PDFs." },
+  { id: 17, image: "/portfolio/ai-agent-flow.jpg", title: "Multi-Agent Telegram Bot", tag: "AI Automation · AI Agent", desc: "AI agent handling email, calendar, contacts & web research via Telegram." },
+  { id: 18, image: "/portfolio/make-automation.jpg", title: "Booking Automation System", tag: "AI Automation · Make.com", desc: "End-to-end booking flow with Slack notifications & Google Sheets sync." },
 ];
 
 const videoProjects = [
-  { id: 16, video: "/videos/ai-video-1.mp4", title: "AI Brand Promo", category: "AI Video" },
-  { id: 17, video: "/videos/ai-video-2.mp4", title: "AI Product Showcase", category: "AI Video" },
-  { id: 18, video: "/videos/ai-video-3.mp4", title: "AI Automation Explainer", category: "AI Video" },
-  { id: 19, video: "/videos/ai-video-4.mp4", title: "AI UGC Ad", category: "AI Video" },
-  { id: 20, video: "/videos/ai-video-5.mp4", title: "AI Motion Graphics", category: "AI Video" },
-  { id: 21, video: "/videos/ai-video-6.mp4", title: "AI Social Content", category: "AI Video" },
+  { id: 19, video: "/videos/ai-video-1.mp4", title: "AI Brand Promo" },
+  { id: 20, video: "/videos/ai-video-2.mp4", title: "AI Product Showcase" },
+  { id: 21, video: "/videos/ai-video-3.mp4", title: "AI Automation Explainer" },
+  { id: 22, video: "/videos/ai-video-4.mp4", title: "AI UGC Ad" },
+  { id: 23, video: "/videos/ai-video-5.mp4", title: "AI Motion Graphics" },
+  { id: 24, video: "/videos/ai-video-6.mp4", title: "AI Social Content" },
 ];
 
-function ImageCard({ image, title, tag, desc }: { image: string; title: string; tag: string; desc?: string }) {
+const processSteps = [
+  { num: "01", title: "Define Your Vision", desc: "Tell us what you want to build, your goals, and the outcomes you're after. We listen first." },
+  { num: "02", title: "Submit Your Request", desc: "We scope the work, agree a clear timeline and lock in deliverables. No surprises." },
+  { num: "03", title: "Project Delivered", desc: "We build fast using the best AI tools, iterate with your feedback and launch with impact." },
+];
+
+const faqs = [
+  { q: "How fast can you build a website?", a: "Most AI websites are delivered in 3–5 business days. Larger multi-page sites take 7–10 days depending on scope." },
+  { q: "Do the websites you build actually work?", a: "Yes — every website in our portfolio is a live, functioning site built for real clients. You can visit each one via the links above." },
+  { q: "What platform do you build on?", a: "We use whatever fits best — Framer, Webflow, Vite/React, WordPress or fully custom stacks depending on the client's needs." },
+  { q: "Can I request revisions?", a: "Absolutely. Every project includes at least one revision round, with more available on higher plans." },
+  { q: "Do you help with content too?", a: "Yes — we handle copywriting, imagery and AI-generated visuals as part of the build process." },
+];
+
+function WebsiteCard({ project }: { project: typeof websiteProjects[0] }) {
   return (
-    <motion.div
-      initial={{ opacity: 0, y: 30 }}
+    <motion.a
+      href={project.href}
+      target="_blank"
+      rel="noopener noreferrer"
+      initial={{ opacity: 0, y: 24 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
       transition={{ duration: 0.5 }}
-      className="group relative overflow-hidden rounded-xl border border-border/50 bg-card cursor-pointer"
+      className="group relative overflow-hidden rounded-2xl border border-border/40 bg-card block cursor-pointer hover:border-border/70 transition-colors"
     >
+      <div className="aspect-[4/3] overflow-hidden bg-card">
+        <img src={project.image} alt={project.title} className="object-cover w-full h-full transition-transform duration-700 group-hover:scale-105"
+          onError={(e) => { (e.target as HTMLImageElement).src = "/portfolio/automation-flow.jpg"; }} />
+      </div>
+      <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
+        <p className="font-inter font-semibold text-[11px] uppercase tracking-[0.2em] text-white/60 mb-1">{project.tag}</p>
+        <div className="flex items-center justify-between">
+          <h3 className="font-grotesk font-semibold text-[18px] text-white">{project.title}</h3>
+          <div className="w-8 h-8 rounded-full border border-white/40 flex items-center justify-center flex-shrink-0">
+            <ExternalLink size={13} className="text-white" />
+          </div>
+        </div>
+      </div>
+      <div className="p-5 border-t border-border/40">
+        <p className="font-inter text-[11px] text-muted-foreground/60 mb-1">{project.tag}</p>
+        <div className="flex items-center justify-between">
+          <h3 className="font-grotesk font-medium text-[15px]">{project.title}</h3>
+          <ExternalLink size={13} className="text-muted-foreground/50 group-hover:text-foreground transition-colors" />
+        </div>
+      </div>
+    </motion.a>
+  );
+}
+
+function ImageCard({ project }: { project: { id: number; image: string; title: string; tag: string; desc?: string } }) {
+  return (
+    <motion.div initial={{ opacity: 0, y: 24 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.5 }}
+      className="group relative overflow-hidden rounded-2xl border border-border/40 bg-card">
       <div className="aspect-[4/3] overflow-hidden">
-        <img src={image} alt={title} className="object-cover w-full h-full transition-transform duration-700 group-hover:scale-105" />
+        <img src={project.image} alt={project.title} className="object-cover w-full h-full transition-transform duration-700 group-hover:scale-105"
+          onError={(e) => { (e.target as HTMLImageElement).src = "/portfolio/automation-flow.jpg"; }} />
       </div>
-      <div className="absolute inset-0 bg-black/70 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
-        <p className="text-xs uppercase tracking-widest text-white/60 mb-1">{tag}</p>
-        <h3 className="text-lg font-bold text-white mb-1">{title}</h3>
-        {desc && <p className="text-xs text-white/60 line-clamp-2">{desc}</p>}
+      <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
+        <p className="font-inter font-semibold text-[11px] uppercase tracking-[0.2em] text-white/60 mb-1">{project.tag}</p>
+        <h3 className="font-grotesk font-semibold text-[18px] text-white">{project.title}</h3>
+        {project.desc && <p className="font-inter text-[13px] text-white/60 mt-1 line-clamp-2">{project.desc}</p>}
       </div>
-      <div className="p-4 border-t border-border/50">
-        <p className="text-xs text-muted-foreground mb-1">{tag}</p>
-        <h3 className="text-sm font-semibold">{title}</h3>
+      <div className="p-5 border-t border-border/40">
+        <p className="font-inter text-[11px] text-muted-foreground/60 mb-1">{project.tag}</p>
+        <h3 className="font-grotesk font-medium text-[15px]">{project.title}</h3>
       </div>
     </motion.div>
   );
@@ -69,24 +118,12 @@ function ImageCard({ image, title, tag, desc }: { image: string; title: string; 
 
 function VideoCard({ video, title }: { video: string; title: string }) {
   return (
-    <motion.div
-      initial={{ opacity: 0, y: 30 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true }}
-      transition={{ duration: 0.5 }}
-      className="rounded-xl overflow-hidden border border-border/50 bg-card"
-    >
-      <video
-        src={video}
-        controls
-        muted
-        loop
-        playsInline
-        className="w-full aspect-video object-cover"
-      />
-      <div className="p-4">
-        <p className="text-xs text-muted-foreground mb-1">AI Video</p>
-        <h3 className="text-sm font-semibold">{title}</h3>
+    <motion.div initial={{ opacity: 0, y: 24 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.5 }}
+      className="rounded-2xl overflow-hidden border border-border/40 bg-card">
+      <video src={video} controls muted loop playsInline className="w-full aspect-video object-cover" />
+      <div className="p-5 border-t border-border/40">
+        <p className="font-inter text-[11px] text-muted-foreground/60 mb-1">AI Video</p>
+        <h3 className="font-grotesk font-medium text-[15px]">{title}</h3>
       </div>
     </motion.div>
   );
@@ -94,7 +131,6 @@ function VideoCard({ video, title }: { video: string; title: string }) {
 
 export function WorkPage() {
   const [active, setActive] = useState<FilterType>("All");
-
   const showWebsite = active === "All" || active === "AI Website";
   const showApp = active === "All" || active === "AI App";
   const showAutomation = active === "All" || active === "AI Automation";
@@ -104,90 +140,151 @@ export function WorkPage() {
     <div className="bg-background min-h-screen text-foreground dark">
       <Navigation />
       <main className="pt-24">
-        <section className="py-20 container mx-auto px-6 text-center">
+
+        {/* ── Page header ── */}
+        <section className="py-20 container mx-auto px-6 text-center border-b border-border/40">
           <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }}>
             <p className="font-inter font-semibold text-[11px] uppercase tracking-[0.2em] text-muted-foreground mb-4">Our Portfolio</p>
             <h1 className="font-grotesk font-bold text-[60px] leading-[1.0] tracking-[-0.02em] mb-6">
-              Real Projects.<br />
-              <span className="text-muted-foreground/40">Real Results.</span>
+              Real Projects.<br /><span className="text-muted-foreground/40">Real Results.</span>
             </h1>
             <p className="font-inter text-[16px] text-muted-foreground max-w-xl mx-auto leading-relaxed">
-              AI-powered websites, videos, automations & apps built for businesses across every industry.
+              AI-powered websites, videos, automations & apps built for businesses across every industry. Click any website to visit the live site.
             </p>
           </motion.div>
         </section>
 
-        <section className="container mx-auto px-6 mb-12">
+        {/* ── Filters ── */}
+        <section className="container mx-auto px-6 py-10">
           <div className="flex flex-wrap gap-2 justify-center">
             {filters.map((f) => (
-              <button
-                key={f}
-                onClick={() => setActive(f)}
-                data-testid={`filter-${f.toLowerCase().replace(/ /g, "-")}`}
-                className={`px-4 py-2 rounded-full text-sm font-medium transition-all border ${
-                  active === f
-                    ? "bg-foreground text-background border-foreground"
-                    : "bg-transparent text-muted-foreground border-border/50 hover:border-foreground/30 hover:text-foreground"
-                }`}
-              >
+              <button key={f} onClick={() => setActive(f)}
+                className={`font-inter font-medium text-[13px] px-5 py-2 rounded-full transition-all border ${active === f ? "bg-foreground text-background border-foreground" : "bg-transparent text-muted-foreground border-border/50 hover:border-foreground/30 hover:text-foreground"}`}>
                 {f}
               </button>
             ))}
           </div>
         </section>
 
-        <div className="container mx-auto px-6 space-y-20 pb-24">
+        {/* ── Portfolio sections ── */}
+        <div className="container mx-auto px-6 space-y-20 pb-28">
           {showWebsite && (
             <div>
-              <h2 className="text-2xl font-black uppercase tracking-tighter mb-8 text-muted-foreground/60">AI Websites</h2>
-              <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-                {websiteProjects.map((p) => (
-                  <ImageCard key={p.id} image={p.image} title={p.title} tag={p.tag} />
-                ))}
+              <div className="flex items-end justify-between mb-8">
+                <div>
+                  <p className="font-inter font-semibold text-[11px] uppercase tracking-[0.2em] text-muted-foreground mb-1">Live Websites</p>
+                  <h2 className="font-grotesk font-semibold text-[28px] tracking-tight">AI Websites</h2>
+                </div>
+                <span className="font-inter text-[12px] text-muted-foreground">Click card to visit live site</span>
+              </div>
+              <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
+                {websiteProjects.map((p) => <WebsiteCard key={p.id} project={p} />)}
               </div>
             </div>
           )}
-
           {showApp && (
             <div>
-              <h2 className="text-2xl font-black uppercase tracking-tighter mb-8 text-muted-foreground/60">AI Apps</h2>
-              <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-                {appProjects.map((p) => (
-                  <ImageCard key={p.id} image={p.image} title={p.title} tag={p.tag} desc={p.desc} />
-                ))}
+              <div className="mb-8">
+                <p className="font-inter font-semibold text-[11px] uppercase tracking-[0.2em] text-muted-foreground mb-1">Custom Builds</p>
+                <h2 className="font-grotesk font-semibold text-[28px] tracking-tight">AI Apps</h2>
+              </div>
+              <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
+                {appProjects.map((p) => <ImageCard key={p.id} project={p} />)}
               </div>
             </div>
           )}
-
           {showAutomation && (
             <div>
-              <h2 className="text-2xl font-black uppercase tracking-tighter mb-8 text-muted-foreground/60">AI Automation</h2>
-              <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-                {automationProjects.map((p) => (
-                  <ImageCard key={p.id} image={p.image} title={p.title} tag={p.tag} desc={p.desc} />
-                ))}
+              <div className="mb-8">
+                <p className="font-inter font-semibold text-[11px] uppercase tracking-[0.2em] text-muted-foreground mb-1">Workflow Systems</p>
+                <h2 className="font-grotesk font-semibold text-[28px] tracking-tight">AI Automation</h2>
+              </div>
+              <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
+                {automationProjects.map((p) => <ImageCard key={p.id} project={p} />)}
               </div>
             </div>
           )}
-
           {showVideo && (
             <div>
-              <h2 className="text-2xl font-black uppercase tracking-tighter mb-8 text-muted-foreground/60">AI Video Productions</h2>
-              <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-                {videoProjects.map((p) => (
-                  <VideoCard key={p.id} video={p.video} title={p.title} />
-                ))}
+              <div className="mb-8">
+                <p className="font-inter font-semibold text-[11px] uppercase tracking-[0.2em] text-muted-foreground mb-1">Motion & Content</p>
+                <h2 className="font-grotesk font-semibold text-[28px] tracking-tight">AI Video Productions</h2>
+              </div>
+              <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
+                {videoProjects.map((p) => <VideoCard key={p.id} video={p.video} title={p.title} />)}
               </div>
             </div>
           )}
         </div>
 
-        <section className="border-t border-border/50 py-24 text-center">
-          <h2 className="text-3xl md:text-4xl font-black uppercase tracking-tighter mb-6">Ready to be our next project?</h2>
-          <Link href="/contact">
-            <Button size="lg" className="rounded-full px-10">Start Your AI Project →</Button>
-          </Link>
+        {/* ── Process ── */}
+        <section className="py-28 border-t border-border/40">
+          <div className="container mx-auto px-6">
+            <div className="grid lg:grid-cols-2 gap-16 items-start">
+              <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>
+                <p className="font-inter font-semibold text-[11px] uppercase tracking-[0.2em] text-muted-foreground mb-3">How It Works</p>
+                <h2 className="font-grotesk font-semibold text-[42px] leading-[1.05] tracking-tight">
+                  Our<br />Process!
+                </h2>
+              </motion.div>
+              <div>
+                {processSteps.map((step, i) => (
+                  <motion.div key={step.num} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.5, delay: i * 0.1 }}
+                    className="flex gap-8 py-8 border-b border-border/40 last:border-0">
+                    <span className="font-inter font-semibold text-[11px] uppercase tracking-[0.2em] text-green-400 pt-1 min-w-[28px]">{step.num}</span>
+                    <div>
+                      <h3 className="font-grotesk font-semibold text-[22px] tracking-tight mb-2">{step.title}</h3>
+                      <p className="font-inter text-[15px] leading-relaxed text-muted-foreground">{step.desc}</p>
+                    </div>
+                  </motion.div>
+                ))}
+              </div>
+            </div>
+          </div>
         </section>
+
+        {/* ── FAQ ── */}
+        <section className="py-28 border-t border-border/40">
+          <div className="container mx-auto px-6">
+            <div className="grid lg:grid-cols-2 gap-16 items-start">
+              <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>
+                <p className="font-inter font-semibold text-[11px] uppercase tracking-[0.2em] text-muted-foreground mb-3">Answers</p>
+                <h2 className="font-grotesk font-semibold text-[42px] leading-[1.05] tracking-tight">
+                  Got a<br />Question?
+                </h2>
+                <p className="font-inter text-[15px] text-muted-foreground mt-4 leading-relaxed max-w-xs">
+                  Everything you want to know about how we work and what we deliver.
+                </p>
+              </motion.div>
+              <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6, delay: 0.1 }}>
+                <Accordion type="single" collapsible className="space-y-3">
+                  {faqs.map((faq, i) => (
+                    <AccordionItem key={i} value={`faq-${i}`} className="border border-border/50 rounded-xl px-6 bg-card/30">
+                      <AccordionTrigger className="font-grotesk font-medium text-[15px] text-left hover:no-underline py-5">{faq.q}</AccordionTrigger>
+                      <AccordionContent className="font-inter text-[14px] text-muted-foreground pb-5 leading-relaxed">{faq.a}</AccordionContent>
+                    </AccordionItem>
+                  ))}
+                </Accordion>
+              </motion.div>
+            </div>
+          </div>
+        </section>
+
+        {/* ── CTA ── */}
+        <section className="py-28 border-t border-border/40 text-center">
+          <motion.div initial={{ opacity: 0, y: 24 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>
+            <p className="font-inter font-semibold text-[11px] uppercase tracking-[0.2em] text-muted-foreground mb-4">Ready?</p>
+            <h2 className="font-grotesk font-bold text-[48px] leading-[1.0] tracking-tight mb-6">
+              Ready to be<br /><span className="text-foreground/40">Our Next Project?</span>
+            </h2>
+            <Link href="/contact">
+              <span className="inline-flex items-center gap-2 bg-foreground text-background font-inter font-semibold text-[13px] rounded-full px-8 py-3.5 hover:bg-foreground/90 transition-colors cursor-pointer">
+                Start Your AI Project <ArrowRight size={14} />
+              </span>
+            </Link>
+          </motion.div>
+        </section>
+
       </main>
       <Footer />
     </div>
