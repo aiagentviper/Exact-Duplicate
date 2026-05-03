@@ -5,6 +5,8 @@ import { Link } from "wouter";
 import { ArrowRight, Zap, Globe, Smartphone, Video, Clapperboard, BrainCircuit } from "lucide-react";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import profilePhoto from "@assets/Gemini_Generated_Image_rk6t1wrk6t1wrk6t_1777802311237.png";
+import womenPhoto from "@assets/Screenshot_2026-05-03_111343_1777803239920.png";
+import menPhoto from "@assets/Screenshot_2026-05-03_111358_1777803241015.png";
 
 const skills = [
   { icon: <Zap size={16} />, label: "AI Automation" },
@@ -32,6 +34,14 @@ const testimonials = [
   { name: "Jordan Miles", title: "CEO, LaunchLab", quote: "VIPER automated our entire onboarding flow in under a week. What used to take hours now runs on autopilot. Genuinely transformative.", stars: 5 },
   { name: "Priya Nair", title: "Co-Founder, Stackly", quote: "They built our AI-powered website in days. It converts better than anything we've had before. The quality-to-speed ratio is unreal.", stars: 5 },
   { name: "Derek Owens", title: "Head of Marketing, BrandWave", quote: "The AI video content drove a 3x increase in engagement in the first two weeks alone. This team knows what they're doing.", stars: 5 },
+];
+
+const reviewImages = [
+  menPhoto,
+  womenPhoto,
+  menPhoto,
+  womenPhoto,
+  menPhoto,
 ];
 
 const faqs = [
@@ -165,6 +175,7 @@ export function AboutPage() {
             <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }} className="mb-14">
               <p className="font-inter font-semibold text-[11px] uppercase tracking-[0.2em] text-white/40 mb-3">Client Reviews</p>
               <h2 className="font-grotesk font-semibold text-[42px] leading-[1.05] tracking-tight">What Clients<br />Say!</h2>
+              <p className="font-inter text-[15px] text-muted-foreground mt-4 max-w-md leading-relaxed">Real feedback from people who trusted VIPER to build their systems, sites, apps, and content.</p>
             </motion.div>
             <div className="grid md:grid-cols-3 gap-6">
               {testimonials.map((t, i) => (
@@ -172,7 +183,7 @@ export function AboutPage() {
                   <div className="flex gap-0.5 mb-5">{Array.from({ length: t.stars }).map((_, j) => <span key={j} className="text-yellow-400 text-sm">★</span>)}</div>
                   <p className="font-inter text-[15px] leading-relaxed text-foreground/80 mb-8">"{t.quote}"</p>
                   <div className="flex items-center gap-3 border-t border-border/40 pt-6">
-                    <img src={profilePhoto} alt={t.name} className="w-9 h-9 rounded-full object-cover object-top border border-white/20 flex-shrink-0" />
+                    <img src={reviewImages[i % reviewImages.length]} alt={t.name} loading="lazy" className="w-9 h-9 rounded-full object-cover object-top border border-white/20 flex-shrink-0" />
                     <div>
                       <h4 className="font-grotesk font-semibold text-[14px]">{t.name}</h4>
                       <p className="font-inter text-[12px] text-white/50">{t.title}</p>
