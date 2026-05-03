@@ -1,11 +1,5 @@
-import { useEffect } from "react";
 import { Link } from "wouter";
 import { Lightbulb, ListChecks, Rocket } from "lucide-react";
-import { gsap } from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
-import processPhoto from "@assets/Screenshot_2026-05-03_110817_1777804010848.png";
-
-gsap.registerPlugin(ScrollTrigger);
 
 const steps = [
   {
@@ -28,43 +22,29 @@ const steps = [
   },
 ];
 
-export function ProcessSection() {
-  useEffect(() => {
-    window.addEventListener("load", () => {
-      const cards = gsap.utils.toArray<HTMLElement>(".process-card");
-
-      cards.forEach((card, i) => {
-        gsap.fromTo(
-          card,
-          { opacity: 0, y: 60 },
-          {
-            opacity: 1,
-            y: 0,
-            duration: 0.8,
-            ease: "power2.out",
-            scrollTrigger: {
-              trigger: card,
-              start: "top 85%",
-              toggleActions: "play none none none",
-            },
-            delay: i * 0.15,
-          },
-        );
-      });
-    });
-  }, []);
-
+function ProcessCard({ num, title, text, icon: Icon }: { num: string; title: string; text: string; icon: any }) {
   return (
-    <section className="process-section w-full max-w-full overflow-x-hidden border-t border-border/40 bg-[#0a0a0a] overflow-visible box-border" style={{ height: "100vh", willChange: "transform" }}>
-      <div className="flex h-full w-full">
-        <div className="w-[45%] shrink-0 overflow-hidden">
-          <img src={processPhoto} alt="Design process" className="block h-full w-full object-cover object-center grayscale contrast-[1.12] brightness-[0.82]" />
+    <div className="relative rounded-[22px] border border-white/10 bg-[#0b0b0b] p-6">
+      <div className="mb-4 flex items-start justify-between gap-4">
+        <div className="flex h-10 w-10 items-center justify-center rounded-full border border-white/10 bg-white/5 text-white/70">
+          <Icon size={16} />
         </div>
+        <span className="font-inter text-[12px] font-medium text-white/40">{num}</span>
+      </div>
+      <h3 className="mb-3 font-grotesk text-[20px] font-semibold tracking-tight text-white">{title}</h3>
+      <p className="font-inter text-[13px] leading-relaxed text-white/55">{text}</p>
+    </div>
+  );
+}
 
-        <div className="flex w-[55%] flex-col justify-center gap-6 bg-[#0a0a0a] px-10 py-20">
+export function ProcessSection() {
+  return (
+    <section className="w-full border-t border-border/40 bg-black py-32">
+      <div className="mx-auto w-full max-w-[1200px] px-6">
+        <div className="grid gap-12 lg:grid-cols-2 lg:items-start">
           <div>
-            <p className="mb-3 font-inter text-[11px] font-semibold uppercase tracking-[0.22em] text-white/40">Design process</p>
-            <h2 className="font-grotesk text-[clamp(2.6rem,4.5vw,4rem)] font-medium leading-[0.95] tracking-tight text-white">Process</h2>
+            <p className="mb-3 font-inter text-[11px] font-semibold uppercase tracking-[0.22em] text-white/40">DESIGN PROCESS</p>
+            <h2 className="font-grotesk text-[52px] font-semibold leading-[1.0] tracking-tight text-white">Process</h2>
             <p className="mt-4 max-w-[360px] font-inter text-[14px] leading-relaxed text-white/55">Crafting bold visuals that inspire and elevate brands with thoughtful process.</p>
             <div className="mt-6 flex flex-wrap gap-3">
               <Link href="/contact"><span className="inline-flex cursor-pointer items-center gap-2 rounded-full bg-white px-5 py-2.5 font-inter text-[13px] font-semibold text-black transition-colors hover:bg-white/90">Book a Free Call</span></Link>
@@ -73,21 +53,8 @@ export function ProcessSection() {
           </div>
 
           <div className="flex flex-col gap-5">
-            {steps.map((step, i) => (
-              <div
-                key={step.num}
-                className="process-card relative rounded-[22px] border border-white/10 bg-[#0b0b0b] p-6"
-                style={{ opacity: i === 0 ? 1 : 0, transform: i === 0 ? "translateY(0)" : "translateY(60px)" }}
-              >
-                <div className="mb-4 flex items-start justify-between gap-4">
-                  <div className="flex h-10 w-10 items-center justify-center rounded-full border border-white/10 bg-white/5 text-white/70">
-                    <step.icon size={16} />
-                  </div>
-                  <span className="font-inter text-[12px] font-medium text-white/40">{step.num}</span>
-                </div>
-                <h3 className="mb-3 font-grotesk text-[20px] font-semibold tracking-tight text-white">{step.title}</h3>
-                <p className="font-inter text-[13px] leading-relaxed text-white/55">{step.text}</p>
-              </div>
+            {steps.map((step) => (
+              <ProcessCard key={step.num} num={step.num} title={step.title} text={step.text} icon={step.icon} />
             ))}
           </div>
         </div>
