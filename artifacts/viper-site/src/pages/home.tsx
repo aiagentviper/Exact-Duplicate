@@ -9,7 +9,7 @@ import { Link } from "wouter";
 import { useState } from "react";
 import profilePhoto from "@assets/Gemini_Generated_Image_rk6t1wrk6t1wrk6t_1777802311237.png";
 import servicesPhoto from "@assets/Screenshot_2026-05-03_104753_1777802222600.png";
-import processPhoto from "@assets/Screenshot_2026-05-03_073740_1777802785070.png";
+import processPhoto from "@assets/Screenshot_2026-05-03_110817_1777802992328.png";
 
 const faqs = [
   { q: "What services do you provide?", a: "We specialise in AI automation, AI-powered websites, apps, and video — plus strategy, chatbots, and agent workflows to scale your business invisibly." },
@@ -87,9 +87,7 @@ export function HomePage() {
               <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }} className="lg:sticky lg:top-24">
                 <p className="mb-3 font-inter text-[11px] font-semibold uppercase tracking-[0.22em] text-white/40">Design process</p>
                 <h2 className="font-grotesk text-[clamp(3rem,5vw,4.5rem)] font-medium leading-[0.95] tracking-tight text-white">Process</h2>
-                <p className="mt-4 max-w-[360px] font-inter text-[14px] leading-relaxed text-white/55">
-                  Crafting bold visuals that inspire and elevate brands with thoughtful process.
-                </p>
+                <p className="mt-4 max-w-[360px] font-inter text-[14px] leading-relaxed text-white/55">Crafting bold visuals that inspire and elevate brands with thoughtful process.</p>
                 <div className="mt-6 flex flex-wrap gap-3">
                   <Link href="/contact"><span className="inline-flex cursor-pointer items-center gap-2 rounded-full bg-white px-5 py-2.5 font-inter text-[13px] font-semibold text-black transition-colors hover:bg-white/90">Book a Free Call</span></Link>
                   <Link href="/work"><span className="inline-flex cursor-pointer items-center gap-2 rounded-full border border-white/20 px-5 py-2.5 font-inter text-[13px] font-semibold text-white/70 transition-colors hover:border-white/50 hover:text-white">See Projects</span></Link>
