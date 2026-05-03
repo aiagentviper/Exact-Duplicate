@@ -100,8 +100,6 @@ export function PricingPage() {
     <div className="bg-black min-h-screen text-foreground dark">
       <Navigation />
       <main className="pt-24">
-
-        {/* ── Page header ── */}
         <section className="border-b border-border/40 py-20 text-center">
           <div className="mx-auto w-full max-w-[1100px] px-6">
             <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }}>
@@ -116,7 +114,6 @@ export function PricingPage() {
           </div>
         </section>
 
-        {/* ── Pricing cards ── */}
         <section className="py-20 border-b border-border/40">
           <div className="mx-auto w-full max-w-[1100px] px-6">
             <div className="grid md:grid-cols-3 gap-6">
@@ -152,15 +149,12 @@ export function PricingPage() {
           </div>
         </section>
 
-        {/* ── Process ── */}
         <section className="py-28 border-b border-border/40">
           <div className="mx-auto w-full max-w-[1100px] px-6">
             <div className="grid lg:grid-cols-2 gap-16 items-start">
               <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>
                 <p className="font-inter font-semibold text-[11px] uppercase tracking-[0.2em] text-white/40 mb-3">How It Works</p>
-                <h2 className="font-grotesk font-semibold text-[42px] leading-[1.05] tracking-tight">
-                  Our<br />Process!
-                </h2>
+                <h2 className="font-grotesk font-semibold text-[42px] leading-[1.05] tracking-tight">Our<br />Process!</h2>
                 <p className="font-inter text-[15px] text-muted-foreground mt-4 max-w-xs leading-relaxed">Three simple steps from idea to live product — no complexity, no confusion.</p>
               </motion.div>
               <div>
@@ -179,7 +173,6 @@ export function PricingPage() {
           </div>
         </section>
 
-        {/* ── Testimonials ── */}
         <section className="py-28 border-b border-border/40">
           <div className="mx-auto w-full max-w-[1100px] px-6">
             <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }} className="mb-14">
@@ -214,7 +207,6 @@ export function PricingPage() {
           </div>
         </section>
 
-        {/* ── FAQ ── */}
         <section className="py-28 border-b border-border/40">
           <div className="mx-auto w-full max-w-[1100px] px-6">
             <div className="grid lg:grid-cols-2 gap-16 items-start">
@@ -245,7 +237,6 @@ export function PricingPage() {
           </div>
         </section>
 
-        {/* ── CTA ── */}
         <section className="py-28 text-center">
           <motion.div initial={{ opacity: 0, y: 24 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>
             <p className="font-inter font-semibold text-[11px] uppercase tracking-[0.2em] text-white/40 mb-4">Let's Talk</p>
@@ -262,7 +253,6 @@ export function PricingPage() {
             </Link>
           </motion.div>
         </section>
-
       </main>
       <Footer />
     </div>
