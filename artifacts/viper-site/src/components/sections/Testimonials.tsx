@@ -2,18 +2,48 @@ import { motion } from "framer-motion";
 import { Link } from "wouter";
 import { ArrowRight } from "lucide-react";
 import { useEffect, useState } from "react";
-import avatar1 from "@assets/Screenshot_2026-05-03_110817_1777802992328.png";
-import avatar2 from "@assets/Screenshot_2026-05-03_111343_1777803445098.png";
-import avatar3 from "@assets/Screenshot_2026-05-03_073740_1777803445099.png";
-import avatar4 from "@assets/Screenshot_2026-05-03_110817_1777802992328.png";
-import avatar5 from "@assets/Screenshot_2026-05-03_111343_1777803445098.png";
 
 const testimonials = [
-  { id: 1, name: "Jordan Miles", title: "Founder of LaunchLab", quote: "VIPER automated our entire onboarding flow in under a week. What used to take hours now runs on autopilot. Genuinely transformative.", stars: 5, avatar: avatar1 },
-  { id: 2, name: "Priya Nair", title: "Co-Founder, Stackly", quote: "They built our AI-powered website in days. It converts better than anything we've had before. The quality-to-speed ratio is unreal.", stars: 5, avatar: avatar2 },
-  { id: 3, name: "Derek Owens", title: "Head of Marketing, BrandWave", quote: "The AI video content drove a 3x increase in engagement in the first two weeks alone. This team knows exactly what they're doing.", stars: 5, avatar: avatar3 },
-  { id: 4, name: "Simone Blake", title: "Founder, PulseKit", quote: "We had an idea on Monday. VIPER shipped a working AI-powered MVP by Thursday. Absolutely unmatched speed and quality.", stars: 5, avatar: avatar4 },
-  { id: 5, name: "Kwame Foster", title: "CEO, AutoStack", quote: "The automation workflows they built save us over 30 hours a week. It paid for itself in the first two weeks.", stars: 5, avatar: avatar5 },
+  {
+    id: 1,
+    name: "Jordan Miles",
+    title: "Founder of LaunchLab",
+    quote: "VIPER automated our entire onboarding flow in under a week. What used to take hours now runs on autopilot. Genuinely transformative.",
+    stars: 5,
+    avatar: "https://images.unsplash.com/photo-1560250097-0b93528c311a?w=100&h=100&fit=crop",
+  },
+  {
+    id: 2,
+    name: "Priya Nair",
+    title: "Co-Founder, Stackly",
+    quote: "They built our AI-powered website in days. It converts better than anything we've had before. The quality-to-speed ratio is unreal.",
+    stars: 5,
+    avatar: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=100&h=100&fit=crop",
+  },
+  {
+    id: 3,
+    name: "Derek Owens",
+    title: "Head of Marketing, BrandWave",
+    quote: "The AI video content drove a 3x increase in engagement in the first two weeks alone. This team knows exactly what they're doing.",
+    stars: 5,
+    avatar: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=100&h=100&fit=crop",
+  },
+  {
+    id: 4,
+    name: "Simone Blake",
+    title: "Founder, PulseKit",
+    quote: "We had an idea on Monday. VIPER shipped a working AI-powered MVP by Thursday. Absolutely unmatched speed and quality.",
+    stars: 5,
+    avatar: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=100&h=100&fit=crop",
+  },
+  {
+    id: 5,
+    name: "Kwame Foster",
+    title: "CEO, AutoStack",
+    quote: "The automation workflows they built save us over 30 hours a week. It paid for itself in the first two weeks.",
+    stars: 5,
+    avatar: "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=100&h=100&fit=crop",
+  },
 ];
 
 function TestimonialCard({ t }: { t: typeof testimonials[0] }) {
@@ -26,7 +56,7 @@ function TestimonialCard({ t }: { t: typeof testimonials[0] }) {
         <p className="mb-6 font-inter text-[14px] leading-relaxed text-foreground/80">"{t.quote}"</p>
       </div>
       <div className="flex items-center gap-3 border-t border-border/40 pt-5">
-        <img src={t.avatar} alt={t.name} className="h-9 w-9 flex-shrink-0 rounded-full object-cover object-top border border-white/20" />
+        <img src={t.avatar} alt={t.name} className="h-9 w-9 flex-shrink-0 rounded-full object-cover object-center border border-white/20" />
         <div>
           <h4 className="font-grotesk text-[13px] font-semibold text-foreground">{t.name}</h4>
           <p className="font-inter text-[11px] text-muted-foreground">{t.title}</p>

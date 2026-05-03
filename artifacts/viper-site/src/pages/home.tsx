@@ -4,12 +4,12 @@ import { Services } from "@/components/sections/Services";
 import { Testimonials } from "@/components/sections/Testimonials";
 import { Footer } from "@/components/sections/Footer";
 import { motion } from "framer-motion";
-import { ArrowRight, Sparkles, Bot, Globe2, Video, Wrench, Brain, Check } from "lucide-react";
+import { ArrowRight, Sparkles, Bot, Globe2, Video, Wrench, Brain, Check, Lightbulb, ListChecks, Rocket } from "lucide-react";
 import { Link } from "wouter";
 import { useState } from "react";
 import profilePhoto from "@assets/Gemini_Generated_Image_rk6t1wrk6t1wrk6t_1777802311237.png";
 import servicesPhoto from "@assets/Screenshot_2026-05-03_111343_1777803239920.png";
-import processPhoto from "@assets/Screenshot_2026-05-03_073740_1777803164443.png";
+import processPhoto from "@assets/Screenshot_2026-05-03_073740_1777803692614.png";
 
 const faqs = [
   { q: "What services do you provide?", a: "We specialise in AI automation, AI-powered websites, apps, and video — plus strategy, chatbots, and agent workflows to scale your business invisibly." },
@@ -51,6 +51,21 @@ function FAQAccordion({ items }: { items: typeof faqs }) {
   );
 }
 
+function ProcessCard({ num, title, text, icon: Icon }: { num: string; title: string; text: string; icon: any }) {
+  return (
+    <div className="relative rounded-[22px] border border-white/10 bg-[#0b0b0b] p-6">
+      <div className="mb-4 flex items-start justify-between gap-4">
+        <div className="flex h-10 w-10 items-center justify-center rounded-full border border-white/10 bg-white/5 text-white/70">
+          <Icon size={16} />
+        </div>
+        <span className="font-inter text-[12px] font-medium text-white/40">{num}</span>
+      </div>
+      <h3 className="mb-3 font-grotesk text-[20px] font-semibold tracking-tight text-white">{title}</h3>
+      <p className="max-w-[760px] font-inter text-[13px] leading-relaxed text-white/55">{text}</p>
+    </div>
+  );
+}
+
 export function HomePage() {
   return (
     <div className="min-h-screen bg-black text-foreground dark">
@@ -88,43 +103,23 @@ export function HomePage() {
                   <Link href="/work"><span className="inline-flex cursor-pointer items-center gap-2 rounded-full border border-white/20 px-5 py-2.5 font-inter text-[13px] font-semibold text-white/70 transition-colors hover:border-white/50 hover:text-white">See Projects</span></Link>
                 </div>
               </motion.div>
-
               <motion.div initial={{ opacity: 0, y: 24 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.7 }} className="grid gap-5">
                 <div className="overflow-hidden rounded-[24px] border border-border/40 bg-zinc-950/80 p-0">
                   <img src={processPhoto} alt="Design process" className="h-[280px] w-full object-cover object-center grayscale contrast-[1.12] brightness-[0.82]" />
                 </div>
-                {[
-                  { num: "1", title: "Define Your Vision", text: "Find the perfect plan tailored to your goals, aligning high-level thinking and execution to help you achieve your goals effortlessly." },
-                  { num: "2", title: "Submit Your Request", text: "Submit your design requirements through our private design portal, ensuring a seamless process where your ideas are understood, refined, and brought to life with precision and creativity." },
-                  { num: "3", title: "Project Delivered", text: "As a detail-oriented freelancer, I ensure your project is completed with precision and delivered within 3–5 days. With a focus on thoughtful design, I bring your vision to life with care and refined execution." },
-                ].map((step) => (
-                  <div key={step.num} className="rounded-[24px] border border-border/40 bg-zinc-950/80 p-6 shadow-[0_0_0_1px_rgba(255,255,255,0.02)]">
-                    <div className="mb-4 flex items-center justify-between gap-4">
-                      <div className="flex items-center gap-3">
-                        <div className="flex h-9 w-9 items-center justify-center rounded-full border border-white/15 bg-white/5 text-white/70">
-                          <Check size={14} />
-                        </div>
-                        <h3 className="font-grotesk text-[20px] font-semibold tracking-tight text-white">{step.title}</h3>
-                      </div>
-                      <span className="font-inter text-[12px] font-medium text-white/40">{step.num}</span>
-                    </div>
-                    <p className="max-w-[820px] font-inter text-[13px] leading-relaxed text-white/55">{step.text}</p>
-                  </div>
-                ))}
+                <div className="grid gap-5">
+                  <ProcessCard num="1" title="Define Your Vision" text="Find the perfect plan tailored to your needs, offering the right balance of features, flexibility, and value to help you achieve your goals effortlessly." icon={Lightbulb} />
+                  <ProcessCard num="2" title="Submit Your Request" text="Easily submit your design requirements through our private design portal, ensuring a seamless process where your vision is understood, refined, and brought to life with precision and creativity." icon={ListChecks} />
+                  <ProcessCard num="3" title="Project Delivered" text="As a dedicated freelancer, I ensure your project is completed with precision and delivered within 2–3 days. With a keen eye for detail and a passion for quality, I bring your vision to life — on time and beyond expectations." icon={Rocket} />
+                </div>
               </motion.div>
             </div>
           </div>
         </section>
 
         <Services />
-
-        <section className="w-full border-t border-border/40 bg-black py-32">
-          <div className="mx-auto w-full max-w-[1200px] px-6">
-            <div className="mb-12"><p className="mb-3 font-inter text-[11px] font-semibold uppercase tracking-[0.22em] text-white/40">Unlimited Design Features</p><h2 className="font-grotesk text-[52px] font-semibold leading-[1.0] tracking-tight">Built for speed. Designed to convert.</h2></div>
-            <div className="grid grid-cols-1 gap-4 md:grid-cols-2 xl:grid-cols-3">{featureCards.map((card, i) => { const Icon = card.icon; return (<motion.div key={card.title} initial={{ opacity: 0, y: 16 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.5, delay: i * 0.05 }} className="rounded-2xl border border-white/10 bg-zinc-950/80 p-6"><div className="mb-5 flex items-center justify-between"><div className="flex h-11 w-11 items-center justify-center rounded-full border border-white/15 bg-white/5 text-white/70"><Icon size={18} /></div><span className="rounded-full border border-white/15 bg-white/5 px-3 py-1 font-inter text-[10px] font-semibold uppercase tracking-[0.18em] text-white/50">NEW</span></div><h3 className="mb-2 font-grotesk text-[18px] font-semibold text-white">{card.title}</h3><p className="font-inter text-[13px] leading-relaxed text-muted-foreground">{card.text}</p></motion.div>);})}</div>
-          </div>
-        </section>
         <Testimonials />
+
         <section className="w-full border-t border-border/40 bg-black py-32"><div className="mx-auto w-full max-w-[1100px] px-6"><div className="grid min-h-[520px] items-start gap-12 lg:grid-cols-2"><div className="flex flex-col gap-8"><motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }}><p className="mb-3 font-inter text-[11px] font-semibold uppercase tracking-[0.2em] text-white/40">FAQs</p><h2 className="mb-4 font-grotesk text-[52px] font-semibold leading-[1.0] tracking-tight">Answers</h2><p className="max-w-[300px] font-inter text-[14px] leading-relaxed text-muted-foreground">Find answers to common questions about our process, services, and delivery.</p></motion.div><motion.div initial={{ opacity: 0, y: 16 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6, delay: 0.15 }} className="aspect-[4/3] max-w-[380px] overflow-hidden rounded-2xl"><img src="/photo-faq.png" alt="FAQ" className="h-full w-full object-cover object-center grayscale contrast-[1.1] brightness-[0.82]" /></motion.div><div><div className="mb-5 flex flex-wrap gap-2">{["AI Automation", "AI Websites", "AI Video"].map((tag) => (<span key={tag} className="rounded-full border border-white/20 px-4 py-1.5 font-inter text-[12px] text-white/60">{tag}</span>))}</div><Link href="/contact"><span className="inline-flex cursor-pointer items-center gap-2 rounded-full border border-white/20 px-6 py-2.5 font-inter text-[13px] font-semibold text-white/70 transition-colors hover:border-white/50 hover:text-white">Book a Free Call <ArrowRight size={13} /></span></Link></div></div><motion.div initial={{ opacity: 0, x: 20 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }} className="lg:pt-2"><FAQAccordion items={faqs} /></motion.div></div></div></section>
         <section className="w-full bg-black py-40 text-center"><div className="mx-auto w-full max-w-[1200px] px-6"><h2 className="font-grotesk text-[clamp(3rem,8vw,8rem)] font-black uppercase leading-[0.92] tracking-[-0.05em] text-white">LET&apos;S BUILD <br />SOMETHING REAL</h2><div className="mt-10 flex justify-center"><Link href="/contact"><span className="inline-flex cursor-pointer items-center gap-2 rounded-full bg-white px-8 py-3.5 font-inter text-[13px] font-semibold text-black transition-colors hover:bg-white/90">Book a Free Call <ArrowRight size={14} /></span></Link></div></div></section>
       </main>
