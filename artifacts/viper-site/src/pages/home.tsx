@@ -10,23 +10,6 @@ import { ArrowRight, Sparkles, Bot, Globe2, Video, Wrench, Brain } from "lucide-
 import { Link } from "wouter";
 import { useState } from "react";
 
-const processSteps = [
-  {
-    num: "1",
-    title: "Define Your Vision",
-    desc: "Find the perfect plan tailored to your needs, offering the right balance of features, flexibility, and value to help you achieve your goals effortlessly.",
-  },
-  {
-    num: "2",
-    title: "Submit Your Request",
-    desc: "Easily submit your requirements through our private client portal, ensuring a seamless process where your vision is understood, refined, and brought to life with precision.",
-  },
-  {
-    num: "3",
-    title: "Project Delivered",
-    desc: "Your project is completed with precision and delivered fast. We bring your vision to life — on time, on budget, and beyond expectations.",
-  },
-];
 
 const faqs = [
   { q: "What services do you provide?", a: "We specialise in AI automation, AI-powered websites, apps, and video — plus strategy, chatbots, and agent workflows to scale your business invisibly." },
@@ -99,74 +82,110 @@ export function HomePage() {
         {/* ── Everything below Hero: strict 1100px wrapper ── */}
         <Portfolio />
 
-        {/* ── Process ── */}
+        {/* ── Journey / Process ── */}
         <section className="w-full border-t border-border/40 bg-black py-32">
           <div className="mx-auto w-full max-w-[1100px] px-6">
-            <div className="grid min-h-[580px] w-full items-start gap-12 lg:grid-cols-2">
+            <div className="mb-16 text-center">
+              <p className="mb-3 font-inter text-[11px] font-semibold uppercase tracking-[0.22em] text-sky-400">How It Works</p>
+              <h2 className="font-grotesk text-[52px] font-semibold leading-[1.0] tracking-tight">
+                We Simplify The Journey.
+              </h2>
+            </div>
 
-              {/* Left — image */}
+            <div className="flex flex-col gap-24">
+
+              {/* Step 1 — text left, image right */}
               <motion.div
-                initial={{ opacity: 0 }}
-                whileInView={{ opacity: 1 }}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                transition={{ duration: 0.8 }}
-                className="relative min-h-[420px] overflow-hidden rounded-2xl"
+                transition={{ duration: 0.7 }}
+                className="grid items-center gap-12 lg:grid-cols-2"
               >
-                <img
-                  src="/photo-process.png"
-                  alt="Process"
-                  className="absolute inset-0 h-full w-full rounded-2xl object-cover object-center grayscale contrast-[1.1] brightness-[0.82]"
-                />
+                <div>
+                  <span className="mb-5 inline-block rounded-full border border-sky-500/40 bg-sky-500/10 px-4 py-1.5 font-inter text-[11px] font-semibold uppercase tracking-[0.2em] text-sky-400">
+                    Step 1
+                  </span>
+                  <h3 className="mb-4 font-grotesk text-[36px] font-semibold leading-[1.1] tracking-tight">Define Your Vision</h3>
+                  <p className="mb-8 max-w-[380px] font-inter text-[15px] leading-relaxed text-muted-foreground">
+                    Tell us exactly what you want to build — your goals, your audience, and the outcome you're after. We listen first, then map the clearest path to impact.
+                  </p>
+                  <Link href="/contact">
+                    <span className="inline-flex cursor-pointer items-center gap-2 rounded-full bg-sky-500 px-6 py-3 font-inter text-[13px] font-semibold text-white transition-colors hover:bg-sky-400">
+                      Book an Appointment →
+                    </span>
+                  </Link>
+                </div>
+                <div className="aspect-[4/3] overflow-hidden rounded-2xl">
+                  <img
+                    src="/photo-process.png"
+                    alt="Define your vision"
+                    className="h-full w-full object-cover object-center grayscale contrast-[1.1] brightness-[0.82]"
+                  />
+                </div>
               </motion.div>
 
-              {/* Right — heading + step cards */}
-              <div className="flex flex-col justify-start">
-                <motion.div
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.6 }}
-                >
-                  <p className="mb-3 font-inter text-[11px] font-semibold uppercase tracking-[0.2em] text-muted-foreground">
-                    Design process
-                  </p>
-                  <h2 className="mb-4 font-grotesk text-[52px] font-semibold leading-[1.0] tracking-tight">Process</h2>
-                  <p className="mb-6 max-w-[340px] font-inter text-[14px] leading-relaxed text-muted-foreground">
-                    Crafting bold AI-powered systems that inspire and elevate brands with precision.
-                  </p>
-                  <div className="mb-10 flex gap-3">
-                    <Link href="/contact">
-                      <span className="inline-flex cursor-pointer items-center gap-2 rounded-full bg-foreground px-6 py-2.5 font-inter text-[13px] font-semibold text-background transition-colors hover:bg-foreground/90">
-                        Book a Free Call
-                      </span>
-                    </Link>
-                    <Link href="/work">
-                      <span className="inline-flex cursor-pointer items-center gap-2 rounded-full border border-border/60 px-6 py-2.5 font-inter text-[13px] font-semibold transition-colors hover:border-foreground/50">
-                        See Projects
-                      </span>
-                    </Link>
-                  </div>
-                </motion.div>
-
-                <div className="space-y-3">
-                  {processSteps.map((step, i) => (
-                    <motion.div
-                      key={step.num}
-                      initial={{ opacity: 0, y: 16 }}
-                      whileInView={{ opacity: 1, y: 0 }}
-                      viewport={{ once: true }}
-                      transition={{ duration: 0.5, delay: i * 0.1 }}
-                      className="rounded-2xl border border-border/40 bg-zinc-900/50 px-6 py-5 transition-all hover:border-border/70 hover:bg-zinc-900"
-                    >
-                      <div className="mb-2 flex items-start justify-between gap-4">
-                        <h3 className="font-grotesk text-[17px] font-semibold tracking-tight">{step.title}</h3>
-                        <span className="mt-0.5 flex-shrink-0 font-inter text-[11px] font-bold text-muted-foreground/30">{step.num}</span>
-                      </div>
-                      <p className="font-inter text-[13px] leading-relaxed text-muted-foreground">{step.desc}</p>
-                    </motion.div>
-                  ))}
+              {/* Step 2 — image left, text right */}
+              <motion.div
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.7 }}
+                className="grid items-center gap-12 lg:grid-cols-2"
+              >
+                <div className="aspect-[4/3] overflow-hidden rounded-2xl lg:order-first order-last">
+                  <img
+                    src="/photo-reviews.png"
+                    alt="Submit your request"
+                    className="h-full w-full object-cover object-center grayscale contrast-[1.1] brightness-[0.82]"
+                  />
                 </div>
-              </div>
+                <div>
+                  <span className="mb-5 inline-block rounded-full border border-sky-500/40 bg-sky-500/10 px-4 py-1.5 font-inter text-[11px] font-semibold uppercase tracking-[0.2em] text-sky-400">
+                    Step 2
+                  </span>
+                  <h3 className="mb-4 font-grotesk text-[36px] font-semibold leading-[1.1] tracking-tight">Submit Your Request</h3>
+                  <p className="mb-8 max-w-[380px] font-inter text-[15px] leading-relaxed text-muted-foreground">
+                    Access our private client portal to drop in your brief. We refine the scope, confirm deliverables, and get to work — typically within 48 hours of sign-off.
+                  </p>
+                  <Link href="/contact">
+                    <span className="inline-flex cursor-pointer items-center gap-2 rounded-full bg-sky-500 px-6 py-3 font-inter text-[13px] font-semibold text-white transition-colors hover:bg-sky-400">
+                      Book an Appointment →
+                    </span>
+                  </Link>
+                </div>
+              </motion.div>
+
+              {/* Step 3 — text left, image right */}
+              <motion.div
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.7 }}
+                className="grid items-center gap-12 lg:grid-cols-2"
+              >
+                <div>
+                  <span className="mb-5 inline-block rounded-full border border-sky-500/40 bg-sky-500/10 px-4 py-1.5 font-inter text-[11px] font-semibold uppercase tracking-[0.2em] text-sky-400">
+                    Step 3
+                  </span>
+                  <h3 className="mb-4 font-grotesk text-[36px] font-semibold leading-[1.1] tracking-tight">Project Delivered</h3>
+                  <p className="mb-8 max-w-[380px] font-inter text-[15px] leading-relaxed text-muted-foreground">
+                    We build fast using the best AI tools available, iterate with your feedback in real time, and ship the final product — on time, on budget, and beyond expectations.
+                  </p>
+                  <Link href="/contact">
+                    <span className="inline-flex cursor-pointer items-center gap-2 rounded-full bg-sky-500 px-6 py-3 font-inter text-[13px] font-semibold text-white transition-colors hover:bg-sky-400">
+                      Book an Appointment →
+                    </span>
+                  </Link>
+                </div>
+                <div className="aspect-[4/3] overflow-hidden rounded-2xl">
+                  <img
+                    src="/photo-services.jpg"
+                    alt="Project delivered"
+                    className="h-full w-full object-cover object-center grayscale contrast-[1.1] brightness-[0.82]"
+                  />
+                </div>
+              </motion.div>
 
             </div>
           </div>
