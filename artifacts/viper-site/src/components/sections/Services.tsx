@@ -44,30 +44,30 @@ export function Services() {
   const doubled2 = [...serviceTags2, ...serviceTags2];
 
   return (
-    <section className="border-t border-border/40">
-      <div className="grid lg:grid-cols-2 min-h-[500px]">
-        <div className="py-20 px-10 lg:px-14 border-r border-border/40 flex flex-col justify-between">
+    <section className="border-t border-border/40 w-full">
+      <div className="grid lg:grid-cols-2 min-h-[460px] w-full">
+        <div className="py-16 px-6 lg:px-10 xl:px-14 border-r border-border/40 flex flex-col justify-between">
           <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>
             <p className="font-inter font-semibold text-[11px] uppercase tracking-[0.2em] text-muted-foreground mb-3">Design services</p>
-            <h2 className="font-grotesk font-semibold text-[42px] leading-[1.05] tracking-tight mb-3">Services</h2>
-            <p className="font-inter text-[15px] text-muted-foreground max-w-xs leading-relaxed mb-6">
-              Helping businesses standout with brand identity packaging that captivates and converts effectively.
+            <h2 className="font-grotesk font-semibold text-[38px] leading-[1.02] tracking-tight mb-3">Services</h2>
+            <p className="font-inter text-[14px] text-muted-foreground max-w-[280px] leading-relaxed mb-6">
+              Helping businesses stand out with strategy-led brand identity and packaging that converts.
             </p>
-            <div className="flex flex-wrap gap-2 mb-8">
-              {['Product Design', 'Brand Identity Design', 'Branding', 'Packaging Design', 'Mockup Design'].map(tag => (
-                <span key={tag} className="border border-border/60 rounded-full px-4 py-1.5 text-[12px] font-inter text-muted-foreground">
+            <div className="flex flex-wrap gap-2 mb-7 max-w-[360px]">
+              {["Product Design", "Brand Identity Design", "Branding", "Packaging Design", "Mockup Design"].map(tag => (
+                <span key={tag} className="border border-border/60 rounded-full px-3.5 py-1.5 text-[11px] font-inter text-muted-foreground">
                   {tag}
                 </span>
               ))}
             </div>
             <div className="flex gap-3">
               <Link href="/contact">
-                <span className="inline-flex items-center gap-2 bg-foreground text-background font-inter font-semibold text-[13px] rounded-full px-6 py-2.5 hover:bg-foreground/90 transition-colors cursor-pointer">
+                <span className="inline-flex items-center gap-2 bg-foreground text-background font-inter font-semibold text-[13px] rounded-full px-5 py-2.5 hover:bg-foreground/90 transition-colors cursor-pointer">
                   Book a Free Call
                 </span>
               </Link>
               <Link href="/work">
-                <span className="inline-flex items-center gap-2 border border-border/60 font-inter font-semibold text-[13px] rounded-full px-6 py-2.5 hover:border-foreground/50 transition-colors cursor-pointer">
+                <span className="inline-flex items-center gap-2 border border-border/60 font-inter font-semibold text-[13px] rounded-full px-5 py-2.5 hover:border-foreground/50 transition-colors cursor-pointer">
                   See Projects
                 </span>
               </Link>
@@ -80,14 +80,14 @@ export function Services() {
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
-          className="relative overflow-hidden min-h-[300px] rounded-none"
+          className="relative overflow-hidden min-h-[320px]"
         >
-          <img src="/photo-services.jpg" alt="Services" className="w-full h-full object-cover object-center" />
-          <div className="absolute inset-0 bg-black/25" />
+          <img src="/photo-services.jpg" alt="Services" className="h-full w-full object-cover object-center" />
+          <div className="absolute inset-0 bg-black/20" />
         </motion.div>
       </div>
 
-      <div className="grid grid-cols-2 border-t border-border/40">
+      <div className="grid grid-cols-2 lg:grid-cols-2 border-t border-border/40 w-full">
         {serviceCards.map((card, i) => (
           <motion.div
             key={card.title}
@@ -95,33 +95,33 @@ export function Services() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: i * 0.06 }}
-            className={`p-8 border-border/40 hover:bg-card/50 transition-colors ${i % 2 === 0 ? "border-r" : ""} ${i < 2 ? "border-b" : ""}`}
+            className={`p-6 lg:p-7 border-border/40 hover:bg-card/50 transition-colors ${i % 2 === 0 ? "border-r" : ""} ${i < 2 ? "border-b" : ""}`}
           >
-            <span className="text-muted-foreground/50 text-[20px] block mb-4">{card.icon}</span>
-            <h3 className="font-grotesk font-semibold text-[18px] tracking-tight mb-2">{card.title}</h3>
-            <p className="font-inter text-[13px] leading-relaxed text-muted-foreground">{card.desc}</p>
+            <span className="text-muted-foreground/50 text-[18px] block mb-3">{card.icon}</span>
+            <h3 className="font-grotesk font-semibold text-[16px] tracking-tight mb-2">{card.title}</h3>
+            <p className="font-inter text-[12px] leading-relaxed text-muted-foreground max-w-[320px]">{card.desc}</p>
           </motion.div>
         ))}
       </div>
 
-      <div className="border-t border-border/40 py-5 overflow-hidden space-y-3">
+      <div className="border-t border-border/40 py-4 overflow-hidden space-y-2 w-full">
         <div className="relative">
-          <div className="absolute left-0 top-0 bottom-0 w-20 z-10 pointer-events-none" style={{ background: "linear-gradient(to right, hsl(0 0% 4%), transparent)" }} />
-          <div className="absolute right-0 top-0 bottom-0 w-20 z-10 pointer-events-none" style={{ background: "linear-gradient(to left, hsl(0 0% 4%), transparent)" }} />
-          <div className="flex gap-3 w-max" style={{ animation: "marquee 25s linear infinite" }}>
+          <div className="absolute left-0 top-0 bottom-0 w-16 z-10 pointer-events-none" style={{ background: "linear-gradient(to right, hsl(0 0% 4%), transparent)" }} />
+          <div className="absolute right-0 top-0 bottom-0 w-16 z-10 pointer-events-none" style={{ background: "linear-gradient(to left, hsl(0 0% 4%), transparent)" }} />
+          <div className="flex gap-2.5 w-max" style={{ animation: "marquee 25s linear infinite" }}>
             {doubled1.map((item, i) => (
-              <span key={i} className="font-inter font-medium text-[12px] whitespace-nowrap border border-border/50 rounded-full px-4 py-2 text-muted-foreground">
+              <span key={i} className="font-inter font-medium text-[11px] whitespace-nowrap border border-border/50 rounded-full px-3.5 py-1.5 text-muted-foreground">
                 {item}
               </span>
             ))}
           </div>
         </div>
         <div className="relative">
-          <div className="absolute left-0 top-0 bottom-0 w-20 z-10 pointer-events-none" style={{ background: "linear-gradient(to right, hsl(0 0% 4%), transparent)" }} />
-          <div className="absolute right-0 top-0 bottom-0 w-20 z-10 pointer-events-none" style={{ background: "linear-gradient(to left, hsl(0 0% 4%), transparent)" }} />
-          <div className="flex gap-3 w-max" style={{ animation: "marquee-reverse 28s linear infinite" }}>
+          <div className="absolute left-0 top-0 bottom-0 w-16 z-10 pointer-events-none" style={{ background: "linear-gradient(to right, hsl(0 0% 4%), transparent)" }} />
+          <div className="absolute right-0 top-0 bottom-0 w-16 z-10 pointer-events-none" style={{ background: "linear-gradient(to left, hsl(0 0% 4%), transparent)" }} />
+          <div className="flex gap-2.5 w-max" style={{ animation: "marquee-reverse 28s linear infinite" }}>
             {doubled2.map((item, i) => (
-              <span key={i} className="font-inter font-medium text-[12px] whitespace-nowrap border border-border/50 rounded-full px-4 py-2 text-muted-foreground">
+              <span key={i} className="font-inter font-medium text-[11px] whitespace-nowrap border border-border/50 rounded-full px-3.5 py-1.5 text-muted-foreground">
                 {item}
               </span>
             ))}

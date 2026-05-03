@@ -68,32 +68,32 @@ export function Testimonials() {
   const doubled = [...testimonials, ...testimonials];
 
   return (
-    <section className="border-t border-border/40 overflow-hidden">
-      <div className="grid lg:grid-cols-2 min-h-[360px]">
-        <div className="relative overflow-hidden min-h-[260px] rounded-none">
+    <section className="border-t border-border/40 overflow-hidden w-full">
+      <div className="grid lg:grid-cols-2 min-h-[420px] w-full">
+        <div className="relative overflow-hidden min-h-[300px]">
           <img
             src="/photo-reviews.png"
             alt="Client Reviews"
             className="w-full h-full object-cover object-center"
           />
-          <div className="absolute inset-0 bg-black/42" />
+          <div className="absolute inset-0 bg-black/35" />
         </div>
 
-        <div className="py-16 px-10 lg:px-14 flex flex-col justify-center">
+        <div className="py-16 px-6 lg:px-10 xl:px-14 flex flex-col justify-center">
           <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>
             <p className="font-inter font-semibold text-[11px] uppercase tracking-[0.2em] text-muted-foreground mb-3">Reviews</p>
-            <h2 className="font-grotesk font-semibold text-[42px] leading-[1.05] tracking-tight mb-4">Client Reviews</h2>
-            <p className="font-inter text-[15px] text-muted-foreground max-w-sm leading-relaxed mb-8">
+            <h2 className="font-grotesk font-semibold text-[46px] leading-[1.02] tracking-tight mb-4">Client Reviews</h2>
+            <p className="font-inter text-[14px] text-muted-foreground max-w-[340px] leading-relaxed mb-8">
               Real feedback from clients who trusted my design expertise to elevate their brands successfully.
             </p>
             <div className="flex gap-3 flex-wrap">
               <Link href="/contact">
-                <span className="inline-flex items-center gap-2 bg-foreground text-background font-inter font-semibold text-[13px] rounded-full px-6 py-2.5 hover:bg-foreground/90 transition-colors cursor-pointer">
+                <span className="inline-flex items-center gap-2 bg-foreground text-background font-inter font-semibold text-[13px] rounded-full px-5 py-2.5 hover:bg-foreground/90 transition-colors cursor-pointer">
                   Book a Free Call
                 </span>
               </Link>
               <Link href="/services">
-                <span className="inline-flex items-center gap-2 border border-border/60 font-inter font-semibold text-[13px] rounded-full px-6 py-2.5 hover:border-foreground/50 transition-colors cursor-pointer">
+                <span className="inline-flex items-center gap-2 border border-border/60 font-inter font-semibold text-[13px] rounded-full px-5 py-2.5 hover:border-foreground/50 transition-colors cursor-pointer">
                   See Services <ArrowRight size={13} />
                 </span>
               </Link>
@@ -102,11 +102,11 @@ export function Testimonials() {
         </div>
       </div>
 
-      <div className="py-12 relative">
-        <div className="absolute left-0 top-0 bottom-0 w-24 z-10 pointer-events-none" style={{ background: "linear-gradient(to right, hsl(0 0% 4%), transparent)" }} />
-        <div className="absolute right-0 top-0 bottom-0 w-24 z-10 pointer-events-none" style={{ background: "linear-gradient(to left, hsl(0 0% 4%), transparent)" }} />
+      <div className="py-10 relative w-full">
+        <div className="absolute left-0 top-0 bottom-0 w-16 z-10 pointer-events-none" style={{ background: "linear-gradient(to right, hsl(0 0% 4%), transparent)" }} />
+        <div className="absolute right-0 top-0 bottom-0 w-16 z-10 pointer-events-none" style={{ background: "linear-gradient(to left, hsl(0 0% 4%), transparent)" }} />
 
-        <div className="flex gap-5 w-max px-6" style={{ animation: "marquee 40s linear infinite" }}>
+        <div className="flex gap-4 w-max px-6" style={{ animation: "marquee 40s linear infinite" }}>
           {doubled.map((t, i) => (
             <TestimonialCard key={`${t.id}-${i}`} t={t} />
           ))}

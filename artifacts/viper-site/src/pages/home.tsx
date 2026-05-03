@@ -83,8 +83,8 @@ export function HomePage() {
         <Portfolio />
 
         {/* PROCESS — LEFT full-bleed photo, RIGHT content + step cards */}
-        <section className="border-t border-border/40">
-          <div className="grid lg:grid-cols-2 min-h-[680px]">
+        <section className="border-t border-border/40 w-full">
+          <div className="grid lg:grid-cols-2 min-h-[680px] w-full">
             {/* LEFT: photo fills the column edge-to-edge */}
             <motion.div
               initial={{ opacity: 0 }}
@@ -168,10 +168,10 @@ export function HomePage() {
         <Testimonials />
 
         {/* ANSWERS / FAQ — LEFT content + image card, RIGHT accordion */}
-        <section className="border-t border-border/40">
-          <div className="grid lg:grid-cols-2 min-h-[580px]">
+        <section className="border-t border-border/40 w-full">
+          <div className="grid lg:grid-cols-2 min-h-[580px] w-full">
             {/* LEFT */}
-            <div className="py-20 px-10 lg:px-14 border-r border-border/40 flex flex-col gap-8">
+            <div className="py-20 px-6 lg:px-10 xl:px-14 border-r border-border/40 flex flex-col gap-8">
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -195,7 +195,7 @@ export function HomePage() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: 0.15 }}
-                className="rounded-2xl overflow-hidden aspect-[4/3] max-w-[420px]"
+                className="rounded-2xl overflow-hidden aspect-[4/3] max-w-[360px]"
               >
                 <img
                   src="/photo-faq.png"
@@ -225,7 +225,7 @@ export function HomePage() {
             </div>
 
             {/* RIGHT: accordion */}
-            <div className="py-20 px-10 lg:px-14 flex flex-col justify-center">
+            <div className="py-20 px-6 lg:px-10 xl:px-14 flex flex-col justify-center">
               <motion.div
                 initial={{ opacity: 0, x: 20 }}
                 whileInView={{ opacity: 1, x: 0 }}
