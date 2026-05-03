@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { Link } from "wouter";
-import servicesPhoto from "@assets/Screenshot_2026-05-03_110825_1777802992322.png";
+import servicesPhoto from "@assets/Screenshot_2026-05-03_111343_1777803445098.png";
 
 const serviceCards = [
   { icon: "⬡", title: "AI Automation", desc: "Build powerful n8n, Make.com, and Zapier workflows that eliminate repetitive tasks — so your team focuses on what matters while the system runs around the clock." },
@@ -40,13 +40,11 @@ export function Services() {
               </div>
             </motion.div>
           </div>
-
           <motion.div initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} viewport={{ once: true }} transition={{ duration: 0.8 }} className="relative min-h-[320px] overflow-hidden rounded-2xl">
             <img src={servicesPhoto} alt="Services" className="h-full w-full rounded-2xl object-cover object-center grayscale contrast-[1.15] brightness-[0.82]" />
             <div className="absolute inset-0 rounded-2xl bg-black/18" />
           </motion.div>
         </div>
-
         <div className="grid w-full grid-cols-1 border-t border-border/40 md:grid-cols-2">
           {serviceCards.map((card, i) => (
             <motion.div key={card.title} initial={{ opacity: 0, y: 16 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.5, delay: i * 0.06 }} className={`border-border/40 p-5 transition-colors hover:bg-card/50 lg:p-6 ${i % 2 === 0 ? 'md:border-r' : ''} ${i < 2 ? 'border-b' : ''}`}>
@@ -58,7 +56,6 @@ export function Services() {
             </motion.div>
           ))}
         </div>
-
         <div className="w-full overflow-hidden border-t border-border/40 py-3 space-y-2">
           <div className="relative">
             <div className="pointer-events-none absolute left-0 top-0 bottom-0 z-10 w-16" style={{ background: 'linear-gradient(to right, hsl(0 0% 0%), transparent)' }} />
