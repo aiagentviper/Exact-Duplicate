@@ -32,36 +32,29 @@ export function ProcessSection() {
   const cardsRef = useRef<HTMLDivElement[]>([]);
 
   useEffect(() => {
-    const cards = gsap.utils.toArray<HTMLElement>(".process-card");
+    window.addEventListener("load", () => {
+      const section = document.querySelector(".process-section");
+      const cards = gsap.utils.toArray<HTMLElement>(".process-card");
 
-    gsap.set(cards, { opacity: 0.2, y: 40 });
-    gsap.set(cards[0], { opacity: 1, y: 0 });
+      gsap.set(cards[1], { opacity: 0.15, y: 50 });
+      gsap.set(cards[2], { opacity: 0.15, y: 50 });
 
-    const tl = gsap.timeline({
-      scrollTrigger: {
-        trigger: ".process-section",
-        start: "top top",
-        end: "+=120%",
-        pin: true,
-        scrub: 0.1,
-        anticipatePin: 1,
-      },
+      let tl = gsap.timeline({
+        scrollTrigger: {
+          trigger: section,
+          start: "top top",
+          end: "+=150%",
+          pin: true,
+          pinSpacing: true,
+          scrub: 0.3,
+          anticipatePin: 1,
+          markers: false,
+        }
+      });
+
+      tl.to(cards[1], { opacity: 1, y: 0, duration: 1 }, 0.3);
+      tl.to(cards[2], { opacity: 1, y: 0, duration: 1 }, 1);
     });
-
-    cards.forEach((card, i) => {
-      if (i === 0) return;
-      tl.fromTo(
-        card,
-        { opacity: 0.2, y: 40 },
-        { opacity: 1, y: 0, duration: 1 },
-        i * 1,
-      );
-    });
-
-    return () => {
-      tl.scrollTrigger?.kill();
-      tl.kill();
-    };
   }, []);
 
   return (
