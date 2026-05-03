@@ -6,7 +6,7 @@ import { ArrowRight, Zap, Globe, Smartphone, Video, Clapperboard, BrainCircuit }
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import profilePhoto from "@assets/Gemini_Generated_Image_rk6t1wrk6t1wrk6t_1777802311237.png";
 import womenPhoto from "@assets/Screenshot_2026-05-03_111343_1777803239920.png";
-import menPhoto from "@assets/Screenshot_2026-05-03_111358_1777803241015.png";
+import menPhoto from "@assets/Gemini_Generated_Image_rk6t1wrk6t1wrk6t_1777802311237.png";
 
 const skills = [
   { icon: <Zap size={16} />, label: "AI Automation" },
