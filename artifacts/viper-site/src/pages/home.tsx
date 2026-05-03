@@ -2,7 +2,6 @@ import { Navigation } from "@/components/sections/Navigation";
 import { Hero } from "@/components/sections/Hero";
 import { Portfolio } from "@/components/sections/Portfolio";
 import { Services } from "@/components/sections/Services";
-import { Stats } from "@/components/sections/Stats";
 import { Testimonials } from "@/components/sections/Testimonials";
 import { CtaBand } from "@/components/sections/CtaBand";
 import { Footer } from "@/components/sections/Footer";
@@ -14,32 +13,32 @@ import { useState } from "react";
 const processSteps = [
   {
     num: "1",
-    icon: "◇",
     title: "Define Your Vision",
     desc: "Find the perfect plan tailored to your needs, offering the right balance of features, flexibility, and value to help you achieve your goals effortlessly.",
   },
   {
     num: "2",
-    icon: "≡",
     title: "Submit Your Request",
-    desc: "Easily submit your design requirements through our private design portal, ensuring a seamless process where your vision is understood, refined, and brought to life with precision and creativity.",
+    desc: "Easily submit your requirements through our private client portal, ensuring a seamless process where your vision is understood, refined, and brought to life with precision.",
   },
   {
     num: "3",
-    icon: "⬡",
     title: "Project Delivered",
-    desc: "As a dedicated freelancer, I ensure your project is completed with precision and delivered within 2–3 days. With a keen eye for detail and a passion for quality, I bring your vision to life — on time and beyond expectations.",
+    desc: "Your project is completed with precision and delivered fast. We bring your vision to life — on time, on budget, and beyond expectations.",
   },
 ];
 
 const faqs = [
-  { q: "What services do you provide?", a: "We specialise in brand identity and package design, with experience in web design, UI/UX, and to create brand experiences." },
+  {
+    q: "What services do you provide?",
+    a: "We specialise in AI automation, AI-powered websites, apps, and video — plus strategy, chatbots, and agent workflows to scale your business invisibly.",
+  },
   { q: "How do I start working with you?" },
-  { q: "What design tools do you use?" },
+  { q: "What tools do you use?" },
   { q: "How long does a project take?" },
   { q: "Do you provide revisions?" },
   { q: "What industries do you work with?" },
-  { q: "Do you offer development services?" },
+  { q: "Do you offer ongoing support?" },
   { q: "What is your pricing structure?" },
   { q: "Can you redesign my existing website?" },
 ];
@@ -55,9 +54,15 @@ function FAQAccordion({ items }: { items: typeof faqs }) {
             className="w-full flex items-center justify-between gap-4 text-left"
           >
             <span className="font-inter text-[14px] text-foreground">{item.q}</span>
-            <span className="text-muted-foreground text-lg leading-none flex-shrink-0">{open === i ? "×" : "+"}</span>
+            <span className="text-muted-foreground text-xl leading-none flex-shrink-0 font-light">
+              {open === i ? "×" : "+"}
+            </span>
           </button>
-          {open === i && item.a && <p className="font-inter text-[13px] text-muted-foreground mt-3 leading-relaxed">{item.a}</p>}
+          {open === i && item.a && (
+            <p className="font-inter text-[13px] text-muted-foreground mt-3 leading-relaxed max-w-[480px]">
+              {item.a}
+            </p>
+          )}
         </div>
       ))}
     </div>
@@ -69,129 +74,170 @@ export function HomePage() {
     <div className="bg-background min-h-screen text-foreground dark">
       <Navigation />
       <main>
+        {/* HERO — LOCKED */}
         <div className="pt-[30px] pb-[30px]">
           <Hero />
         </div>
 
+        {/* PORTFOLIO / RECENT WORKS */}
         <Portfolio />
-        <Services />
-        <Stats />
 
-        <section className="border-t border-border/40 py-16">
-          <div className="mx-auto max-w-[1240px] px-6 lg:px-10">
-            <div className="grid lg:grid-cols-[1.08fr_0.92fr] gap-8 items-start">
-              <div className="space-y-4">
-                <p className="font-inter text-[12px] uppercase tracking-[0.22em] text-muted-foreground">About Meily</p>
-                <h2 className="font-grotesk text-[74px] leading-[0.95] tracking-tight">Meet Meily</h2>
-                <p className="font-inter text-[13px] text-muted-foreground max-w-[360px] leading-relaxed">
-                  Brand identity and package designer creating bold visuals with strategy, structure, and clarity.
+        {/* PROCESS — LEFT full-bleed photo, RIGHT content + step cards */}
+        <section className="border-t border-border/40">
+          <div className="grid lg:grid-cols-2 min-h-[680px]">
+            {/* LEFT: photo fills the column edge-to-edge */}
+            <motion.div
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.9 }}
+              className="relative overflow-hidden min-h-[420px]"
+            >
+              <img
+                src="/photo-process.png"
+                alt="Our Process"
+                className="absolute inset-0 w-full h-full object-cover object-center"
+              />
+              <div className="absolute inset-0 bg-black/30" />
+            </motion.div>
+
+            {/* RIGHT: content */}
+            <div className="py-20 px-10 lg:px-14 flex flex-col justify-center">
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6 }}
+              >
+                <p className="font-inter font-semibold text-[11px] uppercase tracking-[0.2em] text-muted-foreground mb-3">
+                  Design process
                 </p>
-                <div className="flex flex-wrap gap-2 pt-2">
-                  {["Product Design", "Brand Identity Design", "UX Design", "Branding", "Packaging Design", "Figma", "Photoshop"].map(tag => (
-                    <span key={tag} className="rounded-full border border-border/50 px-3 py-1 text-[11px] text-muted-foreground">
+                <h2 className="font-grotesk font-semibold text-[48px] leading-[1.0] tracking-tight mb-4">
+                  Process
+                </h2>
+                <p className="font-inter text-[14px] text-muted-foreground max-w-[340px] leading-relaxed mb-6">
+                  Crafting bold results that inspire and elevate brands with a clear, repeatable thought process.
+                </p>
+                <div className="flex gap-3 mb-10">
+                  <Link href="/contact">
+                    <span className="inline-flex items-center gap-2 bg-foreground text-background font-inter font-semibold text-[13px] rounded-full px-6 py-2.5 hover:bg-foreground/90 transition-colors cursor-pointer">
+                      Book a Free Call
+                    </span>
+                  </Link>
+                  <Link href="/work">
+                    <span className="inline-flex items-center gap-2 border border-border/60 font-inter font-semibold text-[13px] rounded-full px-6 py-2.5 hover:border-foreground/50 transition-colors cursor-pointer">
+                      See Projects
+                    </span>
+                  </Link>
+                </div>
+              </motion.div>
+
+              {/* Step cards */}
+              <div className="space-y-3">
+                {processSteps.map((step, i) => (
+                  <motion.div
+                    key={step.num}
+                    initial={{ opacity: 0, y: 16 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.5, delay: i * 0.1 }}
+                    className="rounded-2xl border border-border/40 bg-card/50 px-6 py-5 hover:border-border/70 hover:bg-card transition-all"
+                  >
+                    <div className="flex items-start justify-between gap-4 mb-2">
+                      <h3 className="font-grotesk font-semibold text-[17px] tracking-tight">
+                        {step.title}
+                      </h3>
+                      <span className="font-inter font-bold text-[11px] text-muted-foreground/40 flex-shrink-0 mt-1">
+                        {step.num}
+                      </span>
+                    </div>
+                    <p className="font-inter text-[13px] leading-relaxed text-muted-foreground">
+                      {step.desc}
+                    </p>
+                  </motion.div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* SERVICES */}
+        <Services />
+
+        {/* CLIENT REVIEWS + MARQUEE + STATS */}
+        <Testimonials />
+
+        {/* ANSWERS / FAQ — LEFT content + image card, RIGHT accordion */}
+        <section className="border-t border-border/40">
+          <div className="grid lg:grid-cols-2 min-h-[580px]">
+            {/* LEFT */}
+            <div className="py-20 px-10 lg:px-14 border-r border-border/40 flex flex-col gap-8">
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6 }}
+              >
+                <p className="font-inter font-semibold text-[11px] uppercase tracking-[0.2em] text-muted-foreground mb-3">
+                  FAQs
+                </p>
+                <h2 className="font-grotesk font-semibold text-[48px] leading-[1.0] tracking-tight mb-4">
+                  Answers
+                </h2>
+                <p className="font-inter text-[14px] text-muted-foreground max-w-[320px] leading-relaxed">
+                  Find answers to common questions about our process, services and delivery.
+                </p>
+              </motion.div>
+
+              {/* Image card */}
+              <motion.div
+                initial={{ opacity: 0, y: 16 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6, delay: 0.15 }}
+                className="rounded-2xl overflow-hidden aspect-[4/3] max-w-[420px]"
+              >
+                <img
+                  src="/photo-faq.png"
+                  alt="FAQ visual"
+                  className="w-full h-full object-cover object-center"
+                />
+              </motion.div>
+
+              {/* Tags + CTA */}
+              <div>
+                <div className="flex flex-wrap gap-2 mb-5">
+                  {["AI Automation", "AI Websites", "AI Apps", "AI Video", "Vibe Coding"].map((tag) => (
+                    <span
+                      key={tag}
+                      className="border border-border/60 rounded-full px-4 py-1.5 text-[12px] font-inter text-muted-foreground"
+                    >
                       {tag}
                     </span>
                   ))}
                 </div>
-                <div className="grid grid-cols-3 gap-6 pt-4 max-w-[520px]">
-                  <div className="space-y-5 text-[12px] text-muted-foreground">
-                    <div>Freelance</div>
-                    <div>Brand Designer</div>
-                    <div>Package Designer</div>
-                  </div>
-                  <div className="space-y-5 text-[12px] text-muted-foreground">
-                    <div>GreenLeaf Co</div>
-                    <div>UrbanFit Studio</div>
-                    <div>GreenK Studio</div>
-                  </div>
-                  <div className="space-y-5 text-right text-[12px] text-muted-foreground">
-                    <div>Currently</div>
-                    <div>2023-24</div>
-                    <div>2020-22</div>
-                  </div>
-                </div>
-                <div className="pt-2 text-[14px] text-muted-foreground">
-                  Recent Works
-                </div>
-              </div>
-
-              <div className="relative">
-                <img src="/photo-reviews.png" alt="Meet Meily portrait" className="w-full rounded-none object-cover" />
-              </div>
-            </div>
-
-            <div className="mt-10 grid grid-cols-4 gap-4">
-              {["photo-process.png", "photo-services.jpg", "photo-faq.png", "photo-reviews.png"].map((src, i) => (
-                <div key={src} className="overflow-hidden bg-card">
-                  <img src={`/${src}`} alt={`Recent work ${i + 1}`} className="h-[120px] w-full object-cover object-center" />
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        <section className="border-t border-border/40 py-20">
-          <div className="mx-auto max-w-[1240px] px-6 lg:px-10 grid lg:grid-cols-[0.95fr_1.05fr] gap-10 items-start">
-            <div className="relative overflow-hidden">
-              <img src="/photo-process.png" alt="Process" className="h-[640px] w-full object-cover object-center" />
-            </div>
-            <div>
-              <p className="font-inter text-[12px] uppercase tracking-[0.22em] text-muted-foreground mb-2">Design process</p>
-              <h2 className="font-grotesk text-[58px] leading-[0.95] tracking-tight mb-4">Process</h2>
-              <p className="font-inter text-[13px] text-muted-foreground max-w-[380px] leading-relaxed mb-5">
-                Crafting bold visuals that inspire and elevate brands with thought process.
-              </p>
-              <div className="flex gap-3 mb-8">
                 <Link href="/contact">
-                  <span className="inline-flex items-center gap-2 rounded-full bg-foreground px-5 py-2.5 text-[13px] font-semibold text-background">
-                    Book a Free Call
-                  </span>
-                </Link>
-                <Link href="/work">
-                  <span className="inline-flex items-center gap-2 rounded-full border border-border/60 px-5 py-2.5 text-[13px] font-semibold">
-                    See Projects
+                  <span className="inline-flex items-center gap-2 font-inter font-semibold text-[13px] border border-border/60 rounded-full px-6 py-2.5 hover:border-foreground/50 transition-colors cursor-pointer">
+                    Book a Free Call <ArrowRight size={13} />
                   </span>
                 </Link>
               </div>
-              <div className="space-y-3">
-                {processSteps.map(step => (
-                  <div key={step.num} className="rounded-2xl border border-border/40 bg-card/50 p-4">
-                    <div className="mb-2 flex items-start justify-between gap-4">
-                      <h3 className="font-grotesk text-[18px] font-semibold">{step.title}</h3>
-                      <span className="text-[12px] text-muted-foreground/60">{step.num}</span>
-                    </div>
-                    <p className="font-inter text-[12px] leading-relaxed text-muted-foreground">{step.desc}</p>
-                  </div>
-                ))}
-              </div>
+            </div>
+
+            {/* RIGHT: accordion */}
+            <div className="py-20 px-10 lg:px-14 flex flex-col justify-center">
+              <motion.div
+                initial={{ opacity: 0, x: 20 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6 }}
+              >
+                <FAQAccordion items={faqs} />
+              </motion.div>
             </div>
           </div>
         </section>
 
-        <section className="border-t border-border/40 py-20">
-          <div className="mx-auto max-w-[1240px] px-6 lg:px-10 grid lg:grid-cols-[0.95fr_1.05fr] gap-10 items-start">
-            <div>
-              <p className="font-inter text-[12px] uppercase tracking-[0.22em] text-muted-foreground mb-2">FAQs</p>
-              <h2 className="font-grotesk text-[58px] leading-[0.95] tracking-tight mb-4">Answers</h2>
-              <p className="font-inter text-[13px] text-muted-foreground max-w-[380px] leading-relaxed mb-6">
-                Find answers to common questions about our process, services etc...
-              </p>
-              <img src="/photo-faq.png" alt="FAQ visual" className="w-full max-w-[520px] rounded-2xl object-cover" />
-              <div className="flex flex-wrap gap-2 pt-4">
-                {["Product Design", "Brand Identity Design", "Branding"].map(tag => (
-                  <span key={tag} className="rounded-full border border-border/50 px-3 py-1 text-[11px] text-muted-foreground">
-                    {tag}
-                  </span>
-                ))}
-              </div>
-            </div>
-            <div className="pt-2">
-              <FAQAccordion items={faqs} />
-            </div>
-          </div>
-        </section>
-
-        <Testimonials />
         <CtaBand />
       </main>
       <Footer />
