@@ -43,10 +43,11 @@ export function ContactPage() {
   }
 
   return (
-    <div className="bg-background min-h-screen text-foreground dark">
+    <div className="bg-black min-h-screen text-foreground dark">
       <Navigation />
       <main className="pt-24">
-        <section className="py-20 container mx-auto px-6">
+        <section className="py-20">
+          <div className="mx-auto w-full max-w-[1100px] px-6">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
@@ -92,8 +93,8 @@ export function ContactPage() {
                     Remote-First. Worldwide.
                   </div>
                   <div className="flex items-center gap-2 text-sm">
-                    <span className="w-2 h-2 rounded-full bg-green-400 animate-pulse" />
-                    <span className="text-green-400 font-medium">Currently Accepting Projects</span>
+                    <span className="w-2 h-2 rounded-full bg-orange-500 animate-pulse" />
+                    <span className="text-orange-500 font-medium">Currently Accepting Projects</span>
                   </div>
                 </div>
               </div>
@@ -232,6 +233,7 @@ export function ContactPage() {
                 </form>
               </Form>
             </motion.div>
+          </div>
           </div>
         </section>
       </main>

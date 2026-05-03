@@ -13,7 +13,7 @@ export function Hero() {
   return (
     <section className="relative w-full h-screen min-h-[600px] overflow-hidden flex flex-col">
 
-      {/* Background image — fills entire hero, no clip */}
+      {/* Background image — fills entire hero */}
       <img
         src="/hero-bg.png"
         alt=""
@@ -21,10 +21,9 @@ export function Hero() {
         className="absolute inset-0 w-full h-full object-cover object-top"
       />
 
-      {/* Folioblox gradient — minimal overall veil, heavy bottom fade only */}
-      {/* 1. Very light overall darkening — let the photo breathe */}
+      {/* Very light overall darkening */}
       <div className="absolute inset-0 bg-black/20" />
-      {/* 2. Strong bottom-to-transparent fade — text area goes near-black */}
+      {/* Strong bottom-to-transparent fade */}
       <div
         className="absolute inset-0"
         style={{
@@ -32,7 +31,7 @@ export function Hero() {
             "linear-gradient(to top, rgba(0,0,0,0.96) 0%, rgba(0,0,0,0.80) 20%, rgba(0,0,0,0.40) 45%, rgba(0,0,0,0.08) 70%, transparent 100%)",
         }}
       />
-      {/* 3. Left vignette — keeps left text readable without hiding the man */}
+      {/* Left vignette */}
       <div
         className="absolute inset-0"
         style={{
@@ -41,10 +40,9 @@ export function Hero() {
         }}
       />
 
-      {/* Content — anchored to bottom, exactly like Folioblox */}
+      {/* Content anchored to bottom */}
       <div className="relative z-10 mt-auto px-6 md:px-12 pb-0">
 
-        {/* Main text row */}
         <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-6 mb-10">
 
           {/* Left — label + large heading */}
@@ -55,7 +53,7 @@ export function Hero() {
               transition={{ duration: 0.5 }}
               className="flex items-center gap-2 mb-3"
             >
-              <span className="w-1.5 h-1.5 rounded-full bg-green-400 animate-pulse" />
+              <span className="w-1.5 h-1.5 rounded-full bg-orange-500 animate-pulse" />
               <span className="text-[11px] font-inter font-semibold uppercase tracking-[0.22em] text-white/70">
                 Next-Gen AI Agency
               </span>
@@ -73,7 +71,7 @@ export function Hero() {
             </motion.h1>
           </div>
 
-          {/* Right — tagline + desc + CTA */}
+          {/* Right — tagline + desc + CTAs */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -114,7 +112,7 @@ export function Hero() {
               key={s.num}
               className={`py-5 px-4 flex flex-col gap-1 ${i < 3 ? "md:border-r border-white/15" : ""}`}
             >
-              <span className="font-inter font-semibold text-[11px] uppercase tracking-[0.2em] text-green-400">{s.num}</span>
+              <span className="font-inter font-semibold text-[11px] uppercase tracking-[0.2em] text-orange-500">{s.num}</span>
               <span className="font-grotesk font-medium text-[14px] text-white/80">{s.label}</span>
             </div>
           ))}

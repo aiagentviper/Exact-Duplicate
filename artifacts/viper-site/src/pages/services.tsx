@@ -109,10 +109,11 @@ const stats = [
 
 export function ServicesPage() {
   return (
-    <div className="bg-background min-h-screen text-foreground dark">
+    <div className="bg-black min-h-screen text-foreground dark">
       <Navigation />
       <main className="pt-24">
-        <section className="py-20 container mx-auto px-6 text-center">
+        <section className="py-20 text-center">
+          <div className="mx-auto w-full max-w-[1100px] px-6">
           <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }}>
             <p className="font-inter font-semibold text-[11px] uppercase tracking-[0.2em] text-muted-foreground mb-4">What We Do</p>
             <h1 className="font-grotesk font-bold text-[60px] leading-[1.0] tracking-[-0.02em] mb-6">
@@ -123,9 +124,10 @@ export function ServicesPage() {
               From automation to full product builds — we handle everything with AI at the core.
             </p>
           </motion.div>
+          </div>
         </section>
 
-        <section className="container mx-auto px-6 pb-24 space-y-32">
+        <section className="mx-auto w-full max-w-[1100px] px-6 pb-24 space-y-32">
           {services.map((service, i) => (
             <motion.div
               key={service.num}
@@ -187,7 +189,7 @@ export function ServicesPage() {
         </section>
 
         <section className="py-24 bg-card/20 border-y border-border/50">
-          <div className="container mx-auto px-6">
+          <div className="mx-auto w-full max-w-[1100px] px-6">
             <div className="grid grid-cols-2 md:grid-cols-4 divide-x divide-y md:divide-y-0 divide-border/50">
               {stats.map((stat, i) => (
                 <motion.div
@@ -206,7 +208,8 @@ export function ServicesPage() {
           </div>
         </section>
 
-        <section className="py-24 container mx-auto px-6 text-center">
+        <section className="py-24 text-center">
+          <div className="mx-auto w-full max-w-[1100px] px-6">
           <h2 className="text-3xl md:text-4xl font-black uppercase tracking-tighter mb-4">Not Sure Which Service You Need?</h2>
           <p className="text-lg text-muted-foreground mb-8 max-w-lg mx-auto">
             Book a free 30-minute AI audit call. We'll tell you exactly what will move the needle for your business.
@@ -214,6 +217,7 @@ export function ServicesPage() {
           <Link href="/contact">
             <Button size="lg" className="rounded-full px-10">Book Free Audit →</Button>
           </Link>
+          </div>
         </section>
       </main>
       <Footer />

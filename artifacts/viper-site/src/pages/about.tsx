@@ -70,16 +70,16 @@ const faqs = [
 
 export function AboutPage() {
   return (
-    <div className="bg-background min-h-screen text-foreground dark">
+    <div className="bg-black min-h-screen text-foreground dark">
       <Navigation />
       <main className="pt-20">
 
         {/* ── Hero split ── */}
         <section className="min-h-[90vh] flex items-center border-b border-border/40">
-          <div className="container mx-auto px-6 py-16">
+          <div className="mx-auto w-full max-w-[1100px] px-6 py-16">
             <div className="grid lg:grid-cols-2 gap-16 items-center">
               <motion.div initial={{ opacity: 0, x: -30 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.7 }}>
-                <span className="font-inter font-semibold text-[11px] uppercase tracking-[0.2em] text-green-400 block mb-6">About VIPER</span>
+                <span className="font-inter font-semibold text-[11px] uppercase tracking-[0.2em] text-orange-500 block mb-6">About VIPER</span>
                 <h1 className="font-grotesk font-bold text-[60px] leading-[1.0] tracking-[-0.02em] mb-6">
                   The AI Agency<br />
                   <span className="text-foreground/40">Built for Speed.</span>
@@ -111,8 +111,8 @@ export function AboutPage() {
                   <div className="absolute bottom-6 left-6 right-6">
                     <div className="bg-card/85 backdrop-blur-md rounded-xl p-5 border border-border/50">
                       <div className="flex items-center gap-2 mb-1">
-                        <span className="w-2 h-2 rounded-full bg-green-400 animate-pulse" />
-                        <span className="font-inter text-[11px] uppercase tracking-[0.2em] text-green-400 font-semibold">Available for Projects</span>
+                        <span className="w-2 h-2 rounded-full bg-orange-500 animate-pulse" />
+                        <span className="font-inter text-[11px] uppercase tracking-[0.2em] text-orange-500 font-semibold">Available for Projects</span>
                       </div>
                       <p className="font-grotesk font-semibold text-[18px] text-foreground">jimohmalik101@gmail.com</p>
                     </div>
@@ -129,7 +129,7 @@ export function AboutPage() {
 
         {/* ── Stats row ── */}
         <section className="border-b border-border/40">
-          <div className="container mx-auto px-6">
+          <div className="mx-auto w-full max-w-[1100px] px-6">
             <div className="grid grid-cols-2 md:grid-cols-4">
               {[
                 { val: "50+", label: "Projects Shipped" },
@@ -149,7 +149,7 @@ export function AboutPage() {
 
         {/* ── Process ── */}
         <section className="py-28 border-b border-border/40">
-          <div className="container mx-auto px-6">
+          <div className="mx-auto w-full max-w-[1100px] px-6">
             <div className="grid lg:grid-cols-2 gap-16 items-start">
               <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>
                 <p className="font-inter font-semibold text-[11px] uppercase tracking-[0.2em] text-muted-foreground mb-3">How It Works</p>
@@ -161,7 +161,7 @@ export function AboutPage() {
                 {processSteps.map((step, i) => (
                   <motion.div key={step.num} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.5, delay: i * 0.1 }}
                     className="flex gap-8 py-8 border-b border-border/40 last:border-0">
-                    <span className="font-inter font-semibold text-[11px] uppercase tracking-[0.2em] text-green-400 pt-1.5 min-w-[28px]">{step.num}</span>
+                    <span className="font-inter font-semibold text-[11px] uppercase tracking-[0.2em] text-orange-500 pt-1.5 min-w-[28px]">{step.num}</span>
                     <div>
                       <h3 className="font-grotesk font-semibold text-[22px] tracking-tight mb-2">{step.title}</h3>
                       <p className="font-inter text-[15px] leading-relaxed text-muted-foreground max-w-md">{step.desc}</p>
@@ -175,7 +175,7 @@ export function AboutPage() {
 
         {/* ── Services grid ── */}
         <section className="py-28 border-b border-border/40">
-          <div className="container mx-auto px-6">
+          <div className="mx-auto w-full max-w-[1100px] px-6">
             <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }} className="mb-14">
               <p className="font-inter font-semibold text-[11px] uppercase tracking-[0.2em] text-muted-foreground mb-3">What We Offer</p>
               <h2 className="font-grotesk font-semibold text-[42px] leading-[1.05] tracking-tight">
@@ -186,7 +186,7 @@ export function AboutPage() {
               {services.map((s, i) => (
                 <motion.div key={s.num} initial={{ opacity: 0, y: 24 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.5, delay: i * 0.08 }}
                   className="bg-card border border-border/40 rounded-2xl p-7 hover:border-border/70 transition-colors">
-                  <div className="w-10 h-10 rounded-xl bg-foreground/8 border border-border/50 flex items-center justify-center mb-5 text-muted-foreground">
+                  <div className="w-10 h-10 rounded-xl bg-foreground/[0.08] border border-border/50 flex items-center justify-center mb-5 text-muted-foreground">
                     {s.icon}
                   </div>
                   <span className="font-inter font-semibold text-[11px] uppercase tracking-[0.2em] text-muted-foreground/60 block mb-2">{s.num}</span>
@@ -207,7 +207,7 @@ export function AboutPage() {
 
         {/* ── Testimonials ── */}
         <section className="py-28 border-b border-border/40">
-          <div className="container mx-auto px-6">
+          <div className="mx-auto w-full max-w-[1100px] px-6">
             <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }} className="mb-14">
               <p className="font-inter font-semibold text-[11px] uppercase tracking-[0.2em] text-muted-foreground mb-3">Client Reviews</p>
               <h2 className="font-grotesk font-semibold text-[42px] leading-[1.05] tracking-tight">
@@ -241,7 +241,7 @@ export function AboutPage() {
 
         {/* ── FAQ ── */}
         <section className="py-28 border-b border-border/40">
-          <div className="container mx-auto px-6">
+          <div className="mx-auto w-full max-w-[1100px] px-6">
             <div className="grid lg:grid-cols-2 gap-16 items-start">
               <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>
                 <p className="font-inter font-semibold text-[11px] uppercase tracking-[0.2em] text-muted-foreground mb-3">Answers</p>

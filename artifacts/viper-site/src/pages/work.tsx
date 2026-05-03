@@ -137,12 +137,13 @@ export function WorkPage() {
   const showVideo = active === "All" || active === "AI Video";
 
   return (
-    <div className="bg-background min-h-screen text-foreground dark">
+    <div className="bg-black min-h-screen text-foreground dark">
       <Navigation />
       <main className="pt-24">
 
         {/* ── Page header ── */}
-        <section className="py-20 container mx-auto px-6 text-center border-b border-border/40">
+        <section className="py-20 text-center border-b border-border/40">
+          <div className="mx-auto w-full max-w-[1100px] px-6">
           <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }}>
             <p className="font-inter font-semibold text-[11px] uppercase tracking-[0.2em] text-muted-foreground mb-4">Our Portfolio</p>
             <h1 className="font-grotesk font-bold text-[60px] leading-[1.0] tracking-[-0.02em] mb-6">
@@ -152,22 +153,25 @@ export function WorkPage() {
               AI-powered websites, videos, automations & apps built for businesses across every industry. Click any website to visit the live site.
             </p>
           </motion.div>
+          </div>
         </section>
 
         {/* ── Filters ── */}
-        <section className="container mx-auto px-6 py-10">
-          <div className="flex flex-wrap gap-2 justify-center">
-            {filters.map((f) => (
-              <button key={f} onClick={() => setActive(f)}
-                className={`font-inter font-medium text-[13px] px-5 py-2 rounded-full transition-all border ${active === f ? "bg-foreground text-background border-foreground" : "bg-transparent text-muted-foreground border-border/50 hover:border-foreground/30 hover:text-foreground"}`}>
-                {f}
-              </button>
-            ))}
+        <section className="py-10">
+          <div className="mx-auto w-full max-w-[1100px] px-6">
+            <div className="flex flex-wrap gap-2 justify-center">
+              {filters.map((f) => (
+                <button key={f} onClick={() => setActive(f)}
+                  className={`font-inter font-medium text-[13px] px-5 py-2 rounded-full transition-all border ${active === f ? "bg-foreground text-background border-foreground" : "bg-transparent text-muted-foreground border-border/50 hover:border-foreground/30 hover:text-foreground"}`}>
+                  {f}
+                </button>
+              ))}
+            </div>
           </div>
         </section>
 
         {/* ── Portfolio sections ── */}
-        <div className="container mx-auto px-6 space-y-20 pb-28">
+        <div className="mx-auto w-full max-w-[1100px] px-6 space-y-20 pb-28">
           {showWebsite && (
             <div>
               <div className="flex items-end justify-between mb-8">
@@ -219,7 +223,7 @@ export function WorkPage() {
 
         {/* ── Process ── */}
         <section className="py-28 border-t border-border/40">
-          <div className="container mx-auto px-6">
+          <div className="mx-auto w-full max-w-[1100px] px-6">
             <div className="grid lg:grid-cols-2 gap-16 items-start">
               <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>
                 <p className="font-inter font-semibold text-[11px] uppercase tracking-[0.2em] text-muted-foreground mb-3">How It Works</p>
@@ -231,7 +235,7 @@ export function WorkPage() {
                 {processSteps.map((step, i) => (
                   <motion.div key={step.num} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.5, delay: i * 0.1 }}
                     className="flex gap-8 py-8 border-b border-border/40 last:border-0">
-                    <span className="font-inter font-semibold text-[11px] uppercase tracking-[0.2em] text-green-400 pt-1 min-w-[28px]">{step.num}</span>
+                    <span className="font-inter font-semibold text-[11px] uppercase tracking-[0.2em] text-orange-500 pt-1 min-w-[28px]">{step.num}</span>
                     <div>
                       <h3 className="font-grotesk font-semibold text-[22px] tracking-tight mb-2">{step.title}</h3>
                       <p className="font-inter text-[15px] leading-relaxed text-muted-foreground">{step.desc}</p>
@@ -245,7 +249,7 @@ export function WorkPage() {
 
         {/* ── FAQ ── */}
         <section className="py-28 border-t border-border/40">
-          <div className="container mx-auto px-6">
+          <div className="mx-auto w-full max-w-[1100px] px-6">
             <div className="grid lg:grid-cols-2 gap-16 items-start">
               <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>
                 <p className="font-inter font-semibold text-[11px] uppercase tracking-[0.2em] text-muted-foreground mb-3">Answers</p>

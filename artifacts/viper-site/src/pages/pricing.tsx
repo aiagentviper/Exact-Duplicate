@@ -97,12 +97,13 @@ const faqs = [
 
 export function PricingPage() {
   return (
-    <div className="bg-background min-h-screen text-foreground dark">
+    <div className="bg-black min-h-screen text-foreground dark">
       <Navigation />
       <main className="pt-24">
 
         {/* ── Page header ── */}
-        <section className="py-20 container mx-auto px-6 text-center border-b border-border/40">
+        <section className="py-20 text-center border-b border-border/40">
+          <div className="mx-auto w-full max-w-[1100px] px-6">
           <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }}>
             <p className="font-inter font-semibold text-[11px] uppercase tracking-[0.2em] text-muted-foreground mb-4">Transparent Pricing</p>
             <h1 className="font-grotesk font-bold text-[60px] leading-[1.0] tracking-[-0.02em] mb-6">
@@ -112,11 +113,12 @@ export function PricingPage() {
               No hidden fees. No bloated retainers. Just AI-powered results at honest prices.
             </p>
           </motion.div>
+          </div>
         </section>
 
         {/* ── Pricing cards ── */}
         <section className="py-20 border-b border-border/40">
-          <div className="container mx-auto px-6">
+          <div className="mx-auto w-full max-w-[1100px] px-6">
             <div className="grid md:grid-cols-3 gap-6">
               {plans.map((plan, i) => (
                 <motion.div key={plan.name} initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.5, delay: i * 0.1 }}
@@ -135,7 +137,7 @@ export function PricingPage() {
                   <ul className="flex-1 space-y-3 mb-8">
                     {plan.features.map((f) => (
                       <li key={f} className="flex items-start gap-3 font-inter text-[14px] text-muted-foreground">
-                        <Check size={14} className="text-green-400 flex-shrink-0 mt-0.5" />{f}
+                        <Check size={14} className="text-orange-500 flex-shrink-0 mt-0.5" />{f}
                       </li>
                     ))}
                   </ul>
@@ -152,7 +154,7 @@ export function PricingPage() {
 
         {/* ── Process ── */}
         <section className="py-28 border-b border-border/40">
-          <div className="container mx-auto px-6">
+          <div className="mx-auto w-full max-w-[1100px] px-6">
             <div className="grid lg:grid-cols-2 gap-16 items-start">
               <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>
                 <p className="font-inter font-semibold text-[11px] uppercase tracking-[0.2em] text-muted-foreground mb-3">How It Works</p>
@@ -165,7 +167,7 @@ export function PricingPage() {
                 {processSteps.map((step, i) => (
                   <motion.div key={step.num} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.5, delay: i * 0.1 }}
                     className="flex gap-8 py-8 border-b border-border/40 last:border-0">
-                    <span className="font-inter font-semibold text-[11px] uppercase tracking-[0.2em] text-green-400 pt-1 min-w-[28px]">{step.num}</span>
+                    <span className="font-inter font-semibold text-[11px] uppercase tracking-[0.2em] text-orange-500 pt-1 min-w-[28px]">{step.num}</span>
                     <div>
                       <h3 className="font-grotesk font-semibold text-[22px] tracking-tight mb-2">{step.title}</h3>
                       <p className="font-inter text-[15px] leading-relaxed text-muted-foreground">{step.desc}</p>
@@ -179,7 +181,7 @@ export function PricingPage() {
 
         {/* ── Testimonials ── */}
         <section className="py-28 border-b border-border/40">
-          <div className="container mx-auto px-6">
+          <div className="mx-auto w-full max-w-[1100px] px-6">
             <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }} className="mb-14">
               <p className="font-inter font-semibold text-[11px] uppercase tracking-[0.2em] text-muted-foreground mb-3">Client Reviews</p>
               <h2 className="font-grotesk font-semibold text-[42px] leading-[1.05] tracking-tight">
@@ -214,7 +216,7 @@ export function PricingPage() {
 
         {/* ── FAQ ── */}
         <section className="py-28 border-b border-border/40">
-          <div className="container mx-auto px-6">
+          <div className="mx-auto w-full max-w-[1100px] px-6">
             <div className="grid lg:grid-cols-2 gap-16 items-start">
               <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>
                 <p className="font-inter font-semibold text-[11px] uppercase tracking-[0.2em] text-muted-foreground mb-3">Answers</p>
