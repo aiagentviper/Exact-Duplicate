@@ -7,136 +7,115 @@ import { Testimonials } from "@/components/sections/Testimonials";
 import { CtaBand } from "@/components/sections/CtaBand";
 import { Footer } from "@/components/sections/Footer";
 import { motion } from "framer-motion";
-import { ArrowRight, Zap, Clock, Globe } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import { Link } from "wouter";
-import { Image } from "lucide-react";
+import { useState } from "react";
 
 const processSteps = [
   {
-    num: "01",
+    num: "1",
+    icon: "◇",
     title: "Define Your Vision",
-    desc: "Tell us what you want to build, your goals, your audience and the outcomes you're after. We listen first and ask the right questions.",
+    desc: "Find the perfect plan tailored to your needs, offering the right balance of features, flexibility, and value to help you achieve your goals effortlessly.",
   },
   {
-    num: "02",
+    num: "2",
+    icon: "≡",
     title: "Submit Your Request",
-    desc: "We scope the work, agree a clear timeline and lock in deliverables. No surprises — just a clean plan you can hold us to.",
+    desc: "Easily submit your design requirements through our private design portal, ensuring a seamless process where your vision is understood, refined, and brought to life with precision and creativity.",
   },
   {
-    num: "03",
+    num: "3",
+    icon: "⬡",
     title: "Project Delivered",
-    desc: "We build fast using the best AI tools, iterate with your feedback and hand over a finished product ready to scale.",
+    desc: "As a dedicated freelancer, I ensure your project is completed with precision and delivered within 2–3 days. With a keen eye for detail and a passion for quality, I bring your vision to life — on time and beyond expectations.",
   },
 ];
 
-const answers = [
-  {
-    icon: <Zap size={18} />,
-    title: "10x Faster Than Traditional Agencies",
-    desc: "We use the most advanced AI tools available — so what takes a traditional agency 6 weeks takes us 3–5 days.",
-  },
-  {
-    icon: <Globe size={18} />,
-    title: "Every Service Under One Roof",
-    desc: "Websites, apps, automation, video and strategy. No handing off to different vendors — we handle everything end-to-end.",
-  },
-  {
-    icon: <Clock size={18} />,
-    title: "No Bloated Retainers or Hidden Fees",
-    desc: "Transparent project pricing, honest timelines and a clear scope before we start. You always know exactly what you're getting.",
-  },
+const faqs = [
+  { q: "What services do you provide?", a: "We specialise in brand identity and package design, with experience in web design, UI/UX, and to create brand experiences." },
+  { q: "How do I start working with you?" },
+  { q: "What design tools do you use?" },
+  { q: "How long does a project take?" },
+  { q: "Do you provide revisions?" },
+  { q: "What industries do you work with?" },
+  { q: "Do you offer development services?" },
+  { q: "What is your pricing structure?" },
+  { q: "Can you redesign my existing website?" },
 ];
 
-const showcaseItems = [
-  {
-    title: "Meet Meily",
-    desc: "Brand identity + package design system",
-    image: "/portfolio/brand-identity-1.jpg",
-    large: true,
-  },
-  {
-    title: "Studio Reel",
-    desc: "Creative direction and motion assets",
-    image: "/portfolio/portfolio-2.jpg",
-  },
-  {
-    title: "Luxury Form",
-    desc: "Product-first landing page system",
-    image: "/portfolio/portfolio-3.jpg",
-  },
-  {
-    title: "Services Grid",
-    desc: "Dark editorial service cards",
-    image: "/portfolio/portfolio-4.jpg",
-  },
-  {
-    title: "FAQs + Answers",
-    desc: "Accordion layout and support content",
-    image: "/portfolio/portfolio-5.jpg",
-  },
-  {
-    title: "Client Reviews",
-    desc: "Scrolling testimonial cards",
-    image: "/portfolio/portfolio-6.jpg",
-  },
-];
+function FAQAccordion({ items }: { items: typeof faqs }) {
+  const [open, setOpen] = useState(0);
+  return (
+    <div className="divide-y divide-border/40">
+      {items.map((item, i) => (
+        <div key={item.q} className="py-4">
+          <button
+            onClick={() => setOpen(open === i ? -1 : i)}
+            className="w-full flex items-center justify-between gap-4 text-left"
+          >
+            <span className="font-inter text-[14px] text-foreground">{item.q}</span>
+            <span className="text-muted-foreground text-lg leading-none flex-shrink-0">
+              {open === i ? "×" : "+"}
+            </span>
+          </button>
+          {open === i && item.a && (
+            <p className="font-inter text-[13px] text-muted-foreground mt-3 leading-relaxed">{item.a}</p>
+          )}
+        </div>
+      ))}
+    </div>
+  );
+}
 
 export function HomePage() {
   return (
     <div className="bg-background min-h-screen text-foreground dark">
       <Navigation />
       <main>
+        {/* Hero — 20px top + bottom breathing room */}
         <div className="pt-[20px] pb-[20px]">
           <Hero />
         </div>
 
+        {/* Featured Portfolio grid */}
         <Portfolio />
 
-        <section className="py-28 border-t border-border/40">
-          <div className="container mx-auto px-6 mb-10">
-            <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>
-              <p className="font-inter font-semibold text-[11px] uppercase tracking-[0.2em] text-muted-foreground mb-3">Recent Works</p>
-              <h2 className="font-grotesk font-semibold text-[42px] leading-[1.05] tracking-tight">Homepage Sections</h2>
-              <p className="font-inter text-[15px] text-muted-foreground mt-4 max-w-md">The same dark editorial style, card language, and reference structure applied directly to the homepage.</p>
-            </motion.div>
-          </div>
-          <div className="container mx-auto px-6">
-            <div className="grid grid-cols-12 gap-4" style={{ gridAutoRows: "80px" }}>
-              <div className="col-span-12 md:col-span-5" style={{ gridRow: "span 7" }}>
-                <div className="relative h-full rounded-[18px] overflow-hidden border border-border/40 bg-card">
-                  <img src={showcaseItems[0].image} alt={showcaseItems[0].title} className="w-full h-full object-cover" />
-                  <div className="absolute inset-0 bg-black/10" />
-                  <div className="absolute bottom-0 left-0 right-0 p-4">
-                    <div className="rounded-full border border-white/50 bg-white/10 backdrop-blur-md px-4 py-2 text-center text-[12px] text-white">View Community ↗</div>
-                  </div>
-                </div>
-              </div>
-              {showcaseItems.slice(1).map((item, idx) => (
-                <div key={item.title} className={`col-span-12 ${idx === 0 ? "md:col-span-7" : idx === 1 ? "md:col-span-4" : idx === 2 ? "md:col-span-4" : idx === 3 ? "md:col-span-4" : "md:col-span-4"}`} style={{ gridRow: "span 3" }}>
-                  <div className="relative h-full rounded-[18px] overflow-hidden border border-border/40 bg-card">
-                    <img src={item.image} alt={item.title} className="w-full h-full object-cover" />
-                    <div className="absolute inset-0 bg-black/10" />
-                    <div className="absolute bottom-0 left-0 right-0 p-4">
-                      <div className="rounded-full border border-white/50 bg-white/10 backdrop-blur-md px-4 py-2 text-center text-[12px] text-white">View Community ↗</div>
-                    </div>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
+        {/* Services + scrolling tickers */}
         <Services />
+
+        {/* Stats band */}
         <Stats />
 
-        <section className="py-28 border-t border-border/40">
-          <div className="container mx-auto px-6">
-            <div className="grid lg:grid-cols-2 gap-16 items-start">
+        {/* ── Process ── */}
+        {/* Reference: LEFT = image of person working, RIGHT = numbered steps */}
+        <section className="border-t border-border/40">
+          <div className="grid lg:grid-cols-2 min-h-[600px]">
+            {/* Left — sticky image panel */}
+            <motion.div
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8 }}
+              className="relative overflow-hidden min-h-[400px] lg:min-h-auto"
+            >
+              <img
+                src="/portfolio/automation-flow.jpg"
+                alt="Our Process"
+                className="w-full h-full object-cover"
+              />
+              <div className="absolute inset-0 bg-black/30" />
+            </motion.div>
+
+            {/* Right — content */}
+            <div className="py-20 px-10 lg:px-14 flex flex-col justify-center">
               <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>
                 <p className="font-inter font-semibold text-[11px] uppercase tracking-[0.2em] text-muted-foreground mb-3">Design process</p>
-                <h2 className="font-grotesk font-semibold text-[42px] leading-[1.05] tracking-tight">Process</h2>
-                <p className="font-inter text-[15px] text-muted-foreground mt-4 max-w-xs leading-relaxed">Crafting bold visuals that inspire and elevate brands with thought process.</p>
-                <div className="flex gap-3 mt-6">
+                <h2 className="font-grotesk font-semibold text-[42px] leading-[1.05] tracking-tight mb-3">Process</h2>
+                <p className="font-inter text-[15px] text-muted-foreground max-w-sm leading-relaxed mb-6">
+                  Crafting bold visuals that inspire and elevate brands with thought process.
+                </p>
+                <div className="flex gap-3 mb-12">
                   <Link href="/contact">
                     <span className="inline-flex items-center gap-2 bg-foreground text-background font-inter font-semibold text-[13px] rounded-full px-6 py-2.5 hover:bg-foreground/90 transition-colors cursor-pointer">
                       Book a Free Call
@@ -149,13 +128,26 @@ export function HomePage() {
                   </Link>
                 </div>
               </motion.div>
-              <div>
+
+              <div className="space-y-0">
                 {processSteps.map((step, i) => (
-                  <motion.div key={step.num} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.5, delay: i * 0.1 }} className="flex gap-8 py-8 border-b border-border/40 last:border-0">
-                    <span className="font-inter font-semibold text-[11px] uppercase tracking-[0.2em] text-green-400 pt-1 min-w-[28px]">{step.num}</span>
-                    <div>
-                      <h3 className="font-grotesk font-semibold text-[22px] tracking-tight mb-2">{step.title}</h3>
-                      <p className="font-inter text-[15px] leading-relaxed text-muted-foreground">{step.desc}</p>
+                  <motion.div
+                    key={step.num}
+                    initial={{ opacity: 0, x: 20 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.5, delay: i * 0.1 }}
+                    className="flex gap-5 py-7 border-b border-border/30 last:border-0"
+                  >
+                    <div className="flex flex-col items-center gap-2 flex-shrink-0">
+                      <span className="text-muted-foreground/50 text-[18px] leading-none">{step.icon}</span>
+                    </div>
+                    <div className="flex-1">
+                      <div className="flex items-start justify-between gap-4 mb-2">
+                        <h3 className="font-grotesk font-semibold text-[20px] tracking-tight">{step.title}</h3>
+                        <span className="font-inter font-bold text-[13px] text-muted-foreground/40 flex-shrink-0">{step.num}</span>
+                      </div>
+                      <p className="font-inter text-[14px] leading-relaxed text-muted-foreground">{step.desc}</p>
                     </div>
                   </motion.div>
                 ))}
@@ -164,46 +156,59 @@ export function HomePage() {
           </div>
         </section>
 
-        <section className="py-28 border-t border-border/40">
-          <div className="container mx-auto px-6">
-            <div className="grid lg:grid-cols-2 gap-16 items-start">
+        {/* ── FAQ / Answers ── */}
+        {/* Reference: LEFT = label + heading + desc + image + pills + CTA, RIGHT = accordion */}
+        <section className="border-t border-border/40">
+          <div className="grid lg:grid-cols-2 min-h-[600px]">
+            {/* Left — content + image */}
+            <div className="py-20 px-10 lg:px-14 flex flex-col justify-between border-r border-border/40">
               <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>
                 <p className="font-inter font-semibold text-[11px] uppercase tracking-[0.2em] text-muted-foreground mb-3">FAQs</p>
-                <h2 className="font-grotesk font-semibold text-[42px] leading-[1.05] tracking-tight">Answers</h2>
-                <p className="font-inter text-[15px] text-muted-foreground mt-4 max-w-xs leading-relaxed">Find answers to common questions about my design process, services etc...</p>
-                <div className="mt-6 flex gap-2 flex-wrap">
-                  <span className="border border-border/60 rounded-full px-4 py-2 text-[12px] font-inter text-muted-foreground">Product Design</span>
-                  <span className="border border-border/60 rounded-full px-4 py-2 text-[12px] font-inter text-muted-foreground">Brand Identity Design</span>
-                  <span className="border border-border/60 rounded-full px-4 py-2 text-[12px] font-inter text-muted-foreground">Branding</span>
+                <h2 className="font-grotesk font-semibold text-[42px] leading-[1.05] tracking-tight mb-3">Answers</h2>
+                <p className="font-inter text-[15px] text-muted-foreground max-w-xs leading-relaxed">
+                  Find answers to common questions about our process, services etc...
+                </p>
+              </motion.div>
+
+              {/* Image card */}
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6, delay: 0.15 }}
+                className="my-8 rounded-2xl overflow-hidden aspect-[4/3] max-w-sm"
+              >
+                <img src="/portfolio/ai-agent-flow.jpg" alt="AI Process" className="w-full h-full object-cover" />
+              </motion.div>
+
+              <div>
+                <div className="flex flex-wrap gap-2 mb-6">
+                  {["AI Automation", "AI Websites", "AI Strategy"].map(tag => (
+                    <span key={tag} className="border border-border/60 rounded-full px-4 py-1.5 text-[12px] font-inter text-muted-foreground">
+                      {tag}
+                    </span>
+                  ))}
                 </div>
                 <Link href="/contact">
-                  <span className="inline-flex items-center gap-2 mt-6 font-inter font-semibold text-[13px] border border-border/60 rounded-full px-6 py-2.5 hover:border-foreground/50 transition-colors cursor-pointer">
+                  <span className="inline-flex items-center gap-2 font-inter font-semibold text-[13px] border border-border/60 rounded-full px-6 py-2.5 hover:border-foreground/50 transition-colors cursor-pointer">
                     Book a Free Call <ArrowRight size={13} />
                   </span>
                 </Link>
-              </motion.div>
-              <div className="grid gap-3">
-                {[
-                  "What services do you offer?",
-                  "How do I start working with you?",
-                  "What design tools do you use?",
-                  "How long does a project take?",
-                  "Do you provide revisions?",
-                  "What industries do you work with?",
-                ].map((q, i) => (
-                  <div key={q} className={`rounded-2xl border border-border/40 bg-card px-5 py-4 ${i === 0 ? "ring-1 ring-white/10" : ""}`}>
-                    <div className="flex items-center justify-between gap-4">
-                      <span className="font-inter text-[14px] text-foreground">{q}</span>
-                      <span className="text-muted-foreground">+</span>
-                    </div>
-                  </div>
-                ))}
               </div>
+            </div>
+
+            {/* Right — accordion */}
+            <div className="py-20 px-10 lg:px-14">
+              <motion.div initial={{ opacity: 0, x: 20 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>
+                <FAQAccordion items={faqs} />
+              </motion.div>
             </div>
           </div>
         </section>
 
+        {/* Testimonials — scrolling marquee */}
         <Testimonials />
+
         <CtaBand />
       </main>
       <Footer />
