@@ -41,9 +41,9 @@ function GalleryImage({ title, img, ratio }: { title: string; img: string; ratio
 
 export function Portfolio() {
   return (
-    <section className="w-full bg-black py-10 lg:py-14">
-      <div className="mx-auto w-full max-w-[1200px] px-5 sm:px-6 lg:px-8">
-        <div className="mb-5 flex items-center justify-between border-b border-white/10 pb-4">
+    <section className="w-full bg-black py-32">
+      <div className="mx-auto w-full max-w-[1100px] px-6">
+        <div className="mb-6 flex items-center justify-between border-b border-white/10 pb-4">
           <p className="flex items-center gap-2 font-inter text-[11px] uppercase tracking-[0.22em] text-white/50">
             Recent Works <ArrowDown size={12} />
           </p>
@@ -54,8 +54,8 @@ export function Portfolio() {
           </Link>
         </div>
 
-        <div className="mx-auto flex w-full max-w-[800px] justify-center gap-4">
-          <div className="flex w-1/3 flex-col gap-4">
+        <div className="mx-auto flex w-full max-w-[800px] justify-between gap-4">
+          <div className="flex w-[32%] flex-col gap-4">
             {leftColumn.map((item) => (
               <motion.div key={item.title} initial={{ opacity: 0, y: 12 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.55 }}>
                 <GalleryImage {...item} />
@@ -63,7 +63,7 @@ export function Portfolio() {
             ))}
           </div>
 
-          <div className="flex w-1/3 -translate-y-12 flex-col gap-4">
+          <div className="flex w-[32%] -translate-y-[100px] flex-col gap-4">
             {middleColumn.map((item) => (
               <motion.div key={item.title} initial={{ opacity: 0, y: 12 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.55 }}>
                 <GalleryImage {...item} />
@@ -71,7 +71,7 @@ export function Portfolio() {
             ))}
           </div>
 
-          <div className="flex w-1/3 flex-col gap-4">
+          <div className="flex w-[32%] flex-col gap-4">
             {rightColumn.map((item) => (
               <motion.div key={item.title} initial={{ opacity: 0, y: 12 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.55 }}>
                 <GalleryImage {...item} />
@@ -80,7 +80,7 @@ export function Portfolio() {
           </div>
         </div>
 
-        <div className="mt-7 flex items-center justify-center gap-5">
+        <div className="mt-8 flex items-center justify-center gap-5">
           <Link href="/work">
             <span className="cursor-pointer border-b border-white pb-0.5 font-inter text-[11px] text-white/70">All Projects</span>
           </Link>

@@ -1,0 +1,38 @@
+"Act as an expert Frontend Developer. Build a single-page landing page using HTML and Tailwind CSS. This page combines two specific styles: a cinematic color Hero section and a minimalist grayscale body.
+
+GLOBAL STYLES:
+
+Background: Pure black (#000000) for the entire page.
+Font: Use 'Inter' or a similar premium sans-serif.
+Container: All content below the hero must be contained in a narrow max-w-5xl or max-w-6xl centered wrapper.
+SECTION 1: THE HERO (Cinematic Style)
+
+Background: A full-bleed, high-contrast portrait image of a man with dramatic red/orange dual-tone lighting.
+Navbar: Transparent background. Left: Logo 'Folioblox'. Right: 'Home, About, Projects'. Button: 'Get in touch' (White pill-shape with a small orange arrow circle on the right).
+Layout: Use relative positioning.
+Left Bottom: Text 'Hey, I'm a' (small, orange). Huge white heading 'Brand Designer' (Bold, large).
+Right Middle: Text 'Great design should feel invisible.' (medium white). Below it, a short description in muted gray.
+Bottom Row: A 4-column grid of small orange numbers (#01, #02...) with white labels (Brand Strategy, etc.).
+SECTION 2: STAGGERED PORTFOLIO (The 3-Column Grid)
+
+Layout: Create a 3-column flex layout (flex flex-row gap-4).
+The Stagger: The Middle Column must be shifted upwards using -mt-20 or translate-y-[-80px] to create the staggered effect.
+Images: ALL images from here down must be grayscale (grayscale). Use a mix of aspect ratios (tall and square).
+Buttons: Every image must have a 'View Case Study' button at the bottom. Style: Pill-shaped, bg-white/10, backdrop-blur-md, border border-white/20.
+SECTION 3: MEET MEILY (About Section)
+
+Layout: Split 50/50. Left: Text bio and experience table. Right: Large vertical grayscale image.
+Tags: Include pill-shaped tags for skills (Product Design, Figma, etc.).
+SECTION 4: PROCESS & SERVICES
+
+Process: Heading 'Process' on the right. Below it, 3 stacked dark cards (bg-zinc-900/50) with numbered steps (1, 2, 3).
+Services: A 2x2 grid of service cards with thin white borders.
+The Ticker: Below services, add two rows of horizontal scrolling text (Marquee) moving in opposite directions.
+SECTION 5: CLIENT REVIEWS & FAQ
+
+Reviews: Horizontal row of testimonial cards. Each card has a profile pic, quote, and 5-star icons.
+Stats: A 3-column row: '180+ projects', '96% satisfaction', '15+ years'.
+FAQ (Answers): Heading and image on left. Right side: A clean vertical accordion with '+' icons and thin dividers.
+FINAL INSTRUCTION:
+Ensure the spacing between sections is large and 'breathable'. The transition from the Hero (color) to the Portfolio (grayscale) should be seamless on a black background. Make sure the 'View Case Study' buttons have the exact glassmorphism look."
+

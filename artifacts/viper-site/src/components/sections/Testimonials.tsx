@@ -36,32 +36,32 @@ export function Testimonials() {
   const doubled = [...testimonials, ...testimonials];
 
   return (
-    <section className="w-full border-t border-border/40 bg-black overflow-hidden">
-      <div className="mx-auto w-full max-w-[1200px] px-5 sm:px-6 lg:px-8">
-        <div className="grid lg:grid-cols-2 min-h-[420px] w-full">
+    <section className="w-full border-t border-border/40 bg-black overflow-hidden py-32">
+      <div className="mx-auto w-full max-w-[1100px] px-6">
+        <div className="grid w-full min-h-[420px] lg:grid-cols-2">
           <div className="relative min-h-[320px] overflow-hidden rounded-2xl">
             <img src="/photo-reviews.png" alt="Client Reviews" className="h-full w-full rounded-2xl object-cover object-center grayscale contrast-[1.1] brightness-[0.82]" />
             <div className="absolute inset-0 rounded-2xl bg-black/35" />
           </div>
 
-          <div className="py-16 px-6 lg:px-10 xl:px-14 flex flex-col justify-center">
+          <div className="flex flex-col justify-center px-6 py-16 lg:px-10 xl:px-14">
             <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>
-              <p className="font-inter font-semibold text-[11px] uppercase tracking-[0.2em] text-muted-foreground mb-3">Reviews</p>
-              <h2 className="font-grotesk font-semibold text-[46px] leading-[1.02] tracking-tight mb-4">Client Reviews</h2>
-              <p className="font-inter text-[14px] text-muted-foreground max-w-[340px] leading-relaxed mb-8">
+              <p className="mb-3 font-inter text-[11px] uppercase tracking-[0.2em] text-muted-foreground">Reviews</p>
+              <h2 className="mb-4 font-grotesk text-[46px] font-semibold leading-[1.02] tracking-tight">Client Reviews</h2>
+              <p className="mb-8 max-w-[340px] font-inter text-[14px] leading-relaxed text-muted-foreground">
                 Real feedback from clients who trusted my design expertise to elevate their brands successfully.
               </p>
               <div className="flex flex-wrap gap-3">
-                <Link href="/contact"><span className="inline-flex items-center gap-2 rounded-full bg-foreground px-5 py-2.5 font-inter text-[13px] font-semibold text-background transition-colors hover:bg-foreground/90 cursor-pointer">Book a Free Call</span></Link>
-                <Link href="/services"><span className="inline-flex items-center gap-2 rounded-full border border-border/60 px-5 py-2.5 font-inter text-[13px] font-semibold text-foreground transition-colors hover:border-foreground/50 cursor-pointer">See Services <ArrowRight size={13} /></span></Link>
+                <Link href="/contact"><span className="inline-flex cursor-pointer items-center gap-2 rounded-full bg-foreground px-5 py-2.5 font-inter text-[13px] font-semibold text-background transition-colors hover:bg-foreground/90">Book a Free Call</span></Link>
+                <Link href="/services"><span className="inline-flex cursor-pointer items-center gap-2 rounded-full border border-border/60 px-5 py-2.5 font-inter text-[13px] font-semibold text-foreground transition-colors hover:border-foreground/50">See Services <ArrowRight size={13} /></span></Link>
               </div>
             </motion.div>
           </div>
         </div>
 
-        <div className="relative py-10 overflow-hidden w-full">
-          <div className="absolute left-0 top-0 bottom-0 w-16 z-10 pointer-events-none" style={{ background: 'linear-gradient(to right, hsl(0 0% 4%), transparent)' }} />
-          <div className="absolute right-0 top-0 bottom-0 w-16 z-10 pointer-events-none" style={{ background: 'linear-gradient(to left, hsl(0 0% 4%), transparent)' }} />
+        <div className="relative w-full overflow-hidden py-10">
+          <div className="pointer-events-none absolute left-0 top-0 bottom-0 z-10 w-16" style={{ background: 'linear-gradient(to right, hsl(0 0% 4%), transparent)' }} />
+          <div className="pointer-events-none absolute right-0 top-0 bottom-0 z-10 w-16" style={{ background: 'linear-gradient(to left, hsl(0 0% 4%), transparent)' }} />
           <div className="flex w-max gap-4 px-6" style={{ animation: 'marquee 40s linear infinite' }}>
             {doubled.map((t, i) => <TestimonialCard key={`${t.id}-${i}`} t={t} />)}
           </div>
