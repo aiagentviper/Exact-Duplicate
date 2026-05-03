@@ -16,7 +16,7 @@ function Card({ project, className }: { project: typeof featured[0]; className?:
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
       transition={{ duration: 0.6 }}
-      className={`group relative overflow-hidden bg-card border border-border/40 cursor-pointer ${className}`}
+      className={`group relative overflow-hidden rounded-[18px] bg-card border border-border/40 cursor-pointer ${className}`}
     >
       <img src={project.image} alt={project.title} className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
       <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-400 flex flex-col justify-end p-6">
@@ -34,14 +34,12 @@ function Card({ project, className }: { project: typeof featured[0]; className?:
 
 export function Portfolio() {
   return (
-    <section className="py-28">
+    <section className="py-28 border-t border-border/40">
       <div className="container mx-auto px-6 mb-10">
         <div className="flex items-end justify-between">
           <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>
             <p className="font-inter font-semibold text-[11px] uppercase tracking-[0.2em] text-muted-foreground mb-3">Our Work ✦</p>
-            <h2 className="font-grotesk font-semibold text-[42px] leading-[1.05] tracking-tight">
-              Featured<br />Portfolio!
-            </h2>
+            <h2 className="font-grotesk font-semibold text-[42px] leading-[1.05] tracking-tight">Featured<br />Portfolio!</h2>
           </motion.div>
           <motion.div initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} viewport={{ once: true }} transition={{ duration: 0.5, delay: 0.2 }}>
             <Link href="/work">
@@ -56,16 +54,16 @@ export function Portfolio() {
       <div className="container mx-auto px-6">
         <div className="grid grid-cols-12 gap-4" style={{ gridAutoRows: "80px" }}>
           <div className="col-span-12 md:col-span-5" style={{ gridRow: "span 7" }}>
-            <Card project={featured[0]} className="w-full h-full rounded-2xl" />
+            <Card project={featured[0]} className="w-full h-full" />
           </div>
           <div className="col-span-12 md:col-span-7" style={{ gridRow: "span 4" }}>
-            <Card project={featured[1]} className="w-full h-full rounded-2xl" />
+            <Card project={featured[1]} className="w-full h-full" />
           </div>
           <div className="col-span-12 md:col-span-4" style={{ gridRow: "span 3" }}>
-            <Card project={featured[2]} className="w-full h-full rounded-2xl" />
+            <Card project={featured[2]} className="w-full h-full" />
           </div>
           <div className="col-span-12 md:col-span-3" style={{ gridRow: "span 3" }}>
-            <Card project={featured[3]} className="w-full h-full rounded-2xl" />
+            <Card project={featured[3]} className="w-full h-full" />
           </div>
         </div>
       </div>

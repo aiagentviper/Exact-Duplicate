@@ -26,13 +26,11 @@ const testimonials = [
 
 export function Testimonials() {
   return (
-    <section className="py-28">
+    <section className="py-28 border-t border-border/40">
       <div className="container mx-auto px-6">
         <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }} className="mb-14">
           <p className="font-inter font-semibold text-[11px] uppercase tracking-[0.2em] text-muted-foreground mb-3">What Clients Say</p>
-          <h2 className="font-grotesk font-semibold text-[42px] leading-[1.05] tracking-tight">
-            Trusted By<br />Experts.
-          </h2>
+          <h2 className="font-grotesk font-semibold text-[42px] leading-[1.05] tracking-tight">Trusted By<br />Experts.</h2>
         </motion.div>
 
         <div className="grid md:grid-cols-3 gap-6">
@@ -43,12 +41,10 @@ export function Testimonials() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: i * 0.1 }}
-              className="bg-card border border-border/40 rounded-2xl p-8 flex flex-col justify-between hover:border-border/70 transition-colors"
+              className="bg-card border border-border/40 rounded-[18px] p-8 flex flex-col justify-between hover:border-border/70 transition-colors"
             >
               <div>
-                <span className="inline-block font-inter font-semibold text-[11px] uppercase tracking-[0.2em] text-muted-foreground border border-border/60 rounded-full px-3 py-1 mb-6">
-                  {t.tag}
-                </span>
+                <span className="inline-block font-inter font-semibold text-[11px] uppercase tracking-[0.2em] text-muted-foreground border border-border/60 rounded-full px-3 py-1 mb-6">{t.tag}</span>
                 <p className="font-inter text-[15px] leading-relaxed text-foreground/80 mb-8">"{t.quote}"</p>
               </div>
               <div className="flex items-center gap-3 border-t border-border/40 pt-6">
