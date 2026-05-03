@@ -46,13 +46,13 @@ export function Testimonials() {
 
           <div className="flex flex-col justify-center px-6 py-16 lg:px-10 xl:px-14">
             <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>
-              <p className="mb-3 font-inter text-[11px] uppercase tracking-[0.2em] text-muted-foreground">Reviews</p>
+              <p className="mb-3 font-inter text-[11px] font-semibold uppercase tracking-[0.2em] text-orange-500">Reviews</p>
               <h2 className="mb-4 font-grotesk text-[46px] font-semibold leading-[1.02] tracking-tight">Client Reviews</h2>
               <p className="mb-8 max-w-[340px] font-inter text-[14px] leading-relaxed text-muted-foreground">
-                Real feedback from clients who trusted my design expertise to elevate their brands successfully.
+                Real results from clients who trusted VIPER to build their AI systems, sites and automations.
               </p>
               <div className="flex flex-wrap gap-3">
-                <Link href="/contact"><span className="inline-flex cursor-pointer items-center gap-2 rounded-full bg-foreground px-5 py-2.5 font-inter text-[13px] font-semibold text-background transition-colors hover:bg-foreground/90">Book a Free Call</span></Link>
+                <Link href="/contact"><span className="inline-flex cursor-pointer items-center gap-2 rounded-full bg-orange-500 px-5 py-2.5 font-inter text-[13px] font-semibold text-white transition-colors hover:bg-orange-400">Book a Free Call</span></Link>
                 <Link href="/services"><span className="inline-flex cursor-pointer items-center gap-2 rounded-full border border-border/60 px-5 py-2.5 font-inter text-[13px] font-semibold text-foreground transition-colors hover:border-foreground/50">See Services <ArrowRight size={13} /></span></Link>
               </div>
             </motion.div>

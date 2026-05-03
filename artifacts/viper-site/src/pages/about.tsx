@@ -98,7 +98,7 @@ export function AboutPage() {
                   ))}
                 </div>
                 <Link href="/contact">
-                  <span className="inline-flex items-center gap-2 bg-foreground text-background font-inter font-semibold text-[13px] rounded-full px-7 py-3 hover:bg-foreground/90 transition-colors cursor-pointer">
+                  <span className="inline-flex items-center gap-2 bg-orange-500 text-white font-inter font-semibold text-[13px] rounded-full px-7 py-3 hover:bg-orange-400 transition-colors cursor-pointer">
                     Work With Us <ArrowRight size={14} />
                   </span>
                 </Link>
@@ -186,7 +186,7 @@ export function AboutPage() {
               {services.map((s, i) => (
                 <motion.div key={s.num} initial={{ opacity: 0, y: 24 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.5, delay: i * 0.08 }}
                   className="bg-card border border-border/40 rounded-2xl p-7 hover:border-border/70 transition-colors">
-                  <div className="w-10 h-10 rounded-xl bg-foreground/[0.08] border border-border/50 flex items-center justify-center mb-5 text-muted-foreground">
+                  <div className="w-10 h-10 rounded-xl bg-orange-500/10 border border-orange-500/30 flex items-center justify-center mb-5 text-orange-500">
                     {s.icon}
                   </div>
                   <span className="font-inter font-semibold text-[11px] uppercase tracking-[0.2em] text-muted-foreground/60 block mb-2">{s.num}</span>
@@ -275,7 +275,7 @@ export function AboutPage() {
               <span className="text-foreground/40">Extraordinary.</span>
             </h2>
             <Link href="/contact">
-              <span className="inline-flex items-center gap-2 bg-foreground text-background font-inter font-semibold text-[13px] rounded-full px-8 py-3.5 hover:bg-foreground/90 transition-colors cursor-pointer">
+              <span className="inline-flex items-center gap-2 bg-orange-500 text-white font-inter font-semibold text-[13px] rounded-full px-8 py-3.5 hover:bg-orange-400 transition-colors cursor-pointer">
                 Get in Touch <ArrowRight size={14} />
               </span>
             </Link>

@@ -71,7 +71,7 @@ export function ContactPage() {
               className="space-y-8"
             >
               <div>
-                <h3 className="text-xs uppercase tracking-widest text-muted-foreground mb-6 font-medium">Contact Details</h3>
+                <h3 className="text-xs uppercase tracking-widest text-orange-500 mb-6 font-semibold">Contact Details</h3>
                 <div className="space-y-5">
                   <a
                     href="mailto:jimohmalik101@gmail.com"
@@ -100,12 +100,12 @@ export function ContactPage() {
               </div>
 
               <div className="pt-8 border-t border-border/50">
-                <h3 className="text-xs uppercase tracking-widest text-muted-foreground mb-4 font-medium">Book a Free Call</h3>
+                <h3 className="text-xs uppercase tracking-widest text-orange-500 mb-4 font-semibold">Book a Free Call</h3>
                 <a
                   href="https://calendly.com/malik-designs"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 font-inter font-semibold text-[13px] bg-foreground text-background rounded-full px-6 py-3 hover:bg-foreground/90 transition-colors mb-8"
+                  className="inline-flex items-center gap-2 font-inter font-semibold text-[13px] bg-orange-500 text-white rounded-full px-6 py-3 hover:bg-orange-400 transition-colors mb-8"
                   data-testid="contact-calendly"
                 >
                   <Calendar size={15} />
@@ -114,11 +114,11 @@ export function ContactPage() {
               </div>
 
               <div className="border-t border-border/50 pt-8">
-                <h3 className="text-xs uppercase tracking-widest text-muted-foreground mb-4 font-medium">What We Build</h3>
+                <h3 className="text-xs uppercase tracking-widest text-orange-500 mb-4 font-semibold">What We Build</h3>
                 <ul className="space-y-2 text-sm text-muted-foreground">
                   {["AI Automation Systems", "AI-Powered Websites", "AI App MVPs", "Vibe Coded Products", "AI Video Content", "AI Strategy & Roadmaps"].map((item) => (
                     <li key={item} className="flex items-center gap-2">
-                      <span className="w-1 h-1 rounded-full bg-muted-foreground/50" />
+                      <span className="w-1.5 h-1.5 rounded-full bg-orange-500 flex-shrink-0" />
                       {item}
                     </li>
                   ))}
@@ -227,7 +227,7 @@ export function ContactPage() {
                       </FormItem>
                     )}
                   />
-                  <Button type="submit" size="lg" className="w-full rounded-xl" data-testid="contact-submit">
+                  <Button type="submit" size="lg" className="w-full rounded-xl bg-orange-500 hover:bg-orange-400 text-white border-0" data-testid="contact-submit">
                     Send Message →
                   </Button>
                 </form>

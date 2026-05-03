@@ -327,7 +327,7 @@ export function HomePage() {
                   viewport={{ once: true }}
                   transition={{ duration: 0.6 }}
                 >
-                  <p className="mb-3 font-inter text-[11px] font-semibold uppercase tracking-[0.2em] text-muted-foreground">FAQs</p>
+                  <p className="mb-3 font-inter text-[11px] font-semibold uppercase tracking-[0.2em] text-orange-500">FAQs</p>
                   <h2 className="mb-4 font-grotesk text-[52px] font-semibold leading-[1.0] tracking-tight">Answers</h2>
                   <p className="max-w-[300px] font-inter text-[14px] leading-relaxed text-muted-foreground">
                     Find answers to common questions about our process, services, and delivery.

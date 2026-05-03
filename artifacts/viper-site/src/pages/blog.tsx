@@ -74,14 +74,14 @@ const insights = [
 
 export function BlogPage() {
   return (
-    <div className="bg-background min-h-screen text-foreground dark">
+    <div className="bg-black min-h-screen text-foreground dark">
       <Navigation />
       <main className="pt-24">
 
         {/* ── Page header ── */}
         <section className="py-20 container mx-auto px-6 text-center border-b border-border/40">
           <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }}>
-            <p className="font-inter font-semibold text-[11px] uppercase tracking-[0.2em] text-muted-foreground mb-4">VIPER Insights</p>
+            <p className="font-inter font-semibold text-[11px] uppercase tracking-[0.2em] text-orange-500 mb-4">VIPER Insights</p>
             <h1 className="font-grotesk font-bold text-[60px] leading-[1.0] tracking-[-0.02em] mb-6">
               AI Knowledge.<br /><span className="text-muted-foreground/40">Zero Fluff.</span>
             </h1>
@@ -94,7 +94,7 @@ export function BlogPage() {
         {/* ── Featured post ── */}
         <section className="py-16 border-b border-border/40">
           <div className="container mx-auto px-6">
-            <p className="font-inter font-semibold text-[11px] uppercase tracking-[0.2em] text-muted-foreground mb-8">Featured Article</p>
+            <p className="font-inter font-semibold text-[11px] uppercase tracking-[0.2em] text-orange-500 mb-8">Featured Article</p>
             <motion.div initial={{ opacity: 0, y: 24 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }}
               className="grid lg:grid-cols-2 gap-10 items-center group cursor-pointer">
               <div className="aspect-[16/10] overflow-hidden rounded-2xl border border-border/40 bg-card">
@@ -167,7 +167,7 @@ export function BlogPage() {
         {/* ── Newsletter / CTA ── */}
         <section className="py-28 text-center">
           <motion.div initial={{ opacity: 0, y: 24 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>
-            <p className="font-inter font-semibold text-[11px] uppercase tracking-[0.2em] text-muted-foreground mb-4">Stay Ahead</p>
+            <p className="font-inter font-semibold text-[11px] uppercase tracking-[0.2em] text-orange-500 mb-4">Stay Ahead</p>
             <h2 className="font-grotesk font-bold text-[48px] leading-[1.0] tracking-tight mb-6">
               Want More AI<br /><span className="text-foreground/40">Insights Like These?</span>
             </h2>
@@ -176,7 +176,7 @@ export function BlogPage() {
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-3">
               <Link href="/contact">
-                <span className="inline-flex items-center gap-2 bg-foreground text-background font-inter font-semibold text-[13px] rounded-full px-8 py-3.5 hover:bg-foreground/90 transition-colors cursor-pointer">
+                <span className="inline-flex items-center gap-2 bg-orange-500 text-white font-inter font-semibold text-[13px] rounded-full px-8 py-3.5 hover:bg-orange-400 transition-colors cursor-pointer">
                   Work With Us <ArrowRight size={14} />
                 </span>
               </Link>

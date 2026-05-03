@@ -177,7 +177,7 @@ export function WorkPage() {
             <div>
               <div className="flex items-end justify-between mb-8">
                 <div>
-                  <p className="font-inter font-semibold text-[11px] uppercase tracking-[0.2em] text-muted-foreground mb-1">Live Websites</p>
+                  <p className="font-inter font-semibold text-[11px] uppercase tracking-[0.2em] text-orange-500 mb-1">Live Websites</p>
                   <h2 className="font-grotesk font-semibold text-[28px] tracking-tight">AI Websites</h2>
                 </div>
                 <span className="font-inter text-[12px] text-muted-foreground">Click card to visit live site</span>
@@ -190,7 +190,7 @@ export function WorkPage() {
           {showApp && (
             <div>
               <div className="mb-8">
-                <p className="font-inter font-semibold text-[11px] uppercase tracking-[0.2em] text-muted-foreground mb-1">Custom Builds</p>
+                <p className="font-inter font-semibold text-[11px] uppercase tracking-[0.2em] text-orange-500 mb-1">Custom Builds</p>
                 <h2 className="font-grotesk font-semibold text-[28px] tracking-tight">AI Apps</h2>
               </div>
               <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
@@ -201,7 +201,7 @@ export function WorkPage() {
           {showAutomation && (
             <div>
               <div className="mb-8">
-                <p className="font-inter font-semibold text-[11px] uppercase tracking-[0.2em] text-muted-foreground mb-1">Workflow Systems</p>
+                <p className="font-inter font-semibold text-[11px] uppercase tracking-[0.2em] text-orange-500 mb-1">Workflow Systems</p>
                 <h2 className="font-grotesk font-semibold text-[28px] tracking-tight">AI Automation</h2>
               </div>
               <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
@@ -212,7 +212,7 @@ export function WorkPage() {
           {showVideo && (
             <div>
               <div className="mb-8">
-                <p className="font-inter font-semibold text-[11px] uppercase tracking-[0.2em] text-muted-foreground mb-1">Motion & Content</p>
+                <p className="font-inter font-semibold text-[11px] uppercase tracking-[0.2em] text-orange-500 mb-1">Motion & Content</p>
                 <h2 className="font-grotesk font-semibold text-[28px] tracking-tight">AI Video Productions</h2>
               </div>
               <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
@@ -283,7 +283,7 @@ export function WorkPage() {
               Ready to be<br /><span className="text-foreground/40">Our Next Project?</span>
             </h2>
             <Link href="/contact">
-              <span className="inline-flex items-center gap-2 bg-foreground text-background font-inter font-semibold text-[13px] rounded-full px-8 py-3.5 hover:bg-foreground/90 transition-colors cursor-pointer">
+              <span className="inline-flex items-center gap-2 bg-orange-500 text-white font-inter font-semibold text-[13px] rounded-full px-8 py-3.5 hover:bg-orange-400 transition-colors cursor-pointer">
                 Start Your AI Project <ArrowRight size={14} />
               </span>
             </Link>
