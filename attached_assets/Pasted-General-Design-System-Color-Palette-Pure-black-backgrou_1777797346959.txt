@@ -1,0 +1,42 @@
+General Design System:
+
+Color Palette: Pure black background (#000000), white text, and dark-gray accents (zinc-900).
+Aesthetic: High-contrast, editorial, luxury brand feel.
+Images: All images must be grayscale (grayscale), high-contrast, and have rounded corners (rounded-2xl).
+Typography: Use a clean sans-serif (like Inter). Bold headings, small muted body text.
+Max Width: The content must be contained in a narrow, centered wrapper (max-w-5xl or max-w-6xl).
+Please build the following sections in order:
+
+1. Hero Section (Split Layout):
+
+Left side: Large heading 'Meet Meily', a short bio, and a group of pill-shaped tags (Product Design, Branding, etc.). Below that, a 3-column 'Experience' table with light borders.
+Right side: A large vertical grayscale image with rounded corners.
+2. Recent Works (Horizontal Scroll):
+
+A heading 'Recent Works' with a down-arrow icon.
+A horizontal container of grayscale product images. Each image MUST have the 'View Casestudy' glassmorphism pill-button (semi-transparent white, backdrop-blur) at the bottom.
+3. Process Section (Vertical Layout):
+
+Left: A very tall, thin vertical image.
+Right: Heading 'Process', subtitle, and two buttons ('Book a Free Call' in black, 'See Projects' in outline).
+Cards: Below the text, three stacked dark cards (bg-zinc-900/50) with small icons, a numbered title (1, 2, 3), and descriptions.
+4. Services Section:
+
+Layout: Header on the left, horizontal image on the right.
+Grid: A 2x2 grid of service cards (Brand Identity, Brand Design, etc.). Each card has a small icon and a border top/bottom.
+Marquee: Below the grid, two 'moving ticker' lines of text/tags scrolling horizontally in opposite directions.
+5. Client Reviews Section:
+
+Top: A large horizontal image of the designer at work on the left; Title/Text/Buttons on the right.
+Testimonial Cards: A horizontal row of cards. Each card has a small profile photo, Name, Role, a text quote, and 5-star icons.
+Stats Bar: A 3-column dark section showing '180+ projects', '96% satisfaction', and '15+ years'.
+6. FAQ (Answers) Section:
+
+Layout: Heading and a grayscale image of a cut fruit on the left.
+Right: A clean vertical Accordion list. Each item is a question with a '+' icon on the right, separated by thin borders.
+Instructions for the code:
+
+Use flex and grid for all layouts.
+Use backdrop-blur-md for all glassmorphism effects.
+Ensure the layout is centered and doesn't stretch to the full edges of the screen.
+Make it fully responsive (stacks on mobile)."

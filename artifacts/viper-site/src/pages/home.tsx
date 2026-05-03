@@ -30,44 +30,48 @@ const faqs = [
 
 function FAQAccordion({ items }: { items: typeof faqs }) {
   const [open, setOpen] = useState(0);
-  return <div className="divide-y divide-border/40">{items.map((item, i) => <div key={item.q} className="py-4"><button onClick={() => setOpen(open === i ? -1 : i)} className="w-full flex items-center justify-between gap-4 text-left"><span className="font-inter text-[14px] text-foreground">{item.q}</span><span className="text-muted-foreground text-xl leading-none flex-shrink-0 font-light">{open === i ? "×" : "+"}</span></button>{open === i && item.a && <p className="font-inter text-[13px] text-muted-foreground mt-3 leading-relaxed max-w-[480px]">{item.a}</p>}</div>)}</div>;
+  return <div className="divide-y divide-border/40">{items.map((item, i) => <div key={item.q} className="py-4"><button onClick={() => setOpen(open === i ? -1 : i)} className="flex w-full items-center justify-between gap-4 text-left"><span className="font-inter text-[14px] text-foreground">{item.q}</span><span className="flex-shrink-0 text-xl font-light leading-none text-muted-foreground">{open === i ? "×" : "+"}</span></button>{open === i && item.a && <p className="mt-3 max-w-[480px] font-inter text-[13px] leading-relaxed text-muted-foreground">{item.a}</p>}</div>)}</div>;
 }
 
 export function HomePage() {
   return (
-    <div className="bg-background min-h-screen text-foreground dark">
+    <div className="min-h-screen bg-background text-foreground dark">
       <Navigation />
       <main>
-        <div className="pt-[30px] pb-[30px]"><Hero /></div>
+        <div className="pb-[30px] pt-[30px]"><Hero /></div>
         <Portfolio />
-        <section className="border-t border-border/40 w-full">
-          <div className="grid lg:grid-cols-2 min-h-[680px] w-full">
-            <motion.div initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} viewport={{ once: true }} transition={{ duration: 0.8 }} className="relative overflow-hidden min-h-[420px]"><img src="/photo-process.png" alt="Process" className="absolute inset-0 w-full h-full object-cover object-center" /></motion.div>
-            <div className="py-16 px-10 lg:px-14 flex flex-col justify-center">
+        <section className="w-full border-t border-border/40">
+          <div className="grid min-h-[680px] w-full lg:grid-cols-2">
+            <motion.div initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} viewport={{ once: true }} transition={{ duration: 0.8 }} className="relative min-h-[420px] overflow-hidden rounded-2xl">
+              <img src="/photo-process.png" alt="Process" className="absolute inset-0 h-full w-full rounded-2xl object-cover object-center grayscale contrast-[1.1] brightness-[0.82]" />
+            </motion.div>
+            <div className="flex flex-col justify-center px-6 py-16 lg:px-14">
               <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>
-                <p className="font-inter font-semibold text-[11px] uppercase tracking-[0.2em] text-muted-foreground mb-3">Design process</p>
-                <h2 className="font-grotesk font-semibold text-[48px] leading-[1.0] tracking-tight mb-4">Process</h2>
-                <p className="font-inter text-[14px] text-muted-foreground max-w-[340px] leading-relaxed mb-6">crafting bold visuals that inspire and elevate brands with thought process.</p>
-                <div className="flex gap-3 mb-10"><Link href="/contact"><span className="inline-flex items-center gap-2 bg-foreground text-background font-inter font-semibold text-[13px] rounded-full px-6 py-2.5 hover:bg-foreground/90 transition-colors cursor-pointer">Book a Free Call</span></Link><Link href="/work"><span className="inline-flex items-center gap-2 border border-border/60 font-inter font-semibold text-[13px] rounded-full px-6 py-2.5 hover:border-foreground/50 transition-colors cursor-pointer">See Projects</span></Link></div>
+                <p className="mb-3 font-inter text-[11px] font-semibold uppercase tracking-[0.2em] text-muted-foreground">Design process</p>
+                <h2 className="mb-4 font-grotesk text-[48px] font-semibold leading-[1.0] tracking-tight">Process</h2>
+                <p className="mb-6 max-w-[340px] font-inter text-[14px] leading-relaxed text-muted-foreground">crafting bold visuals that inspire and elevate brands with thought process.</p>
+                <div className="mb-10 flex gap-3"><Link href="/contact"><span className="inline-flex cursor-pointer items-center gap-2 rounded-full bg-foreground px-6 py-2.5 font-inter text-[13px] font-semibold text-background transition-colors hover:bg-foreground/90">Book a Free Call</span></Link><Link href="/work"><span className="inline-flex cursor-pointer items-center gap-2 rounded-full border border-border/60 px-6 py-2.5 font-inter text-[13px] font-semibold transition-colors hover:border-foreground/50">See Projects</span></Link></div>
               </motion.div>
-              <div className="space-y-3">{processSteps.map((step, i) => <motion.div key={step.num} initial={{ opacity: 0, y: 16 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.5, delay: i * 0.1 }} className="rounded-2xl border border-border/40 bg-card/50 px-6 py-5 hover:border-border/70 hover:bg-card transition-all"><div className="flex items-start justify-between gap-4 mb-2"><h3 className="font-grotesk font-semibold text-[17px] tracking-tight">{step.title}</h3><span className="font-inter font-bold text-[11px] text-muted-foreground/40 flex-shrink-0 mt-1">{step.num}</span></div><p className="font-inter text-[13px] leading-relaxed text-muted-foreground">{step.desc}</p></motion.div>)}</div>
+              <div className="space-y-3">{processSteps.map((step, i) => <motion.div key={step.num} initial={{ opacity: 0, y: 16 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.5, delay: i * 0.1 }} className="rounded-2xl border border-border/40 bg-zinc-900/50 px-6 py-5 transition-all hover:border-border/70 hover:bg-card"><div className="mb-2 flex items-start justify-between gap-4"><h3 className="font-grotesk text-[17px] font-semibold tracking-tight">{step.title}</h3><span className="mt-1 flex-shrink-0 font-inter text-[11px] font-bold text-muted-foreground/40">{step.num}</span></div><p className="font-inter text-[13px] leading-relaxed text-muted-foreground">{step.desc}</p></motion.div>)}</div>
             </div>
           </div>
         </section>
         <Services />
         <Testimonials />
-        <section className="border-t border-border/40 w-full">
-          <div className="grid lg:grid-cols-2 min-h-[580px] w-full">
-            <div className="py-20 px-6 lg:px-10 xl:px-14 border-r border-border/40 flex flex-col gap-8">
+        <section className="w-full border-t border-border/40">
+          <div className="grid min-h-[580px] w-full lg:grid-cols-2">
+            <div className="flex flex-col gap-8 px-6 py-20 lg:border-r lg:border-border/40 lg:px-10 xl:px-14">
               <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>
-                <p className="font-inter font-semibold text-[11px] uppercase tracking-[0.2em] text-muted-foreground mb-3">FAQs</p>
-                <h2 className="font-grotesk font-semibold text-[48px] leading-[1.0] tracking-tight mb-4">Answers</h2>
-                <p className="font-inter text-[14px] text-muted-foreground max-w-[320px] leading-relaxed">Find answers to common questions about my design process, services etc...</p>
+                <p className="mb-3 font-inter text-[11px] font-semibold uppercase tracking-[0.2em] text-muted-foreground">FAQs</p>
+                <h2 className="mb-4 font-grotesk text-[48px] font-semibold leading-[1.0] tracking-tight">Answers</h2>
+                <p className="max-w-[320px] font-inter text-[14px] leading-relaxed text-muted-foreground">Find answers to common questions about my design process, services etc...</p>
               </motion.div>
-              <motion.div initial={{ opacity: 0, y: 16 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6, delay: 0.15 }} className="rounded-2xl overflow-hidden aspect-[4/3] max-w-[360px]"><img src="/photo-faq.png" alt="FAQ" className="w-full h-full object-cover object-center" /></motion.div>
-              <div><div className="flex flex-wrap gap-2 mb-5">{"Brand Identity,Brand Design,Branding".split(",").map((tag) => <span key={tag} className="border border-border/60 rounded-full px-4 py-1.5 text-[12px] font-inter text-muted-foreground">{tag}</span>)}</div><Link href="/contact"><span className="inline-flex items-center gap-2 font-inter font-semibold text-[13px] border border-border/60 rounded-full px-6 py-2.5 hover:border-foreground/50 transition-colors cursor-pointer">Book a Free Call <ArrowRight size={13} /></span></Link></div>
+              <motion.div initial={{ opacity: 0, y: 16 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6, delay: 0.15 }} className="max-w-[360px] overflow-hidden rounded-2xl aspect-[4/3]">
+                <img src="/photo-faq.png" alt="FAQ" className="h-full w-full object-cover object-center grayscale contrast-[1.1] brightness-[0.82]" />
+              </motion.div>
+              <div><div className="mb-5 flex flex-wrap gap-2">{"Brand Identity,Brand Design,Branding".split(",").map((tag) => <span key={tag} className="rounded-full border border-border/60 px-4 py-1.5 font-inter text-[12px] text-muted-foreground">{tag}</span>)}</div><Link href="/contact"><span className="inline-flex cursor-pointer items-center gap-2 rounded-full border border-border/60 px-6 py-2.5 font-inter text-[13px] font-semibold transition-colors hover:border-foreground/50">Book a Free Call <ArrowRight size={13} /></span></Link></div>
             </div>
-            <div className="py-20 px-6 lg:px-10 xl:px-14 flex flex-col justify-center"><motion.div initial={{ opacity: 0, x: 20 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }}><FAQAccordion items={faqs} /></motion.div></div>
+            <div className="flex flex-col justify-center px-6 py-20 lg:px-10 xl:px-14"><motion.div initial={{ opacity: 0, x: 20 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }}><FAQAccordion items={faqs} /></motion.div></div>
           </div>
         </section>
         <CtaBand />
