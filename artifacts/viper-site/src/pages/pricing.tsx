@@ -237,22 +237,6 @@ export function PricingPage() {
           </div>
         </section>
 
-        <section className="py-28 text-center">
-          <motion.div initial={{ opacity: 0, y: 24 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>
-            <p className="font-inter font-semibold text-[11px] uppercase tracking-[0.2em] text-white/40 mb-4">Let's Talk</p>
-            <h2 className="font-grotesk font-bold text-[48px] leading-[1.0] tracking-tight mb-6">
-              Need a Custom Quote?<br /><span className="text-white/60">We've Got You.</span>
-            </h2>
-            <p className="font-inter text-[16px] text-muted-foreground max-w-md mx-auto mb-8 leading-relaxed">
-              Every business is different. Let's talk about what you actually need.
-            </p>
-            <Link href="/contact">
-              <span className="inline-flex items-center gap-2 bg-white text-black font-inter font-semibold text-[13px] rounded-full px-8 py-3.5 hover:bg-white/90 transition-colors cursor-pointer">
-                Contact Us <ArrowRight size={14} />
-              </span>
-            </Link>
-          </motion.div>
-        </section>
       </main>
       <Footer />
     </div>

@@ -164,30 +164,6 @@ export function BlogPage() {
           </div>
         </section>
 
-        {/* ── CTA ── */}
-        <section className="py-28 text-center">
-          <motion.div initial={{ opacity: 0, y: 24 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>
-            <p className="font-inter font-semibold text-[11px] uppercase tracking-[0.2em] text-white/40 mb-4">Stay Ahead</p>
-            <h2 className="font-grotesk font-bold text-[48px] leading-[1.0] tracking-tight mb-6">
-              Want More AI<br /><span className="text-white/60">Insights Like These?</span>
-            </h2>
-            <p className="font-inter text-[16px] text-muted-foreground max-w-md mx-auto mb-8 leading-relaxed">
-              Follow us for weekly breakdowns on AI, automation, and how to build faster than everyone else.
-            </p>
-            <div className="flex flex-col sm:flex-row items-center justify-center gap-3">
-              <Link href="/contact">
-                <span className="inline-flex items-center gap-2 bg-white text-black font-inter font-semibold text-[13px] rounded-full px-8 py-3.5 hover:bg-white/90 transition-colors cursor-pointer">
-                  Work With Us <ArrowRight size={14} />
-                </span>
-              </Link>
-              <a href="https://calendly.com/malik-designs" target="_blank" rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 font-inter font-semibold text-[13px] border border-white/20 rounded-full px-8 py-3.5 hover:border-white/50 transition-colors text-white/70">
-                Book a Free Call <ArrowRight size={13} />
-              </a>
-            </div>
-          </motion.div>
-        </section>
-
       </main>
       <Footer />
     </div>

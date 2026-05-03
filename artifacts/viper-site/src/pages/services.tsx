@@ -208,17 +208,6 @@ export function ServicesPage() {
           </div>
         </section>
 
-        <section className="py-24 text-center">
-          <div className="mx-auto w-full max-w-[1100px] px-6">
-          <h2 className="text-3xl md:text-4xl font-black uppercase tracking-tighter mb-4">Not Sure Which Service You Need?</h2>
-          <p className="text-lg text-muted-foreground mb-8 max-w-lg mx-auto">
-            Book a free 30-minute AI audit call. We'll tell you exactly what will move the needle for your business.
-          </p>
-          <Link href="/contact">
-            <Button size="lg" className="rounded-full px-10">Book Free Audit →</Button>
-          </Link>
-          </div>
-        </section>
       </main>
       <Footer />
     </div>

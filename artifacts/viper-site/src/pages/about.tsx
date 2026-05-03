@@ -204,13 +204,6 @@ export function AboutPage() {
             </div>
           </div>
         </section>
-        <section className="py-28 text-center">
-          <motion.div initial={{ opacity: 0, y: 24 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>
-            <p className="font-inter font-semibold text-[11px] uppercase tracking-[0.2em] text-white/40 mb-4">Ready?</p>
-            <h2 className="font-grotesk font-bold text-[48px] leading-[1.0] tracking-tight mb-6">Let's Build Something<br /><span className="text-white/60">Extraordinary.</span></h2>
-            <Link href="/contact"><span className="inline-flex items-center gap-2 bg-white text-black font-inter font-semibold text-[13px] rounded-full px-8 py-3.5 hover:bg-white/90 transition-colors cursor-pointer">Get in Touch <ArrowRight size={14} /></span></Link>
-          </motion.div>
-        </section>
       </main>
       <Footer />
     </div>
