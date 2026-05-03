@@ -70,12 +70,8 @@ export function Testimonials() {
   return (
     <section className="border-t border-border/40 overflow-hidden w-full">
       <div className="grid lg:grid-cols-2 min-h-[420px] w-full">
-        <div className="relative overflow-hidden min-h-[300px]">
-          <img
-            src="/photo-reviews.png"
-            alt="Client Reviews"
-            className="w-full h-full object-cover object-center"
-          />
+        <div className="relative overflow-hidden min-h-[320px]">
+          <img src="/photo-reviews.png" alt="Client Reviews" className="w-full h-full object-cover object-center" />
           <div className="absolute inset-0 bg-black/35" />
         </div>
 
@@ -103,10 +99,9 @@ export function Testimonials() {
       </div>
 
       <div className="py-10 relative w-full">
-        <div className="absolute left-0 top-0 bottom-0 w-16 z-10 pointer-events-none" style={{ background: "linear-gradient(to right, hsl(0 0% 4%), transparent)" }} />
-        <div className="absolute right-0 top-0 bottom-0 w-16 z-10 pointer-events-none" style={{ background: "linear-gradient(to left, hsl(0 0% 4%), transparent)" }} />
-
-        <div className="flex gap-4 w-max px-6" style={{ animation: "marquee 40s linear infinite" }}>
+        <div className="absolute left-0 top-0 bottom-0 w-16 z-10 pointer-events-none" style={{ background: 'linear-gradient(to right, hsl(0 0% 4%), transparent)' }} />
+        <div className="absolute right-0 top-0 bottom-0 w-16 z-10 pointer-events-none" style={{ background: 'linear-gradient(to left, hsl(0 0% 4%), transparent)' }} />
+        <div className="flex gap-4 w-max px-6" style={{ animation: 'marquee 40s linear infinite' }}>
           {doubled.map((t, i) => (
             <TestimonialCard key={`${t.id}-${i}`} t={t} />
           ))}
@@ -126,7 +121,7 @@ export function Testimonials() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: i * 0.1 }}
-              className={`py-10 px-8 bg-card text-center ${i < 2 ? "border-r border-border/40" : ""}`}
+              className={`py-10 px-8 bg-card text-center ${i < 2 ? 'border-r border-border/40' : ''}`}
             >
               <div className="font-grotesk font-bold text-[42px] leading-none tracking-tight mb-2">{s.val}</div>
               <div className="font-inter text-[13px] text-muted-foreground">{s.label}</div>
