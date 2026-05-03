@@ -5,23 +5,23 @@ import { ArrowRight } from "lucide-react";
 const serviceCards = [
   {
     icon: "⬡",
-    title: "Brand Identity",
-    desc: "Crafting unique, memorable brand identities that resonate with your audience — from logos to visual systems — ensuring every touchpoint reflects your brand's essence.",
+    title: "AI Automation",
+    desc: "Build powerful n8n, Make.com, and Zapier workflows that eliminate repetitive tasks — so your team focuses on what matters while the system runs around the clock.",
   },
   {
     icon: "✦",
-    title: "Brand Design",
-    desc: "Designing sleek, impactful packaging that not only looks stunning but also connects with your ideal customers — turning first impressions into lasting brand loyalty.",
+    title: "AI Websites & Apps",
+    desc: "We design and deploy AI-powered websites and web apps that convert — fast, beautiful, and smart enough to personalise the experience for every visitor.",
   },
   {
     icon: "◻",
-    title: "Package Design",
-    desc: "Bringing your brand to life through high-fidelity product mockups, giving you a clear, realistic preview of how your designs and visuals will stand out in the real world.",
+    title: "AI Video & Content",
+    desc: "From script to screen — we produce AI-generated video ads, social content, and brand films that rival studio productions at a fraction of the cost and timeline.",
   },
   {
     icon: "⬙",
-    title: "Mockup Design",
-    desc: "Tailored design mockups that align perfectly with your brand's aesthetic — because every detail matters when showcasing your product's true potential.",
+    title: "AI Agents & Chatbots",
+    desc: "Deploy intelligent agents that qualify leads, handle support, and book meetings 24/7 — trained on your business and integrated directly into your existing stack.",
   },
 ];
 
@@ -48,13 +48,13 @@ export function Services() {
       <div className="grid lg:grid-cols-[1.05fr_0.95fr] min-h-[520px] w-full">
         <div className="py-16 px-6 lg:px-10 xl:px-14 flex flex-col justify-center border-r border-border/40">
           <motion.div initial={{ opacity: 0, y: 18 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>
-            <p className="font-inter text-[11px] uppercase tracking-[0.22em] text-muted-foreground mb-3">Design services</p>
+            <p className="font-inter text-[11px] uppercase tracking-[0.22em] text-muted-foreground mb-3">Our services</p>
             <h2 className="font-grotesk text-[58px] leading-[0.96] tracking-tight mb-3">Services</h2>
             <p className="font-inter text-[13px] text-muted-foreground max-w-[360px] leading-relaxed mb-5">
-              Helping businesses stand out with brand identity and packaging that captivates and converts.
+              We help businesses scale invisibly — with AI automation, websites, apps, video, and agent workflows that work around the clock.
             </p>
             <div className="flex flex-wrap gap-2 mb-6 max-w-[520px]">
-              {['Product Design', 'Brand Identity Design', 'Branding', 'Packaging Design', 'Mockup Design'].map(tag => (
+              {['AI Automation', 'AI Websites', 'AI Apps', 'AI Video', 'AI Agents'].map(tag => (
                 <span key={tag} className="border border-border/60 rounded-full px-3.5 py-1.5 text-[11px] font-inter text-muted-foreground">
                   {tag}
                 </span>
