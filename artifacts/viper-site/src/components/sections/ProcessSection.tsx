@@ -1,4 +1,4 @@
-import { useEffect, useRef } from "react";
+import { useEffect } from "react";
 import { Link } from "wouter";
 import { Lightbulb, ListChecks, Rocket } from "lucide-react";
 import { gsap } from "gsap";
@@ -29,31 +29,28 @@ const steps = [
 ];
 
 export function ProcessSection() {
-  const cardsRef = useRef<HTMLDivElement[]>([]);
-
   useEffect(() => {
     window.addEventListener("load", () => {
-      const section = document.querySelector(".process-section");
       const cards = gsap.utils.toArray<HTMLElement>(".process-card");
 
-      gsap.set(cards[1], { opacity: 0.15, y: 50 });
-      gsap.set(cards[2], { opacity: 0.15, y: 50 });
-
-      let tl = gsap.timeline({
-        scrollTrigger: {
-          trigger: section,
-          start: "top top",
-          end: "+=150%",
-          pin: true,
-          pinSpacing: true,
-          scrub: 0.3,
-          anticipatePin: 1,
-          markers: false,
-        }
+      cards.forEach((card, i) => {
+        gsap.fromTo(
+          card,
+          { opacity: 0, y: 60 },
+          {
+            opacity: 1,
+            y: 0,
+            duration: 0.8,
+            ease: "power2.out",
+            scrollTrigger: {
+              trigger: card,
+              start: "top 85%",
+              toggleActions: "play none none none",
+            },
+            delay: i * 0.15,
+          },
+        );
       });
-
-      tl.to(cards[1], { opacity: 1, y: 0, duration: 1 }, 0.3);
-      tl.to(cards[2], { opacity: 1, y: 0, duration: 1 }, 1);
     });
   }, []);
 
@@ -79,11 +76,8 @@ export function ProcessSection() {
             {steps.map((step, i) => (
               <div
                 key={step.num}
-                ref={(el) => {
-                  if (el) cardsRef.current[i] = el;
-                }}
                 className="process-card relative rounded-[22px] border border-white/10 bg-[#0b0b0b] p-6"
-                style={{ opacity: i === 0 ? 1 : 0.2, transform: i === 0 ? "translateY(0)" : "translateY(40px)" }}
+                style={{ opacity: i === 0 ? 1 : 0, transform: i === 0 ? "translateY(0)" : "translateY(60px)" }}
               >
                 <div className="mb-4 flex items-start justify-between gap-4">
                   <div className="flex h-10 w-10 items-center justify-center rounded-full border border-white/10 bg-white/5 text-white/70">
