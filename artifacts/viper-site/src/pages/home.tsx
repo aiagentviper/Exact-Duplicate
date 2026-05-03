@@ -9,7 +9,7 @@ import { Link } from "wouter";
 import { useState } from "react";
 import profilePhoto from "@assets/Gemini_Generated_Image_rk6t1wrk6t1wrk6t_1777802311237.png";
 import servicesPhoto from "@assets/Screenshot_2026-05-03_111343_1777803239920.png";
-import processPhoto from "@assets/Screenshot_2026-05-03_073740_1777803855620.png";
+import processPhoto from "@assets/Screenshot_2026-05-03_110817_1777804010848.png";
 
 const faqs = [
   { q: "What services do you provide?", a: "We specialise in AI automation, AI-powered websites, apps, and video — plus strategy, chatbots, and agent workflows to scale your business invisibly." },
@@ -96,7 +96,7 @@ export function HomePage() {
             <div className="process-image w-1/2 h-full overflow-hidden">
               <img src={processPhoto} alt="Design process" className="h-full w-full object-cover object-center grayscale contrast-[1.12] brightness-[0.82]" />
             </div>
-            <div className="process-steps w-1/2 bg-[#0a0a0a] px-[40px] py-[60px] flex flex-col justify-start">
+            <div className="process-steps w-1/2 bg-[#0a0a0a] px-[40px] py-[60px] flex flex-col justify-start overflow-visible">
               <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>
                 <p className="mb-3 font-inter text-[11px] font-semibold uppercase tracking-[0.22em] text-white/40">Design process</p>
                 <h2 className="font-grotesk text-[clamp(3rem,5vw,4.5rem)] font-medium leading-[0.95] tracking-tight text-white">Process</h2>
@@ -106,7 +106,7 @@ export function HomePage() {
                   <Link href="/work"><span className="inline-flex cursor-pointer items-center gap-2 rounded-full border border-white/20 px-5 py-2.5 font-inter text-[13px] font-semibold text-white/70 transition-colors hover:border-white/50 hover:text-white">See Projects</span></Link>
                 </div>
               </motion.div>
-              <div className="mt-8 flex flex-1 flex-col gap-5 overflow-y-auto pr-2">
+              <div className="mt-8 flex flex-col gap-5 pr-2">
                 <ProcessCard num="1" title="Define Your Vision" text="Find the perfect plan tailored to your needs, offering the right balance of features, flexibility, and value to help you achieve your goals effortlessly." icon={Lightbulb} />
                 <ProcessCard num="2" title="Submit Your Request" text="Easily submit your design requirements through our private design portal, ensuring a seamless process where your vision is understood, refined, and brought to life with precision and creativity." icon={ListChecks} />
                 <ProcessCard num="3" title="Project Delivered" text="As a dedicated freelancer, I ensure your project is completed with precision and delivered within 2–3 days. With a keen eye for detail and a passion for quality, I bring your vision to life — on time and beyond expectations." icon={Rocket} />
