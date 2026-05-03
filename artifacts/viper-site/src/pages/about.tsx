@@ -82,7 +82,7 @@ export function AboutPage() {
                 <span className="font-inter font-semibold text-[11px] uppercase tracking-[0.2em] text-orange-500 block mb-6">About VIPER</span>
                 <h1 className="font-grotesk font-bold text-[60px] leading-[1.0] tracking-[-0.02em] mb-6">
                   The AI Agency<br />
-                  <span className="text-foreground/40">Built for Speed.</span>
+                  <span className="text-orange-500">Built for Speed.</span>
                 </h1>
                 <p className="font-inter text-[16px] leading-relaxed text-muted-foreground mb-6 max-w-md">
                   VIPER is a next-generation AI agency founded on one belief: every business deserves to operate at machine speed. We build the systems, sites, apps, and content that make that possible.
@@ -92,7 +92,7 @@ export function AboutPage() {
                 </p>
                 <div className="flex flex-wrap gap-3 mb-10">
                   {skills.map((s) => (
-                    <span key={s.label} className="inline-flex items-center gap-2 border border-border/50 rounded-full px-4 py-2 font-inter text-[13px] text-muted-foreground hover:border-foreground/40 hover:text-foreground transition-colors">
+                    <span key={s.label} className="inline-flex items-center gap-2 border border-orange-500/30 rounded-full px-4 py-2 font-inter text-[13px] text-orange-500 hover:border-orange-400 hover:text-orange-400 transition-colors">
                       {s.icon}{s.label}
                     </span>
                   ))}
@@ -120,7 +120,7 @@ export function AboutPage() {
                 </div>
                 <div className="absolute -top-4 -right-4 bg-card border border-border/50 rounded-2xl p-5 shadow-xl hidden lg:block">
                   <div className="font-grotesk font-bold text-[36px] leading-none mb-1">50+</div>
-                  <div className="font-inter text-[11px] uppercase tracking-[0.2em] text-muted-foreground font-semibold">Projects Shipped</div>
+                  <div className="font-inter text-[11px] uppercase tracking-[0.2em] text-orange-500 font-semibold">Projects Shipped</div>
                 </div>
               </motion.div>
             </div>
@@ -140,7 +140,7 @@ export function AboutPage() {
                 <motion.div key={s.val} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.5, delay: i * 0.1 }}
                   className={`py-12 px-6 ${i < 3 ? "md:border-r border-border/40" : ""} ${i > 1 ? "border-t md:border-t-0 border-border/40" : ""}`}>
                   <div className="font-grotesk font-bold text-[48px] leading-none tracking-tight mb-2">{s.val}</div>
-                  <div className="font-inter font-semibold text-[11px] uppercase tracking-[0.2em] text-muted-foreground">{s.label}</div>
+                  <div className="font-inter font-semibold text-[11px] uppercase tracking-[0.2em] text-orange-500">{s.label}</div>
                 </motion.div>
               ))}
             </div>
@@ -189,7 +189,7 @@ export function AboutPage() {
                   <div className="w-10 h-10 rounded-xl bg-orange-500/10 border border-orange-500/30 flex items-center justify-center mb-5 text-orange-500">
                     {s.icon}
                   </div>
-                  <span className="font-inter font-semibold text-[11px] uppercase tracking-[0.2em] text-muted-foreground/60 block mb-2">{s.num}</span>
+                  <span className="font-inter font-semibold text-[11px] uppercase tracking-[0.2em] text-orange-500/70 block mb-2">{s.num}</span>
                   <h3 className="font-grotesk font-semibold text-[20px] tracking-tight mb-2">{s.title}</h3>
                   <p className="font-inter text-[14px] leading-relaxed text-muted-foreground">{s.desc}</p>
                 </motion.div>
@@ -197,7 +197,7 @@ export function AboutPage() {
             </div>
             <motion.div initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} viewport={{ once: true }} transition={{ duration: 0.5, delay: 0.3 }} className="mt-10 text-center">
               <Link href="/services">
-                <span className="inline-flex items-center gap-2 font-inter font-semibold text-[13px] border border-border/60 rounded-full px-6 py-2.5 hover:border-foreground/50 transition-colors cursor-pointer">
+                <span className="inline-flex items-center gap-2 font-inter font-semibold text-[13px] border border-orange-500/40 rounded-full px-6 py-2.5 hover:border-orange-500 transition-colors cursor-pointer text-orange-500">
                   View All Services <ArrowRight size={13} />
                 </span>
               </Link>
@@ -225,12 +225,12 @@ export function AboutPage() {
                   </div>
                   <p className="font-inter text-[15px] leading-relaxed text-foreground/80 mb-8">"{t.quote}"</p>
                   <div className="flex items-center gap-3 border-t border-border/40 pt-6">
-                    <div className="w-9 h-9 rounded-full bg-foreground/10 border border-border/50 flex items-center justify-center font-grotesk text-[12px] font-bold flex-shrink-0">
+                    <div className="w-9 h-9 rounded-full bg-orange-500/10 border border-orange-500/30 flex items-center justify-center font-grotesk text-[12px] font-bold flex-shrink-0">
                       {t.name.split(" ").map(n => n[0]).join("")}
                     </div>
                     <div>
                       <h4 className="font-grotesk font-semibold text-[14px]">{t.name}</h4>
-                      <p className="font-inter text-[12px] text-muted-foreground">{t.title}</p>
+                      <p className="font-inter text-[12px] text-orange-500">{t.title}</p>
                     </div>
                   </div>
                 </motion.div>
@@ -272,7 +272,7 @@ export function AboutPage() {
             <p className="font-inter font-semibold text-[11px] uppercase tracking-[0.2em] text-orange-500 mb-4">Ready?</p>
             <h2 className="font-grotesk font-bold text-[48px] leading-[1.0] tracking-tight mb-6">
               Let's Build Something<br />
-              <span className="text-foreground/40">Extraordinary.</span>
+              <span className="text-orange-500">Extraordinary.</span>
             </h2>
             <Link href="/contact">
               <span className="inline-flex items-center gap-2 bg-orange-500 text-white font-inter font-semibold text-[13px] rounded-full px-8 py-3.5 hover:bg-orange-400 transition-colors cursor-pointer">

@@ -56,7 +56,7 @@ export function ContactPage() {
           >
             <h1 className="font-grotesk font-bold text-[60px] leading-[1.0] tracking-[-0.02em] mb-6 max-w-3xl">
               Let's Build Something<br />
-              <span className="text-muted-foreground/40">Intelligent.</span>
+              <span className="text-orange-500">Intelligent.</span>
             </h1>
             <p className="font-inter text-[16px] text-muted-foreground max-w-xl leading-relaxed">
               Have a project in mind? Whether it's automation, an AI app, a website or a full AI strategy — we are ready to build.
@@ -75,20 +75,20 @@ export function ContactPage() {
                 <div className="space-y-5">
                   <a
                     href="mailto:jimohmalik101@gmail.com"
-                    className="flex items-center gap-3 text-base hover:text-muted-foreground transition-colors"
+                    className="flex items-center gap-3 text-base hover:text-orange-500 transition-colors"
                     data-testid="contact-email"
                   >
-                    <Mail size={18} className="text-muted-foreground flex-shrink-0" />
+                    <Mail size={18} className="text-orange-500 flex-shrink-0" />
                     jimohmalik101@gmail.com
                   </a>
                   <a
                     href="tel:+2348107311900"
-                    className="flex items-center gap-3 text-base hover:text-muted-foreground transition-colors"
+                    className="flex items-center gap-3 text-base hover:text-orange-500 transition-colors"
                   >
-                    <Phone size={18} className="text-muted-foreground flex-shrink-0" />
+                    <Phone size={18} className="text-orange-500 flex-shrink-0" />
                     +234 810 731 1900
                   </a>
-                  <div className="flex items-center gap-3 text-base text-muted-foreground">
+                  <div className="flex items-center gap-3 text-base text-orange-500">
                     <MapPin size={18} className="flex-shrink-0" />
                     Remote-First. Worldwide.
                   </div>
@@ -139,7 +139,7 @@ export function ContactPage() {
                     name="name"
                     render={({ field }) => (
                       <FormItem>
-                        <FormLabel className="text-xs uppercase tracking-widest text-muted-foreground">Name</FormLabel>
+                        <FormLabel className="text-xs uppercase tracking-widest text-orange-500">Name</FormLabel>
                         <FormControl>
                           <Input placeholder="Your Name" className="bg-background/50 border-border/50 rounded-xl" {...field} data-testid="contact-input-name" />
                         </FormControl>
@@ -152,7 +152,7 @@ export function ContactPage() {
                     name="email"
                     render={({ field }) => (
                       <FormItem>
-                        <FormLabel className="text-xs uppercase tracking-widest text-muted-foreground">Email</FormLabel>
+                        <FormLabel className="text-xs uppercase tracking-widest text-orange-500">Email</FormLabel>
                         <FormControl>
                           <Input type="email" placeholder="your@email.com" className="bg-background/50 border-border/50 rounded-xl" {...field} data-testid="contact-input-email" />
                         </FormControl>
@@ -165,7 +165,7 @@ export function ContactPage() {
                     name="service"
                     render={({ field }) => (
                       <FormItem>
-                        <FormLabel className="text-xs uppercase tracking-widest text-muted-foreground">Service</FormLabel>
+                        <FormLabel className="text-xs uppercase tracking-widest text-orange-500">Service</FormLabel>
                         <Select onValueChange={field.onChange} defaultValue={field.value}>
                           <FormControl>
                             <SelectTrigger className="bg-background/50 border-border/50 rounded-xl" data-testid="contact-select-service">
@@ -191,7 +191,7 @@ export function ContactPage() {
                     name="budget"
                     render={({ field }) => (
                       <FormItem>
-                        <FormLabel className="text-xs uppercase tracking-widest text-muted-foreground">Budget</FormLabel>
+                        <FormLabel className="text-xs uppercase tracking-widest text-orange-500">Budget</FormLabel>
                         <Select onValueChange={field.onChange} defaultValue={field.value}>
                           <FormControl>
                             <SelectTrigger className="bg-background/50 border-border/50 rounded-xl" data-testid="contact-select-budget">
@@ -214,7 +214,7 @@ export function ContactPage() {
                     name="message"
                     render={({ field }) => (
                       <FormItem>
-                        <FormLabel className="text-xs uppercase tracking-widest text-muted-foreground">Message</FormLabel>
+                        <FormLabel className="text-xs uppercase tracking-widest text-orange-500">Message</FormLabel>
                         <FormControl>
                           <Textarea
                             placeholder="Tell us about your project..."

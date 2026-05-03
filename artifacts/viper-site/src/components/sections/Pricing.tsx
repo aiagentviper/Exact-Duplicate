@@ -84,7 +84,7 @@ export function Pricing() {
             >
               {plan.popular && (
                 <div className="absolute -top-3 left-1/2 -translate-x-1/2">
-                  <span className="bg-foreground text-background font-inter font-semibold text-[11px] rounded-full px-4 py-1.5">
+                  <span className="bg-orange-500 text-white font-inter font-semibold text-[11px] rounded-full px-4 py-1.5">
                     Most Popular
                   </span>
                 </div>
@@ -102,7 +102,7 @@ export function Pricing() {
               <ul className="space-y-3 mb-10 flex-1">
                 {plan.features.map(f => (
                   <li key={f} className="flex items-start gap-3 font-inter text-[13px] text-muted-foreground">
-                    <Check size={14} className="text-foreground mt-0.5 flex-shrink-0" />
+                    <Check size={14} className="text-orange-500 mt-0.5 flex-shrink-0" />
                     {f}
                   </li>
                 ))}
@@ -112,8 +112,8 @@ export function Pricing() {
                 <span
                   className={`w-full inline-flex items-center justify-center gap-2 font-inter font-semibold text-[13px] rounded-full px-6 py-3 transition-colors cursor-pointer ${
                     plan.popular
-                      ? "bg-foreground text-background hover:bg-foreground/90"
-                      : "border border-border/60 hover:border-foreground/50"
+                      ? "bg-orange-500 text-white hover:bg-orange-400"
+                      : "border border-orange-500/40 text-orange-500 hover:border-orange-500 hover:bg-orange-500/10"
                   }`}
                 >
                   Get Started <ArrowRight size={13} />
@@ -132,7 +132,7 @@ export function Pricing() {
         >
           Need something custom?{" "}
           <Link href="/contact">
-            <span className="text-foreground underline underline-offset-4 cursor-pointer hover:text-foreground/70 transition-colors">
+            <span className="text-orange-500 underline underline-offset-4 cursor-pointer hover:text-orange-400 transition-colors">
               Book a free call →
             </span>
           </Link>

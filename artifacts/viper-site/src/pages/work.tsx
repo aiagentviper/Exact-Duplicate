@@ -148,7 +148,7 @@ export function WorkPage() {
             <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }}>
               <p className="mb-4 font-inter text-[11px] font-semibold uppercase tracking-[0.2em] text-orange-500">Our Portfolio</p>
               <h1 className="mb-6 font-grotesk text-[60px] font-bold leading-[1.0] tracking-[-0.02em]">
-                Real Projects.<br /><span className="text-muted-foreground/40">Real Results.</span>
+                Real Projects.<br /><span className="text-orange-500">Real Results.</span>
               </h1>
               <p className="mx-auto max-w-xl font-inter text-[16px] leading-relaxed text-muted-foreground">
                 AI-powered websites, videos, automations & apps built for businesses across every industry. Click any website to visit the live site.
@@ -163,7 +163,7 @@ export function WorkPage() {
             <div className="flex flex-wrap gap-2 justify-center">
               {filters.map((f) => (
                 <button key={f} onClick={() => setActive(f)}
-                  className={`font-inter font-medium text-[13px] px-5 py-2 rounded-full transition-all border ${active === f ? "bg-foreground text-background border-foreground" : "bg-transparent text-muted-foreground border-border/50 hover:border-foreground/30 hover:text-foreground"}`}>
+                  className={`font-inter font-medium text-[13px] px-5 py-2 rounded-full transition-all border ${active === f ? "bg-orange-500 text-white border-orange-500" : "bg-transparent text-muted-foreground border-border/50 hover:border-orange-500 hover:text-orange-500"}`}>
                   {f}
                 </button>
               ))}
@@ -180,7 +180,7 @@ export function WorkPage() {
                   <p className="font-inter font-semibold text-[11px] uppercase tracking-[0.2em] text-orange-500 mb-1">Live Websites</p>
                   <h2 className="font-grotesk font-semibold text-[28px] tracking-tight">AI Websites</h2>
                 </div>
-                <span className="font-inter text-[12px] text-muted-foreground">Click card to visit live site</span>
+                <span className="font-inter text-[12px] text-orange-500/70">Click card to visit live site</span>
               </div>
               <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
                 {websiteProjects.map((p) => <WebsiteCard key={p.id} project={p} />)}
@@ -228,7 +228,7 @@ export function WorkPage() {
             <div className="grid lg:grid-cols-2 gap-16 items-start">
               <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>
                 <p className="font-inter font-semibold text-[11px] uppercase tracking-[0.2em] text-orange-500 mb-3">How It Works</p>
-                <h2 className="font-grotesk font-semibold text-[42px] leading-[1.05] tracking-tight">
+                  <h2 className="font-grotesk font-semibold text-[42px] leading-[1.05] tracking-tight">
                   Our<br />Process!
                 </h2>
               </motion.div>
@@ -254,7 +254,7 @@ export function WorkPage() {
             <div className="grid lg:grid-cols-2 gap-16 items-start">
               <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>
                 <p className="font-inter font-semibold text-[11px] uppercase tracking-[0.2em] text-orange-500 mb-3">Answers</p>
-                <h2 className="font-grotesk font-semibold text-[42px] leading-[1.05] tracking-tight">
+              <h2 className="font-grotesk font-semibold text-[42px] leading-[1.05] tracking-tight">
                   Got a<br />Question?
                 </h2>
                 <p className="font-inter text-[15px] text-muted-foreground mt-4 leading-relaxed max-w-xs">
@@ -280,7 +280,7 @@ export function WorkPage() {
           <motion.div initial={{ opacity: 0, y: 24 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>
             <p className="font-inter font-semibold text-[11px] uppercase tracking-[0.2em] text-orange-500 mb-4">Ready?</p>
             <h2 className="font-grotesk font-bold text-[48px] leading-[1.0] tracking-tight mb-6">
-              Ready to be<br /><span className="text-foreground/40">Our Next Project?</span>
+              Ready to be<br /><span className="text-orange-500">Our Next Project?</span>
             </h2>
             <Link href="/contact">
               <span className="inline-flex items-center gap-2 bg-orange-500 text-white font-inter font-semibold text-[13px] rounded-full px-8 py-3.5 hover:bg-orange-400 transition-colors cursor-pointer">

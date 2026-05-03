@@ -83,7 +83,7 @@ export function BlogPage() {
           <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }}>
             <p className="font-inter font-semibold text-[11px] uppercase tracking-[0.2em] text-orange-500 mb-4">VIPER Insights</p>
             <h1 className="font-grotesk font-bold text-[60px] leading-[1.0] tracking-[-0.02em] mb-6">
-              AI Knowledge.<br /><span className="text-muted-foreground/40">Zero Fluff.</span>
+              AI Knowledge.<br /><span className="text-orange-500">Zero Fluff.</span>
             </h1>
             <p className="font-inter text-[16px] text-muted-foreground max-w-xl mx-auto leading-relaxed">
               Strategies, breakdowns & insights on AI automation, web, apps, video & vibe coding — written by practitioners, not theorists.
@@ -108,7 +108,7 @@ export function BlogPage() {
                 </div>
                 <h2 className="font-grotesk font-bold text-[36px] leading-[1.1] tracking-tight mb-4 group-hover:text-foreground/80 transition-colors">{featured.title}</h2>
                 <p className="font-inter text-[15px] leading-relaxed text-muted-foreground mb-8">{featured.excerpt}</p>
-                <span className="inline-flex items-center gap-2 font-inter font-semibold text-[13px] border border-border/60 rounded-full px-6 py-2.5 hover:border-foreground/50 transition-colors">
+                <span className="inline-flex items-center gap-2 font-inter font-semibold text-[13px] border border-orange-500/40 rounded-full px-6 py-2.5 hover:border-orange-500 transition-colors text-orange-500">
                   Read Article <ArrowRight size={13} />
                 </span>
               </div>
@@ -121,7 +121,7 @@ export function BlogPage() {
           <div className="container mx-auto px-6">
             <div className="flex flex-wrap gap-2 mb-12">
               {categories.map((c) => (
-                <span key={c} className="font-inter font-medium text-[12px] px-4 py-1.5 rounded-full border border-border/50 text-muted-foreground hover:border-foreground/40 hover:text-foreground transition-colors cursor-pointer">
+                <span key={c} className="font-inter font-medium text-[12px] px-4 py-1.5 rounded-full border border-border/50 text-muted-foreground hover:border-orange-500 hover:text-orange-500 transition-colors cursor-pointer">
                   {c}
                 </span>
               ))}
@@ -168,8 +168,8 @@ export function BlogPage() {
         <section className="py-28 text-center">
           <motion.div initial={{ opacity: 0, y: 24 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>
             <p className="font-inter font-semibold text-[11px] uppercase tracking-[0.2em] text-orange-500 mb-4">Stay Ahead</p>
-            <h2 className="font-grotesk font-bold text-[48px] leading-[1.0] tracking-tight mb-6">
-              Want More AI<br /><span className="text-foreground/40">Insights Like These?</span>
+                <h2 className="font-grotesk font-bold text-[48px] leading-[1.0] tracking-tight mb-6">
+              Want More AI<br /><span className="text-orange-500">Insights Like These?</span>
             </h2>
             <p className="font-inter text-[16px] text-muted-foreground max-w-md mx-auto mb-8 leading-relaxed">
               Follow us for weekly breakdowns on AI, automation, and how to build faster than everyone else.
@@ -181,7 +181,7 @@ export function BlogPage() {
                 </span>
               </Link>
               <a href="https://calendly.com/malik-designs" target="_blank" rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 font-inter font-semibold text-[13px] border border-border/60 rounded-full px-8 py-3.5 hover:border-foreground/50 transition-colors">
+                className="inline-flex items-center gap-2 font-inter font-semibold text-[13px] border border-orange-500/40 rounded-full px-8 py-3.5 hover:border-orange-500 transition-colors text-orange-500">
                 Book a Free Call <ArrowRight size={13} />
               </a>
             </div>

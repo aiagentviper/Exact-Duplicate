@@ -29,14 +29,14 @@ export function Services() {
               </p>
               <div className="mb-6 flex max-w-[520px] flex-wrap gap-2">
                 {['AI Automation', 'AI Websites', 'AI Apps', 'AI Video', 'AI Agents'].map((tag) => (
-                  <span key={tag} className="rounded-full border border-border/60 px-3.5 py-1.5 font-inter text-[11px] text-muted-foreground">
+                  <span key={tag} className="rounded-full border border-orange-500/30 px-3.5 py-1.5 font-inter text-[11px] text-orange-500">
                     {tag}
                   </span>
                 ))}
               </div>
               <div className="flex gap-3">
                 <Link href="/contact"><span className="inline-flex cursor-pointer items-center gap-2 rounded-full bg-orange-500 px-5 py-2.5 font-inter text-[13px] font-semibold text-white transition-colors hover:bg-orange-400">Book a Free Call</span></Link>
-                <Link href="/work"><span className="inline-flex cursor-pointer items-center gap-2 rounded-full border border-border/60 px-5 py-2.5 font-inter text-[13px] font-semibold transition-colors hover:border-foreground/50">See Projects</span></Link>
+                <Link href="/work"><span className="inline-flex cursor-pointer items-center gap-2 rounded-full border border-orange-500/30 px-5 py-2.5 font-inter text-[13px] font-semibold text-orange-500 transition-colors hover:border-orange-400">See Projects</span></Link>
               </div>
             </motion.div>
           </div>
@@ -61,17 +61,17 @@ export function Services() {
 
         <div className="w-full overflow-hidden border-t border-border/40 py-3 space-y-2">
           <div className="relative">
-            <div className="pointer-events-none absolute left-0 top-0 bottom-0 z-10 w-16" style={{ background: 'linear-gradient(to right, hsl(0 0% 4%), transparent)' }} />
-            <div className="pointer-events-none absolute right-0 top-0 bottom-0 z-10 w-16" style={{ background: 'linear-gradient(to left, hsl(0 0% 4%), transparent)' }} />
+            <div className="pointer-events-none absolute left-0 top-0 bottom-0 z-10 w-16" style={{ background: 'linear-gradient(to right, hsl(0 0% 0%), transparent)' }} />
+            <div className="pointer-events-none absolute right-0 top-0 bottom-0 z-10 w-16" style={{ background: 'linear-gradient(to left, hsl(0 0% 0%), transparent)' }} />
             <div className="flex w-max gap-2.5" style={{ animation: 'marquee 25s linear infinite' }}>
-              {doubled1.map((item, i) => <span key={i} className="whitespace-nowrap rounded-full border border-border/50 px-3.5 py-1.5 font-inter text-[11px] font-medium text-muted-foreground">{item}</span>)}
+              {doubled1.map((item, i) => <span key={i} className="whitespace-nowrap rounded-full border border-orange-500/20 px-3.5 py-1.5 font-inter text-[11px] font-medium text-orange-500">{item}</span>)}
             </div>
           </div>
           <div className="relative">
-            <div className="pointer-events-none absolute left-0 top-0 bottom-0 z-10 w-16" style={{ background: 'linear-gradient(to right, hsl(0 0% 4%), transparent)' }} />
-            <div className="pointer-events-none absolute right-0 top-0 bottom-0 z-10 w-16" style={{ background: 'linear-gradient(to left, hsl(0 0% 4%), transparent)' }} />
+            <div className="pointer-events-none absolute left-0 top-0 bottom-0 z-10 w-16" style={{ background: 'linear-gradient(to right, hsl(0 0% 0%), transparent)' }} />
+            <div className="pointer-events-none absolute right-0 top-0 bottom-0 z-10 w-16" style={{ background: 'linear-gradient(to left, hsl(0 0% 0%), transparent)' }} />
             <div className="flex w-max gap-2.5" style={{ animation: 'marquee-reverse 28s linear infinite' }}>
-              {doubled2.map((item, i) => <span key={i} className="whitespace-nowrap rounded-full border border-border/50 px-3.5 py-1.5 font-inter text-[11px] font-medium text-muted-foreground">{item}</span>)}
+              {doubled2.map((item, i) => <span key={i} className="whitespace-nowrap rounded-full border border-orange-500/20 px-3.5 py-1.5 font-inter text-[11px] font-medium text-orange-500">{item}</span>)}
             </div>
           </div>
         </div>

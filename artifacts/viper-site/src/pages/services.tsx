@@ -118,7 +118,7 @@ export function ServicesPage() {
               <p className="mb-4 font-inter text-[11px] font-semibold uppercase tracking-[0.2em] text-orange-500">What We Do</p>
               <h1 className="mb-6 font-grotesk text-[60px] font-bold leading-[1.0] tracking-[-0.02em]">
                 AI Services That<br />
-                <span className="text-muted-foreground/40">Actually Move The Needle.</span>
+                <span className="text-orange-500">Actually Move The Needle.</span>
               </h1>
               <p className="mx-auto max-w-xl font-inter text-[16px] leading-relaxed text-muted-foreground">
                 From automation to full product builds — we handle everything with AI at the core.
@@ -139,11 +139,11 @@ export function ServicesPage() {
             >
               <div className={i % 2 === 1 ? "lg:col-start-2" : ""}>
                 <div className="flex items-center gap-4 mb-6">
-                  <span className="text-xs font-mono text-muted-foreground">{service.num}</span>
-                  <div className="w-10 h-10 rounded-lg bg-card border border-border/50 flex items-center justify-center text-muted-foreground">
+                  <span className="text-xs font-mono text-orange-500">{service.num}</span>
+                  <div className="w-10 h-10 rounded-lg bg-card border border-orange-500/30 flex items-center justify-center text-orange-500">
                     {service.icon}
                   </div>
-                  <span className="text-sm font-medium text-muted-foreground">{service.title}</span>
+                  <span className="text-sm font-medium text-orange-500">{service.title}</span>
                 </div>
                 <h2 className="font-grotesk font-semibold text-[36px] leading-[1.1] tracking-tight mb-4">
                   {service.headline}
@@ -160,7 +160,7 @@ export function ServicesPage() {
                   ))}
                 </ul>
                 <Link href="/contact">
-                  <Button variant="outline" className="rounded-full px-6 border-foreground/20 hover:border-foreground/60">
+                  <Button variant="outline" className="rounded-full px-6 border-orange-500/30 text-orange-500 hover:border-orange-400 hover:bg-orange-500/10">
                     Get This Service →
                   </Button>
                 </Link>
@@ -188,7 +188,7 @@ export function ServicesPage() {
           ))}
         </section>
 
-        <section className="py-24 bg-card/20 border-y border-border/50">
+        <section className="py-24 bg-black border-y border-border/50">
           <div className="mx-auto w-full max-w-[1100px] px-6">
             <div className="grid grid-cols-2 md:grid-cols-4 divide-x divide-y md:divide-y-0 divide-border/50">
               {stats.map((stat, i) => (

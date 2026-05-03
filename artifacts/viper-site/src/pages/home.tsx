@@ -351,13 +351,13 @@ export function HomePage() {
                 <div>
                   <div className="mb-5 flex flex-wrap gap-2">
                     {["AI Automation", "AI Websites", "AI Video"].map((tag) => (
-                      <span key={tag} className="rounded-full border border-border/60 px-4 py-1.5 font-inter text-[12px] text-muted-foreground">
+                      <span key={tag} className="rounded-full border border-orange-500/30 px-4 py-1.5 font-inter text-[12px] text-orange-500">
                         {tag}
                       </span>
                     ))}
                   </div>
                   <Link href="/contact">
-                    <span className="inline-flex cursor-pointer items-center gap-2 rounded-full border border-border/60 px-6 py-2.5 font-inter text-[13px] font-semibold transition-colors hover:border-foreground/50">
+                    <span className="inline-flex cursor-pointer items-center gap-2 rounded-full border border-orange-500/30 px-6 py-2.5 font-inter text-[13px] font-semibold text-orange-500 transition-colors hover:border-orange-400">
                       Book a Free Call <ArrowRight size={13} />
                     </span>
                   </Link>
