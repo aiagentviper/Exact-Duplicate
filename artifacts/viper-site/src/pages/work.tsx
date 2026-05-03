@@ -72,17 +72,15 @@ function WebsiteCard({ project }: { project: typeof websiteProjects[0] }) {
       className="group relative overflow-hidden rounded-2xl border border-border/40 bg-card block cursor-pointer hover:border-border/70 transition-colors"
     >
       <div className="aspect-[4/3] overflow-hidden bg-card">
-        <img src={project.image} alt={project.title} className="object-cover w-full h-full transition-transform duration-700 group-hover:scale-105"
+        <img src={project.image} alt={project.title} className="object-cover w-full h-full grayscale contrast-[1.15] brightness-[0.85] transition-transform duration-700 group-hover:scale-105 group-hover:grayscale-0"
           onError={(e) => { (e.target as HTMLImageElement).src = "/portfolio/automation-flow.jpg"; }} />
       </div>
-      <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
-        <p className="font-inter font-semibold text-[11px] uppercase tracking-[0.2em] text-white/60 mb-1">{project.tag}</p>
-        <div className="flex items-center justify-between">
-          <h3 className="font-grotesk font-semibold text-[18px] text-white">{project.title}</h3>
-          <div className="w-8 h-8 rounded-full border border-white/40 flex items-center justify-center flex-shrink-0">
-            <ExternalLink size={13} className="text-white" />
-          </div>
-        </div>
+      <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-5">
+        <p className="font-inter font-semibold text-[10px] uppercase tracking-[0.2em] text-white/50 mb-2">{project.tag}</p>
+        <h3 className="font-grotesk font-semibold text-[17px] text-white mb-3">{project.title}</h3>
+        <span className="inline-flex w-full items-center justify-center gap-1.5 rounded-full border border-white/20 bg-white/10 px-4 py-2 font-inter text-[11px] text-white backdrop-blur-md">
+          View Case Study ↗
+        </span>
       </div>
       <div className="p-5 border-t border-border/40">
         <p className="font-inter text-[11px] text-muted-foreground/60 mb-1">{project.tag}</p>
@@ -100,13 +98,16 @@ function ImageCard({ project }: { project: { id: number; image: string; title: s
     <motion.div initial={{ opacity: 0, y: 24 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.5 }}
       className="group relative overflow-hidden rounded-2xl border border-border/40 bg-card">
       <div className="aspect-[4/3] overflow-hidden">
-        <img src={project.image} alt={project.title} className="object-cover w-full h-full transition-transform duration-700 group-hover:scale-105"
+        <img src={project.image} alt={project.title} className="object-cover w-full h-full grayscale contrast-[1.15] brightness-[0.85] transition-transform duration-700 group-hover:scale-105 group-hover:grayscale-0"
           onError={(e) => { (e.target as HTMLImageElement).src = "/portfolio/automation-flow.jpg"; }} />
       </div>
-      <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
-        <p className="font-inter font-semibold text-[11px] uppercase tracking-[0.2em] text-white/60 mb-1">{project.tag}</p>
-        <h3 className="font-grotesk font-semibold text-[18px] text-white">{project.title}</h3>
-        {project.desc && <p className="font-inter text-[13px] text-white/60 mt-1 line-clamp-2">{project.desc}</p>}
+      <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-5">
+        <p className="font-inter font-semibold text-[10px] uppercase tracking-[0.2em] text-white/50 mb-2">{project.tag}</p>
+        <h3 className="font-grotesk font-semibold text-[17px] text-white mb-3">{project.title}</h3>
+        {project.desc && <p className="font-inter text-[12px] text-white/60 mb-3 line-clamp-1">{project.desc}</p>}
+        <span className="inline-flex w-full items-center justify-center gap-1.5 rounded-full border border-white/20 bg-white/10 px-4 py-2 font-inter text-[11px] text-white backdrop-blur-md">
+          View Case Study ↗
+        </span>
       </div>
       <div className="p-5 border-t border-border/40">
         <p className="font-inter text-[11px] text-muted-foreground/60 mb-1">{project.tag}</p>
