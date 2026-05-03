@@ -2,6 +2,7 @@ import { Navigation } from "@/components/sections/Navigation";
 import { Hero } from "@/components/sections/Hero";
 import { Services } from "@/components/sections/Services";
 import { Testimonials } from "@/components/sections/Testimonials";
+import { ProcessSection } from "@/components/sections/ProcessSection";
 import { Footer } from "@/components/sections/Footer";
 import { motion } from "framer-motion";
 import { ArrowRight, Sparkles, Bot, Globe2, Video, Wrench, Brain, Check, Lightbulb, ListChecks, Rocket } from "lucide-react";
@@ -9,7 +10,6 @@ import { Link } from "wouter";
 import { useState } from "react";
 import profilePhoto from "@assets/Gemini_Generated_Image_rk6t1wrk6t1wrk6t_1777802311237.png";
 import servicesPhoto from "@assets/Screenshot_2026-05-03_111343_1777803239920.png";
-import processPhoto from "@assets/Screenshot_2026-05-03_110817_1777804010848.png";
 
 const faqs = [
   { q: "What services do you provide?", a: "We specialise in AI automation, AI-powered websites, apps, and video — plus strategy, chatbots, and agent workflows to scale your business invisibly." },
@@ -91,27 +91,7 @@ export function HomePage() {
           </div>
         </section>
 
-        <section className="w-full border-t border-border/40 bg-black overflow-hidden">
-          <div className="process-section mx-auto flex min-h-[100vh] max-w-[1200px] items-stretch bg-[#0a0a0a]">
-            <div className="process-image-wrapper w-[45%] sticky top-0 h-[100vh] shrink-0 overflow-hidden">
-              <img src={processPhoto} alt="Design process" className="h-full w-full object-cover object-center grayscale contrast-[1.12] brightness-[0.82] block" />
-            </div>
-            <div className="process-steps w-[55%] bg-[#0a0a0a] px-[40px] py-[80px] flex flex-col gap-6">
-              <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>
-                <p className="mb-3 font-inter text-[11px] font-semibold uppercase tracking-[0.22em] text-white/40">Design process</p>
-                <h2 className="font-grotesk text-[clamp(3rem,5vw,4.5rem)] font-medium leading-[0.95] tracking-tight text-white">Process</h2>
-                <p className="mt-4 max-w-[360px] font-inter text-[14px] leading-relaxed text-white/55">Crafting bold visuals that inspire and elevate brands with thoughtful process.</p>
-                <div className="mt-6 flex flex-wrap gap-3">
-                  <Link href="/contact"><span className="inline-flex cursor-pointer items-center gap-2 rounded-full bg-white px-5 py-2.5 font-inter text-[13px] font-semibold text-black transition-colors hover:bg-white/90">Book a Free Call</span></Link>
-                  <Link href="/work"><span className="inline-flex cursor-pointer items-center gap-2 rounded-full border border-white/20 px-5 py-2.5 font-inter text-[13px] font-semibold text-white/70 transition-colors hover:border-white/50 hover:text-white">See Projects</span></Link>
-                </div>
-              </motion.div>
-              <ProcessCard num="1" title="Define Your Vision" text="Find the perfect plan tailored to your needs, offering the right balance of features, flexibility, and value to help you achieve your goals effortlessly." icon={Lightbulb} />
-              <ProcessCard num="2" title="Submit Your Request" text="Easily submit your design requirements through our private design portal, ensuring a seamless process where your vision is understood, refined, and brought to life with precision and creativity." icon={ListChecks} />
-              <ProcessCard num="3" title="Project Delivered" text="As a dedicated freelancer, I ensure your project is completed with precision and delivered within 2–3 days. With a keen eye for detail and a passion for quality, I bring your vision to life — on time and beyond expectations." icon={Rocket} />
-            </div>
-          </div>
-        </section>
+        <ProcessSection />
 
         <Services />
         <Testimonials />
