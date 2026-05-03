@@ -72,11 +72,12 @@ export function Testimonials() {
       <div className="grid lg:grid-cols-2 min-h-[360px]">
         <div className="relative overflow-hidden min-h-[260px]">
           <img
-            src="@assets/Screenshot_2026-05-03_073800_1777791116835.png"
+            src="/ref-reviews.png"
             alt="Client Reviews"
-            className="w-full h-full object-cover"
+            className="w-full h-full object-cover object-left"
           />
-          <div className="absolute inset-0 bg-black/40" />
+          <div className="absolute inset-0 bg-black/55" />
+          <div className="absolute inset-0" style={{ background: "linear-gradient(to right, rgba(0,0,0,0.1) 0%, rgba(0,0,0,0.7) 60%, rgba(0,0,0,0.97) 100%)" }} />
         </div>
 
         <div className="py-16 px-10 lg:px-14 flex flex-col justify-center">

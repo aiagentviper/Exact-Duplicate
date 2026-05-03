@@ -77,6 +77,7 @@ export function HomePage() {
           <Hero />
         </div>
 
+
         <Portfolio />
         <Services />
         <Stats />
@@ -91,11 +92,12 @@ export function HomePage() {
               className="relative overflow-hidden min-h-[400px] lg:min-h-auto"
             >
               <img
-                src="@assets/Screenshot_2026-05-03_073740_1777791116828.png"
+                src="/ref-process.png"
                 alt="Our Process"
-                className="w-full h-full object-cover"
+                className="w-full h-full object-cover object-left"
               />
-              <div className="absolute inset-0 bg-black/30" />
+              <div className="absolute inset-0 bg-black/55" />
+              <div className="absolute inset-0" style={{ background: "linear-gradient(to right, rgba(0,0,0,0.1) 0%, rgba(0,0,0,0.6) 55%, rgba(0,0,0,0.97) 100%)" }} />
             </motion.div>
 
             <div className="py-20 px-10 lg:px-14 flex flex-col justify-center">
@@ -164,7 +166,7 @@ export function HomePage() {
                 transition={{ duration: 0.6, delay: 0.15 }}
                 className="my-8 rounded-2xl overflow-hidden aspect-[4/3] max-w-sm"
               >
-                <img src="@assets/Screenshot_2026-05-03_073837_1777791116834.png" alt="AI Process" className="w-full h-full object-cover" />
+                <img src="/ref-faq.png" alt="FAQ visual" className="w-full h-full object-cover object-left" />
               </motion.div>
 
               <div>

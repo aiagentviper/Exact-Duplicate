@@ -82,8 +82,9 @@ export function Services() {
           transition={{ duration: 0.8 }}
           className="relative overflow-hidden min-h-[300px]"
         >
-          <img src="@assets/Screenshot_2026-05-03_074126_1777791116828.png" alt="Services" className="w-full h-full object-cover" />
-          <div className="absolute inset-0 bg-black/10" />
+          <img src="/ref-services.png" alt="Services" className="w-full h-full object-cover object-right" />
+          <div className="absolute inset-0 bg-black/50" />
+          <div className="absolute inset-0" style={{ background: "linear-gradient(to right, rgba(0,0,0,0.95) 0%, rgba(0,0,0,0.4) 45%, rgba(0,0,0,0.05) 100%)" }} />
         </motion.div>
       </div>
 
