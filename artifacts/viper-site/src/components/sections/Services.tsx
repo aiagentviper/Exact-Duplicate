@@ -82,7 +82,7 @@ export function Services() {
           transition={{ duration: 0.8 }}
           className="relative overflow-hidden min-h-[300px] rounded-none"
         >
-          <img src="@assets/imgi_159_p6Im6dfknHAI0ig4NqDcO4WNpc_1777792397456.jpg" alt="Services" className="w-full h-full object-cover object-center" />
+          <img src="/photo-services.jpg" alt="Services" className="w-full h-full object-cover object-center" />
           <div className="absolute inset-0 bg-black/25" />
         </motion.div>
       </div>

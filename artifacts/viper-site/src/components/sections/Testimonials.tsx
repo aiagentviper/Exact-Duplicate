@@ -72,7 +72,7 @@ export function Testimonials() {
       <div className="grid lg:grid-cols-2 min-h-[360px]">
         <div className="relative overflow-hidden min-h-[260px] rounded-none">
           <img
-            src="@assets/imgi_160_PjaPY2S6qP6ii6fCxTJHhHU66SM_1777792400172.png"
+            src="/photo-reviews.png"
             alt="Client Reviews"
             className="w-full h-full object-cover object-center"
           />

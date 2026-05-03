@@ -87,7 +87,7 @@ export function HomePage() {
               className="relative overflow-hidden min-h-[400px] lg:min-h-auto"
             >
               <img
-                src="@assets/96d7cdeb-a346-42db-bebf-ad4717a34552_1777792353296.png"
+                src="/photo-process.png"
                 alt="Our Process"
                 className="w-full h-full object-cover object-center"
               />
@@ -160,7 +160,7 @@ export function HomePage() {
                 transition={{ duration: 0.6, delay: 0.15 }}
                 className="my-8 rounded-2xl overflow-hidden aspect-[4/3] max-w-sm"
               >
-                <img src="@assets/imgi_141_QqqmFNIdzb0HbOiMSHvqZXkwT7w_1777792395220.png" alt="FAQ visual" className="w-full h-full object-cover object-center" />
+                <img src="/photo-faq.png" alt="FAQ visual" className="w-full h-full object-cover object-center" />
               </motion.div>
 
               <div>
