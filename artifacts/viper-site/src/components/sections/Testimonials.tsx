@@ -56,7 +56,7 @@ function TestimonialCard({ t }: { t: typeof testimonials[0] }) {
         <p className="mb-6 font-inter text-[14px] leading-relaxed text-foreground/80">"{t.quote}"</p>
       </div>
       <div className="flex items-center gap-3 border-t border-border/40 pt-5">
-        <img src={t.avatar} alt={t.name} className="h-9 w-9 flex-shrink-0 rounded-full object-cover object-center border border-white/20" />
+        <img src={t.avatar} alt={t.name} loading="lazy" className="h-9 w-9 flex-shrink-0 rounded-full object-cover object-center border border-white/20" />
         <div>
           <h4 className="font-grotesk text-[13px] font-semibold text-foreground">{t.name}</h4>
           <p className="font-inter text-[11px] text-muted-foreground">{t.title}</p>
@@ -94,7 +94,7 @@ export function Testimonials() {
       <div className="mx-auto w-full max-w-[1100px] px-6">
         <div className="grid w-full min-h-[420px] lg:grid-cols-2">
           <div className="relative min-h-[320px] overflow-hidden rounded-2xl">
-            <img src="/photo-reviews.png" alt="Client Reviews" className="h-full w-full rounded-2xl object-cover object-center grayscale contrast-[1.1] brightness-[0.82]" />
+            <img src="/photo-reviews.png" alt="Client reviews for Viper AI Agency" loading="lazy" className="h-full w-full rounded-2xl object-cover object-center grayscale contrast-[1.1] brightness-[0.82]" />
             <div className="absolute inset-0 rounded-2xl bg-black/35" />
           </div>
           <div className="flex flex-col justify-center px-6 py-16 lg:px-10 xl:px-14">
@@ -103,8 +103,8 @@ export function Testimonials() {
               <h2 className="mb-4 font-grotesk text-[46px] font-semibold leading-[1.02] tracking-tight">Client Reviews</h2>
               <p className="mb-8 max-w-[340px] font-inter text-[14px] leading-relaxed text-muted-foreground">Real results from clients who trusted VIPER to build their AI systems, sites and automations.</p>
               <div className="flex flex-wrap gap-3">
-                <Link href="/contact"><span className="inline-flex cursor-pointer items-center gap-2 rounded-full bg-white px-5 py-2.5 font-inter text-[13px] font-semibold text-black transition-colors hover:bg-white/90">Book a Free Call</span></Link>
-                <Link href="/services"><span className="inline-flex cursor-pointer items-center gap-2 rounded-full border border-white/20 px-5 py-2.5 font-inter text-[13px] font-semibold text-white/70 transition-colors hover:border-white/50 hover:text-white">See Services <ArrowRight size={13} /></span></Link>
+                <Link href="/contact"><span aria-label="Book a Free Call" className="inline-flex cursor-pointer items-center gap-2 rounded-full bg-white px-5 py-2.5 font-inter text-[13px] font-semibold text-black transition-colors hover:bg-white/90">Book a Free Call</span></Link>
+                <Link href="/services"><span aria-label="See Services" className="inline-flex cursor-pointer items-center gap-2 rounded-full border border-white/20 px-5 py-2.5 font-inter text-[13px] font-semibold text-white/70 transition-colors hover:border-white/50 hover:text-white">See Services <ArrowRight size={13} /></span></Link>
               </div>
             </motion.div>
           </div>

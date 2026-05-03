@@ -35,13 +35,13 @@ export function Services() {
                 ))}
               </div>
               <div className="flex gap-3">
-                <Link href="/contact"><span className="inline-flex cursor-pointer items-center gap-2 rounded-full bg-white px-5 py-2.5 font-inter text-[13px] font-semibold text-black transition-colors hover:bg-white/90">Book a Free Call</span></Link>
-                <Link href="/work"><span className="inline-flex cursor-pointer items-center gap-2 rounded-full border border-white/20 px-5 py-2.5 font-inter text-[13px] font-semibold text-white/70 transition-colors hover:border-white/50 hover:text-white">See Projects</span></Link>
+                <Link href="/contact"><span aria-label="Book a Free Call" className="inline-flex cursor-pointer items-center gap-2 rounded-full bg-white px-5 py-2.5 font-inter text-[13px] font-semibold text-black transition-colors hover:bg-white/90">Book a Free Call</span></Link>
+                <Link href="/work"><span aria-label="See Projects" className="inline-flex cursor-pointer items-center gap-2 rounded-full border border-white/20 px-5 py-2.5 font-inter text-[13px] font-semibold text-white/70 transition-colors hover:border-white/50 hover:text-white">See Projects</span></Link>
               </div>
             </motion.div>
           </div>
           <motion.div initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} viewport={{ once: true }} transition={{ duration: 0.8 }} className="relative min-h-[320px] overflow-hidden rounded-2xl">
-            <img src={servicesPhoto} alt="Services" className="h-full w-full rounded-2xl object-cover object-center grayscale contrast-[1.15] brightness-[0.82]" />
+            <img src={servicesPhoto} alt="AI agency services preview" loading="lazy" className="h-full w-full rounded-2xl object-cover object-center grayscale contrast-[1.15] brightness-[0.82]" />
             <div className="absolute inset-0 rounded-2xl bg-black/18" />
           </motion.div>
         </div>
