@@ -1,6 +1,8 @@
 import { motion } from "framer-motion";
 import { Link } from "wouter";
 import { ArrowRight } from "lucide-react";
+import { useEffect, useState } from "react";
+import profilePhoto from "@assets/Gemini_Generated_Image_rk6t1wrk6t1wrk6t_1777802311237.png";
 
 const testimonials = [
   { id: 1, name: "Jordan Miles", title: "Founder of LaunchLab", quote: "VIPER automated our entire onboarding flow in under a week. What used to take hours now runs on autopilot. Genuinely transformative.", stars: 5 },
@@ -20,9 +22,7 @@ function TestimonialCard({ t }: { t: typeof testimonials[0] }) {
         <p className="mb-6 font-inter text-[14px] leading-relaxed text-foreground/80">"{t.quote}"</p>
       </div>
       <div className="flex items-center gap-3 border-t border-border/40 pt-5">
-        <div className="flex h-9 w-9 flex-shrink-0 items-center justify-center rounded-full border border-border/50 bg-white/5 font-grotesk text-[11px] font-bold text-white">
-          {t.name.split(" ").map(n => n[0]).join("")}
-        </div>
+        <img src={profilePhoto} alt={t.name} className="h-9 w-9 flex-shrink-0 rounded-full object-cover object-top border border-white/20" />
         <div>
           <h4 className="font-grotesk text-[13px] font-semibold text-foreground">{t.name}</h4>
           <p className="font-inter text-[11px] text-muted-foreground">{t.title}</p>
@@ -30,6 +30,29 @@ function TestimonialCard({ t }: { t: typeof testimonials[0] }) {
       </div>
     </div>
   );
+}
+
+function CountUp({ end, suffix = "" }: { end: number; suffix?: string }) {
+  const [value, setValue] = useState(0);
+
+  useEffect(() => {
+    const duration = 1400;
+    const steps = 40;
+    const increment = end / steps;
+    let current = 0;
+    const timer = window.setInterval(() => {
+      current += increment;
+      if (current >= end) {
+        setValue(end);
+        window.clearInterval(timer);
+      } else {
+        setValue(Math.round(current));
+      }
+    }, duration / steps);
+    return () => window.clearInterval(timer);
+  }, [end]);
+
+  return <>{value}{suffix}</>;
 }
 
 export function Testimonials() {
@@ -70,12 +93,12 @@ export function Testimonials() {
         <div className="border-t border-border/40">
           <div className="grid grid-cols-1 md:grid-cols-3">
             {[
-              { val: "180+", label: "projects completed" },
-              { val: "96%", label: "client satisfaction" },
-              { val: "15+", label: "years of experience" },
+              { val: 180, label: "projects completed", suffix: "+" },
+              { val: 96, label: "client satisfaction", suffix: "%" },
+              { val: 15, label: "years of experience", suffix: "+" },
             ].map((s, i) => (
-              <motion.div key={s.val} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.5, delay: i * 0.1 }} className={`bg-zinc-900/50 py-10 px-8 text-center ${i < 2 ? 'border-r border-border/40' : ''}`}>
-                <div className="mb-2 font-grotesk text-[42px] font-bold leading-none tracking-tight text-foreground">{s.val}</div>
+              <motion.div key={s.label} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.5, delay: i * 0.1 }} className={`bg-zinc-900/50 py-10 px-8 text-center ${i < 2 ? 'border-r border-border/40' : ''}`}>
+                <div className="mb-2 font-grotesk text-[42px] font-bold leading-none tracking-tight text-foreground"><CountUp end={s.val} suffix={s.suffix} /></div>
                 <div className="font-inter text-[13px] text-muted-foreground">{s.label}</div>
               </motion.div>
             ))}

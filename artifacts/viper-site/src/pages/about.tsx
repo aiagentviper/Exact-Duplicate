@@ -4,6 +4,7 @@ import { Footer } from "@/components/sections/Footer";
 import { Link } from "wouter";
 import { ArrowRight, Zap, Globe, Smartphone, Video, Clapperboard, BrainCircuit } from "lucide-react";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
+import profilePhoto from "@assets/Gemini_Generated_Image_rk6t1wrk6t1wrk6t_1777802311237.png";
 
 const skills = [
   { icon: <Zap size={16} />, label: "AI Automation" },
@@ -13,21 +14,9 @@ const skills = [
 ];
 
 const processSteps = [
-  {
-    num: "01",
-    title: "Define Your Vision",
-    desc: "Tell us what you want to build, your goals, your audience and the outcomes you're after. We listen first and ask the right questions.",
-  },
-  {
-    num: "02",
-    title: "Submit Your Request",
-    desc: "We scope the work, agree a clear timeline and lock in deliverables. No surprises — just a clean plan you can hold us to.",
-  },
-  {
-    num: "03",
-    title: "Project Delivered",
-    desc: "We build fast using the best AI tools, iterate with your feedback and hand over a finished product ready to scale.",
-  },
+  { num: "01", title: "Define Your Vision", desc: "Tell us what you want to build, your goals, your audience and the outcomes you're after. We listen first and ask the right questions." },
+  { num: "02", title: "Submit Your Request", desc: "We scope the work, agree a clear timeline and lock in deliverables. No surprises — just a clean plan you can hold us to." },
+  { num: "03", title: "Project Delivered", desc: "We build fast using the best AI tools, iterate with your feedback and hand over a finished product ready to scale." },
 ];
 
 const services = [
@@ -40,24 +29,9 @@ const services = [
 ];
 
 const testimonials = [
-  {
-    name: "Jordan Miles",
-    title: "CEO, LaunchLab",
-    quote: "VIPER automated our entire onboarding flow in under a week. What used to take hours now runs on autopilot. Genuinely transformative.",
-    stars: 5,
-  },
-  {
-    name: "Priya Nair",
-    title: "Co-Founder, Stackly",
-    quote: "They built our AI-powered website in days. It converts better than anything we've had before. The quality-to-speed ratio is unreal.",
-    stars: 5,
-  },
-  {
-    name: "Derek Owens",
-    title: "Head of Marketing, BrandWave",
-    quote: "The AI video content drove a 3x increase in engagement in the first two weeks alone. This team knows what they're doing.",
-    stars: 5,
-  },
+  { name: "Jordan Miles", title: "CEO, LaunchLab", quote: "VIPER automated our entire onboarding flow in under a week. What used to take hours now runs on autopilot. Genuinely transformative.", stars: 5 },
+  { name: "Priya Nair", title: "Co-Founder, Stackly", quote: "They built our AI-powered website in days. It converts better than anything we've had before. The quality-to-speed ratio is unreal.", stars: 5 },
+  { name: "Derek Owens", title: "Head of Marketing, BrandWave", quote: "The AI video content drove a 3x increase in engagement in the first two weeks alone. This team knows what they're doing.", stars: 5 },
 ];
 
 const faqs = [
@@ -73,8 +47,6 @@ export function AboutPage() {
     <div className="bg-black min-h-screen text-foreground dark">
       <Navigation />
       <main className="pt-20">
-
-        {/* ── Hero split ── */}
         <section className="min-h-[90vh] flex items-center border-b border-border/40">
           <div className="mx-auto w-full max-w-[1100px] px-6 py-16">
             <div className="grid lg:grid-cols-2 gap-16 items-center">
@@ -103,10 +75,9 @@ export function AboutPage() {
                   </span>
                 </Link>
               </motion.div>
-
               <motion.div initial={{ opacity: 0, x: 30 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.8, delay: 0.15 }} className="relative">
                 <div className="relative rounded-2xl overflow-hidden aspect-[4/5] bg-card border border-border/30 max-w-md mx-auto">
-                  <img src="/profile-clean.png" alt="VIPER AI Agency — Founder" className="w-full h-full object-cover object-top" />
+                  <img src={profilePhoto} alt="VIPER AI Agency — Founder" className="w-full h-full object-cover object-top" />
                   <div className="absolute inset-0 bg-gradient-to-t from-background/50 via-transparent to-transparent" />
                   <div className="absolute bottom-6 left-6 right-6">
                     <div className="bg-card/85 backdrop-blur-md rounded-xl p-5 border border-border/50">
@@ -126,8 +97,6 @@ export function AboutPage() {
             </div>
           </div>
         </section>
-
-        {/* ── Stats row ── */}
         <section className="border-b border-border/40">
           <div className="mx-auto w-full max-w-[1100px] px-6">
             <div className="grid grid-cols-2 md:grid-cols-4">
@@ -137,8 +106,7 @@ export function AboutPage() {
                 { val: "100%", label: "AI-Built" },
                 { val: "24hr", label: "MVP Turnaround" },
               ].map((s, i) => (
-                <motion.div key={s.val} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.5, delay: i * 0.1 }}
-                  className={`py-12 px-6 ${i < 3 ? "md:border-r border-border/40" : ""} ${i > 1 ? "border-t md:border-t-0 border-border/40" : ""}`}>
+                <motion.div key={s.val} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.5, delay: i * 0.1 }} className={`py-12 px-6 ${i < 3 ? "md:border-r border-border/40" : ""} ${i > 1 ? "border-t md:border-t-0 border-border/40" : ""}`}>
                   <div className="font-grotesk font-bold text-[48px] leading-none tracking-tight mb-2">{s.val}</div>
                   <div className="font-inter font-semibold text-[11px] uppercase tracking-[0.2em] text-white/40">{s.label}</div>
                 </motion.div>
@@ -146,21 +114,16 @@ export function AboutPage() {
             </div>
           </div>
         </section>
-
-        {/* ── Process ── */}
         <section className="py-28 border-b border-border/40">
           <div className="mx-auto w-full max-w-[1100px] px-6">
             <div className="grid lg:grid-cols-2 gap-16 items-start">
               <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>
                 <p className="font-inter font-semibold text-[11px] uppercase tracking-[0.2em] text-white/40 mb-3">How It Works</p>
-                <h2 className="font-grotesk font-semibold text-[42px] leading-[1.05] tracking-tight">
-                  Our<br />Process!
-                </h2>
+                <h2 className="font-grotesk font-semibold text-[42px] leading-[1.05] tracking-tight">Our<br />Process!</h2>
               </motion.div>
               <div className="space-y-0">
                 {processSteps.map((step, i) => (
-                  <motion.div key={step.num} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.5, delay: i * 0.1 }}
-                    className="flex gap-8 py-8 border-b border-border/40 last:border-0">
+                  <motion.div key={step.num} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.5, delay: i * 0.1 }} className="flex gap-8 py-8 border-b border-border/40 last:border-0">
                     <span className="font-inter font-semibold text-[11px] uppercase tracking-[0.2em] text-white/40 pt-1.5 min-w-[28px]">{step.num}</span>
                     <div>
                       <h3 className="font-grotesk font-semibold text-[22px] tracking-tight mb-2">{step.title}</h3>
@@ -172,23 +135,16 @@ export function AboutPage() {
             </div>
           </div>
         </section>
-
-        {/* ── Services grid ── */}
         <section className="py-28 border-b border-border/40">
           <div className="mx-auto w-full max-w-[1100px] px-6">
             <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }} className="mb-14">
               <p className="font-inter font-semibold text-[11px] uppercase tracking-[0.2em] text-white/40 mb-3">What We Offer</p>
-              <h2 className="font-grotesk font-semibold text-[42px] leading-[1.05] tracking-tight">
-                Our<br />Services!
-              </h2>
+              <h2 className="font-grotesk font-semibold text-[42px] leading-[1.05] tracking-tight">Our<br />Services!</h2>
             </motion.div>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
               {services.map((s, i) => (
-                <motion.div key={s.num} initial={{ opacity: 0, y: 24 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.5, delay: i * 0.08 }}
-                  className="bg-card border border-border/40 rounded-2xl p-7 hover:border-border/70 transition-colors">
-                  <div className="w-10 h-10 rounded-xl bg-white/5 border border-white/15 flex items-center justify-center mb-5 text-white/60">
-                    {s.icon}
-                  </div>
+                <motion.div key={s.num} initial={{ opacity: 0, y: 24 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.5, delay: i * 0.08 }} className="bg-card border border-border/40 rounded-2xl p-7 hover:border-border/70 transition-colors">
+                  <div className="w-10 h-10 rounded-xl bg-white/5 border border-white/15 flex items-center justify-center mb-5 text-white/60">{s.icon}</div>
                   <span className="font-inter font-semibold text-[11px] uppercase tracking-[0.2em] text-white/30 block mb-2">{s.num}</span>
                   <h3 className="font-grotesk font-semibold text-[20px] tracking-tight mb-2">{s.title}</h3>
                   <p className="font-inter text-[14px] leading-relaxed text-muted-foreground">{s.desc}</p>
@@ -204,30 +160,19 @@ export function AboutPage() {
             </motion.div>
           </div>
         </section>
-
-        {/* ── Testimonials ── */}
         <section className="py-28 border-b border-border/40">
           <div className="mx-auto w-full max-w-[1100px] px-6">
             <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }} className="mb-14">
               <p className="font-inter font-semibold text-[11px] uppercase tracking-[0.2em] text-white/40 mb-3">Client Reviews</p>
-              <h2 className="font-grotesk font-semibold text-[42px] leading-[1.05] tracking-tight">
-                What Clients<br />Say!
-              </h2>
+              <h2 className="font-grotesk font-semibold text-[42px] leading-[1.05] tracking-tight">What Clients<br />Say!</h2>
             </motion.div>
             <div className="grid md:grid-cols-3 gap-6">
               {testimonials.map((t, i) => (
-                <motion.div key={t.name} initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.5, delay: i * 0.1 }}
-                  className="bg-card border border-border/40 rounded-2xl p-8">
-                  <div className="flex gap-0.5 mb-5">
-                    {Array.from({ length: t.stars }).map((_, j) => (
-                      <span key={j} className="text-yellow-400 text-sm">★</span>
-                    ))}
-                  </div>
+                <motion.div key={t.name} initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.5, delay: i * 0.1 }} className="bg-card border border-border/40 rounded-2xl p-8">
+                  <div className="flex gap-0.5 mb-5">{Array.from({ length: t.stars }).map((_, j) => <span key={j} className="text-yellow-400 text-sm">★</span>)}</div>
                   <p className="font-inter text-[15px] leading-relaxed text-foreground/80 mb-8">"{t.quote}"</p>
                   <div className="flex items-center gap-3 border-t border-border/40 pt-6">
-                    <div className="w-9 h-9 rounded-full bg-white/5 border border-white/20 flex items-center justify-center font-grotesk text-[12px] font-bold flex-shrink-0">
-                      {t.name.split(" ").map(n => n[0]).join("")}
-                    </div>
+                    <img src={profilePhoto} alt={t.name} className="w-9 h-9 rounded-full object-cover object-top border border-white/20 flex-shrink-0" />
                     <div>
                       <h4 className="font-grotesk font-semibold text-[14px]">{t.name}</h4>
                       <p className="font-inter text-[12px] text-white/50">{t.title}</p>
@@ -238,19 +183,13 @@ export function AboutPage() {
             </div>
           </div>
         </section>
-
-        {/* ── FAQ ── */}
         <section className="py-28 border-b border-border/40">
           <div className="mx-auto w-full max-w-[1100px] px-6">
             <div className="grid lg:grid-cols-2 gap-16 items-start">
               <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>
                 <p className="font-inter font-semibold text-[11px] uppercase tracking-[0.2em] text-white/40 mb-3">Answers</p>
-                <h2 className="font-grotesk font-semibold text-[42px] leading-[1.05] tracking-tight">
-                  Got a<br />Question?
-                </h2>
-                <p className="font-inter text-[15px] text-muted-foreground mt-4 max-w-xs leading-relaxed">
-                  Curious what working together actually looks like? We've answered the most common ones below.
-                </p>
+                <h2 className="font-grotesk font-semibold text-[42px] leading-[1.05] tracking-tight">Got a<br />Question?</h2>
+                <p className="font-inter text-[15px] text-muted-foreground mt-4 max-w-xs leading-relaxed">Curious what working together actually looks like? We've answered the most common ones below.</p>
               </motion.div>
               <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6, delay: 0.1 }}>
                 <Accordion type="single" collapsible className="space-y-3">
@@ -265,23 +204,13 @@ export function AboutPage() {
             </div>
           </div>
         </section>
-
-        {/* ── CTA ── */}
         <section className="py-28 text-center">
           <motion.div initial={{ opacity: 0, y: 24 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>
             <p className="font-inter font-semibold text-[11px] uppercase tracking-[0.2em] text-white/40 mb-4">Ready?</p>
-            <h2 className="font-grotesk font-bold text-[48px] leading-[1.0] tracking-tight mb-6">
-              Let's Build Something<br />
-              <span className="text-white/60">Extraordinary.</span>
-            </h2>
-            <Link href="/contact">
-              <span className="inline-flex items-center gap-2 bg-white text-black font-inter font-semibold text-[13px] rounded-full px-8 py-3.5 hover:bg-white/90 transition-colors cursor-pointer">
-                Get in Touch <ArrowRight size={14} />
-              </span>
-            </Link>
+            <h2 className="font-grotesk font-bold text-[48px] leading-[1.0] tracking-tight mb-6">Let's Build Something<br /><span className="text-white/60">Extraordinary.</span></h2>
+            <Link href="/contact"><span className="inline-flex items-center gap-2 bg-white text-black font-inter font-semibold text-[13px] rounded-full px-8 py-3.5 hover:bg-white/90 transition-colors cursor-pointer">Get in Touch <ArrowRight size={14} /></span></Link>
           </motion.div>
         </section>
-
       </main>
       <Footer />
     </div>
