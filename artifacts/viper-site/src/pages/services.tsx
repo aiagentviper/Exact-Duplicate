@@ -114,16 +114,16 @@ export function ServicesPage() {
       <main className="pt-24">
         <section className="py-20 text-center">
           <div className="mx-auto w-full max-w-[1100px] px-6">
-          <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }}>
-            <p className="font-inter font-semibold text-[11px] uppercase tracking-[0.2em] text-orange-500 mb-4">What We Do</p>
-            <h1 className="font-grotesk font-bold text-[60px] leading-[1.0] tracking-[-0.02em] mb-6">
-              AI Services That<br />
-              <span className="text-muted-foreground/40">Actually Move The Needle.</span>
-            </h1>
-            <p className="font-inter text-[16px] text-muted-foreground max-w-xl mx-auto leading-relaxed">
-              From automation to full product builds — we handle everything with AI at the core.
-            </p>
-          </motion.div>
+            <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }}>
+              <p className="mb-4 font-inter text-[11px] font-semibold uppercase tracking-[0.2em] text-orange-500">What We Do</p>
+              <h1 className="mb-6 font-grotesk text-[60px] font-bold leading-[1.0] tracking-[-0.02em]">
+                AI Services That<br />
+                <span className="text-muted-foreground/40">Actually Move The Needle.</span>
+              </h1>
+              <p className="mx-auto max-w-xl font-inter text-[16px] leading-relaxed text-muted-foreground">
+                From automation to full product builds — we handle everything with AI at the core.
+              </p>
+            </motion.div>
           </div>
         </section>
 

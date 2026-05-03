@@ -1,0 +1,73 @@
+Role: Act as a Senior UI/UX Engineer and Frontend Expert.
+Tech Stack: HTML5, Tailwind CSS, Lucide-icons (or similar SVG icons).
+Global Styles:
+
+Background: Strictly #000000 (Pure Black).
+Primary Accent: Strictly #FF4D00 (Vivid Orange). ERASE ALL BLUE ELEMENTS.
+Typography: Use 'Inter' or 'Geist Sans'. Headings: Bold, tracking-tighter. Body: 14px-16px, zinc-400 color.
+Main Wrapper: Wrap all content below the Hero in a <main class="max-w-[1200px] mx-auto px-6 overflow-hidden">.
+SECTION 1: THE RED-LIT HERO (Cinema Style)
+Container: relative h-screen w-full flex items-end.
+Background Image: Use a full-bleed portrait of a man with rim-lighting (Red/Orange tones). Use object-cover object-top.
+Navbar: Fixed at top. Left: Logo 'Viper' (White). Right: Links (White, 14px). Far Right: Button (White pill, orange circle icon on the right).
+Hero Text:
+Bottom-left: <h1> 'We Build <br/> With AI.' (Text-7xl, white, font-bold).
+Apply a small orange label above it: 'NEXT-GEN AI AGENCY'.
+Bottom Stats: A 4-column grid at the very bottom edge. Each column: border-t border-zinc-800 pt-4. Include an orange number (#01, #02...) and a white title.
+SECTION 2: MEET JIMOH (The Split About)
+Structure: <section class="py-32 grid grid-cols-1 md:grid-cols-2 gap-20 items-center">.
+Left Content:
+Heading: 'Meet Jimoh' (Text-5xl, white).
+Bio: 2 paragraphs of gray text (text-zinc-400).
+Tags: A flex-wrap container of small buttons. Style: border border-zinc-700 px-4 py-2 rounded-full text-xs. Add an orange border only on hover.
+Right Content:
+Mandatory Sizing: ONE vertical image. Class: w-full max-h-[600px] aspect-[3/4] object-cover rounded-3xl grayscale.
+SECTION 3: THE PORTFOLIO (The 3-Column Offset Masonry)
+Container: <section class="py-20 flex gap-6 justify-between items-start">.
+Column Logic: Three vertical <div> columns, each w-1/3.
+Column 1 (Left): Starts at normal Y-position. 2 images.
+Column 2 (Middle): CRITICAL: Apply translate-y-[-140px]. This is the staggered offset. 2 images.
+Column 3 (Right): Starts at normal Y-position. 2 images.
+Image Cards:
+Style: relative group rounded-2xl overflow-hidden grayscale.
+Card 1/4/5: aspect-[4/5]. Card 2/3/6: aspect-square.
+Button: Inside every card: absolute bottom-6 left-1/2 -translate-x-1/2 w-[90%].
+Button Style: bg-white/10 backdrop-blur-xl border border-white/20 rounded-full py-3 text-white text-xs text-center.
+SECTION 4: THE PROCESS (Vertical Roadmap)
+Structure: grid grid-cols-1 md:grid-cols-2 gap-16 py-32.
+Left: A tall grayscale image (h-full max-h-[700px] object-cover rounded-2xl).
+Right:
+Heading: 'Process' (Text-5xl, white).
+Subtext: 'Crafting bold visuals...' (Text-zinc-400).
+Cards: 3 stacked cards. Style: bg-zinc-900/40 p-8 rounded-2xl border border-zinc-800.
+Card content: Top right small number (1, 2, 3), Left side orange icon, Bottom title and description.
+SECTION 5: SERVICES (2x2 Grid + Scaled Image)
+Structure: grid grid-cols-1 md:grid-cols-2 gap-12 py-32 items-start.
+Left:
+Heading: 'Services'.
+A 2x2 grid of small cards. Style: p-6 border-l border-zinc-800.
+Content: Small orange dot, white title, gray description.
+Right: IMAGE LIMITER:
+Use <div class="sticky top-20">.
+Image: w-full max-h-[550px] aspect-square object-cover rounded-2xl grayscale.
+SECTION 6: PRICING (Comparison Cards)
+Header: Centered title 'Simple plans. Serious output.'
+Grid: grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto.
+Card Style: p-10 bg-zinc-900/30 rounded-3xl border border-zinc-800.
+Highlights:
+Prices: Huge white text (e.g., $999).
+Features: List with Orange Checkmarks.
+Buttons: Full-width Vivid Orange pill buttons (bg-[#FF4D00] text-white).
+SECTION 7: THE ENDING (Plain Background CTA)
+Background: bg-black py-40. REMOVE ALL BACKGROUND IMAGES.
+Content:
+Center everything.
+Heading: 'LET'S BUILD <br/> SOMETHING REAL' (Text-8xl, font-black, white, uppercase).
+Button: Below text, one white pill button with an orange circle/arrow on the right.
+SECTION 8: FOOTER (The Viper Branding)
+Layout: 4 columns.
+Content:
+Column 1: 'VIPER' logo + small tag.
+Column 2/3: Links list.
+Column 4: Contact info (Orange hover effect on email).
+Legal: Bottom row with copyright and 'Built by AI' text in zinc-600.

@@ -379,10 +379,11 @@ export function HomePage() {
           </div>
         </section>
 
-        <section className="w-full border-t border-white/10 bg-black py-32 text-center">
+        <section className="w-full bg-black py-40 text-center">
           <div className="mx-auto w-full max-w-[1200px] px-6">
-            <h2 className="font-grotesk text-[clamp(3rem,8vw,7rem)] font-black leading-[0.95] tracking-[-0.04em] text-white">
-              LET&apos;S BUILD SOMETHING REAL
+            <h2 className="font-grotesk text-[clamp(3rem,8vw,8rem)] font-black uppercase leading-[0.92] tracking-[-0.05em] text-white">
+              LET&apos;S BUILD <br />
+              SOMETHING REAL
             </h2>
             <div className="mt-10 flex justify-center">
               <Link href="/contact">

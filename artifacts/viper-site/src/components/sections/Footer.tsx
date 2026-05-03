@@ -21,16 +21,6 @@ const socials = [
 export function Footer() {
   return (
     <footer className="relative w-full overflow-hidden bg-black">
-      {/* ── Grayscale image overlay ── */}
-      <div className="pointer-events-none absolute inset-0 z-0">
-        <img
-          src="/photo-reviews.png"
-          alt=""
-          className="h-full w-full object-cover object-center grayscale opacity-[0.06] brightness-50 contrast-[1.3]"
-        />
-        <div className="absolute inset-0 bg-gradient-to-b from-black via-transparent to-black/90" />
-      </div>
-
       <div className="relative z-10">
         {/* ── Massive headline ── */}
         <div className="border-b border-white/10 px-6 py-20 text-center">
@@ -153,7 +143,7 @@ export function Footer() {
               © 2025 VIPER AI Agency. All rights reserved.
             </p>
             <p className="font-inter text-[11px] text-white/25">
-              Built with AI. Shipped with speed.
+              Built by AI. Shipped with speed.
             </p>
           </div>
         </div>

@@ -143,17 +143,17 @@ export function WorkPage() {
       <main className="pt-24">
 
         {/* ── Page header ── */}
-        <section className="py-20 text-center border-b border-border/40">
+        <section className="border-b border-border/40 py-20 text-center">
           <div className="mx-auto w-full max-w-[1100px] px-6">
-          <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }}>
-            <p className="font-inter font-semibold text-[11px] uppercase tracking-[0.2em] text-orange-500 mb-4">Our Portfolio</p>
-            <h1 className="font-grotesk font-bold text-[60px] leading-[1.0] tracking-[-0.02em] mb-6">
-              Real Projects.<br /><span className="text-muted-foreground/40">Real Results.</span>
-            </h1>
-            <p className="font-inter text-[16px] text-muted-foreground max-w-xl mx-auto leading-relaxed">
-              AI-powered websites, videos, automations & apps built for businesses across every industry. Click any website to visit the live site.
-            </p>
-          </motion.div>
+            <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }}>
+              <p className="mb-4 font-inter text-[11px] font-semibold uppercase tracking-[0.2em] text-orange-500">Our Portfolio</p>
+              <h1 className="mb-6 font-grotesk text-[60px] font-bold leading-[1.0] tracking-[-0.02em]">
+                Real Projects.<br /><span className="text-muted-foreground/40">Real Results.</span>
+              </h1>
+              <p className="mx-auto max-w-xl font-inter text-[16px] leading-relaxed text-muted-foreground">
+                AI-powered websites, videos, automations & apps built for businesses across every industry. Click any website to visit the live site.
+              </p>
+            </motion.div>
           </div>
         </section>
 
