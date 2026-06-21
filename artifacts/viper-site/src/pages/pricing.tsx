@@ -118,8 +118,9 @@ export function PricingPage() {
           <div className="mx-auto w-full max-w-[1100px] px-6">
             <div className="grid md:grid-cols-3 gap-6">
               {plans.map((plan, i) => (
-                <motion.div key={plan.name} initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.5, delay: i * 0.1 }}
-                  className={`relative flex flex-col p-8 rounded-2xl border ${plan.popular ? "bg-card border-white/30 shadow-2xl" : "bg-card/50 border-border/50"}`}>
+                <div key={plan.name} className="glow-parent">
+                <motion.div initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.5, delay: i * 0.1 }}
+                  className={`glow-card relative flex flex-col p-8 rounded-2xl border ${plan.popular ? "bg-card border-white/30 shadow-2xl" : "bg-card/50 border-border/50"}`}>
                   {plan.popular && (
                     <div className="absolute -top-4 left-1/2 -translate-x-1/2 bg-white text-black font-inter font-bold text-[11px] px-4 py-1.5 rounded-full uppercase tracking-[0.15em]">
                       Most Popular
@@ -144,6 +145,7 @@ export function PricingPage() {
                     </span>
                   </Link>
                 </motion.div>
+                </div>
               ))}
             </div>
           </div>

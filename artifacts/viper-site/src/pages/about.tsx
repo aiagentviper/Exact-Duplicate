@@ -153,12 +153,14 @@ export function AboutPage() {
             </motion.div>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
               {services.map((s, i) => (
-                <motion.div key={s.num} initial={{ opacity: 0, y: 24 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.5, delay: i * 0.08 }} className="bg-card border border-border/40 rounded-2xl p-7 hover:border-border/70 transition-colors">
+                <div key={s.num} className="glow-parent">
+                <motion.div initial={{ opacity: 0, y: 24 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.5, delay: i * 0.08 }} className="glow-card bg-card border border-border/40 rounded-2xl p-7 hover:border-border/70 transition-colors">
                   <div className="w-10 h-10 rounded-xl bg-white/5 border border-white/15 flex items-center justify-center mb-5 text-white/60">{s.icon}</div>
                   <span className="font-inter font-semibold text-[11px] uppercase tracking-[0.2em] text-white/30 block mb-2">{s.num}</span>
                   <h3 className="font-grotesk font-semibold text-[20px] tracking-tight mb-2">{s.title}</h3>
                   <p className="font-inter text-[14px] leading-relaxed text-muted-foreground">{s.desc}</p>
                 </motion.div>
+                </div>
               ))}
             </div>
             <motion.div initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} viewport={{ once: true }} transition={{ duration: 0.5, delay: 0.3 }} className="mt-10 text-center">
@@ -179,7 +181,8 @@ export function AboutPage() {
             </motion.div>
             <div className="grid md:grid-cols-3 gap-6">
               {testimonials.map((t, i) => (
-                <motion.div key={t.name} initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.5, delay: i * 0.1 }} className="bg-card border border-border/40 rounded-2xl p-8">
+                <div key={t.name} className="glow-parent">
+                <motion.div initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.5, delay: i * 0.1 }} className="glow-card bg-card border border-border/40 rounded-2xl p-8">
                   <div className="flex gap-0.5 mb-5">{Array.from({ length: t.stars }).map((_, j) => <span key={j} className="text-yellow-400 text-sm">★</span>)}</div>
                   <p className="font-inter text-[15px] leading-relaxed text-foreground/80 mb-8">"{t.quote}"</p>
                   <div className="flex items-center gap-3 border-t border-border/40 pt-6">
@@ -190,6 +193,7 @@ export function AboutPage() {
                     </div>
                   </div>
                 </motion.div>
+                </div>
               ))}
             </div>
           </div>

@@ -1,0 +1,189 @@
+I need you to make 3 changes to this website. Do NOT touch the home page at all.
+
+═══════════════════════════════════════════
+CHANGE 1: GLOWING CARDS (About, Work, Services, Pricing, Blog pages only)
+═══════════════════════════════════════════
+
+Find all card components on the About, Work, Services, Pricing, and Blog pages. Apply this glowing 3D card style to them. Do not change any cards or sections on the Home page.
+
+Add this CSS to the global stylesheet:
+
+.parent {
+  height: 400px;
+  width: 300px;
+  perspective: 1000px;
+}
+
+.card {
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  transition: all 0.5s ease;
+}
+
+.card:hover {
+  background-position: 80%;
+  transform: rotate3d(0.5, 1, 0, 30deg);
+  box-shadow: 0 0 40px rgba(255, 0, 0, 0.7);
+}
+
+.card-2 { filter: hue-rotate(150deg); }
+.card-3 { filter: hue-rotate(300deg); }
+.card-4 { filter: hue-rotate(90deg); }
+
+.date-box {
+  position: absolute;
+  top: 75px;
+  left: 25px;
+  height: 60px;
+  width: 60px;
+  background-color: black;
+}
+
+.date-box .date {
+  font-size: 20px;
+  font-weight: 900;
+  color: #0088ff;
+}
+
+Wrap each card on those pages with:
+<div class="parent">
+  <div class="card">
+    ... existing card content ...
+  </div>
+</div>
+
+═══════════════════════════════════════════
+CHANGE 2: ANIMATED RING FORM STYLE (every form on the entire site)
+═══════════════════════════════════════════
+
+Find every form on the website (contact form, login form, signup form, newsletter, etc.) including on the Home page. Wrap each form with the class "ring-form" and add this CSS:
+
+.ring-form {
+  position: relative;
+  width: 380px;
+  padding: 40px;
+  background: rgba(0, 0, 0, 0.85);
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin: auto;
+}
+
+.ring-form::before,
+.ring-form::after {
+  content: '';
+  position: absolute;
+  border-radius: 38% 62% 63% 37% / 41% 44% 56% 59%;
+  width: 110%;
+  height: 110%;
+  top: -5%;
+  left: -5%;
+  z-index: -1;
+}
+
+.ring-form::before {
+  border: 4px solid lawngreen;
+  animation: animateRing 6s linear infinite;
+}
+
+.ring-form::after {
+  border: 4px solid red;
+  animation: animateRing 4s linear infinite reverse;
+}
+
+@keyframes animateRing {
+  0%   { border-radius: 38% 62% 63% 37% / 41% 44% 56% 59%; }
+  50%  { border-radius: 62% 38% 37% 63% / 56% 59% 41% 44%; }
+  100% { border-radius: 38% 62% 63% 37% / 41% 44% 56% 59%; }
+}
+
+.ring-form input,
+.ring-form textarea,
+.ring-form select {
+  background: rgba(255, 255, 255, 0.08);
+  border: none;
+  border-bottom: 2px solid lawngreen;
+  color: white;
+  padding: 10px;
+  border-radius: 4px;
+  outline: none;
+  font-size: 14px;
+  width: 100%;
+}
+
+.ring-form button[type="submit"],
+.ring-form .submit-btn {
+  background: lawngreen;
+  color: black;
+  font-weight: bold;
+  padding: 10px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: 0.3s;
+  width: 100%;
+}
+
+.ring-form button[type="submit"]:hover,
+.ring-form .submit-btn:hover {
+  background: red;
+  color: white;
+}
+
+═══════════════════════════════════════════
+CHANGE 3: WHATSAPP CHATBOT WIDGET (on every page)
+═══════════════════════════════════════════
+
+Add a floating WhatsApp chat widget that appears on every page (add it to the main layout file so it shows globally). When clicked it opens a chat box. When the user types a message and clicks send, it opens WhatsApp with their message pre-filled and redirects to this number: +2348107311900
+
+Add this to the main layout component (before the closing </body> or at the bottom of the root layout):
+
+<!-- WhatsApp Chat Widget -->
+<div id="wa-widget" style="position:fixed;bottom:24px;right:24px;z-index:9999;font-family:sans-serif;">
+
+  <div id="wa-box" style="display:none;position:absolute;bottom:75px;right:0;width:290px;background:#1a1a1a;border-radius:14px;box-shadow:0 8px 32px rgba(0,0,0,0.5);overflow:hidden;">
+    <div style="background:#25D366;padding:16px;color:white;">
+      <div style="font-weight:bold;font-size:15px;">💬 Chat with us</div>
+      <div style="font-size:12px;opacity:0.85;margin-top:2px;">We reply instantly on WhatsApp</div>
+    </div>
+    <div style="padding:16px;">
+      <div style="background:#2a2a2a;border-radius:8px;padding:12px;color:#ccc;font-size:13px;margin-bottom:12px;">
+        👋 Hi! How can we help you? Send us a message below.
+      </div>
+      <input id="wa-input" placeholder="Type your message..." style="width:100%;padding:10px;box-sizing:border-box;background:#2a2a2a;border:1px solid #333;border-radius:6px;color:white;font-size:13px;outline:none;margin-bottom:10px;" />
+      <button onclick="openWhatsApp()" style="width:100%;background:#25D366;color:white;border:none;padding:10px;border-radius:6px;font-weight:bold;cursor:pointer;font-size:14px;">
+        Open WhatsApp Chat →
+      </button>
+    </div>
+  </div>
+
+  <div id="wa-btn" onclick="toggleWA()" style="background:#25D366;width:60px;height:60px;border-radius:50%;display:flex;align-items:center;justify-content:center;cursor:pointer;box-shadow:0 4px 20px rgba(37,211,102,0.6);">
+    <svg width="30" height="30" viewBox="0 0 24 24" fill="white" xmlns="http://www.w3.org/2000/svg">
+      <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/>
+      <path d="M12 0C5.373 0 0 5.373 0 12c0 2.136.558 4.14 1.535 5.874L.057 23.776a.75.75 0 00.92.92l5.902-1.478A11.945 11.945 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.891 0-3.659-.522-5.168-1.428l-.37-.22-3.835.96.977-3.835-.242-.384A9.935 9.935 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/>
+    </svg>
+  </div>
+</div>
+
+<script>
+function toggleWA() {
+  var box = document.getElementById('wa-box');
+  box.style.display = box.style.display === 'none' ? 'block' : 'none';
+}
+function openWhatsApp() {
+  var msg = document.getElementById('wa-input').value || 'Hi! I visited your website and would like to know more.';
+  window.open('https://wa.me/2348107311900?text=' + encodeURIComponent(msg), '_blank');
+}
+</script>
+
+═══════════════════════════════════════════
+SUMMARY OF RULES:
+- Home page: ONLY add the form ring style and the WhatsApp widget. Do NOT change any cards or layout.
+- About, Work, Services, Pricing, Blog pages: Apply glowing card style + ring form style + WhatsApp widget.
+- WhatsApp widget appears on ALL pages via the global layout.
+- Do not break any existing functionality.
+═══════════════════════════════════════════

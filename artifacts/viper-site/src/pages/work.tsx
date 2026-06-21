@@ -61,6 +61,7 @@ const faqs = [
 
 function WebsiteCard({ project }: { project: typeof websiteProjects[0] }) {
   return (
+    <div className="glow-parent">
     <motion.a
       href={project.href}
       target="_blank"
@@ -90,11 +91,13 @@ function WebsiteCard({ project }: { project: typeof websiteProjects[0] }) {
         </div>
       </div>
     </motion.a>
+    </div>
   );
 }
 
 function ImageCard({ project }: { project: { id: number; image: string; title: string; tag: string; desc?: string } }) {
   return (
+    <div className="glow-parent">
     <motion.div initial={{ opacity: 0, y: 24 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.5 }}
       className="group relative overflow-hidden rounded-2xl border border-border/40 bg-card">
       <div className="aspect-[4/3] overflow-hidden">
@@ -114,19 +117,22 @@ function ImageCard({ project }: { project: { id: number; image: string; title: s
         <h3 className="font-grotesk font-medium text-[15px]">{project.title}</h3>
       </div>
     </motion.div>
+    </div>
   );
 }
 
 function VideoCard({ video, title }: { video: string; title: string }) {
   return (
+    <div className="glow-parent">
     <motion.div initial={{ opacity: 0, y: 24 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.5 }}
-      className="rounded-2xl overflow-hidden border border-border/40 bg-card">
+      className="glow-card rounded-2xl overflow-hidden border border-border/40 bg-card">
       <video src={video} controls muted loop playsInline className="w-full aspect-video object-cover" />
       <div className="p-5 border-t border-border/40">
         <p className="font-inter text-[11px] text-muted-foreground/60 mb-1">AI Video</p>
         <h3 className="font-grotesk font-medium text-[15px]">{title}</h3>
       </div>
     </motion.div>
+    </div>
   );
 }
 

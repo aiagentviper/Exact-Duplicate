@@ -128,8 +128,9 @@ export function BlogPage() {
             </div>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
               {posts.map((post, i) => (
-                <motion.article key={post.id} initial={{ opacity: 0, y: 24 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.5, delay: i * 0.08 }}
-                  className="group cursor-pointer">
+                <div key={post.id} className="glow-parent">
+                <motion.article initial={{ opacity: 0, y: 24 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.5, delay: i * 0.08 }}
+                  className="glow-card group cursor-pointer">
                   <div className="aspect-[16/10] overflow-hidden rounded-2xl mb-5 border border-border/40 bg-card">
                     <img src={post.image} alt={post.title} className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                       onError={(e) => { (e.target as HTMLImageElement).src = "/portfolio/automation-flow.jpg"; }} />
@@ -144,6 +145,7 @@ export function BlogPage() {
                     Read Article <ArrowRight size={12} className="group-hover:translate-x-1 transition-transform" />
                   </span>
                 </motion.article>
+                </div>
               ))}
             </div>
           </div>
