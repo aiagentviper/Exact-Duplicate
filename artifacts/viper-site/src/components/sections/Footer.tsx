@@ -59,7 +59,7 @@ export function Footer() {
             {/* Brand */}
             <div className="col-span-2 md:col-span-1">
               <span className="mb-4 block font-grotesk text-[20px] font-bold uppercase tracking-[0.12em] text-white">
-                VIPER
+                FlowForge AI
               </span>
               <p className="max-w-[200px] font-inter text-[13px] leading-relaxed text-white/40">
                 We don't just use AI. We weaponize it for your growth.
@@ -140,7 +140,7 @@ export function Footer() {
         <div className="border-t border-white/10 px-6 py-5">
           <div className="mx-auto flex w-full max-w-[1100px] flex-col items-center justify-between gap-3 md:flex-row">
             <p className="font-inter text-[11px] text-white/25">
-              © 2025 VIPER AI Agency. All rights reserved.
+              © 2025 FlowForge AI AI Agency. All rights reserved.
             </p>
             <p className="font-inter text-[11px] text-white/25">
               Built by AI. Shipped with speed.
@@ -154,7 +154,7 @@ export function Footer() {
             className="font-grotesk font-black uppercase text-white/[0.03]"
             style={{ fontSize: "clamp(5rem, 22vw, 20rem)", letterSpacing: "-0.02em", lineHeight: 0.82 }}
           >
-            VIPER
+            FlowForge AI
           </span>
         </div>
       </div>

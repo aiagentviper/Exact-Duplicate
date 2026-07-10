@@ -35,7 +35,7 @@ export function Hero() {
               Great AI should scale your business invisibly.
             </p>
             <p className="font-inter text-[15px] leading-relaxed text-white/55 mb-6">
-              VIPER builds automation, AI-powered websites, apps & video that work around the clock — so you don't have to.
+              FlowForge AI builds automation, AI-powered websites, apps & video that work around the clock — so you don't have to.
             </p>
             <div className="flex items-center gap-4">
               <Link href="/contact">

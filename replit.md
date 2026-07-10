@@ -1,8 +1,8 @@
-# VIPER AI Agency — Workspace
+# FlowForge AI — Workspace
 
 ## Overview
 
-pnpm workspace monorepo. Primary artifact is the VIPER AI Agency portfolio site (`artifacts/viper-site`).
+pnpm workspace monorepo. Primary artifact is the FlowForge AI portfolio site (`artifacts/viper-site`). Note: the artifact directory/package name remains `viper-site` / `@workspace/viper-site` (internal identifier only) — the user-facing brand is "FlowForge AI".
 
 ## Stack
 
@@ -16,7 +16,7 @@ pnpm workspace monorepo. Primary artifact is the VIPER AI Agency portfolio site 
 
 ## Key Artifacts
 
-### `artifacts/viper-site` — VIPER AI Agency Website
+### `artifacts/viper-site` — FlowForge AI Website
 - **Stack**: React + Vite + Tailwind v4 + shadcn/ui + framer-motion + wouter
 - **Fonts**: Space Grotesk (`.font-grotesk`) + Inter (`.font-inter`) via index.css `@layer utilities`
 - **Routing**: wouter, 7 pages (Home, About, Work, Services, Pricing, Blog, Contact)
@@ -43,7 +43,7 @@ pnpm workspace monorepo. Primary artifact is the VIPER AI Agency portfolio site 
 9. `Testimonials` — photo left + content right, scrolling marquee, 3-col stats
 10. **FAQ** — 50/50, left = heading + image + tags + CTA, right = accordion, inline in `home.tsx`
 11. **Plain Black CTA** — massive `LET'S BUILD SOMETHING REAL` headline, white CTA button, inline in `home.tsx`
-12. `Footer` — massive headline + 4-col grid (Brand / Navigate / Contact / Socials) + VIPER watermark
+12. `Footer` — massive headline + 4-col grid (Brand / Navigate / Contact / Socials) + FlowForge AI watermark
 
 ## Key Component Files
 

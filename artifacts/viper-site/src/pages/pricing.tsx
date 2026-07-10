@@ -66,7 +66,7 @@ const testimonials = [
   {
     name: "Jordan Miles",
     title: "CEO, LaunchLab",
-    quote: "VIPER automated our entire onboarding flow in under a week. What used to take hours now runs on autopilot. Genuinely transformative.",
+    quote: "FlowForge AI automated our entire onboarding flow in under a week. What used to take hours now runs on autopilot. Genuinely transformative.",
     stars: 5,
     plan: "Growth",
   },

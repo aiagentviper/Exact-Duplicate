@@ -31,8 +31,8 @@ export function Navigation() {
     <motion.header initial={{ y: -100, opacity: 0 }} animate={{ y: 0, opacity: 1 }} transition={{ duration: 0.5, ease: "easeOut" }} className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${scrolled ? "bg-black/90 backdrop-blur-md border-b border-border/40" : "bg-transparent"}`}>
       <div className="w-full px-6 md:px-10 h-16 flex items-center justify-between">
         <Link href="/">
-          <span aria-label="VIPER home" className="font-grotesk font-bold text-[18px] tracking-[0.15em] uppercase text-foreground cursor-pointer" data-testid="nav-logo">
-            VIPER
+          <span aria-label="FlowForge AI home" className="font-grotesk font-bold text-[18px] tracking-[0.15em] uppercase text-foreground cursor-pointer" data-testid="nav-logo">
+            FlowForge AI
           </span>
         </Link>
         <nav className="hidden md:flex items-center gap-7">

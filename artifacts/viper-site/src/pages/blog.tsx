@@ -43,7 +43,7 @@ const posts = [
     image: "/portfolio/smart-home-site.jpg",
     tag: "AI Strategy",
     date: "Feb 18, 2025",
-    title: "The 6 AI Tools We Use on Every Single Project at VIPER",
+    title: "The 6 AI Tools We Use on Every Single Project at FlowForge AI",
     excerpt: "Our go-to stack for automation, web, apps, video & everything in between.",
   },
   {
@@ -81,7 +81,7 @@ export function BlogPage() {
         {/* ── Page header ── */}
         <section className="py-20 container mx-auto px-6 text-center border-b border-border/40">
           <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }}>
-            <p className="font-inter font-semibold text-[11px] uppercase tracking-[0.2em] text-white/40 mb-4">VIPER Insights</p>
+            <p className="font-inter font-semibold text-[11px] uppercase tracking-[0.2em] text-white/40 mb-4">FlowForge AI Insights</p>
             <h1 className="font-grotesk font-bold text-[60px] leading-[1.0] tracking-[-0.02em] mb-6">
               AI Knowledge.<br /><span className="text-white/60">Zero Fluff.</span>
             </h1>

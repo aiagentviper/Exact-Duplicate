@@ -31,7 +31,7 @@ const services = [
 ];
 
 const testimonials = [
-  { name: "Jordan Miles", title: "CEO, LaunchLab", quote: "VIPER automated our entire onboarding flow in under a week. What used to take hours now runs on autopilot. Genuinely transformative.", stars: 5 },
+  { name: "Jordan Miles", title: "CEO, LaunchLab", quote: "FlowForge AI automated our entire onboarding flow in under a week. What used to take hours now runs on autopilot. Genuinely transformative.", stars: 5 },
   { name: "Priya Nair", title: "Co-Founder, Stackly", quote: "They built our AI-powered website in days. It converts better than anything we've had before. The quality-to-speed ratio is unreal.", stars: 5 },
   { name: "Derek Owens", title: "Head of Marketing, BrandWave", quote: "The AI video content drove a 3x increase in engagement in the first two weeks alone. This team knows what they're doing.", stars: 5 },
 ];
@@ -45,7 +45,7 @@ const reviewImages = [
 ];
 
 const faqs = [
-  { q: "What makes VIPER different from other agencies?", a: "We are 100% AI-native. Every project is built using the best AI tools available — not adapted to them. This means we move 10x faster and deliver more for less." },
+  { q: "What makes FlowForge AI different from other agencies?", a: "We are 100% AI-native. Every project is built using the best AI tools available — not adapted to them. This means we move 10x faster and deliver more for less." },
   { q: "How fast can you deliver?", a: "Most Starter projects are done in 3–5 business days. Growth projects in 7–10 days. Enterprise timelines are scoped together based on complexity." },
   { q: "What industries do you work with?", a: "Every industry. We've built for e-commerce, SaaS, health & wellness, finance, hospitality, fitness, education and more. If there's a business, we can AI-power it." },
   { q: "Do I need to be technical to work with you?", a: "Not at all. You just need to know what outcome you want. We handle everything from strategy to delivery." },
@@ -61,13 +61,13 @@ export function AboutPage() {
           <div className="mx-auto w-full max-w-[1100px] px-6 py-16">
             <div className="grid lg:grid-cols-2 gap-16 items-center">
               <motion.div initial={{ opacity: 0, x: -30 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.7 }}>
-                <span className="font-inter font-semibold text-[11px] uppercase tracking-[0.2em] text-white/40 block mb-6">About VIPER</span>
+                <span className="font-inter font-semibold text-[11px] uppercase tracking-[0.2em] text-white/40 block mb-6">About FlowForge AI</span>
                 <h1 className="font-grotesk font-bold text-[60px] leading-[1.0] tracking-[-0.02em] mb-6">
                   The AI Agency<br />
                   <span className="text-white/60">Built for Speed.</span>
                 </h1>
                 <p className="font-inter text-[16px] leading-relaxed text-muted-foreground mb-6 max-w-md">
-                  VIPER is a next-generation AI agency founded on one belief: every business deserves to operate at machine speed. We build the systems, sites, apps, and content that make that possible.
+                  FlowForge AI is a next-generation AI agency founded on one belief: every business deserves to operate at machine speed. We build the systems, sites, apps, and content that make that possible.
                 </p>
                 <p className="font-inter text-[15px] leading-relaxed text-muted-foreground mb-10 max-w-md">
                   No bloated retainers. No unnecessary fluff. Just AI-powered work that scales — delivered fast.
@@ -87,7 +87,7 @@ export function AboutPage() {
               </motion.div>
               <motion.div initial={{ opacity: 0, x: 30 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.8, delay: 0.15 }} className="relative">
                 <div className="relative rounded-2xl overflow-hidden aspect-[4/5] bg-card border border-border/30 max-w-md mx-auto">
-                  <img src={profilePhoto} alt="VIPER AI Agency — Founder" className="w-full h-full object-cover object-top" />
+                  <img src={profilePhoto} alt="FlowForge AI AI Agency — Founder" className="w-full h-full object-cover object-top" />
                   <div className="absolute inset-0 bg-gradient-to-t from-background/50 via-transparent to-transparent" />
                   <div className="absolute bottom-6 left-6 right-6">
                     <div className="bg-card/85 backdrop-blur-md rounded-xl p-5 border border-border/50">
@@ -177,7 +177,7 @@ export function AboutPage() {
             <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }} className="mb-14">
               <p className="font-inter font-semibold text-[11px] uppercase tracking-[0.2em] text-white/40 mb-3">Client Reviews</p>
               <h2 className="font-grotesk font-semibold text-[42px] leading-[1.05] tracking-tight">What Clients<br />Say!</h2>
-              <p className="font-inter text-[15px] text-muted-foreground mt-4 max-w-md leading-relaxed">Real feedback from people who trusted VIPER to build their systems, sites, apps, and content.</p>
+              <p className="font-inter text-[15px] text-muted-foreground mt-4 max-w-md leading-relaxed">Real feedback from people who trusted FlowForge AI to build their systems, sites, apps, and content.</p>
             </motion.div>
             <div className="grid md:grid-cols-3 gap-6">
               {testimonials.map((t, i) => (

@@ -8,7 +8,7 @@ const testimonials = [
     id: 1,
     name: "Jordan Miles",
     title: "Founder of LaunchLab",
-    quote: "VIPER automated our entire onboarding flow in under a week. What used to take hours now runs on autopilot. Genuinely transformative.",
+    quote: "FlowForge AI automated our entire onboarding flow in under a week. What used to take hours now runs on autopilot. Genuinely transformative.",
     stars: 5,
     avatar: "https://images.unsplash.com/photo-1560250097-0b93528c311a?w=100&h=100&fit=crop",
   },
@@ -32,7 +32,7 @@ const testimonials = [
     id: 4,
     name: "Simone Blake",
     title: "Founder, PulseKit",
-    quote: "We had an idea on Monday. VIPER shipped a working AI-powered MVP by Thursday. Absolutely unmatched speed and quality.",
+    quote: "We had an idea on Monday. FlowForge AI shipped a working AI-powered MVP by Thursday. Absolutely unmatched speed and quality.",
     stars: 5,
     avatar: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=100&h=100&fit=crop",
   },
@@ -94,14 +94,14 @@ export function Testimonials() {
       <div className="mx-auto w-full max-w-[1100px] px-6">
         <div className="grid w-full min-h-[420px] lg:grid-cols-2">
           <div className="relative min-h-[320px] overflow-hidden rounded-2xl">
-            <img src="/photo-reviews.png" alt="Client reviews for Viper AI Agency" loading="lazy" className="h-full w-full rounded-2xl object-cover object-center grayscale contrast-[1.1] brightness-[0.82]" />
+            <img src="/photo-reviews.png" alt="Client reviews for FlowForge AI AI Agency" loading="lazy" className="h-full w-full rounded-2xl object-cover object-center grayscale contrast-[1.1] brightness-[0.82]" />
             <div className="absolute inset-0 rounded-2xl bg-black/35" />
           </div>
           <div className="flex flex-col justify-center px-6 py-16 lg:px-10 xl:px-14">
             <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>
               <p className="mb-3 font-inter text-[11px] font-semibold uppercase tracking-[0.2em] text-white/40">Reviews</p>
               <h2 className="mb-4 font-grotesk text-[46px] font-semibold leading-[1.02] tracking-tight">Client Reviews</h2>
-              <p className="mb-8 max-w-[340px] font-inter text-[14px] leading-relaxed text-muted-foreground">Real results from clients who trusted VIPER to build their AI systems, sites and automations.</p>
+              <p className="mb-8 max-w-[340px] font-inter text-[14px] leading-relaxed text-muted-foreground">Real results from clients who trusted FlowForge AI to build their AI systems, sites and automations.</p>
               <div className="flex flex-wrap gap-3">
                 <Link href="/contact"><span aria-label="Book a Free Call" className="inline-flex cursor-pointer items-center gap-2 rounded-full bg-white px-5 py-2.5 font-inter text-[13px] font-semibold text-black transition-colors hover:bg-white/90">Book a Free Call</span></Link>
                 <Link href="/services"><span aria-label="See Services" className="inline-flex cursor-pointer items-center gap-2 rounded-full border border-white/20 px-5 py-2.5 font-inter text-[13px] font-semibold text-white/70 transition-colors hover:border-white/50 hover:text-white">See Services <ArrowRight size={13} /></span></Link>
