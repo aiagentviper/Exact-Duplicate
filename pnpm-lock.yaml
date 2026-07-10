@@ -101,10 +101,10 @@ importers:
   artifacts/api-server:
     dependencies:
       '@workspace/api-zod':
-        specifier: workspace:*
+        specifier: file:../../lib/api-zod
         version: link:../../lib/api-zod
       '@workspace/db':
-        specifier: workspace:*
+        specifier: file:../../lib/db
         version: link:../../lib/db
       cookie-parser:
         specifier: ^1.4.7
@@ -454,7 +454,7 @@ importers:
         specifier: ^5.0.4
         version: 5.1.4(vite@7.3.2(@types/node@25.3.5)(jiti@2.6.1)(lightningcss@1.31.1)(tsx@4.21.0)(yaml@2.8.2))
       '@workspace/api-client-react':
-        specifier: workspace:*
+        specifier: file:../../lib/api-client-react
         version: link:../../lib/api-client-react
       class-variance-authority:
         specifier: ^0.7.1
