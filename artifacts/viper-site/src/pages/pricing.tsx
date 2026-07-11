@@ -97,7 +97,7 @@ const faqs = [
 
 export function PricingPage() {
   return (
-    <div className="bg-black min-h-screen text-foreground dark">
+    <div className="bg-black min-h-screen text-foreground">
       <Navigation />
       <main className="pt-24">
         <section className="border-b border-border/40 py-20 text-center">

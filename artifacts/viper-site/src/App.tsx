@@ -11,6 +11,7 @@ import { PricingPage } from "@/pages/pricing";
 import { BlogPage } from "@/pages/blog";
 import { ContactPage } from "@/pages/contact";
 import { useState } from "react";
+import { ThemeProvider } from "@/contexts/theme";
 
 const queryClient = new QueryClient();
 
@@ -78,15 +79,17 @@ function Router() {
 
 function App() {
   return (
-    <QueryClientProvider client={queryClient}>
-      <TooltipProvider>
-        <WouterRouter base={import.meta.env.BASE_URL.replace(/\/$/, "")}>
-          <Router />
-        </WouterRouter>
-        <Toaster />
-        <WhatsAppWidget />
-      </TooltipProvider>
-    </QueryClientProvider>
+    <ThemeProvider>
+      <QueryClientProvider client={queryClient}>
+        <TooltipProvider>
+          <WouterRouter base={import.meta.env.BASE_URL.replace(/\/$/, "")}>
+            <Router />
+          </WouterRouter>
+          <Toaster />
+          <WhatsAppWidget />
+        </TooltipProvider>
+      </QueryClientProvider>
+    </ThemeProvider>
   );
 }
 

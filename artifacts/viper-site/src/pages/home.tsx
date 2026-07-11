@@ -68,7 +68,7 @@ function ProcessCard({ num, title, text, icon: Icon }: { num: string; title: str
 
 export function HomePage() {
   return (
-    <div className="min-h-screen bg-black text-foreground dark">
+    <div className="min-h-screen bg-black text-foreground">
       <Navigation />
       <main>
         <Hero />

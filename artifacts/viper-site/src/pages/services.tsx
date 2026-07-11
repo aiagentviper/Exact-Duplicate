@@ -109,7 +109,7 @@ const stats = [
 
 export function ServicesPage() {
   return (
-    <div className="bg-black min-h-screen text-foreground dark">
+    <div className="bg-black min-h-screen text-foreground">
       <Navigation />
       <main className="pt-24">
         <section className="py-20 text-center">

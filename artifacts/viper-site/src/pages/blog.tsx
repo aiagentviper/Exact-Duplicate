@@ -74,7 +74,7 @@ const insights = [
 
 export function BlogPage() {
   return (
-    <div className="bg-black min-h-screen text-foreground dark">
+    <div className="bg-black min-h-screen text-foreground">
       <Navigation />
       <main className="pt-24">
 

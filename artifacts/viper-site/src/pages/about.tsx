@@ -54,7 +54,7 @@ const faqs = [
 
 export function AboutPage() {
   return (
-    <div className="bg-black min-h-screen text-foreground dark">
+    <div className="bg-black min-h-screen text-foreground">
       <Navigation />
       <main className="pt-20">
         <section className="min-h-[90vh] flex items-center border-b border-border/40">
