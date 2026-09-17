@@ -7,7 +7,7 @@ import { faqItems, lastUpdated } from "@/data/faq";
 
 const featured = {
   id: 1,
-  image: "/portfolio/automation-flow.jpg",
+  image: "/blog/stock/stock-31.jpg",
   tag: "AI Automation",
   date: "May 10, 2025",
   title: "How AI Agents Are Replacing Entire Business Departments",
@@ -17,7 +17,7 @@ const featured = {
 const posts = [
   {
     id: 2,
-    image: "/portfolio/watch-website.jpg",
+    image: "/blog/stock/stock-32.jpg",
     tag: "Vibe Coding",
     date: "Apr 22, 2025",
     title: "What Is Vibe Coding — And Why It's Changing How We Build Software",
@@ -25,7 +25,7 @@ const posts = [
   },
   {
     id: 3,
-    image: "/portfolio/car-rental-site.jpg",
+    image: "/blog/stock/stock-33.jpg",
     tag: "AI Video",
     date: "Mar 30, 2025",
     title: "How We Produced 30 Videos in One Day Using AI Tools",
@@ -33,7 +33,7 @@ const posts = [
   },
   {
     id: 4,
-    image: "/portfolio/crypto-dashboard.jpg",
+    image: "/blog/stock/stock-34.jpg",
     tag: "AI Website",
     date: "Mar 10, 2025",
     title: "Why Every Business Needs an AI-Powered Website in 2025",
@@ -41,7 +41,7 @@ const posts = [
   },
   {
     id: 5,
-    image: "/portfolio/smart-home-site.jpg",
+    image: "/blog/stock/stock-35.jpg",
     tag: "AI Strategy",
     date: "Feb 18, 2025",
     title: "The 6 AI Tools We Use on Every Single Project at FlowForge AI",
@@ -49,7 +49,7 @@ const posts = [
   },
   {
     id: 6,
-    image: "/portfolio/omega-website.jpg",
+    image: "/blog/stock/stock-36.jpg",
     tag: "AI Automation",
     date: "Jan 25, 2025",
     title: "5 Automation Workflows Every Business Should Have Running Right Now",
@@ -57,7 +57,7 @@ const posts = [
   },
   {
     id: 7,
-    image: "/portfolio/email-sequences.jpg",
+    image: "/blog/stock/stock-37.jpg",
     tag: "AI Apps",
     date: "Jan 5, 2025",
     title: "From Idea to App in 48 Hours: Our AI-Powered Development Process",
@@ -68,7 +68,7 @@ const posts = [
 const faqPosts = faqItems.map((item, index) => ({
   id: 100 + index,
   slug: item.id,
-  image: ["/portfolio/automation-flow.jpg", "/portfolio/watch-website.jpg", "/portfolio/car-rental-site.jpg", "/portfolio/crypto-dashboard.jpg"][index % 4],
+  image: `/blog/stock/stock-${String(index + 1).padStart(2, "0")}.jpg`,
   tag: item.category,
   date: lastUpdated,
   title: item.question,
@@ -111,7 +111,7 @@ export function BlogPage() {
               className="grid lg:grid-cols-2 gap-10 items-center group cursor-pointer">
               <div className="aspect-[16/10] overflow-hidden rounded-2xl border border-border/40 bg-card">
                 <img src={featured.image} alt={featured.title} className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-                  onError={(e) => { (e.target as HTMLImageElement).src = "/portfolio/automation-flow.jpg"; }} />
+                  onError={(e) => { (e.target as HTMLImageElement).src = "/blog/stock/stock-01.jpg"; }} />
               </div>
               <div>
                 <div className="flex items-center gap-3 mb-5">
@@ -145,7 +145,7 @@ export function BlogPage() {
                   className="glow-card group">
                   <div className="aspect-[16/10] overflow-hidden rounded-2xl mb-5 border border-border/40 bg-card">
                     <img src={post.image} alt={post.title} className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
-                      onError={(e) => { (e.target as HTMLImageElement).src = "/portfolio/automation-flow.jpg"; }} />
+                      onError={(e) => { (e.target as HTMLImageElement).src = "/blog/stock/stock-01.jpg"; }} />
                   </div>
                   <div className="flex items-center gap-3 mb-3">
                     <span className="font-inter font-semibold text-[11px] uppercase tracking-[0.15em] border border-border/50 rounded-full px-3 py-1 text-muted-foreground">{post.tag}</span>

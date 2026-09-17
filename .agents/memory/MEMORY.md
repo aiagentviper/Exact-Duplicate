@@ -1,0 +1,1 @@
+- [Local stock imagery](stock-images.md) — verify and store editorial images locally before mapping them to article cards.
