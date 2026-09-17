@@ -3,6 +3,7 @@ import { Link } from "wouter";
 import { Navigation } from "@/components/sections/Navigation";
 import { Footer } from "@/components/sections/Footer";
 import { ArrowRight } from "lucide-react";
+import { faqItems, lastUpdated } from "@/data/faq";
 
 const featured = {
   id: 1,
@@ -64,7 +65,17 @@ const posts = [
   },
 ];
 
-const categories = ["All", "AI Automation", "AI Website", "AI Apps", "AI Video", "Vibe Coding", "AI Strategy"];
+const faqPosts = faqItems.map((item, index) => ({
+  id: 100 + index,
+  slug: item.id,
+  image: ["/portfolio/automation-flow.jpg", "/portfolio/watch-website.jpg", "/portfolio/car-rental-site.jpg", "/portfolio/crypto-dashboard.jpg"][index % 4],
+  tag: item.category,
+  date: lastUpdated,
+  title: item.question,
+  excerpt: item.excerpt,
+}));
+
+const categories = ["All", "AI Automation", "AI Website", "AI Apps", "AI Video", "Vibe Coding", "AI Strategy", ...new Set(faqItems.map((item) => item.category))];
 
 const insights = [
   { stat: "10x", label: "Faster than traditional development" },
@@ -88,6 +99,7 @@ export function BlogPage() {
             <p className="font-inter text-[16px] text-muted-foreground max-w-xl mx-auto leading-relaxed">
               Strategies, breakdowns & insights on AI automation, web, apps, video & vibe coding — written by practitioners, not theorists.
             </p>
+            <p className="mt-5 font-inter text-[12px] text-muted-foreground">Last updated: {lastUpdated}</p>
           </motion.div>
         </section>
 
@@ -127,10 +139,10 @@ export function BlogPage() {
               ))}
             </div>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {posts.map((post, i) => (
+              {[...posts, ...faqPosts].map((post, i) => (
                 <div key={post.id} className="glow-parent">
                 <motion.article initial={{ opacity: 0, y: 24 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.5, delay: i * 0.08 }}
-                  className="glow-card group cursor-pointer">
+                  className="glow-card group">
                   <div className="aspect-[16/10] overflow-hidden rounded-2xl mb-5 border border-border/40 bg-card">
                     <img src={post.image} alt={post.title} className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                       onError={(e) => { (e.target as HTMLImageElement).src = "/portfolio/automation-flow.jpg"; }} />
@@ -141,9 +153,17 @@ export function BlogPage() {
                   </div>
                   <h2 className="font-grotesk font-semibold text-[18px] leading-[1.25] mb-2 group-hover:text-foreground/70 transition-colors">{post.title}</h2>
                   <p className="font-inter text-[14px] text-muted-foreground mb-4 line-clamp-2">{post.excerpt}</p>
-                  <span className="font-inter font-medium text-[13px] text-muted-foreground group-hover:text-white transition-colors flex items-center gap-1">
-                    Read Article <ArrowRight size={12} className="group-hover:translate-x-1 transition-transform" />
-                  </span>
+                   {"slug" in post ? (
+                     <Link href={`/blog/${post.slug}`}>
+                       <span className="font-inter font-medium text-[13px] text-muted-foreground group-hover:text-white transition-colors flex items-center gap-1 cursor-pointer">
+                         Read Article <ArrowRight size={12} className="group-hover:translate-x-1 transition-transform" />
+                       </span>
+                     </Link>
+                   ) : (
+                     <span className="font-inter font-medium text-[13px] text-muted-foreground group-hover:text-white transition-colors flex items-center gap-1">
+                       Read Article <ArrowRight size={12} className="group-hover:translate-x-1 transition-transform" />
+                     </span>
+                   )}
                 </motion.article>
                 </div>
               ))}

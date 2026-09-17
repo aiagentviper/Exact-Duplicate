@@ -9,6 +9,8 @@ import { WorkPage } from "@/pages/work";
 import { ServicesPage } from "@/pages/services";
 import { PricingPage } from "@/pages/pricing";
 import { BlogPage } from "@/pages/blog";
+import { BlogPostPage } from "@/pages/blog-post";
+import { FaqPage } from "@/pages/faq";
 import { ContactPage } from "@/pages/contact";
 import { useState } from "react";
 import { ThemeProvider } from "@/contexts/theme";
@@ -70,6 +72,8 @@ function Router() {
       <Route path="/work" component={WorkPage} />
       <Route path="/services" component={ServicesPage} />
       <Route path="/pricing" component={PricingPage} />
+      <Route path="/faq" component={FaqPage} />
+      <Route path="/blog/:slug" component={BlogPostPage} />
       <Route path="/blog" component={BlogPage} />
       <Route path="/contact" component={ContactPage} />
       <Route component={NotFound} />
