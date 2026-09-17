@@ -7,19 +7,28 @@ interface ThemeContextValue {
   toggleTheme: () => void;
 }
 
+function getInitialTheme(): Theme {
+  try {
+    const stored = localStorage.getItem("theme");
+    return stored === "light" || stored === "dark" ? stored : "dark";
+  } catch {
+    return "dark";
+  }
+}
+
+const initialTheme = getInitialTheme();
+
+if (typeof document !== "undefined") {
+  document.documentElement.classList.toggle("dark", initialTheme === "dark");
+}
+
 const ThemeContext = createContext<ThemeContextValue>({
   theme: "dark",
   toggleTheme: () => {},
 });
 
 export function ThemeProvider({ children }: { children: React.ReactNode }) {
-  const [theme, setTheme] = useState<Theme>(() => {
-    try {
-      return (localStorage.getItem("theme") as Theme) ?? "dark";
-    } catch {
-      return "dark";
-    }
-  });
+  const [theme, setTheme] = useState<Theme>(initialTheme);
 
   useEffect(() => {
     const root = document.documentElement;

@@ -411,3 +411,234 @@ html {
   50%  { border-radius: 62% 38% 37% 63% / 56% 59% 41% 44%; }
   100% { border-radius: 38% 62% 63% 37% / 41% 44% 56% 59%; }
 }
+
+/* Theme-aware colors for the existing site surfaces. These selectors keep the
+ * established layout and component markup intact while replacing only the
+ * fixed black/white presentation colors when light mode is active. */
+html:not(.dark) body {
+  background-color: hsl(var(--background));
+}
+
+html:not(.dark) [class~="bg-black"] {
+  background-color: hsl(var(--background)) !important;
+}
+
+html:not(.dark) [class~="bg-zinc-900/50"],
+html:not(.dark) [class~="bg-[#0b0b0b]"] {
+  background-color: hsl(var(--card)) !important;
+}
+
+html:not(.dark) [class~="bg-white"] {
+  background-color: hsl(var(--primary)) !important;
+}
+
+html:not(.dark) [class~="bg-white/5"] {
+  background-color: hsl(var(--foreground) / 0.05) !important;
+}
+
+html:not(.dark) [class~="bg-white/10"] {
+  background-color: hsl(var(--foreground) / 0.1) !important;
+}
+
+html:not(.dark) [class~="bg-white/40"] {
+  background-color: hsl(var(--foreground) / 0.4) !important;
+}
+
+html:not(.dark) [class~="bg-white/60"] {
+  background-color: hsl(var(--foreground) / 0.6) !important;
+}
+
+html:not(.dark) [class~="bg-white/90"] {
+  background-color: hsl(var(--primary) / 0.9) !important;
+}
+
+html:not(.dark) [class~="text-white"] {
+  color: hsl(var(--foreground)) !important;
+}
+
+html:not(.dark) [class~="text-white/30"] {
+  color: hsl(var(--foreground) / 0.3) !important;
+}
+
+html:not(.dark) [class~="text-white/40"] {
+  color: hsl(var(--foreground) / 0.4) !important;
+}
+
+html:not(.dark) [class~="text-white/50"] {
+  color: hsl(var(--foreground) / 0.5) !important;
+}
+
+html:not(.dark) [class~="text-white/55"] {
+  color: hsl(var(--foreground) / 0.55) !important;
+}
+
+html:not(.dark) [class~="text-white/60"] {
+  color: hsl(var(--foreground) / 0.6) !important;
+}
+
+html:not(.dark) [class~="text-white/65"] {
+  color: hsl(var(--foreground) / 0.65) !important;
+}
+
+html:not(.dark) [class~="text-white/70"] {
+  color: hsl(var(--foreground) / 0.7) !important;
+}
+
+html:not(.dark) [class~="text-white/80"] {
+  color: hsl(var(--foreground) / 0.8) !important;
+}
+
+html:not(.dark) [class~="text-black"] {
+  color: hsl(var(--primary-foreground)) !important;
+}
+
+html:not(.dark) [class~="border-white"] {
+  border-color: hsl(var(--border)) !important;
+}
+
+html:not(.dark) [class~="border-white/10"] {
+  border-color: hsl(var(--border) / 0.1) !important;
+}
+
+html:not(.dark) [class~="border-white/15"] {
+  border-color: hsl(var(--border) / 0.15) !important;
+}
+
+html:not(.dark) [class~="border-white/20"] {
+  border-color: hsl(var(--border) / 0.2) !important;
+}
+
+html:not(.dark) [class~="border-white/30"] {
+  border-color: hsl(var(--border) / 0.3) !important;
+}
+
+html:not(.dark) [class~="border-white/40"] {
+  border-color: hsl(var(--border) / 0.4) !important;
+}
+
+html:not(.dark) [class~="border-white/50"] {
+  border-color: hsl(var(--border) / 0.5) !important;
+}
+
+html:not(.dark) [class~="border-white/60"] {
+  border-color: hsl(var(--border) / 0.6) !important;
+}
+
+/* Keep the cinematic hero readable over its unchanged image and overlays. */
+html:not(.dark) .relative.w-full.h-screen [class~="text-white"] {
+  color: #fff !important;
+}
+
+html:not(.dark) .relative.w-full.h-screen [class~="text-white/30"] {
+  color: rgb(255 255 255 / 0.3) !important;
+}
+
+html:not(.dark) .relative.w-full.h-screen [class~="text-white/55"] {
+  color: rgb(255 255 255 / 0.55) !important;
+}
+
+html:not(.dark) .relative.w-full.h-screen [class~="text-white/60"] {
+  color: rgb(255 255 255 / 0.6) !important;
+}
+
+html:not(.dark) .relative.w-full.h-screen [class~="text-white/70"] {
+  color: rgb(255 255 255 / 0.7) !important;
+}
+
+html:not(.dark) .relative.w-full.h-screen [class~="text-white/80"] {
+  color: rgb(255 255 255 / 0.8) !important;
+}
+
+html:not(.dark) .relative.w-full.h-screen [class~="text-black"] {
+  color: #000 !important;
+}
+
+html:not(.dark) .relative.w-full.h-screen [class~="bg-white"] {
+  background-color: #fff !important;
+}
+
+/* Navigation and footer use semantic theme variables instead of fixed colors. */
+.nav-scrolled-bg,
+.nav-mobile-bg {
+  background-color: hsl(var(--background) / 0.88);
+}
+
+.nav-cta {
+  background-color: hsl(var(--primary));
+  color: hsl(var(--primary-foreground));
+}
+
+.nav-cta:hover {
+  background-color: hsl(var(--primary) / 0.9);
+}
+
+.footer-bg {
+  background-color: hsl(var(--background));
+  color: hsl(var(--foreground));
+}
+
+.footer-divider,
+.footer-bottom-border {
+  border-color: hsl(var(--border) / 0.4);
+}
+
+.footer-divider {
+  border-bottom: 1px solid hsl(var(--border) / 0.4);
+}
+
+.footer-bottom-border {
+  border-top: 1px solid hsl(var(--border) / 0.4);
+}
+
+.footer-heading,
+.footer-text {
+  color: hsl(var(--foreground));
+}
+
+.footer-heading-dim,
+.footer-watermark {
+  color: hsl(var(--muted-foreground) / 0.32);
+}
+
+.footer-subtle-text,
+.footer-label-text,
+.footer-bottom-text {
+  color: hsl(var(--muted-foreground));
+}
+
+.footer-muted-text {
+  color: hsl(var(--muted-foreground) / 0.8);
+}
+
+.footer-link-text {
+  color: hsl(var(--muted-foreground));
+}
+
+.footer-link-text:hover,
+.footer-link-hover:hover,
+.footer-schedule-link:hover {
+  color: hsl(var(--foreground));
+}
+
+.footer-schedule-link {
+  color: hsl(var(--primary));
+}
+
+.footer-cta-primary {
+  background-color: hsl(var(--primary));
+  color: hsl(var(--primary-foreground));
+}
+
+.footer-cta-primary:hover {
+  background-color: hsl(var(--primary) / 0.9);
+}
+
+.footer-cta-secondary {
+  border: 1px solid hsl(var(--border) / 0.6);
+  color: hsl(var(--foreground));
+}
+
+.footer-cta-secondary:hover {
+  border-color: hsl(var(--border));
+  background-color: hsl(var(--foreground) / 0.06);
+}
