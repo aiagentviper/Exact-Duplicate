@@ -1,0 +1,93 @@
+# FlowForge AI — Implementation Brief for Replit AI
+
+Paste this whole thing into Replit's AI Agent/Assistant on the flowforgeai.flowforge.workers.dev project.
+
+## ⚠️ HARD CONSTRAINT — READ FIRST
+Do **NOT** touch, edit, redesign, restyle, or refactor any existing page, component, route, layout, or file on this site. No changes to the homepage, existing navigation, existing styles, existing content, or existing code. This is **additive only**:
+- Only **create new pages/files** (the FAQ page, the 4 new landing pages, the new blog posts).
+- The only edits allowed to existing files are the **minimum necessary** to (a) add nav/footer links to the new pages, (b) add the new pages to the sitemap, and (c) confirm robots.txt still allows the AI crawlers listed in Step 4 — nothing else in those files should change.
+- Do not change the existing blog page's design, template, or existing posts — only add new posts to it using its current format/layout.
+- If something is ambiguous, default to creating a new file/page rather than modifying an existing one, and ask before doing anything broader than that.
+
+## Context (don't skip)
+This site currently ranks 8th of 30 brands for AI visibility (3.3%) because AI engines (ChatGPT, Gemini, Perplexity, Google AI, Claude) can't find direct, well-structured answers to the questions our buyers actually ask them. The fix is: add an FAQ page + supporting blog posts that answer these questions in the exact format AI engines like to quote.
+
+## Formatting rule for EVERY answer below (apply this to all 30)
+1. Answer the question directly in the **first 60–100 words** — no throat-clearing intro.
+2. If the question involves alternatives/competitors (Webflow, Framer, Zapier, Make, Canva, Runway, InVideo AI, etc.), **name them honestly** — don't dodge the comparison.
+3. Include a small **comparison table** (features/price/best-for) wherever the question implies "vs" or "best tool for X".
+4. Show a **visible "Last updated: [date]"** line near the top of each page/answer.
+5. Use the exact question as an `<h2>` or `<h3>` heading — verbatim — so it matches how people phrase it to AI engines.
+6. Add FAQPage schema (JSON-LD) for every Q&A block.
+
+## Step 1 — Build `/faq` page
+Create a single FAQ page at `/faq` with all 30 questions below as expandable accordion items, grouped by category. Each answer follows the formatting rule above. Add FAQPage schema markup for the whole page.
+
+## Step 2 — Build 4 dedicated landing pages (highest priority per the audit)
+These categories have zero visibility and need their own page, not just an FAQ entry:
+- `/ai-powered-websites/` — covers all "AI-Powered Websites" questions, mention Webflow, Framer, Wix ADI by name, include comparison table
+- `/ai-video-production/` — covers "AI Video Production" questions, mention Canva, InVideo AI, Runway by name, comparison table
+- `/brand-design-systems/` — covers "Brand Design Systems" questions, mention Design Cafe Agency, Magic Studio, Progression Agency, comparison table
+- `/content-strategy/` — covers "Content Strategy" questions
+
+Each landing page should embed its relevant FAQ questions from Step 1 (don't duplicate content — pull the same Q&A blocks in).
+
+## Step 3 — Turn each question into a short blog post
+On `/blog`, create one short post per question (or group 2–3 tightly related ones into one post). Title = the question, verbatim. Interlink each post to the relevant landing page from Step 2 and to `/faq`.
+
+## The 30 questions (grouped by category)
+
+### Chatbot Development
+- How much does it cost to build an AI chatbot for customer support?
+- How do I set up lead qualification with an AI agent?
+- What's the cheapest way to build an AI agent for sales?
+- Can a chatbot really handle complex customer support issues?
+- How do AI agents improve customer support response times?
+
+### Workflow Automation
+- What's the best no-code tool to automate my sales pipeline?
+- What's the ROI on automating repetitive business tasks?
+- What's the fastest way to launch an MVP with AI? *(overlaps MVP Development below)*
+- Best alternative to Zapier for workflow automation?
+- How much time does workflow automation actually save?
+- What skills do I need to manage AI automation workflows?
+- FlowForge vs Make: which is better for complex workflows? *(you already win this one — keep it fresh)*
+
+### MVP Development
+- Can I build an MVP with AI in under three months?
+- What's the fastest way to launch an MVP with AI?
+
+### AI Video Production
+- Best AI tools for generating video ads on a budget?
+- What AI video tools work best for social media ads?
+- Best practices for AI-generated video content quality?
+
+### Brand Design Systems
+- What does a modern brand design system actually include?
+- How do I design a UI system that scales with my product?
+- What does professional brand design actually cost?
+
+### No-Code / CRM Integration
+- How do I connect my CRM to marketing automation without code?
+- How do I connect Zapier workflows to my CRM system?
+- What integrations do I need for a complete CRM automation?
+
+### AI-Powered Websites
+- Can AI websites actually convert better than traditional ones?
+- How long to build a personalized AI website from scratch?
+- Can I build a personalized website without coding skills?
+- How do I choose between Webflow and Framer for AI sites?
+
+### Content Strategy
+- How do I create a content strategy with AI tools?
+- How do I measure content performance with AI analytics?
+- Can AI generate enough social content for daily posting?
+
+## Step 4 — Technical/agent-readiness fixes (from the "Agent readiness" score of 13/21)
+- Confirm robots.txt / crawl access allows GPTBot, OAI-SearchBot, ChatGPT-User, ClaudeBot, Claude-User, PerplexityBot, Google-Extended, Applebot-Extended, CCBot (audit shows 9/9 currently passing — just don't break this).
+- Ensure content accessibility and bot access control stay at 100% (per report, these sections were already green — re-check after redesign).
+- Add clear, crawlable last-updated timestamps site-wide, not just on new pages.
+
+## Step 5 — After deploy
+- Submit updated sitemap.
+- Internally link every new FAQ/blog page from the homepage and from each other (topic clusters help AI engines understand the site).
