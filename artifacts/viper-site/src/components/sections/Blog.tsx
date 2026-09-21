@@ -47,7 +47,7 @@ export function Blog() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: i * 0.1 }}
-            className="group cursor-pointer"
+            className="pixel-card group cursor-pointer"
           >
             <div className="aspect-[16/9] overflow-hidden rounded-xl mb-6 border border-border/50">
               <img 

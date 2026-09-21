@@ -85,7 +85,7 @@ export function BlogPostPage() {
             )}
           </div>
 
-          <div className="mt-14 rounded-2xl border border-border/50 bg-card/30 p-7">
+          <div className="pixel-card mt-14 rounded-2xl border border-border/50 bg-card/30 p-7">
             <p className="mb-3 font-inter text-[10px] font-semibold uppercase tracking-[0.2em] text-white/40">More answers</p>
             <div className="flex flex-col gap-4">
               {related.map((item) => (

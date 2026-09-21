@@ -86,11 +86,11 @@ export function AboutPage() {
                 </Link>
               </motion.div>
               <motion.div initial={{ opacity: 0, x: 30 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.8, delay: 0.15 }} className="relative">
-                <div className="relative rounded-2xl overflow-hidden aspect-[4/5] bg-card border border-border/30 max-w-md mx-auto">
+                <div className="pixel-card relative rounded-2xl overflow-hidden aspect-[4/5] bg-card border border-border/30 max-w-md mx-auto">
                   <img src={profilePhoto} alt="FlowForge AI AI Agency — Founder" className="w-full h-full object-cover object-top" />
                   <div className="absolute inset-0 bg-gradient-to-t from-background/50 via-transparent to-transparent" />
                   <div className="absolute bottom-6 left-6 right-6">
-                    <div className="bg-card/85 backdrop-blur-md rounded-xl p-5 border border-border/50">
+                    <div className="pixel-card bg-card/85 backdrop-blur-md rounded-xl p-5 border border-border/50">
                       <div className="flex items-center gap-2 mb-1">
                         <span className="w-2 h-2 rounded-full bg-white/60 animate-pulse" />
                         <span className="font-inter text-[11px] uppercase tracking-[0.2em] text-white/50 font-semibold">Available for Projects</span>
@@ -99,7 +99,7 @@ export function AboutPage() {
                     </div>
                   </div>
                 </div>
-                <div className="absolute -top-4 -right-4 bg-card border border-border/50 rounded-2xl p-5 shadow-xl hidden lg:block">
+                <div className="pixel-card absolute -top-4 -right-4 bg-card border border-border/50 rounded-2xl p-5 shadow-xl hidden lg:block">
                   <div className="font-grotesk font-bold text-[36px] leading-none mb-1">50+</div>
                   <div className="font-inter text-[11px] uppercase tracking-[0.2em] text-white/40 font-semibold">Projects Shipped</div>
                 </div>
@@ -154,7 +154,7 @@ export function AboutPage() {
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
               {services.map((s, i) => (
                 <div key={s.num} className="glow-parent">
-                <motion.div initial={{ opacity: 0, y: 24 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.5, delay: i * 0.08 }} className="glow-card bg-card border border-border/40 rounded-2xl p-7 hover:border-border/70 transition-colors">
+                <motion.div initial={{ opacity: 0, y: 24 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.5, delay: i * 0.08 }} className="pixel-card glow-card bg-card border border-border/40 rounded-2xl p-7 hover:border-border/70 transition-colors">
                   <div className="w-10 h-10 rounded-xl bg-white/5 border border-white/15 flex items-center justify-center mb-5 text-white/60">{s.icon}</div>
                   <span className="font-inter font-semibold text-[11px] uppercase tracking-[0.2em] text-white/30 block mb-2">{s.num}</span>
                   <h3 className="font-grotesk font-semibold text-[20px] tracking-tight mb-2">{s.title}</h3>
@@ -182,7 +182,7 @@ export function AboutPage() {
             <div className="grid md:grid-cols-3 gap-6">
               {testimonials.map((t, i) => (
                 <div key={t.name} className="glow-parent">
-                <motion.div initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.5, delay: i * 0.1 }} className="glow-card bg-card border border-border/40 rounded-2xl p-8">
+                <motion.div initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.5, delay: i * 0.1 }} className="pixel-card glow-card bg-card border border-border/40 rounded-2xl p-8">
                   <div className="flex gap-0.5 mb-5">{Array.from({ length: t.stars }).map((_, j) => <span key={j} className="text-yellow-400 text-sm">★</span>)}</div>
                   <p className="font-inter text-[15px] leading-relaxed text-foreground/80 mb-8">"{t.quote}"</p>
                   <div className="flex items-center gap-3 border-t border-border/40 pt-6">
@@ -209,7 +209,7 @@ export function AboutPage() {
               <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6, delay: 0.1 }}>
                 <Accordion type="single" collapsible className="space-y-3">
                   {faqs.map((faq, i) => (
-                    <AccordionItem key={i} value={`faq-${i}`} className="border border-border/50 rounded-xl px-6 bg-card/30">
+                    <AccordionItem key={i} value={`faq-${i}`} className="pixel-card border border-border/50 rounded-xl px-6 bg-card/30">
                       <AccordionTrigger className="font-grotesk font-medium text-[15px] text-left hover:no-underline py-5">{faq.q}</AccordionTrigger>
                       <AccordionContent className="font-inter text-[14px] text-muted-foreground pb-5 leading-relaxed">{faq.a}</AccordionContent>
                     </AccordionItem>

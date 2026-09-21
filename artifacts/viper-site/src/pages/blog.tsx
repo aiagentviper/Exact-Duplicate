@@ -108,7 +108,7 @@ export function BlogPage() {
           <div className="container mx-auto px-6">
             <p className="font-inter font-semibold text-[11px] uppercase tracking-[0.2em] text-white/40 mb-8">Featured Article</p>
             <motion.div initial={{ opacity: 0, y: 24 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }}
-              className="grid lg:grid-cols-2 gap-10 items-center group cursor-pointer">
+              className="pixel-card grid lg:grid-cols-2 gap-10 items-center group cursor-pointer">
               <div className="aspect-[16/10] overflow-hidden rounded-2xl border border-border/40 bg-card">
                 <img src={featured.image} alt={featured.title} className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                   onError={(e) => { (e.target as HTMLImageElement).src = "/blog/stock/stock-01.jpg"; }} />
@@ -142,7 +142,7 @@ export function BlogPage() {
               {[...posts, ...faqPosts].map((post, i) => (
                 <div key={post.id} className="glow-parent">
                 <motion.article initial={{ opacity: 0, y: 24 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.5, delay: i * 0.08 }}
-                  className="glow-card group">
+                  className="pixel-card glow-card group">
                   <div className="aspect-[16/10] overflow-hidden rounded-2xl mb-5 border border-border/40 bg-card">
                     <img src={post.image} alt={post.title} className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                       onError={(e) => { (e.target as HTMLImageElement).src = "/blog/stock/stock-01.jpg"; }} />

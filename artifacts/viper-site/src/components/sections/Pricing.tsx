@@ -67,7 +67,7 @@ export function Pricing() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: i * 0.1 }}
-              className={`relative flex flex-col rounded-2xl border p-8 ${
+              className={`pixel-card relative flex flex-col rounded-2xl border p-8 ${
                 plan.popular
                   ? "border-white/30 bg-white/5"
                   : "border-border/40 bg-card/40 hover:border-border/70"

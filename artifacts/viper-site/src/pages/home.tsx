@@ -53,7 +53,7 @@ const featureCards = [
 
 function ProcessCard({ num, title, text, icon: Icon }: { num: string; title: string; text: string; icon: any }) {
   return (
-    <div className="relative rounded-[22px] border border-white/10 bg-[#0b0b0b] p-6">
+    <div className="pixel-card relative rounded-[22px] border border-white/10 bg-[#0b0b0b] p-6">
       <div className="mb-4 flex items-start justify-between gap-4">
         <div className="flex h-10 w-10 items-center justify-center rounded-full border border-white/10 bg-white/5 text-white/70">
           <Icon size={16} />

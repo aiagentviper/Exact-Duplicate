@@ -22,7 +22,7 @@ const rightColumn = [
 
 function GalleryImage({ title, img, ratio }: { title: string; img: string; ratio: string }) {
   return (
-    <div className={`relative w-full overflow-hidden rounded-2xl bg-zinc-900/50 ${ratio}`}>
+    <div className={`pixel-card relative w-full overflow-hidden rounded-2xl bg-zinc-900/50 ${ratio}`}>
       <img
         src={img}
         alt={title}

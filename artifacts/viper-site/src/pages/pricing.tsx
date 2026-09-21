@@ -120,7 +120,7 @@ export function PricingPage() {
               {plans.map((plan, i) => (
                 <div key={plan.name} className="glow-parent">
                 <motion.div initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.5, delay: i * 0.1 }}
-                  className={`glow-card relative flex flex-col p-8 rounded-2xl border ${plan.popular ? "bg-card border-white/30 shadow-2xl" : "bg-card/50 border-border/50"}`}>
+                  className={`pixel-card glow-card relative flex flex-col p-8 rounded-2xl border ${plan.popular ? "bg-card border-white/30 shadow-2xl" : "bg-card/50 border-border/50"}`}>
                   {plan.popular && (
                     <div className="absolute -top-4 left-1/2 -translate-x-1/2 bg-white text-black font-inter font-bold text-[11px] px-4 py-1.5 rounded-full uppercase tracking-[0.15em]">
                       Most Popular
@@ -186,7 +186,7 @@ export function PricingPage() {
             <div className="grid md:grid-cols-3 gap-6">
               {testimonials.map((t, i) => (
                 <motion.div key={t.name} initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.5, delay: i * 0.1 }}
-                  className="bg-card border border-border/40 rounded-2xl p-8">
+                  className="pixel-card bg-card border border-border/40 rounded-2xl p-8">
                   <div className="flex items-center justify-between mb-5">
                     <div className="flex gap-0.5">
                       {Array.from({ length: t.stars }).map((_, j) => <span key={j} className="text-yellow-400 text-sm">★</span>)}
@@ -228,7 +228,7 @@ export function PricingPage() {
               <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6, delay: 0.1 }}>
                 <Accordion type="single" collapsible className="space-y-3">
                   {faqs.map((faq, i) => (
-                    <AccordionItem key={i} value={`faq-${i}`} className="border border-border/50 rounded-xl px-6 bg-card/30">
+                    <AccordionItem key={i} value={`faq-${i}`} className="pixel-card border border-border/50 rounded-xl px-6 bg-card/30">
                       <AccordionTrigger className="font-grotesk font-medium text-[15px] text-left hover:no-underline py-5">{faq.q}</AccordionTrigger>
                       <AccordionContent className="font-inter text-[14px] text-muted-foreground pb-5 leading-relaxed">{faq.a}</AccordionContent>
                     </AccordionItem>

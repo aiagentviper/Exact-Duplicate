@@ -70,7 +70,7 @@ function WebsiteCard({ project }: { project: typeof websiteProjects[0] }) {
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
       transition={{ duration: 0.5 }}
-      className="group relative overflow-hidden rounded-2xl border border-border/40 bg-card block cursor-pointer hover:border-border/70 transition-colors"
+      className="pixel-card group relative overflow-hidden rounded-2xl border border-border/40 bg-card block cursor-pointer hover:border-border/70 transition-colors"
     >
       <div className="aspect-[4/3] overflow-hidden bg-card">
         <img src={project.image} alt={project.title} className="object-cover w-full h-full grayscale contrast-[1.15] brightness-[0.85] transition-transform duration-700 group-hover:scale-105 group-hover:grayscale-0"
@@ -99,7 +99,7 @@ function ImageCard({ project }: { project: { id: number; image: string; title: s
   return (
     <div className="glow-parent">
     <motion.div initial={{ opacity: 0, y: 24 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.5 }}
-      className="group relative overflow-hidden rounded-2xl border border-border/40 bg-card">
+      className="pixel-card group relative overflow-hidden rounded-2xl border border-border/40 bg-card">
       <div className="aspect-[4/3] overflow-hidden">
         <img src={project.image} alt={project.title} className="object-cover w-full h-full grayscale contrast-[1.15] brightness-[0.85] transition-transform duration-700 group-hover:scale-105 group-hover:grayscale-0"
           onError={(e) => { (e.target as HTMLImageElement).src = "/portfolio/automation-flow.jpg"; }} />
@@ -125,7 +125,7 @@ function VideoCard({ video, title }: { video: string; title: string }) {
   return (
     <div className="glow-parent">
     <motion.div initial={{ opacity: 0, y: 24 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.5 }}
-      className="glow-card rounded-2xl overflow-hidden border border-border/40 bg-card">
+      className="pixel-card glow-card rounded-2xl overflow-hidden border border-border/40 bg-card">
       <video src={video} controls muted loop playsInline className="w-full aspect-video object-cover" />
       <div className="p-5 border-t border-border/40">
         <p className="font-inter text-[11px] text-muted-foreground/60 mb-1">AI Video</p>

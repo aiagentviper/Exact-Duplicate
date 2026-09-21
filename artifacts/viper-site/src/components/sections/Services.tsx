@@ -48,7 +48,7 @@ export function Services() {
         <div className="grid w-full grid-cols-1 border-t border-border/40 md:grid-cols-2">
           {serviceCards.map((card, i) => (
             <motion.div key={card.title} initial={{ opacity: 0, y: 16 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.5, delay: i * 0.06 }} className={`border-border/40 p-5 transition-colors hover:bg-card/50 lg:p-6 ${i % 2 === 0 ? 'md:border-r' : ''} ${i < 2 ? 'border-b' : ''}`}>
-              <div className="h-full rounded-2xl border border-border/40 bg-zinc-900/50 p-5">
+              <div className="pixel-card h-full rounded-2xl border border-border/40 bg-zinc-900/50 p-5">
                 <span className="mb-3 block w-2 h-2 rounded-full bg-white/40"></span>
                 <h3 className="mb-2 font-grotesk text-[16px] font-semibold tracking-tight">{card.title}</h3>
                 <p className="max-w-[320px] font-inter text-[12px] leading-relaxed text-muted-foreground">{card.desc}</p>

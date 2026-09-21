@@ -16,6 +16,58 @@ html {
   will-change: transform;
 }
 
+/* Reusable responsive pixel-grid hover layer for card surfaces. The percentage
+ * background size keeps the dot density consistent across any card dimensions. */
+.pixel-card {
+  position: relative;
+  isolation: isolate;
+}
+
+.pixel-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 5;
+  pointer-events: none;
+  border-radius: inherit;
+  opacity: 0;
+  clip-path: inset(0);
+  background-image: radial-gradient(circle, rgb(255 255 255 / 0.22) 0 20%, transparent 24%);
+  background-position: 0 0;
+  background-size: 4% 4%;
+  background-repeat: repeat;
+  transition: opacity 0.35s ease-out;
+}
+
+.pixel-card:hover::before {
+  animation: pixel-card-reveal 0.65s ease-out forwards;
+}
+
+@keyframes pixel-card-reveal {
+  0% {
+    opacity: 0;
+    clip-path: inset(0 100% 0 0);
+  }
+  45% {
+    opacity: 0.24;
+  }
+  100% {
+    opacity: 0.24;
+    clip-path: inset(0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .pixel-card::before {
+    transition-duration: 0.01ms;
+  }
+
+  .pixel-card:hover::before {
+    animation: none;
+    opacity: 0.2;
+  }
+}
+
 @theme inline {
   --color-background: hsl(var(--background));
   --color-foreground: hsl(var(--foreground));

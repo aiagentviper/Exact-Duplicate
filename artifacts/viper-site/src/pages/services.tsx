@@ -166,7 +166,7 @@ export function ServicesPage() {
                 </Link>
               </div>
 
-              <div className={`${i % 2 === 1 ? "lg:col-start-1 lg:row-start-1" : ""} rounded-2xl overflow-hidden border border-border/50 bg-card`}>
+              <div className={`pixel-card ${i % 2 === 1 ? "lg:col-start-1 lg:row-start-1" : ""} rounded-2xl overflow-hidden border border-border/50 bg-card`}>
                 {service.media.type === "video" ? (
                   <video
                     src={service.media.src}

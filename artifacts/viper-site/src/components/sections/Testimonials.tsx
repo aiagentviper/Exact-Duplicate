@@ -48,7 +48,7 @@ const testimonials = [
 
 function TestimonialCard({ t }: { t: typeof testimonials[0] }) {
   return (
-    <div className="w-[320px] flex-shrink-0 rounded-[18px] border border-border/40 bg-zinc-900/50 p-7 transition-colors hover:border-border/70">
+    <div className="pixel-card w-[320px] flex-shrink-0 rounded-[18px] border border-border/40 bg-zinc-900/50 p-7 transition-colors hover:border-border/70">
       <div>
         <div className="mb-4 flex gap-0.5">
           {Array.from({ length: t.stars }).map((_, j) => <span key={j} className="text-[13px] text-yellow-400">★</span>)}

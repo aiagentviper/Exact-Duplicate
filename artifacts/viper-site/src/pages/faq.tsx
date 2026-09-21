@@ -62,7 +62,7 @@ export function FaqPage() {
                   </div>
                   <Accordion type="single" collapsible className="space-y-3">
                     {items.map((item) => (
-                      <AccordionItem key={item.id} value={item.id} className="rounded-xl border border-border/50 bg-card/30 px-6">
+                      <AccordionItem key={item.id} value={item.id} className="pixel-card rounded-xl border border-border/50 bg-card/30 px-6">
                         <AccordionTrigger className="text-left font-grotesk text-[16px] font-medium hover:no-underline">
                           {item.question}
                         </AccordionTrigger>
