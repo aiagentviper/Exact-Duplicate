@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { Link } from "wouter";
 import { ArrowRight } from "lucide-react";
+import { useEffect, useRef } from "react";
 
 const services = [
   { num: "#01", label: "AI Automation" },
@@ -10,9 +11,42 @@ const services = [
 ];
 
 export function Hero() {
+  const heroRef = useRef<HTMLElement>(null);
+  const heroImageRef = useRef<HTMLImageElement>(null);
+
+  useEffect(() => {
+    const hero = heroRef.current;
+    const image = heroImageRef.current;
+    if (!hero || !image) return;
+
+    const resetImage = () => {
+      image.style.transform = "translate3d(0, 0, 0) rotateX(0deg) rotateY(0deg) scale(1)";
+    };
+
+    const handleMouseMove = (event: MouseEvent) => {
+      const bounds = hero.getBoundingClientRect();
+      const pointerX = (event.clientX - bounds.left) / bounds.width;
+      const pointerY = (event.clientY - bounds.top) / bounds.height;
+      const translateX = (pointerX - 0.5) * 36;
+      const translateY = (pointerY - 0.5) * 36;
+      const rotateX = (0.5 - pointerY) * 6;
+      const rotateY = (pointerX - 0.5) * 6;
+
+      image.style.transform = `translate3d(${translateX}px, ${translateY}px, 0) rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale(1.05)`;
+    };
+
+    hero.addEventListener("mousemove", handleMouseMove);
+    hero.addEventListener("mouseleave", resetImage);
+
+    return () => {
+      hero.removeEventListener("mousemove", handleMouseMove);
+      hero.removeEventListener("mouseleave", resetImage);
+    };
+  }, []);
+
   return (
-    <section className="relative w-full h-screen min-h-[600px] overflow-hidden flex flex-col">
-      <img src="/hero-bg.png" alt="Grayscale luxury AI agency hero background" aria-hidden="true" className="absolute inset-0 w-full h-full object-cover object-top" />
+    <section ref={heroRef} className="relative w-full h-screen min-h-[600px] overflow-hidden flex flex-col">
+      <img ref={heroImageRef} src="/hero-bg.png" alt="Grayscale luxury AI agency hero background" aria-hidden="true" className="hero-parallax-image absolute inset-0 w-full h-full object-cover object-top" />
       <div className="absolute inset-0 bg-black/20" />
       <div className="absolute inset-0" style={{ background: "linear-gradient(to top, rgba(0,0,0,0.96) 0%, rgba(0,0,0,0.80) 20%, rgba(0,0,0,0.40) 45%, rgba(0,0,0,0.08) 70%, transparent 100%)" }} />
       <div className="absolute inset-0" style={{ background: "linear-gradient(to right, rgba(0,0,0,0.45) 0%, rgba(0,0,0,0.15) 35%, transparent 60%)" }} />

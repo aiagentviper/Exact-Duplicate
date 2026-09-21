@@ -1,0 +1,15 @@
+In the hero section of the homepage, I want to add a subtle mouse-follow parallax effect to the background portrait image (the man's face photo) — similar to how a 3D model tilts and shifts slightly as you move the mouse over it.
+
+Requirements:
+
+Do NOT change any layout, text, colors, spacing, or other sections of the site — only add this effect to the hero background image.
+Find the hero section's background image element (likely a <div> with a background-image, or an <img> tag) and its wrapping container.
+Add a mousemove event listener scoped to that hero container only. As the mouse moves across the hero section, the image should:
+Shift slightly (translate) in the direction of the cursor — max ~15–20px movement.
+Tilt slightly in 3D (rotateX/rotateY) — max ~3 degrees.
+Scale up very slightly (e.g. scale(1.05)) so no empty edges show while it shifts.
+Use transition: transform 0.15s ease-out; on the image so the movement feels smooth, not jumpy.
+On mouseleave, reset the image back to its original position (translate(0,0) rotateX(0) rotateY(0) scale(1)).
+Keep the effect subtle — this is a full-bleed photo, not a small object, so it shouldn't feel jarring.
+Don't touch the nav bar, CTA buttons, feature ticker, or any other part of the page.
+After adding it, confirm which file and CSS selector you used so I can review the change.
